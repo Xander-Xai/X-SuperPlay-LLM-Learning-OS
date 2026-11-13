@@ -1,6 +1,8 @@
 # LLM Training Roadmap V2.0 — 最终执行版
 
-**状态：学习设计已落盘；模型训练待执行。** 更新：2026-11-14。
+**状态：学习体系文档已落盘；模型训练待执行。**
+
+**学习中心：[12 模块导航](README.md) · [预训练/后训练对照](knowledge-graph/pretrain-posttrain-relations.md) · [CPU Toy Shift/Mask](labs/README.md) · [验收报告](ACCEPTANCE-V2.md)。** 更新：2026-11-14。
 
 ## 0. 学习目标与方法
 
@@ -16,18 +18,18 @@
 
 | 模块 | 需要理解与验证的核心点 | 优先级 |
 |---|---|---|
-| M01 数学和 PyTorch | 张量、链式法则、Autograd、CE、AdamW、混合精度、显存 | P0 |
-| M02 数据与 Tokenizer | BPE、清洗、去重、Packing、抽样、分布、数据泄漏 | P0 |
-| M03 Transformer | Causal Attention、RoPE、RMSNorm、SwiGLU、GQA、KV Cache | P0 |
-| M04 Pretraining | Next-token CE、Batch/Seq、优化器、LR、Scaler、Checkpoint、Scaling Laws | P0 |
-| M05 CPT / Mid-training | 领域继续训练、Replay、防遗忘、调度器对照 | P1 |
-| M06 SFT + PEFT | Full SFT、LoRA、QLoRA、多轮工具调用、Mask、合成数据和拒绝采样 | P0 |
-| M07 Preference | 偏好对构造、DPO、Reward Model、Online DPO、外部/自采样比较 | P0 |
-| M08 RL | PPO、GRPO、RLVR、Rollout、Advantage、KL、奖励投机 | P0 |
-| M09 Training Systems | 显存、Profiler、FlashAttention、DDP、ZeRO、FSDP、TP/PP/CP/EP、verl | 基础 P0 / 进阶 P1 |
-| M10 Evaluation | PPL、BPB、任务准确率、工具调用、数据泄漏、消融与回归 | 贯穿 P0 |
-| M11 Distillation / Serving | 蒸馏、量化、Adapter 合并、vLLM、吞吐和延迟 | P1 |
-| M12 Advanced | MoE、长上下文、多模态、Agentic RL、test-time compute | P2 |
+| [M01 数学和 PyTorch](modules/M01.md) | 张量、链式法则、Autograd、CE、AdamW、混合精度、显存 | P0 |
+| [M02 数据与 Tokenizer](modules/M02.md) | BPE、清洗、去重、Packing、抽样、分布、数据泄漏 | P0 |
+| [M03 Transformer](modules/M03.md) | Causal Attention、RoPE、RMSNorm、SwiGLU、GQA、KV Cache | P0 |
+| [M04 Pretraining](modules/M04.md) | Next-token CE、Batch/Seq、优化器、LR、Scaler、Checkpoint、Scaling Laws | P0 |
+| [M05 CPT / Mid-training](modules/M05.md) | 领域继续训练、Replay、防遗忘、调度器对照 | P1 |
+| [M06 SFT + PEFT](modules/M06.md) | Full SFT、LoRA、QLoRA、多轮工具调用、Mask、合成数据和拒绝采样 | P0 |
+| [M07 Preference](modules/M07.md) | 偏好对构造、DPO、Reward Model、Online DPO、外部/自采样比较 | P0 |
+| [M08 RL](modules/M08.md) | PPO、GRPO、RLVR、Rollout、Advantage、KL、奖励投机 | P0 |
+| [M09 Training Systems](modules/M09.md) | 显存、Profiler、FlashAttention、DDP、ZeRO、FSDP、TP/PP/CP/EP、verl | 基础 P0 / 进阶 P1 |
+| [M10 Evaluation](modules/M10.md) | PPL、BPB、任务准确率、工具调用、数据泄漏、消融与回归 | 贯穿 P0 |
+| [M11 Distillation / Serving](modules/M11.md) | 蒸馏、量化、Adapter 合并、vLLM、吞吐和延迟 | P1 |
+| [M12 Advanced](modules/M12.md) | MoE、长上下文、多模态、Agentic RL、test-time compute | P2 |
 
 **学习深度**：L1 会解释（定义、例子、边界）；L2 会实现和调试（源码、日志、对照）；L3 会推导和做消融。M01–M04、M06–M08 至少 L2；其余按需求 L1/L2。
 

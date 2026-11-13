@@ -1,0 +1,23 @@
+name: Learning documentation QA
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate 12 modules, experiments, local Markdown links
+        run: python LLM-Training/tools/check_repo.py
+
+# No GPU dependencies installed by CI. The PyTorch CPU toy test is run separately
+# and must not be confused with successful MiniMind/Qwen model training.
+
