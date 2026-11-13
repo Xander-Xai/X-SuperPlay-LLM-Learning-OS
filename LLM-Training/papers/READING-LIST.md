@@ -7,7 +7,7 @@
 | 资源 | 唯一职责 | 入口 |
 |---|---|---|
 | MiniMind | 底层源码唯一实战主线，Pretrain→SFT→其他后训练 | https://github.com/jingyaogong/minimind |
-| Stanford CS336 | 预训练、Scaling、GPU、数据、系统和对齐理论 | https://stanford-cs336.github.io/spring2026/ |
+| Stanford CS336 | 预训练、Scaling、GPU、数据、系统和对齐理论 | https://cs336.stanford.edu/ |
 | Raschka, Build a Large Language Model From Scratch | 张量维度、Attention、PyTorch 细节按需查 | https://github.com/rasbt/LLMs-from-scratch |
 | nanochat | 最后学习端到端训练项目组织，不与 MiniMind 同时复现 | https://github.com/karpathy/nanochat |
 

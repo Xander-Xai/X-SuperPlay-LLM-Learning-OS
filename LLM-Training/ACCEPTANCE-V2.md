@@ -28,7 +28,14 @@
 - **对照严谨性**：CPT Base/Domain/Replay，Cosine/WSD 单变量；DPO/GRPO 从同一 SFT 分支；评估集隔离与失败记录。
 - **学习资源**：[论文/课程清单](papers/READING-LIST.md)、[面试题](interview-qa/QUESTION-BANK.md)、[故障排查](troubleshooting/COMMON-FAILURES.md)。
 
-## 3. 验证与限制（不得混淆）
+## 3. 来源与链接抽样审查
+
+- 仓库 Markdown 相对路径曾在 PR 审查阶段发现两处未创建的验收文档链接，现已补建 [ACCEPTANCE-V2.md](ACCEPTANCE-V2.md)。
+- [Stanford CS336 Spring 2026](https://cs336.stanford.edu/) 的旧 GitHub Pages 地址不可访问；已将本仓库的引用统一更新到官方有效域名。
+- 抽样确认 [Qwen3-0.6B-Base](https://huggingface.co/Qwen/Qwen3-0.6B-Base)、[TRL GRPO](https://huggingface.co/docs/trl/grpo_trainer)、[TRL Online DPO](https://huggingface.co/docs/trl/online_dpo_trainer)、[Qwen Function Calling](https://qwen.readthedocs.io/en/latest/framework/function_call.html) 和 [Unsloth RL Guide](https://unsloth.ai/docs/get-started/reinforcement-learning-rl-guide) 可访问。
+- **外链只进行了针对性抽检**；尚未逐个验证全仓库所有外部链接。静态脚本只检查仓库内相对路径，不能替代 HTTP 外链巡检。
+
+## 4. 验证与限制（不得混淆）
 
 | 验收对象 | 结果 | 证明范围 |
 |---|---|---|
@@ -40,7 +47,7 @@
 | Qwen CPT / Full SFT / LoRA / QLoRA | NOT RUN | 需有评估/显存/忘却对照 |
 | DPO / GRPO / vLLM Deployment | NOT RUN | 需真实采样、评估与服务日志 |
 
-## 4. 最终验收结论
+## 5. 最终验收结论
 
 **文档与学习路线可执行层面：通过（以 PR #2 合并并复验静态检查为最终交付条件）。**
 **模型训练效果层面：未验收，不得声称完成。**
