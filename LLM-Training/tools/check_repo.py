@@ -19,6 +19,7 @@ REQUIRED = [
     "LLM-Training/knowledge-graph/concept-dependencies.md",
     "LLM-Training/evaluation/evaluation-protocol.md",
     "LLM-Training/experiments/EXPERIMENT-TEMPLATE.md",
+    "LLM-Training/ACCEPTANCE-V2.md",
     "LLM-Training/labs/toy_train.py", "LLM-Training/labs/test_toy_train.py",
     *[f"LLM-Training/modules/M{i:02d}.md" for i in range(1, 13)],
     *[f"LLM-Training/experiments/{i:02d}-{slug}/README.md" for i, slug in [

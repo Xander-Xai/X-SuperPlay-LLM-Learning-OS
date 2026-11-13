@@ -4,13 +4,15 @@
 
 | 阶段 | 状态 | 验收依据 | 证据路径 |
 |---|---|---|---|
-| Roadmap 与课程设计 | IN REVIEW | 12 模块、4 阶段、官方资源、实验规范 | ROADMAP-V2.md |
+| Roadmap 与课程设计 | VERIFIED (DOCS ONLY) | 12 模块、4 阶段、官方资源、实验规范 | ROADMAP-V2.md |
 | 01 MiniMind 白盒 | NOT STARTED | 模型组件对照 + Pretrain/SFT + Mask | experiments/01-minimind-whitebox/ |
 | 02 Qwen CPT | NOT STARTED | Base/Domain/Replay + 调度器对照 | experiments/02-qwen-cpt-replay/ |
 | 03 Agent Tool SFT | NOT STARTED | 生成/验证数据 + LoRA/QLoRA 对照 | experiments/03-agent-tool-sft/ |
 | 04 DPO | NOT STARTED | 外部 vs 自采样离线偏好数据对照 | experiments/04-dpo/ |
 | 05 GRPO | NOT STARTED | 真实 Rollout + Reward/Accuracy/Length/KL 记录 | experiments/05-grpo/ |
 | 06 部署 | NOT STARTED | Profiler + vLLM + Agent 端到端回归 | experiments/06-deployment/ |
+
+**学习资料验收见 [ACCEPTANCE-V2](ACCEPTANCE-V2.md)：文档合规通过不代表训练实验通过。**
 
 ## 四个阶段退出门槛
 
