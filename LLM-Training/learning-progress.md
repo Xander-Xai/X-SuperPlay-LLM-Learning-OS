@@ -4,7 +4,7 @@
 
 | 阶段 | 状态 | 验收依据 | 证据路径 |
 |---|---|---|---|
-| Roadmap 与课程设计 | READY FOR REVIEW | 12 模块、4 阶段、官方资源、实验规范 | ROADMAP-V2.md |
+| Roadmap 与课程设计 | IN REVIEW | 12 模块、4 阶段、官方资源、实验规范 | ROADMAP-V2.md |
 | 01 MiniMind 白盒 | NOT STARTED | 模型组件对照 + Pretrain/SFT + Mask | experiments/01-minimind-whitebox/ |
 | 02 Qwen CPT | NOT STARTED | Base/Domain/Replay + 调度器对照 | experiments/02-qwen-cpt-replay/ |
 | 03 Agent Tool SFT | NOT STARTED | 生成/验证数据 + LoRA/QLoRA 对照 | experiments/03-agent-tool-sft/ |
@@ -18,6 +18,8 @@
 - [ ] **阶段二**：CPT 防遗忘和学习率对照、Agent 合成数据版本、SFT 效果对照全部留痕。
 - [ ] **阶段三**：同源 SFT 分叉的 DPO/GRPO 对照，包含真实正确率和 Reward hacking 检查。
 - [ ] **阶段四**：训练/推理资源剖析、verl 等架构理解、vLLM/Agent 端到端结果。
+
+**补充静态 QA**：[学习资料目录/相对链接自动检查](tools/check_repo.py)；[CPU 教学单元测试](labs/README.md)（不替代 GPU 训练）。
 
 ## 第一个实际任务（无需另外造项目）
 

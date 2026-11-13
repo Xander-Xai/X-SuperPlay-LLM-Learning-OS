@@ -2,6 +2,8 @@
 
 **状态：NOT RUN**。先跑当前 MiniMind README 的最小数据/模型配置；固定项目 commit，不照搬旧博客指令。
 
+**起步教学验证**：先跑 [CPU Mask/Shift 单元测试](../../labs/README.md)，注意其不是 MiniMind 训练证据。
+
 ## Steps
 
 1. Clone [MiniMind](https://github.com/jingyaogong/minimind) 并记录 SHA；查看 model/model_minimind.py、trainer/train_pretrain.py、trainer/train_full_sft.py、dataset/lm_dataset.py（若上游改动以当前仓库为准）。

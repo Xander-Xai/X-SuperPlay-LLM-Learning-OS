@@ -11,15 +11,20 @@
 | 05 | GRPO：16GB 低成本可验证奖励 | [05](05-grpo/README.md) | Rollout/Reward/Accuracy/KL/长度等指标 |
 | 06 | 系统工程 / vLLM / Agent 部署 | [06](06-deployment/README.md) | Profiler、部署回归与系统架构图 |
 
+**编号说明**：01–05 为 5 类训练实验；06 是部署与系统验收（不是第六类训练方法）。每个实验的 NOT RUN 状态表示尚未执行 GPU 训练。
+
 ## 运行顺序与分叉
 
 ~~~mermaid
 flowchart LR
-  Mini[01 MiniMind] --> CPT[02 CPT]
-  CPT --> SFT[03 Agent SFT]
+  Mini[01 MiniMind 白盒] --> Understanding[理解训练机制]
+  Understanding -. "方法迁移" .-> Base[Qwen3 Base]
+  Base --> CPT[02 CPT 防遗忘诊断]
+  Base --> SFT[03 Agent SFT]
   SFT --> DPO[04 DPO branch]
   SFT --> GRPO[05 GRPO branch]
-  DPO --> Deploy[06 Deploy + Compare]
+  SFT --> Deploy[06 Deploy + Compare]
+  DPO --> Deploy
   GRPO --> Deploy
 ~~~
 
