@@ -12,6 +12,8 @@
 
 **核心约定**：源代码与官方论文是证据；上游 Canonical Knowledge 是跨技术的稳定定义；本仓是能力训练入口、实验方法和版本化资料索引。源代码版本变化时先复核，再更新稳定定义；不把一段实现当普遍定律。
 
+上游已同步登记 [LLM 专项独立学习仓索引（2026-11-14）](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/docs/indices/llm-training-specialization-20261114.md)；本页面是对应的专项反向索引，确保两侧入口可互相跳转。
+
 ## 2. 三个一键入口
 
 - 上游 [六域 Atlas](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/tree/main/docs/atlas) 与 [METHODOLOGY](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/main/METHODOLOGY.md)。
