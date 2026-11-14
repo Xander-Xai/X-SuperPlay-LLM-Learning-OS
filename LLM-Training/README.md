@@ -1,3 +1,7 @@
+## 严格复验补足：小模型 SFT→GRPO 操作与可证伪评估
+
+[原七部分覆盖审计](ACCEPTANCE-RL-AGENTIC-STRICT-20261115.md) · [SFT→GRPO 五入口可执行手册（真正 GPU 仍 NOT RUN）](experiments/mini-posttrain-sft-grpo/README.md) · [数据/Reward 标准库测试](experiments/mini-posttrain-sft-grpo/data_and_reward.py)。沿原实验 03、05 补齐，不增加固定课程编号。
+
 ## 新增｜RL / Agentic RL 专题入口（2026-11-14）
 
 [RL / Agentic RL 体系、28 天可选学习路线](reinforcement-learning/AGENTIC-RL-LEARNING-PATH.md) · [官方原始资料与版本边界](resources/RL-AGENTIC-PRIMARY-SOURCES.md) · [可运行多步工具环境 + Tabular Q-learning 教学](labs/agentic-rl-trajectory/README.md) · [与实验 03/05 关联的真实模型实验桥（NOT RUN）](experiments/agentic-rl-bridge/README.md)。本专题跨 M04/M06/M07/M08/M09/M10，不另设 M13，不新增加强制模块。

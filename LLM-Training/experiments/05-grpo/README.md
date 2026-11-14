@@ -21,3 +21,7 @@
 ## 可选进阶：多轮 Agent 环境（非新编号实验）
 
 完成简单可验证的 GRPO/RLVR 真正训练后，再依据 [Agentic RL Bridge](../agentic-rl-bridge/README.md) 把 rollout 扩展到可重置的多步工具环境。其 [CPU 标准库沙盒](../../labs/agentic-rl-trajectory/README.md) 只是 Tabular Q-learning 教学，不可记录为本实验真实 GRPO PASS；训练资料见 [权威来源表](../../resources/RL-AGENTIC-PRIMARY-SOURCES.md)。
+
+## 真实模型最小代码入口（2026-11-15）
+
+在 CPU 数学实验之后，按照 [小模型 SFT→GRPO 可选实操](../mini-posttrain-sft-grpo/README.md) 做数据/Reward 测试、SFT adapter 继续 GRPO、held-out 评测和结果记录。该演示是**单轮可验证算术任务**，训练脚本未实际在 CUDA 跑通，且不等于 Agentic RL 多步环境。正式任务必须根据 [实验模板](../EXPERIMENT-TEMPLATE.md) 用实测日志更新状态。
