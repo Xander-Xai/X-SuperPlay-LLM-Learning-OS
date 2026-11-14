@@ -1,0 +1,4897 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "created_on": "2026-11-15",
+  "provenance": "Original fabricated teaching fixtures. No legal, product or customer ground truth.",
+  "annotation_status": "TEMPLATE_GENERATED_NOT_HUMAN_VERIFIED",
+  "splits_note": "Only toy_dev; no statistical independence or real-world benchmarking.",
+  "expected_counts": {
+    "direct": 25,
+    "exact": 20,
+    "paraphrase": 20,
+    "multi_hop": 15,
+    "table_ocr_proxy": 15,
+    "multi_turn": 10,
+    "no_answer": 10,
+    "acl": 5
+  },
+  "documents": [
+    {
+      "id": "FP01",
+      "source_family": "P01",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P01",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "烟酰胺"
+      ],
+      "text": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。"
+    },
+    {
+      "id": "TP01",
+      "source_family": "P01",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P01",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P01，示例用量 1.0 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP01",
+      "source_family": "P01",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P01",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P01，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP01",
+      "source_family": "P01",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P01",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P01，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP02",
+      "source_family": "P02",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P02",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "甘油"
+      ],
+      "text": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。"
+    },
+    {
+      "id": "TP02",
+      "source_family": "P02",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P02",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P02，示例用量 1.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP02",
+      "source_family": "P02",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P02",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P02，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP02",
+      "source_family": "P02",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P02",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P02，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP03",
+      "source_family": "P03",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P03",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "玻尿酸"
+      ],
+      "text": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。"
+    },
+    {
+      "id": "TP03",
+      "source_family": "P03",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P03",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P03，示例用量 2.0 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP03",
+      "source_family": "P03",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P03",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P03，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP03",
+      "source_family": "P03",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P03",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P03，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP04",
+      "source_family": "P04",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P04",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "神经酰胺"
+      ],
+      "text": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。"
+    },
+    {
+      "id": "TP04",
+      "source_family": "P04",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P04",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P04，示例用量 2.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP04",
+      "source_family": "P04",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P04",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P04，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP04",
+      "source_family": "P04",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P04",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P04，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP05",
+      "source_family": "P05",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P05",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "泛醇"
+      ],
+      "text": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。"
+    },
+    {
+      "id": "TP05",
+      "source_family": "P05",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P05",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P05，示例用量 0.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP05",
+      "source_family": "P05",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P05",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P05，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP05",
+      "source_family": "P05",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P05",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P05，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP06",
+      "source_family": "P06",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P06",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "角鲨烷"
+      ],
+      "text": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。"
+    },
+    {
+      "id": "TP06",
+      "source_family": "P06",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P06",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P06，示例用量 1.0 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP06",
+      "source_family": "P06",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P06",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P06，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP06",
+      "source_family": "P06",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P06",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P06，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP07",
+      "source_family": "P07",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P07",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "积雪草"
+      ],
+      "text": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。"
+    },
+    {
+      "id": "TP07",
+      "source_family": "P07",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P07",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P07，示例用量 1.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP07",
+      "source_family": "P07",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P07",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P07，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP07",
+      "source_family": "P07",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P07",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P07，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP08",
+      "source_family": "P08",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P08",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "尿囊素"
+      ],
+      "text": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。"
+    },
+    {
+      "id": "TP08",
+      "source_family": "P08",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P08",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P08，示例用量 2.0 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP08",
+      "source_family": "P08",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P08",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P08，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP08",
+      "source_family": "P08",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P08",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P08，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP09",
+      "source_family": "P09",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P09",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "透明质酸"
+      ],
+      "text": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。"
+    },
+    {
+      "id": "TP09",
+      "source_family": "P09",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P09",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P09，示例用量 2.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP09",
+      "source_family": "P09",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P09",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P09，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP09",
+      "source_family": "P09",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P09",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P09，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP10",
+      "source_family": "P10",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P10",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "生育酚"
+      ],
+      "text": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。"
+    },
+    {
+      "id": "TP10",
+      "source_family": "P10",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P10",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P10，示例用量 0.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP10",
+      "source_family": "P10",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P10",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P10，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP10",
+      "source_family": "P10",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P10",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P10，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP11",
+      "source_family": "P11",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P11",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "甜菜碱"
+      ],
+      "text": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。"
+    },
+    {
+      "id": "TP11",
+      "source_family": "P11",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P11",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P11，示例用量 1.0 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP11",
+      "source_family": "P11",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P11",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P11，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP11",
+      "source_family": "P11",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P11",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P11，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP12",
+      "source_family": "P12",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P12",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "氨基酸"
+      ],
+      "text": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。"
+    },
+    {
+      "id": "TP12",
+      "source_family": "P12",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P12",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P12，示例用量 1.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP12",
+      "source_family": "P12",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P12",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P12，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP12",
+      "source_family": "P12",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P12",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P12，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP13",
+      "source_family": "P13",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P13",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "乳酸"
+      ],
+      "text": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。"
+    },
+    {
+      "id": "TP13",
+      "source_family": "P13",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P13",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P13，示例用量 2.0 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP13",
+      "source_family": "P13",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P13",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P13，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP13",
+      "source_family": "P13",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P13",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P13，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP14",
+      "source_family": "P14",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P14",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "尿素"
+      ],
+      "text": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。"
+    },
+    {
+      "id": "TP14",
+      "source_family": "P14",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P14",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P14，示例用量 2.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP14",
+      "source_family": "P14",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P14",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P14，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP14",
+      "source_family": "P14",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P14",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P14，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP15",
+      "source_family": "P15",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P15",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "水杨酸"
+      ],
+      "text": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。"
+    },
+    {
+      "id": "TP15",
+      "source_family": "P15",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P15",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P15，示例用量 0.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP15",
+      "source_family": "P15",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P15",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P15，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP15",
+      "source_family": "P15",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P15",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P15，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP16",
+      "source_family": "P16",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P16",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "柠檬酸"
+      ],
+      "text": "模拟知识库：产品 P16，主要成分 柠檬酸；内部参考编号 P16。"
+    },
+    {
+      "id": "TP16",
+      "source_family": "P16",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P16",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P16，示例用量 1.0 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP16",
+      "source_family": "P16",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P16",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P16，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP16",
+      "source_family": "P16",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P16",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P16，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP17",
+      "source_family": "P17",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P17",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "海藻糖"
+      ],
+      "text": "模拟知识库：产品 P17，主要成分 海藻糖；内部参考编号 P17。"
+    },
+    {
+      "id": "TP17",
+      "source_family": "P17",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P17",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P17，示例用量 1.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP17",
+      "source_family": "P17",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P17",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P17，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP17",
+      "source_family": "P17",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P17",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P17，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP18",
+      "source_family": "P18",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P18",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "葡糖酸"
+      ],
+      "text": "模拟知识库：产品 P18，主要成分 葡糖酸；内部参考编号 P18。"
+    },
+    {
+      "id": "TP18",
+      "source_family": "P18",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P18",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P18，示例用量 2.0 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP18",
+      "source_family": "P18",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P18",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P18，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP18",
+      "source_family": "P18",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P18",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P18，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP19",
+      "source_family": "P19",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P19",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "油橄榄"
+      ],
+      "text": "模拟知识库：产品 P19，主要成分 油橄榄；内部参考编号 P19。"
+    },
+    {
+      "id": "TP19",
+      "source_family": "P19",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P19",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P19，示例用量 2.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP19",
+      "source_family": "P19",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P19",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P19，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP19",
+      "source_family": "P19",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P19",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P19，私密字段仅供 T2。"
+    },
+    {
+      "id": "FP20",
+      "source_family": "P20",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "fact",
+      "terms": [
+        "P20",
+        "产品",
+        "编号",
+        "主要成分",
+        "成分",
+        "鲸蜡醇"
+      ],
+      "text": "模拟知识库：产品 P20，主要成分 鲸蜡醇；内部参考编号 P20。"
+    },
+    {
+      "id": "TP20",
+      "source_family": "P20",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 2,
+      "kind": "table_text_only",
+      "terms": [
+        "P20",
+        "表格",
+        "示例用量",
+        "用量",
+        "单位"
+      ],
+      "text": "模拟表格：产品 P20，示例用量 0.5 克；表头为产品编号、用量、单位。"
+    },
+    {
+      "id": "OP20",
+      "source_family": "P20",
+      "tenant": "T1",
+      "roles": [
+        "public"
+      ],
+      "active": false,
+      "revision": "v2024",
+      "page": 3,
+      "kind": "expired",
+      "terms": [
+        "old-P20",
+        "历史仅限",
+        "旧版"
+      ],
+      "text": "已失效旧版：old-P20，历史仅限、版本 2024，数据不得作为当前答案。"
+    },
+    {
+      "id": "XP20",
+      "source_family": "P20",
+      "tenant": "T2",
+      "roles": [
+        "private"
+      ],
+      "active": true,
+      "revision": "v2026.1",
+      "page": 1,
+      "kind": "tenant_private",
+      "terms": [
+        "foreign-P20",
+        "私密字段"
+      ],
+      "text": "其他租户私有资料：foreign-P20，私密字段仅供 T2。"
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "DIRECT-01",
+      "query": "P01 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P01",
+        "主要成分"
+      ],
+      "source_family": "P01",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP01"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP01",
+          "page": 1,
+          "quote": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-02",
+      "query": "P02 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P02",
+        "主要成分"
+      ],
+      "source_family": "P02",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP02"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP02",
+          "page": 1,
+          "quote": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-03",
+      "query": "P03 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P03",
+        "主要成分"
+      ],
+      "source_family": "P03",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP03"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP03",
+          "page": 1,
+          "quote": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-04",
+      "query": "P04 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P04",
+        "主要成分"
+      ],
+      "source_family": "P04",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP04"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP04",
+          "page": 1,
+          "quote": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-05",
+      "query": "P05 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P05",
+        "主要成分"
+      ],
+      "source_family": "P05",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP05"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP05",
+          "page": 1,
+          "quote": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-06",
+      "query": "P06 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P06",
+        "主要成分"
+      ],
+      "source_family": "P06",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP06"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP06",
+          "page": 1,
+          "quote": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-07",
+      "query": "P07 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P07",
+        "主要成分"
+      ],
+      "source_family": "P07",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP07"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP07",
+          "page": 1,
+          "quote": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-08",
+      "query": "P08 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P08",
+        "主要成分"
+      ],
+      "source_family": "P08",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP08"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP08",
+          "page": 1,
+          "quote": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-09",
+      "query": "P09 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P09",
+        "主要成分"
+      ],
+      "source_family": "P09",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP09"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP09",
+          "page": 1,
+          "quote": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-10",
+      "query": "P10 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P10",
+        "主要成分"
+      ],
+      "source_family": "P10",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP10"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP10",
+          "page": 1,
+          "quote": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-11",
+      "query": "P11 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P11",
+        "主要成分"
+      ],
+      "source_family": "P11",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP11"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP11",
+          "page": 1,
+          "quote": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-12",
+      "query": "P12 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P12",
+        "主要成分"
+      ],
+      "source_family": "P12",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP12"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP12",
+          "page": 1,
+          "quote": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-13",
+      "query": "P13 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P13",
+        "主要成分"
+      ],
+      "source_family": "P13",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP13"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP13",
+          "page": 1,
+          "quote": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-14",
+      "query": "P14 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P14",
+        "主要成分"
+      ],
+      "source_family": "P14",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP14"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP14",
+          "page": 1,
+          "quote": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-15",
+      "query": "P15 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P15",
+        "主要成分"
+      ],
+      "source_family": "P15",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP15"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP15",
+          "page": 1,
+          "quote": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-16",
+      "query": "P16 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P16",
+        "主要成分"
+      ],
+      "source_family": "P16",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP16"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP16",
+          "page": 1,
+          "quote": "模拟知识库：产品 P16，主要成分 柠檬酸；内部参考编号 P16。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P16，主要成分 柠檬酸；内部参考编号 P16。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-17",
+      "query": "P17 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P17",
+        "主要成分"
+      ],
+      "source_family": "P17",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP17"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP17",
+          "page": 1,
+          "quote": "模拟知识库：产品 P17，主要成分 海藻糖；内部参考编号 P17。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P17，主要成分 海藻糖；内部参考编号 P17。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-18",
+      "query": "P18 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P18",
+        "主要成分"
+      ],
+      "source_family": "P18",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP18"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP18",
+          "page": 1,
+          "quote": "模拟知识库：产品 P18，主要成分 葡糖酸；内部参考编号 P18。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P18，主要成分 葡糖酸；内部参考编号 P18。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-19",
+      "query": "P19 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P19",
+        "主要成分"
+      ],
+      "source_family": "P19",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP19"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP19",
+          "page": 1,
+          "quote": "模拟知识库：产品 P19，主要成分 油橄榄；内部参考编号 P19。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P19，主要成分 油橄榄；内部参考编号 P19。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-20",
+      "query": "P20 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P20",
+        "主要成分"
+      ],
+      "source_family": "P20",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP20"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP20",
+          "page": 1,
+          "quote": "模拟知识库：产品 P20，主要成分 鲸蜡醇；内部参考编号 P20。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P20，主要成分 鲸蜡醇；内部参考编号 P20。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-21",
+      "query": "P01 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P01",
+        "主要成分"
+      ],
+      "source_family": "P01",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP01"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP01",
+          "page": 1,
+          "quote": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-22",
+      "query": "P02 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P02",
+        "主要成分"
+      ],
+      "source_family": "P02",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP02"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP02",
+          "page": 1,
+          "quote": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-23",
+      "query": "P03 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P03",
+        "主要成分"
+      ],
+      "source_family": "P03",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP03"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP03",
+          "page": 1,
+          "quote": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-24",
+      "query": "P04 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P04",
+        "主要成分"
+      ],
+      "source_family": "P04",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP04"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP04",
+          "page": 1,
+          "quote": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "DIRECT-25",
+      "query": "P05 的主要成分是什么？",
+      "question_type": "direct",
+      "query_terms": [
+        "P05",
+        "主要成分"
+      ],
+      "source_family": "P05",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP05"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP05",
+          "page": 1,
+          "quote": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-01",
+      "query": "请查编号 P01 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P01",
+        "成分"
+      ],
+      "source_family": "P01",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP01"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP01",
+          "page": 1,
+          "quote": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-02",
+      "query": "请查编号 P02 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P02",
+        "成分"
+      ],
+      "source_family": "P02",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP02"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP02",
+          "page": 1,
+          "quote": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-03",
+      "query": "请查编号 P03 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P03",
+        "成分"
+      ],
+      "source_family": "P03",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP03"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP03",
+          "page": 1,
+          "quote": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-04",
+      "query": "请查编号 P04 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P04",
+        "成分"
+      ],
+      "source_family": "P04",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP04"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP04",
+          "page": 1,
+          "quote": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-05",
+      "query": "请查编号 P05 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P05",
+        "成分"
+      ],
+      "source_family": "P05",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP05"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP05",
+          "page": 1,
+          "quote": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-06",
+      "query": "请查编号 P06 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P06",
+        "成分"
+      ],
+      "source_family": "P06",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP06"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP06",
+          "page": 1,
+          "quote": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-07",
+      "query": "请查编号 P07 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P07",
+        "成分"
+      ],
+      "source_family": "P07",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP07"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP07",
+          "page": 1,
+          "quote": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-08",
+      "query": "请查编号 P08 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P08",
+        "成分"
+      ],
+      "source_family": "P08",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP08"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP08",
+          "page": 1,
+          "quote": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-09",
+      "query": "请查编号 P09 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P09",
+        "成分"
+      ],
+      "source_family": "P09",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP09"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP09",
+          "page": 1,
+          "quote": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-10",
+      "query": "请查编号 P10 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P10",
+        "成分"
+      ],
+      "source_family": "P10",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP10"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP10",
+          "page": 1,
+          "quote": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-11",
+      "query": "请查编号 P11 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P11",
+        "成分"
+      ],
+      "source_family": "P11",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP11"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP11",
+          "page": 1,
+          "quote": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-12",
+      "query": "请查编号 P12 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P12",
+        "成分"
+      ],
+      "source_family": "P12",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP12"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP12",
+          "page": 1,
+          "quote": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-13",
+      "query": "请查编号 P13 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P13",
+        "成分"
+      ],
+      "source_family": "P13",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP13"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP13",
+          "page": 1,
+          "quote": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-14",
+      "query": "请查编号 P14 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P14",
+        "成分"
+      ],
+      "source_family": "P14",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP14"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP14",
+          "page": 1,
+          "quote": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-15",
+      "query": "请查编号 P15 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P15",
+        "成分"
+      ],
+      "source_family": "P15",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP15"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP15",
+          "page": 1,
+          "quote": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-16",
+      "query": "请查编号 P16 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P16",
+        "成分"
+      ],
+      "source_family": "P16",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP16"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP16",
+          "page": 1,
+          "quote": "模拟知识库：产品 P16，主要成分 柠檬酸；内部参考编号 P16。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P16，主要成分 柠檬酸；内部参考编号 P16。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-17",
+      "query": "请查编号 P17 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P17",
+        "成分"
+      ],
+      "source_family": "P17",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP17"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP17",
+          "page": 1,
+          "quote": "模拟知识库：产品 P17，主要成分 海藻糖；内部参考编号 P17。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P17，主要成分 海藻糖；内部参考编号 P17。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-18",
+      "query": "请查编号 P18 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P18",
+        "成分"
+      ],
+      "source_family": "P18",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP18"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP18",
+          "page": 1,
+          "quote": "模拟知识库：产品 P18，主要成分 葡糖酸；内部参考编号 P18。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P18，主要成分 葡糖酸；内部参考编号 P18。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-19",
+      "query": "请查编号 P19 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P19",
+        "成分"
+      ],
+      "source_family": "P19",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP19"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP19",
+          "page": 1,
+          "quote": "模拟知识库：产品 P19，主要成分 油橄榄；内部参考编号 P19。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P19，主要成分 油橄榄；内部参考编号 P19。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "EXACT-20",
+      "query": "请查编号 P20 的成分。",
+      "question_type": "exact",
+      "query_terms": [
+        "编号",
+        "P20",
+        "成分"
+      ],
+      "source_family": "P20",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP20"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP20",
+          "page": 1,
+          "quote": "模拟知识库：产品 P20，主要成分 鲸蜡醇；内部参考编号 P20。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P20，主要成分 鲸蜡醇；内部参考编号 P20。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-01",
+      "query": "P01 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P01"
+      ],
+      "source_family": "P01",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP01"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP01",
+          "page": 1,
+          "quote": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-02",
+      "query": "P02 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P02"
+      ],
+      "source_family": "P02",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP02"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP02",
+          "page": 1,
+          "quote": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-03",
+      "query": "P03 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P03"
+      ],
+      "source_family": "P03",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP03"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP03",
+          "page": 1,
+          "quote": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-04",
+      "query": "P04 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P04"
+      ],
+      "source_family": "P04",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP04"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP04",
+          "page": 1,
+          "quote": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-05",
+      "query": "P05 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P05"
+      ],
+      "source_family": "P05",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP05"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP05",
+          "page": 1,
+          "quote": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-06",
+      "query": "P06 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P06"
+      ],
+      "source_family": "P06",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP06"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP06",
+          "page": 1,
+          "quote": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-07",
+      "query": "P07 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P07"
+      ],
+      "source_family": "P07",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP07"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP07",
+          "page": 1,
+          "quote": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-08",
+      "query": "P08 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P08"
+      ],
+      "source_family": "P08",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP08"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP08",
+          "page": 1,
+          "quote": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-09",
+      "query": "P09 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P09"
+      ],
+      "source_family": "P09",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP09"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP09",
+          "page": 1,
+          "quote": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-10",
+      "query": "P10 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P10"
+      ],
+      "source_family": "P10",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP10"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP10",
+          "page": 1,
+          "quote": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-11",
+      "query": "P11 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P11"
+      ],
+      "source_family": "P11",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP11"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP11",
+          "page": 1,
+          "quote": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-12",
+      "query": "P12 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P12"
+      ],
+      "source_family": "P12",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP12"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP12",
+          "page": 1,
+          "quote": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-13",
+      "query": "P13 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P13"
+      ],
+      "source_family": "P13",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP13"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP13",
+          "page": 1,
+          "quote": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-14",
+      "query": "P14 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P14"
+      ],
+      "source_family": "P14",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP14"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP14",
+          "page": 1,
+          "quote": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-15",
+      "query": "P15 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P15"
+      ],
+      "source_family": "P15",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP15"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP15",
+          "page": 1,
+          "quote": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-16",
+      "query": "P16 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P16"
+      ],
+      "source_family": "P16",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP16"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP16",
+          "page": 1,
+          "quote": "模拟知识库：产品 P16，主要成分 柠檬酸；内部参考编号 P16。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P16，主要成分 柠檬酸；内部参考编号 P16。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-17",
+      "query": "P17 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P17"
+      ],
+      "source_family": "P17",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP17"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP17",
+          "page": 1,
+          "quote": "模拟知识库：产品 P17，主要成分 海藻糖；内部参考编号 P17。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P17，主要成分 海藻糖；内部参考编号 P17。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-18",
+      "query": "P18 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P18"
+      ],
+      "source_family": "P18",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP18"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP18",
+          "page": 1,
+          "quote": "模拟知识库：产品 P18，主要成分 葡糖酸；内部参考编号 P18。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P18，主要成分 葡糖酸；内部参考编号 P18。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-19",
+      "query": "P19 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P19"
+      ],
+      "source_family": "P19",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP19"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP19",
+          "page": 1,
+          "quote": "模拟知识库：产品 P19，主要成分 油橄榄；内部参考编号 P19。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P19，主要成分 油橄榄；内部参考编号 P19。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "PARAPHRASE-20",
+      "query": "P20 里放的原料叫什么？",
+      "question_type": "paraphrase",
+      "query_terms": [
+        "原料",
+        "P20"
+      ],
+      "source_family": "P20",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP20"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP20",
+          "page": 1,
+          "quote": "模拟知识库：产品 P20，主要成分 鲸蜡醇；内部参考编号 P20。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P20，主要成分 鲸蜡醇；内部参考编号 P20。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-01",
+      "query": "P01 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P01",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P01",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP01",
+        "TP01"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP01",
+          "page": 1,
+          "quote": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。"
+        },
+        {
+          "source_id": "TP01",
+          "page": 2,
+          "quote": "模拟表格：产品 P01，示例用量 1.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。；模拟表格：产品 P01，示例用量 1.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-02",
+      "query": "P02 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P02",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P02",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP02",
+        "TP02"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP02",
+          "page": 1,
+          "quote": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。"
+        },
+        {
+          "source_id": "TP02",
+          "page": 2,
+          "quote": "模拟表格：产品 P02，示例用量 1.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。；模拟表格：产品 P02，示例用量 1.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-03",
+      "query": "P03 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P03",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P03",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP03",
+        "TP03"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP03",
+          "page": 1,
+          "quote": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。"
+        },
+        {
+          "source_id": "TP03",
+          "page": 2,
+          "quote": "模拟表格：产品 P03，示例用量 2.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。；模拟表格：产品 P03，示例用量 2.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-04",
+      "query": "P04 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P04",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P04",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP04",
+        "TP04"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP04",
+          "page": 1,
+          "quote": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。"
+        },
+        {
+          "source_id": "TP04",
+          "page": 2,
+          "quote": "模拟表格：产品 P04，示例用量 2.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。；模拟表格：产品 P04，示例用量 2.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-05",
+      "query": "P05 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P05",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P05",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP05",
+        "TP05"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP05",
+          "page": 1,
+          "quote": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。"
+        },
+        {
+          "source_id": "TP05",
+          "page": 2,
+          "quote": "模拟表格：产品 P05，示例用量 0.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。；模拟表格：产品 P05，示例用量 0.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-06",
+      "query": "P06 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P06",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P06",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP06",
+        "TP06"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP06",
+          "page": 1,
+          "quote": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。"
+        },
+        {
+          "source_id": "TP06",
+          "page": 2,
+          "quote": "模拟表格：产品 P06，示例用量 1.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。；模拟表格：产品 P06，示例用量 1.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-07",
+      "query": "P07 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P07",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P07",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP07",
+        "TP07"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP07",
+          "page": 1,
+          "quote": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。"
+        },
+        {
+          "source_id": "TP07",
+          "page": 2,
+          "quote": "模拟表格：产品 P07，示例用量 1.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。；模拟表格：产品 P07，示例用量 1.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-08",
+      "query": "P08 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P08",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P08",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP08",
+        "TP08"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP08",
+          "page": 1,
+          "quote": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。"
+        },
+        {
+          "source_id": "TP08",
+          "page": 2,
+          "quote": "模拟表格：产品 P08，示例用量 2.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。；模拟表格：产品 P08，示例用量 2.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-09",
+      "query": "P09 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P09",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P09",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP09",
+        "TP09"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP09",
+          "page": 1,
+          "quote": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。"
+        },
+        {
+          "source_id": "TP09",
+          "page": 2,
+          "quote": "模拟表格：产品 P09，示例用量 2.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。；模拟表格：产品 P09，示例用量 2.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-10",
+      "query": "P10 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P10",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P10",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP10",
+        "TP10"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP10",
+          "page": 1,
+          "quote": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。"
+        },
+        {
+          "source_id": "TP10",
+          "page": 2,
+          "quote": "模拟表格：产品 P10，示例用量 0.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。；模拟表格：产品 P10，示例用量 0.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-11",
+      "query": "P11 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P11",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P11",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP11",
+        "TP11"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP11",
+          "page": 1,
+          "quote": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。"
+        },
+        {
+          "source_id": "TP11",
+          "page": 2,
+          "quote": "模拟表格：产品 P11，示例用量 1.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P11，主要成分 甜菜碱；内部参考编号 P11。；模拟表格：产品 P11，示例用量 1.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-12",
+      "query": "P12 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P12",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P12",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP12",
+        "TP12"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP12",
+          "page": 1,
+          "quote": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。"
+        },
+        {
+          "source_id": "TP12",
+          "page": 2,
+          "quote": "模拟表格：产品 P12，示例用量 1.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P12，主要成分 氨基酸；内部参考编号 P12。；模拟表格：产品 P12，示例用量 1.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-13",
+      "query": "P13 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P13",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P13",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP13",
+        "TP13"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP13",
+          "page": 1,
+          "quote": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。"
+        },
+        {
+          "source_id": "TP13",
+          "page": 2,
+          "quote": "模拟表格：产品 P13，示例用量 2.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P13，主要成分 乳酸；内部参考编号 P13。；模拟表格：产品 P13，示例用量 2.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-14",
+      "query": "P14 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P14",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P14",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP14",
+        "TP14"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP14",
+          "page": 1,
+          "quote": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。"
+        },
+        {
+          "source_id": "TP14",
+          "page": 2,
+          "quote": "模拟表格：产品 P14，示例用量 2.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P14，主要成分 尿素；内部参考编号 P14。；模拟表格：产品 P14，示例用量 2.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "MULTI_HOP-15",
+      "query": "P15 的主要成分及示例用量是什么？",
+      "question_type": "multi_hop",
+      "query_terms": [
+        "P15",
+        "主要成分",
+        "用量"
+      ],
+      "source_family": "P15",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP15",
+        "TP15"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP15",
+          "page": 1,
+          "quote": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。"
+        },
+        {
+          "source_id": "TP15",
+          "page": 2,
+          "quote": "模拟表格：产品 P15，示例用量 0.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P15，主要成分 水杨酸；内部参考编号 P15。；模拟表格：产品 P15，示例用量 0.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-01",
+      "query": "查 P01 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P01",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P01",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP01"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP01",
+          "page": 2,
+          "quote": "模拟表格：产品 P01，示例用量 1.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P01，示例用量 1.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-02",
+      "query": "查 P02 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P02",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P02",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP02"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP02",
+          "page": 2,
+          "quote": "模拟表格：产品 P02，示例用量 1.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P02，示例用量 1.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-03",
+      "query": "查 P03 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P03",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P03",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP03"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP03",
+          "page": 2,
+          "quote": "模拟表格：产品 P03，示例用量 2.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P03，示例用量 2.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-04",
+      "query": "查 P04 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P04",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P04",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP04"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP04",
+          "page": 2,
+          "quote": "模拟表格：产品 P04，示例用量 2.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P04，示例用量 2.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-05",
+      "query": "查 P05 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P05",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P05",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP05"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP05",
+          "page": 2,
+          "quote": "模拟表格：产品 P05，示例用量 0.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P05，示例用量 0.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-06",
+      "query": "查 P06 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P06",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P06",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP06"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP06",
+          "page": 2,
+          "quote": "模拟表格：产品 P06，示例用量 1.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P06，示例用量 1.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-07",
+      "query": "查 P07 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P07",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P07",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP07"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP07",
+          "page": 2,
+          "quote": "模拟表格：产品 P07，示例用量 1.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P07，示例用量 1.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-08",
+      "query": "查 P08 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P08",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P08",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP08"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP08",
+          "page": 2,
+          "quote": "模拟表格：产品 P08，示例用量 2.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P08，示例用量 2.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-09",
+      "query": "查 P09 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P09",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P09",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP09"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP09",
+          "page": 2,
+          "quote": "模拟表格：产品 P09，示例用量 2.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P09，示例用量 2.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-10",
+      "query": "查 P10 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P10",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P10",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP10"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP10",
+          "page": 2,
+          "quote": "模拟表格：产品 P10，示例用量 0.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P10，示例用量 0.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-11",
+      "query": "查 P11 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P11",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P11",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP11"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP11",
+          "page": 2,
+          "quote": "模拟表格：产品 P11，示例用量 1.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P11，示例用量 1.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-12",
+      "query": "查 P12 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P12",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P12",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP12"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP12",
+          "page": 2,
+          "quote": "模拟表格：产品 P12，示例用量 1.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P12，示例用量 1.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-13",
+      "query": "查 P13 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P13",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P13",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP13"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP13",
+          "page": 2,
+          "quote": "模拟表格：产品 P13，示例用量 2.0 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P13，示例用量 2.0 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-14",
+      "query": "查 P14 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P14",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P14",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP14"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP14",
+          "page": 2,
+          "quote": "模拟表格：产品 P14，示例用量 2.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P14，示例用量 2.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "TABLE_OCR_PROXY-15",
+      "query": "查 P15 表格用量。",
+      "question_type": "table_ocr_proxy",
+      "query_terms": [
+        "P15",
+        "表格",
+        "示例用量"
+      ],
+      "source_family": "P15",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "TP15"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "TP15",
+          "page": 2,
+          "quote": "模拟表格：产品 P15，示例用量 0.5 克；表头为产品编号、用量、单位。"
+        }
+      ],
+      "answer_reference": "模拟表格：产品 P15，示例用量 0.5 克；表头为产品编号、用量、单位。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "note": "TEXT_TABLE_PROXY; does not test OCR or image parsing"
+    },
+    {
+      "case_id": "MULTI_TURN-01",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P01",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP01"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP01",
+          "page": 1,
+          "quote": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P01，主要成分 烟酰胺；内部参考编号 P01。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P01",
+      "rewritten_query": "产品 P01 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P01",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-02",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P02",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP02"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP02",
+          "page": 1,
+          "quote": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P02，主要成分 甘油；内部参考编号 P02。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P02",
+      "rewritten_query": "产品 P02 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P02",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-03",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P03",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP03"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP03",
+          "page": 1,
+          "quote": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P03，主要成分 玻尿酸；内部参考编号 P03。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P03",
+      "rewritten_query": "产品 P03 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P03",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-04",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P04",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP04"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP04",
+          "page": 1,
+          "quote": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P04，主要成分 神经酰胺；内部参考编号 P04。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P04",
+      "rewritten_query": "产品 P04 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P04",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-05",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P05",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP05"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP05",
+          "page": 1,
+          "quote": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P05，主要成分 泛醇；内部参考编号 P05。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P05",
+      "rewritten_query": "产品 P05 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P05",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-06",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P06",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP06"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP06",
+          "page": 1,
+          "quote": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P06，主要成分 角鲨烷；内部参考编号 P06。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P06",
+      "rewritten_query": "产品 P06 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P06",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-07",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P07",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP07"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP07",
+          "page": 1,
+          "quote": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P07，主要成分 积雪草；内部参考编号 P07。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P07",
+      "rewritten_query": "产品 P07 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P07",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-08",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P08",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP08"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP08",
+          "page": 1,
+          "quote": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P08，主要成分 尿囊素；内部参考编号 P08。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P08",
+      "rewritten_query": "产品 P08 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P08",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-09",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P09",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP09"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP09",
+          "page": 1,
+          "quote": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P09，主要成分 透明质酸；内部参考编号 P09。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P09",
+      "rewritten_query": "产品 P09 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P09",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "MULTI_TURN-10",
+      "query": "那它的主要成分呢？",
+      "question_type": "multi_turn",
+      "query_terms": [
+        "它",
+        "主要成分"
+      ],
+      "source_family": "P10",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": false,
+      "gold_ids": [
+        "FP10"
+      ],
+      "gold_source_spans": [
+        {
+          "source_id": "FP10",
+          "page": 1,
+          "quote": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。"
+        }
+      ],
+      "answer_reference": "模拟知识库：产品 P10，主要成分 生育酚；内部参考编号 P10。",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "previous_turn": "上一轮在讨论产品 P10",
+      "rewritten_query": "产品 P10 的主要成分是什么？",
+      "query_terms_rewritten": [
+        "P10",
+        "主要成分"
+      ]
+    },
+    {
+      "case_id": "NO_ANSWER-01",
+      "query": "没有收录的 UNKNOWN-1 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-1",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-1",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-02",
+      "query": "没有收录的 UNKNOWN-2 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-2",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-2",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-03",
+      "query": "没有收录的 UNKNOWN-3 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-3",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-3",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-04",
+      "query": "没有收录的 UNKNOWN-4 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-4",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-4",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-05",
+      "query": "没有收录的 UNKNOWN-5 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-5",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-5",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-06",
+      "query": "没有收录的 UNKNOWN-6 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-6",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-6",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-07",
+      "query": "没有收录的 UNKNOWN-7 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-7",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-7",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-08",
+      "query": "没有收录的 UNKNOWN-8 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-8",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-8",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-09",
+      "query": "没有收录的 UNKNOWN-9 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-9",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-9",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "NO_ANSWER-10",
+      "query": "没有收录的 UNKNOWN-10 有哪些成分？",
+      "question_type": "no_answer",
+      "query_terms": [
+        "UNKNOWN-10",
+        "没有收录"
+      ],
+      "source_family": "UNKNOWN-10",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev"
+    },
+    {
+      "case_id": "ACL-01",
+      "query": "我可以看 其他租户私有资料 P01 吗？",
+      "question_type": "acl",
+      "query_terms": [
+        "foreign-P01",
+        "私密字段"
+      ],
+      "source_family": "P01",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "forbidden_doc_ids": [
+        "XP01"
+      ],
+      "note": "CROSS_TENANT"
+    },
+    {
+      "case_id": "ACL-02",
+      "query": "我可以看 其他租户私有资料 P02 吗？",
+      "question_type": "acl",
+      "query_terms": [
+        "foreign-P02",
+        "私密字段"
+      ],
+      "source_family": "P02",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "forbidden_doc_ids": [
+        "XP02"
+      ],
+      "note": "CROSS_TENANT"
+    },
+    {
+      "case_id": "ACL-03",
+      "query": "我可以看 其他租户私有资料 P03 吗？",
+      "question_type": "acl",
+      "query_terms": [
+        "foreign-P03",
+        "私密字段"
+      ],
+      "source_family": "P03",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "forbidden_doc_ids": [
+        "XP03"
+      ],
+      "note": "CROSS_TENANT"
+    },
+    {
+      "case_id": "ACL-04",
+      "query": "我可以看 过期版本 P04 吗？",
+      "question_type": "acl",
+      "query_terms": [
+        "old-P04",
+        "历史仅限"
+      ],
+      "source_family": "P04",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "forbidden_doc_ids": [
+        "OP04"
+      ],
+      "note": "EXPIRED_VERSION"
+    },
+    {
+      "case_id": "ACL-05",
+      "query": "我可以看 过期版本 P05 吗？",
+      "question_type": "acl",
+      "query_terms": [
+        "old-P05",
+        "历史仅限"
+      ],
+      "source_family": "P05",
+      "tenant": "T1",
+      "role": "public",
+      "valid_on": "2026-11-14",
+      "expected_abstain": true,
+      "gold_ids": [],
+      "gold_source_spans": [],
+      "answer_reference": "",
+      "annotation_review": "SYNTHETIC_TEMPLATE_NOT_HUMAN_REVIEWED",
+      "split": "toy_dev",
+      "forbidden_doc_ids": [
+        "OP05"
+      ],
+      "note": "EXPIRED_VERSION"
+    }
+  ]
+}

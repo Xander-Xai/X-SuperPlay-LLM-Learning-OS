@@ -11,6 +11,19 @@ python -m unittest discover -s LLM-Training/application-engineering/rag-deep-div
 
 这个微实验自包含，演示 BM25（预分词合成语料）、给定排名模拟的第二路召回、RRF、ACL、Recall/Hit/MRR/nDCG、无证据/无权限拒答分母。不含真实 Embedding/ANN/Tokenizer/LLM，不可将结果写成 BGE/ES/Milvus/Ragas 实测。
 
+## 已有的 120 题可运行样本（合成，不是业务真值）
+
+[goldset 入口](goldset/README.md) 已提交 80 份虚构资料与 120 条模板生成的分桶标注（105 正例/15 拒答）。可以用下列命令对照 BM25、预定义 Rewrite 和两条词法排名 RRF，但不涉及真正的 OCR/Embedding/LLM：
+
+~~~bash
+python LLM-Training/application-engineering/rag-deep-dive/goldset/evaluate.py --mode bm25 --k 5
+python LLM-Training/application-engineering/rag-deep-dive/goldset/evaluate.py --mode rewrite_bm25 --k 5
+python LLM-Training/application-engineering/rag-deep-dive/goldset/evaluate.py --mode multiquery_rrf --k 5
+python LLM-Training/application-engineering/rag-deep-dive/lab/real_embedding_eval.py
+~~~
+
+最后一条是无联网 Dry Run；真正使用本地已下载 SentenceTransformer 路径需手工选择 --model-path 并自行安装适配的 sentence-transformers，CI 不下载模型。输出正例检索指标，不会伪装成 Ragas 或答案正确率。
+
 ## 1. 真正进阶实验（规划，NOT RUN）
 
 | 编号 | 独立变量 | 固定控制项 | 结果指标 | 最少负例 |
@@ -23,7 +36,7 @@ python -m unittest discover -s LLM-Training/application-engineering/rag-deep-div
 
 **实验报告至少包括**：目的、数据许可与脱敏、baseline、预注册假设、唯一改变变量、代码/数据 SHA、模型/索引版本、原始 Query/Gold、K/score 定义、重复试验次数、错误样例、结果是否可推广、NOT RUN/PASS/FAIL/INCONCLUSIVE。
 
-## 2. 120 条 Gold Set 设计（计划，不声称已采集）
+## 2. 120 条 Gold Set 分类（合成模板已落盘，真实业务标注仍待执行）
 
 | 类型 | 条数 | 需要单独衡量 |
 |---|---:|---|
@@ -35,6 +48,8 @@ python -m unittest discover -s LLM-Training/application-engineering/rag-deep-div
 | 多轮追问 | 10 | Rewrite 不改变原意 |
 | 无答案 | 10 | 正确拒答与误答 |
 | 权限/隔离 | 5 | 未授权泄漏为零 |
+
+本仓合成数据实际满足以上数量，但数据由模板生成，非人工审核、非真实表格 OCR，也不是真正的独立测试集。真实项目需要重新采集 50–100 份授权或公开文档并人工核对，不得把合成指标作为业务性能。
 
 每条最少字段：case_id、query、query_type、source_family、gold_source_spans、answer_reference、expected_abstain、tenant、role、valid_on、annotation_review。禁止使用个人/客户敏感信息，固定 Gold 版本；重复问法按 source_family 聚类划分，防止泄漏。同一问题可以有多个相关证据；Gold 为空时不计算 Recall，而统计 Abstain。
 
