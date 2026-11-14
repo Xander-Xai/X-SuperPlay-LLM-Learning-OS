@@ -9,7 +9,7 @@
 最小导航：
 1. [01–05 基础与检索](CORE-01-05.md)：适用边界→解析/Chunk→Embedding→BM25/ANN/Hybrid→RRF/Rerank。
 2. [06–10 生成、评测、工程与高级](CORE-06-10.md)：Query→Grounding→评测→生产→多模态/Graph/Agentic。
-3. [权威来源证据账本](SOURCES.md)：论文/教科书/官方文档，按任务精读；区分已抽查与待版本复核。
+3. [权威来源证据账本](SOURCES.md)：论文/教科书/官方文档 + DeepLearning.AI 系统课，按任务精读；区分已抽查与待版本复核。
 4. [实验设计与验收](LABS.md)：按需选择对照，不虚构跑分。附 [纯标准库检索微型实验](lab/README.md)。
 5. [面试答辩题卡](INTERVIEW.md)：12 个核心问法、追问和证据模板。
 6. [本轮交付与状态](ACCEPTANCE.md)：静态、自动化与真实模型的证据边界。
@@ -31,6 +31,10 @@ flowchart LR
 ~~~
 
 注意：精确库存/订单金额应查业务 API/SQL；法规变更应查有时效和授权的来源。RAG 不是必须包含向量库，长上下文直读、BM25、SQL 都是有效对照基线。
+
+## 课程观看顺序（可按需跳过）
+
+系统主线：[DeepLearning.AI RAG 系统课程](https://www.deeplearning.ai/courses/retrieval-augmented-generation) → 代码：[LangChain RAG From Scratch](https://github.com/langchain-ai/rag-from-scratch) → 进阶：[Building and Evaluating Advanced RAG](https://www.deeplearning.ai/courses/building-evaluating-advanced-rag) → 精排与 Query：[Advanced Retrieval for AI](https://www.deeplearning.ai/courses/advanced-retrieval-for-ai)。补检索底层读 [Stanford IR](https://www-nlp.stanford.edu/IR-book/)，多模态回看 [PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR) 与 [CLIP](https://github.com/openai/CLIP)。这些是学习指引，**不是课程内容已下载、课程付费权益可用或所有教程已在本机运行**。
 
 ## 十个主题与独立产物（不是另起 10 个训练模块）
 

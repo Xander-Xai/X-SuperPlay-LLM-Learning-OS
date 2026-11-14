@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 from copy import deepcopy
+from pathlib import Path
+from tempfile import TemporaryDirectory
+import json
 import unittest
 
 from retrieval_eval import (
@@ -82,12 +85,23 @@ class RetrievalLabTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             evaluate(self.data, top_k=0)
 
-    def test_gold_missing_rejected(self):
+    def test_gold_missing_rejected_by_loader(self):
         d = deepcopy(self.data)
         d["cases"][0]["gold_ids"] = []
-        with self.assertRaises(ValueError):
-            if (d["cases"][0]["kind"] == "positive") != bool(d["cases"][0]["gold_ids"]):
-                raise ValueError("positive requires gold")
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / "cases.json"
+            path.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "positive requires gold"):
+                load_cases(path)
+
+    def test_unknown_dense_document_rejected_by_loader(self):
+        d = deepcopy(self.data)
+        d["cases"][0]["dense_rank_ids"].append("unknown-document")
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / "cases.json"
+            path.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "unknown dense-stub"):
+                load_cases(path)
 
     def test_injection_document_is_only_data(self):
         case = self.case("q5")
