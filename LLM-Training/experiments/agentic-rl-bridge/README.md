@@ -8,7 +8,7 @@
 
 ### 流程与数据契约
 
-\`\`\`text
+```text
 train task ID + env seed + env snapshot
   → reset → policy(model/tokenizer/chat_template revision)
   → tool call(action tokens) → tool observation(non-policy tokens)
@@ -16,13 +16,13 @@ train task ID + env seed + env snapshot
   → trajectory: task_id/episode_id/actor_revision/tool_request_id
   → verifier: task_success + safety + cost + reward_components
   → [group advantage / KL if configured] → policy update → held-out test
-\`\`\`
+```
 
 **最小 JSONL 契约示意**：字段结构因具体框架而异；训练前需将消息和 token spans 映射到安装版本的格式。
 
-\`\`\`json
+```json
 {"task_id":"train-order-001","episode_id":"ep-0001","env_seed":42,"policy_revision":"sha-of-policy","messages":[{"role":"assistant","tool_call":{"name":"lookup","args":{"order_id":"mock-1"}}},{"role":"tool","content":"mock-policy-check-required"}],"actions":[{"tool_name":"lookup","authorized":true}],"terminal":{"success":false,"unsafe_side_effect":false},"reward_components":{"task":0.0,"safety":0.0},"done_reason":"max_steps"}
-\`\`\`
+```
 
 上例是**字段示意，非真实 rollout**。不得包含真实姓名、电话、订单号、密钥或未经脱敏的工具响应。工具结果不能作为 policy 需预测的 assistant target。
 
@@ -31,7 +31,7 @@ train task ID + env seed + env snapshot
 1. **隔离**：可重置、幂等、无生产支付/退款/外网副作用，日志可撤销；高风险工具在执行层拦截。
 2. **数据**：train/dev/test 按订单/用户/模板簇隔离，保存 snapshot hash；reward grader 不可读测试标签。
 3. **策略基线**：保留相同 SFT checkpoint、tokenizer、tools、prompt、采样设置，B/C 资源预算匹配或注明不可比。
-4. **技术兼容**：锁定 \`torch/transformers/trl/peft/accelerate\`、CUDA、模型 revision；根据当前 [TRL GRPO](https://huggingface.co/docs/trl/grpo_trainer) 文档核对 \`tools\`/\`environment_factory\`、组内同初始环境、Tool Message 前缀稳定性、Loss mask、Reference/KL、截断；不照搬示例参数。
+4. **技术兼容**：锁定 `torch/transformers/trl/peft/accelerate`、CUDA、模型 revision；根据当前 [TRL GRPO](https://huggingface.co/docs/trl/grpo_trainer) 文档核对 `tools`/`environment_factory`、组内同初始环境、Tool Message 前缀稳定性、Loss mask、Reference/KL、截断；不照搬示例参数。
 5. **预检**：先采集不更新参数的 10–30 条轨迹，人工校验 reward、错误类型、重复执行和权限拦截；通过后才考虑小步更新。
 
 ## 三种方案的实验记录
