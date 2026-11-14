@@ -49,7 +49,7 @@ L1：能解释定义、依赖、公式和边界；L2：能够定位源码、运�
 ## 先从这里学
 
 1. 想先搭全局框架：[预训练 vs 后训练关系](knowledge-graph/pretrain-posttrain-relations.md) 和 [全流程图](knowledge-graph/full-training-pipeline.md)。
-2. 想直接开始：先做 [纯 CPU Shift/Mask 教学测试](labs/README.md)，之后进入 [MiniMind 白盒实验](experiments/01-minimind-whitebox/README.md)。
+2. 想直接开始：先做 [纯 CPU Shift/Mask 教学测试](labs/README.md)，之后进入 [MiniMind 白盒实验](experiments/01-minimind-whitebox/README.md) 与 [第一天操作手册](experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md)。
 3. 想补 Tokenizer：[BPE / Packing / 数据污染](data-engineering/tokenizer-and-packing.md)。
 4. 想补经典 RLHF：[Reward Modeling/ORPO](alignment/reward-model-orpo.md) 和 [PPO 基础](reinforcement-learning/ppo-rlhf-fundamentals.md)。
 5. 想反向跳学：从 [知识依赖图](knowledge-graph/concept-dependencies.md) 或 [面试题库](interview-qa/QUESTION-BANK.md) 出发。

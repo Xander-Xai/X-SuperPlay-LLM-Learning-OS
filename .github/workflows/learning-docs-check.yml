@@ -15,9 +15,22 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Validate 12 modules, experiments, local Markdown links
+      - name: Validate modules, statuses, local Markdown links
         run: python LLM-Training/tools/check_repo.py
+  cpu-toy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install CPU-only PyTorch
+        run: python -m pip install --no-input torch --index-url https://download.pytorch.org/whl/cpu
+      - name: Run Shift/Mask smoke and unit tests
+        run: |
+          python -c "import torch; print('CPU torch:', torch.__version__)"
+          python LLM-Training/labs/toy_train.py
+          python -m unittest discover -s LLM-Training/labs -p 'test_*.py' -v
 
-# No GPU dependencies installed by CI. The PyTorch CPU toy test is run separately
-# and must not be confused with successful MiniMind/Qwen model training.
+# CPU teaching lab is tested in CI. Passing it does not demonstrate any GPU training.
 

@@ -23,6 +23,8 @@
 
 **补充静态 QA**：[学习资料目录/相对链接自动检查](tools/check_repo.py)；[CPU 教学单元测试](labs/README.md)（不替代 GPU 训练）。
 
+**启动前建议先执行 [第一天 Runbook](experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md)**；CI 的 CPU Toy 成功与真实 GPU 训练成功严格区分。
+
 ## 第一个实际任务（无需另外造项目）
 
 1. Clone MiniMind，记录 SHA、版本、CUDA 环境与模型配置。

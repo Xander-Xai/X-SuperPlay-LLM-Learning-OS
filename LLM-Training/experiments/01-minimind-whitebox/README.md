@@ -1,6 +1,6 @@
 # 实验 01 — MiniMind 白盒 Pretrain → SFT
 
-**状态：NOT RUN**。先跑当前 MiniMind README 的最小数据/模型配置；固定项目 commit，不照搬旧博客指令。
+**状态：NOT RUN**。先参考 [MiniMind 第一天操作手册](RUNBOOK-FIRST-DAY.md)（上游真实 CLI、数据集下载、WSL2/16GB 配置、输出和恢复），再用本页验收。先跑当前 MiniMind README 的最小数据/模型配置；固定项目 commit，不照搬旧博客指令。
 
 **起步教学验证**：先跑 [CPU Mask/Shift 单元测试](../../labs/README.md)，注意其不是 MiniMind 训练证据。
 

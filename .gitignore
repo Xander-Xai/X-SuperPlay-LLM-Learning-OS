@@ -1,0 +1,24 @@
+# Keep binary checkpoints, source datasets, secrets and local outputs out of Git
+.venv/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+wandb/
+swanlab/
+runs/
+logs/
+checkpoints/
+out/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+dataset/*.jsonl
+dataset/*.parquet
+data/raw/
+data/private/
+*.log

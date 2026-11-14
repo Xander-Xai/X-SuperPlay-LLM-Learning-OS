@@ -20,6 +20,7 @@ REQUIRED = [
     "LLM-Training/evaluation/evaluation-protocol.md",
     "LLM-Training/experiments/EXPERIMENT-TEMPLATE.md",
     "LLM-Training/ACCEPTANCE-V2.md",
+    "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
     "LLM-Training/labs/toy_train.py", "LLM-Training/labs/test_toy_train.py",
     *[f"LLM-Training/modules/M{i:02d}.md" for i in range(1, 13)],
     *[f"LLM-Training/experiments/{i:02d}-{slug}/README.md" for i, slug in [
@@ -46,8 +47,14 @@ def main() -> int:
                 failures.append(f"Broken local link: {file.relative_to(ROOT)} -> {raw}")
     for i in range(1, 7):
         exp = ROOT / f"LLM-Training/experiments/{i:02d}-{['minimind-whitebox','qwen-cpt-replay','agent-tool-sft','dpo','grpo','deployment'][i-1]}/README.md"
-        if exp.exists() and "NOT RUN" not in exp.read_text(encoding="utf-8"):
-            failures.append(f"Experiment missing honest NOT RUN marker: {exp.relative_to(ROOT)}")
+        if not exp.exists():
+            continue
+        content = exp.read_text(encoding="utf-8")
+        status = re.search(r"(?m)^\*\*状态：\s*(NOT RUN|RUNNING|PASS|FAIL|INCONCLUSIVE)\*\*", content)
+        if not status:
+            failures.append(f"Experiment missing an explicit supported status: {exp.relative_to(ROOT)}")
+        elif status.group(1) in {"PASS", "FAIL", "INCONCLUSIVE"} and "## 实际运行证据" not in content:
+            failures.append(f"Experiment marked {status.group(1)} without evidence heading: {exp.relative_to(ROOT)}")
     for issue in failures:
         print("ERROR:", issue, file=sys.stderr)
     print(f"Documentation QA: markdown={len(markdown)}, local_links={local_links}, required={len(REQUIRED)}, issues={len(failures)}")
