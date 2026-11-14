@@ -45,3 +45,10 @@
 - 真实产品上线/客户验收、成本 SLO 和持久回滚演练 **NOT RUN**。此项属于具体产品仓的记录，不应伪造进学习仓。
 
 **建议下次学习**：由一个当前障碍进入 [应用工程路由](application-engineering/index/README.md) → [官方/上游资料](application-engineering/README.md) → [模拟负例](application-engineering/labs/README.md) → 真实模型/授权工程环境 → [Rubric](assessments/CAPABILITY-RUBRIC.md) + 有生产要求时 [G0–G8](production/PRODUCTION-READINESS.md)。
+
+## 第四轮严格复验：固定基准补缺
+
+- **发现**：上轮 20 项应用实验单测只断言局部函数，缺少统一的案例登记、逐条失败分类与明确分母。
+- **修复**：[19 条冻结测试案例](application-engineering/labs/benchmark_cases.json) 与 [评测程序](application-engineering/labs/evaluate_benchmark.py)。10 条检索/拒答、9 条工具/授权/幂等；程序打印 JSON 结果，失败时返回非零码。专门负例确保错误 Gold、越权、预算缩减或副作用变化不会假阳性通过。
+- **真实 Ragas**：[可选 LLM Judge 脚本](application-engineering/labs/ragas_live_optional.py) 使用官方 collections API，默认离线，只有显式带 --live 和环境 Key 才可执行；可能产生费用。**未在此仓或用户账号上联网执行，不得宣称模型 Faithfulness 已通过。**
+- **未覆盖**：真实 Vector/BM25/Hybird、自动回复与模型调用、线上 Traces、持久 Agent/权限认证、人工标注与正式生产门禁，这些仍需工程仓授权环境验收。

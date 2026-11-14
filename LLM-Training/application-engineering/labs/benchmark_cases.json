@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "description": "Frozen synthetic evaluation contract; no model/judge. Gold IDs are accessible documents expected from lexical retriever. Tool cases test scripted gateway only.",
+  "retrieval_cases": [
+    {
+      "id": "R01",
+      "query": "product a stock",
+      "tenant": "demo",
+      "role": "viewer",
+      "budget": 80,
+      "k": 3,
+      "gold_ids": [
+        "a-public"
+      ],
+      "should_abstain": false,
+      "forbidden_ids": [
+        "a-secret",
+        "a-cross-tenant",
+        "a-old"
+      ],
+      "family": "standard"
+    },
+    {
+      "id": "R02",
+      "query": "product b stock",
+      "tenant": "demo",
+      "role": "viewer",
+      "budget": 80,
+      "k": 3,
+      "gold_ids": [
+        "b-public"
+      ],
+      "should_abstain": false,
+      "forbidden_ids": [
+        "a-secret",
+        "a-cross-tenant",
+        "a-old"
+      ],
+      "family": "standard"
+    },
+    {
+      "id": "R03",
+      "query": "classified admin secret",
+      "tenant": "demo",
+      "role": "admin",
+      "budget": 120,
+      "k": 3,
+      "gold_ids": [
+        "a-secret"
+      ],
+      "should_abstain": false,
+      "forbidden_ids": [
+        "a-cross-tenant",
+        "a-old"
+      ],
+      "family": "privileged"
+    },
+    {
+      "id": "R04",
+      "query": "classified admin secret",
+      "tenant": "demo",
+      "role": "viewer",
+      "budget": 80,
+      "k": 3,
+      "gold_ids": [],
+      "should_abstain": true,
+      "forbidden_ids": [
+        "a-secret",
+        "a-cross-tenant",
+        "a-old"
+      ],
+      "family": "access-denied"
+    },
+    {
+      "id": "R05",
+      "query": "product a stock",
+      "tenant": "other",
+      "role": "viewer",
+      "budget": 80,
+      "k": 3,
+      "gold_ids": [
+        "a-cross-tenant"
+      ],
+      "should_abstain": false,
+      "forbidden_ids": [
+        "a-public",
+        "a-secret",
+        "b-public",
+        "a-old",
+        "a-untrusted"
+      ],
+      "family": "tenant-isolation"
+    },
+    {
+      "id": "R06",
+      "query": "product a stock",
+      "tenant": "outsider",
+      "role": "viewer",
+      "budget": 80,
+      "k": 3,
+      "gold_ids": [],
+      "should_abstain": true,
+      "forbidden_ids": [
+        "a-public",
+        "a-secret",
+        "b-public",
+        "a-cross-tenant",
+        "a-old",
+        "a-untrusted"
+      ],
+      "family": "tenant-isolation"
+    },
+    {
+      "id": "R07",
+      "query": "obsolete version",
+      "tenant": "demo",
+      "role": "viewer",
+      "budget": 80,
+      "k": 3,
+      "gold_ids": [],
+      "should_abstain": true,
+      "forbidden_ids": [
+        "a-old"
+      ],
+      "family": "stale-document"
+    },
+    {
+      "id": "R08",
+      "query": "product a stock",
+      "tenant": "demo",
+      "role": "viewer",
+      "budget": 0,
+      "k": 3,
+      "gold_ids": [],
+      "should_abstain": true,
+      "forbidden_ids": [
+        "a-secret",
+        "a-cross-tenant",
+        "a-old"
+      ],
+      "family": "budget-zero"
+    },
+    {
+      "id": "R09",
+      "query": "manual note ignore",
+      "tenant": "demo",
+      "role": "viewer",
+      "budget": 80,
+      "k": 3,
+      "gold_ids": [
+        "a-untrusted"
+      ],
+      "should_abstain": false,
+      "forbidden_ids": [
+        "a-secret",
+        "a-cross-tenant",
+        "a-old"
+      ],
+      "family": "untrusted-content"
+    },
+    {
+      "id": "R10",
+      "query": "quantum orbital spacecraft",
+      "tenant": "demo",
+      "role": "viewer",
+      "budget": 80,
+      "k": 3,
+      "gold_ids": [],
+      "should_abstain": true,
+      "forbidden_ids": [
+        "a-secret",
+        "a-cross-tenant",
+        "a-old"
+      ],
+      "family": "no-evidence"
+    }
+  ],
+  "tool_cases": [
+    {
+      "id": "T01",
+      "action": "lookup",
+      "tenant": "demo",
+      "role": "viewer",
+      "actor": "viewer-1",
+      "expected": "ok",
+      "expected_remaining": 8,
+      "family": "read"
+    },
+    {
+      "id": "T02",
+      "action": "reserve",
+      "tenant": "demo",
+      "role": "viewer",
+      "actor": "viewer-1",
+      "approved": true,
+      "expected": "PolicyError",
+      "expected_remaining": 8,
+      "family": "unauthorized"
+    },
+    {
+      "id": "T03",
+      "action": "reserve",
+      "tenant": "demo",
+      "role": "admin",
+      "actor": "admin-1",
+      "approved": false,
+      "expected": "PolicyError",
+      "expected_remaining": 8,
+      "family": "approval"
+    },
+    {
+      "id": "T04",
+      "action": "reserve",
+      "tenant": "demo",
+      "role": "admin",
+      "actor": "admin-1",
+      "approved": true,
+      "expected": "ok",
+      "expected_remaining": 6,
+      "family": "write"
+    },
+    {
+      "id": "T05",
+      "action": "replay",
+      "tenant": "demo",
+      "role": "admin",
+      "actor": "admin-1",
+      "approved": true,
+      "expected": "ok",
+      "expected_remaining": 6,
+      "family": "idempotency"
+    },
+    {
+      "id": "T06",
+      "action": "conflict",
+      "tenant": "demo",
+      "role": "admin",
+      "actor": "admin-1",
+      "approved": true,
+      "expected": "ToolError",
+      "expected_remaining": 6,
+      "family": "idempotency"
+    },
+    {
+      "id": "T07",
+      "action": "unknown",
+      "tenant": "demo",
+      "role": "viewer",
+      "actor": "viewer-1",
+      "expected": "ToolError",
+      "expected_remaining": 8,
+      "family": "allowlist"
+    },
+    {
+      "id": "T08",
+      "action": "lookup",
+      "tenant": "other",
+      "role": "viewer",
+      "actor": "viewer-1",
+      "expected": "PolicyError",
+      "expected_remaining": 8,
+      "family": "tenant-isolation"
+    },
+    {
+      "id": "T09",
+      "action": "step_limit",
+      "tenant": "demo",
+      "role": "viewer",
+      "actor": "viewer-1",
+      "expected": "ToolError",
+      "expected_remaining": 8,
+      "family": "termination"
+    }
+  ]
+}

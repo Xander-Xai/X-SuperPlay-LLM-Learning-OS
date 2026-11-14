@@ -34,3 +34,29 @@ python -m unittest discover -s LLM-Training/application-engineering/labs -p 'tes
 **注意**：这 20 个 CPU 单测不是“真实 RAG/Agent 或权限安全评估通过”。只代表确定性教学合同和分层关系在给定合成 fixture 下成立。
  
 **严格说明（2026-11-14 审计修订）**：这里的 Context Budget 仅是**检索材料的空白分隔代理成本**，不计算 System Prompt、Tool Schema、历史或预留输出；真实 Token Budget 必须用目标 Tokenizer 全量计算。样例的 `system/user/tool` 列表只演示信任角色边界，**不是可直接提交给任意 API 的完整 Tool Calling 消息序列**（常需 Assistant Tool Call / Tool Call ID）。Idempotency Key 在真实系统里必须由受信身份、租户和业务操作共同确定，不能从用户自报角色判断身份。模拟工具的 actor_id 也不是已认证用户。
+
+## 复验新增：固定数据集驱动的完整离线评测
+
+此前的 20 项单测可证明局部函数的条件，但缺少逐条输入/期望/结果和分母的版本化评测。现新增：
+
+~~~bash
+python LLM-Training/application-engineering/labs/evaluate_benchmark.py
+python -m unittest discover -s LLM-Training/application-engineering/labs -p 'test_*.py' -v
+# Ragas 脚本默认绝不联网
+python LLM-Training/application-engineering/labs/ragas_live_optional.py
+~~~
+
+- [19 条固定合成用例](benchmark_cases.json)：10 个检索/拒答案例，9 个工具/权限/幂等案例，均有 ID、失败类别、Gold/期望工具结果；
+- [可重放基准程序](evaluate_benchmark.py)：独立统计正例 Recall@k、无证据时拒答、未授权材料、工具结果与副作用；错误时返回非零退出码，附带 failed_ids 和 failed_families；
+- [回归反例测试](test_evaluate_benchmark.py)：故意更改预算、Gold 文档 ID、Expected Inventory，必须明确报错或判失败；
+- **不会混淆的指标**：Recall@k 只对有 Gold 的正例计算。没有 Gold 的用例归入拒答，不塞入 Recall 分母。此处并未评估语言模型回答的 Faithfulness、事实正确率或真实任务完成率。
+
+### 可选运行真实 Ragas Faithfulness（会使用外部模型，CI 不执行）
+
+先在专用环境中按 [Ragas 官方 collections Faithfulness 文档](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/) 安装兼容的 ragas 与 openai；在本地配置你授权使用的 OPENAI_API_KEY 后，执行：
+
+~~~bash
+python LLM-Training/application-engineering/labs/ragas_live_optional.py --live --model gpt-4o-mini
+~~~
+
+脚本只发送一条合成问答和一条允许公开的人工固定证据给实际 LLM Judge；可能产生费用。模型与 API 可用性需按实际账户确认。缺失 --live 或 API Key 时直接退出，绝不自动调用。**此项并未在用户环境或 CI 中真实运行，因此没有真实 Ragas 分数。**

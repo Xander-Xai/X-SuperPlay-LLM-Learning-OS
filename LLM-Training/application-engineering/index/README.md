@@ -37,3 +37,7 @@ python LLM-Training/application-engineering/tools/validate_application_engineeri
 ## 统一口径
 
 RAG ≠ Ragas；Harness Runtime ≠ lm-evaluation-harness；Prompt ≠ Context；Tool Calling/MCP ≠ Server Authorization；学习等级 [L0–L4](../../assessments/CAPABILITY-RUBRIC.md) 和 [生产 G0–G8](../../production/PRODUCTION-READINESS.md) 互不替代。
+
+### 复验补充（2026-11-14）
+
+[19 条合成评测案例与指标分母](../labs/README.md) · [可选 Ragas 官方 API 示例](../labs/ragas_live_optional.py)。APP-RAGAS、APP-EVAL、APP-HARNESS 不新增编号，仍标注真实模型/生产尚未运行。
