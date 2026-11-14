@@ -75,6 +75,12 @@ jobs:
         run: |
           python LLM-Training/labs/task-evaluation/evaluate.py
           python -m unittest discover -s LLM-Training/labs/task-evaluation -p 'test_*.py' -v
+      - name: Test synthetic arithmetic data, strict GRPO rewards and training-script syntax
+        run: |
+          python LLM-Training/experiments/mini-posttrain-sft-grpo/data_and_reward.py
+          python LLM-Training/experiments/mini-posttrain-sft-grpo/train_with_trl.py --mode data-check
+          python -m py_compile LLM-Training/experiments/mini-posttrain-sft-grpo/train_with_trl.py
+          python -m unittest discover -s LLM-Training/experiments/mini-posttrain-sft-grpo -p 'test_*.py' -v
       - name: Test synthetic agentic RL environment and tabular policy updates
         run: |
           python LLM-Training/labs/agentic-rl-trajectory/trajectory_lab.py
