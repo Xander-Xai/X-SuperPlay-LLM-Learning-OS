@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-15",
+  "scope": "Agent learning deep-dive overlay; no new training/application track IDs",
+  "canonical_rubric": "LLM-Training/assessments/CAPABILITY-RUBRIC.md",
+  "main_guide": "LLM-Training/application-engineering/AGENT-LEARNING-PATH.md",
+  "deep_guide": "LLM-Training/application-engineering/agent-deep-dive/README.md",
+  "modules": [
+    {
+      "id": "A1",
+      "title": "Agent 基础原理",
+      "guide": "LLM-Training/application-engineering/agent-deep-dive/CORE-01-04.md",
+      "keywords": [
+        "Agent Loop",
+        "Tool Calling",
+        "ReAct",
+        "Messages",
+        "Workflow"
+      ]
+    },
+    {
+      "id": "A2",
+      "title": "工具规划与上下文",
+      "guide": "LLM-Training/application-engineering/agent-deep-dive/CORE-01-04.md",
+      "keywords": [
+        "Schema",
+        "Planning",
+        "Context",
+        "Gateway",
+        "Prompt"
+      ]
+    },
+    {
+      "id": "A3",
+      "title": "LangGraph 状态机",
+      "guide": "LLM-Training/application-engineering/agent-deep-dive/CORE-01-04.md",
+      "keywords": [
+        "State",
+        "Reducer",
+        "Command",
+        "Send",
+        "Interrupt",
+        "Checkpoint"
+      ]
+    },
+    {
+      "id": "A4",
+      "title": "记忆 RAG 多智能体",
+      "guide": "LLM-Training/application-engineering/agent-deep-dive/CORE-01-04.md",
+      "keywords": [
+        "Agentic RAG",
+        "Router",
+        "Supervisor",
+        "Handoff",
+        "Memory"
+      ]
+    },
+    {
+      "id": "A5",
+      "title": "企业级工程",
+      "guide": "LLM-Training/application-engineering/agent-deep-dive/CORE-05-08.md",
+      "keywords": [
+        "FastAPI",
+        "SSE",
+        "Celery",
+        "Redis",
+        "PostgreSQL",
+        "幂等"
+      ]
+    },
+    {
+      "id": "A6",
+      "title": "评测与安全",
+      "guide": "LLM-Training/application-engineering/agent-deep-dive/CORE-05-08.md",
+      "keywords": [
+        "Task Success",
+        "Trace",
+        "P95",
+        "Prompt Injection",
+        "Cost"
+      ]
+    },
+    {
+      "id": "A7",
+      "title": "MCP Skills Harness",
+      "guide": "LLM-Training/application-engineering/agent-deep-dive/CORE-05-08.md",
+      "keywords": [
+        "MCP",
+        "Skills",
+        "A2A",
+        "Harness",
+        "Sandbox"
+      ]
+    },
+    {
+      "id": "A8",
+      "title": "交付与面试",
+      "guide": "LLM-Training/application-engineering/agent-deep-dive/CORE-05-08.md",
+      "keywords": [
+        "面试",
+        "架构",
+        "工程",
+        "实验",
+        "交付"
+      ]
+    }
+  ],
+  "weeks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "day_plans": [
+    "Day 1",
+    "Day 2",
+    "Day 3"
+  ],
+  "projects": [
+    "Mini Agent",
+    "Customer Service Agent 2.0",
+    "Mini Coding/Research Harness"
+  ],
+  "resources": [
+    "https://huggingface.co/learn/agents-course/unit0/introduction",
+    "https://www.anthropic.com/research/building-effective-agents",
+    "https://openai.github.io/openai-agents-python/",
+    "https://docs.langchain.com/oss/python/langgraph/workflows-agents",
+    "https://huggingface.co/learn/agents-course/en/unit2/langgraph/introduction",
+    "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+    "https://docs.langchain.com/oss/python/langgraph/persistence",
+    "https://openai.github.io/openai-agents-python/tracing/",
+    "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+    "https://google.github.io/adk-docs/"
+  ],
+  "required_docs": [
+    "LLM-Training/application-engineering/agent-deep-dive/README.md",
+    "LLM-Training/application-engineering/agent-deep-dive/CORE-01-04.md",
+    "LLM-Training/application-engineering/agent-deep-dive/CORE-05-08.md",
+    "LLM-Training/application-engineering/agent-deep-dive/STUDY-SCHEDULE.md",
+    "LLM-Training/application-engineering/agent-deep-dive/SOURCES.md",
+    "LLM-Training/application-engineering/agent-deep-dive/LABS.md",
+    "LLM-Training/application-engineering/agent-deep-dive/COVERAGE.md",
+    "LLM-Training/application-engineering/agent-deep-dive/agent-curriculum-manifest.json",
+    "LLM-Training/application-engineering/labs/mini_agent_loop.py",
+    "LLM-Training/application-engineering/labs/test_mini_agent_loop.py",
+    "LLM-Training/application-engineering/labs/real_llm_optional.py",
+    "LLM-Training/application-engineering/labs/test_real_llm_optional.py",
+    "LLM-Training/application-engineering/labs/REAL-LLM-OPTIONAL.md"
+  ],
+  "states": {
+    "curriculum": "DOC_READY",
+    "toy": "SYNTHETIC_TESTED",
+    "provider": "LIVE_NOT_RUN",
+    "langgraph": "NOT_RUN",
+    "production": "NOT_RUN",
+    "learner": "UNASSESSED"
+  }
+}

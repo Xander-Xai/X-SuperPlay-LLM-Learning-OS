@@ -1,5 +1,7 @@
 # Agent 系统化学习主线｜原理、编排、工程与评测
 
+**严格补充版（2026-11-15）**：[八模块细节讲义](agent-deep-dive/README.md) · [8 周与 Day 1/2/3](agent-deep-dive/STUDY-SCHEDULE.md) · [官方资料审核](agent-deep-dive/SOURCES.md) · [逐项覆盖检查](agent-deep-dive/COVERAGE.md) · [真实 Tool Calling 可选教学](labs/REAL-LLM-OPTIONAL.md)。此处仍是大纲，深学资料在关联目录。
+
 > 修订日期：2026-11-14。状态：CURRICULUM_READY / REAL_AGENT_NOT_RUN / LEARNER_UNASSESSED。属于 [应用工程](README.md) 的 Agent 专项，不新增 M13–M20，不修改 12 个训练模块、10 个应用专题、33 个宏观主题、90 个基础概念或 19 条训练需求。统一能力等级使用 [L0–L4](../assessments/CAPABILITY-RUBRIC.md)，实际生产另过 [G0–G8](../production/PRODUCTION-READINESS.md)。
 
 ## 目标和训练方法
