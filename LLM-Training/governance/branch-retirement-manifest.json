@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-15",
+  "purpose": "explicit one-time safe retirement of previously merged or strictly ancestor branches",
+  "candidates": [
+    {
+      "branch": "docs/llm-training-roadmap-v2-20261114",
+      "expected_sha": "bc9eb0ba432f9537160aabb72bbe960fc80b33a3",
+      "merged_pr": 1
+    },
+    {
+      "branch": "audit/roadmap-v2-completeness-20261114",
+      "expected_sha": "433ea4d57b4dc3d97ae2b5294354c701132215af",
+      "merged_pr": 2
+    },
+    {
+      "branch": "audit/v2-final-runtime-qa-20261114",
+      "expected_sha": "d166d29a9942ed5e670a85af39c3d5fb560ba9a2",
+      "merged_pr": 3
+    },
+    {
+      "branch": "feat/demand-driven-roadmap-v3-20261114",
+      "expected_sha": "7feacf0799d1e4b657ba2dde5d705cf2cd3e1fb3",
+      "merged_pr": 4
+    },
+    {
+      "branch": "audit/v3-depth-and-executable-labs-20261114",
+      "expected_sha": "8df44f9753e32f933470f367ebd8e6179f8c24d6",
+      "merged_pr": 5
+    },
+    {
+      "branch": "docs/llm-full-stack-upstream-bridge-20261114",
+      "expected_sha": "6f4095733fbd3987095e30093a131909aff8c816",
+      "merged_pr": 6
+    },
+    {
+      "branch": "docs/llm-atlas-50-topic-upstream-appendix-20261114",
+      "expected_sha": "aa20f8c4aeec49722434915f14b6014b7950eda5",
+      "merged_pr": 7
+    },
+    {
+      "branch": "audit/atlas-relations-and-runtime-safety-20261114",
+      "expected_sha": "ff047b8a3f6e2f5dd59d6c74a3565f14a7c0d563",
+      "merged_pr": 8
+    },
+    {
+      "branch": "feat/training-roadmap-source-and-tinygpt-20261114",
+      "expected_sha": "d810f04f99d502bba948ca5daa565529abcb59f6",
+      "merged_pr": 9
+    },
+    {
+      "branch": "audit/foundation-coverage-and-consistency-20261114",
+      "expected_sha": "aa4aa8137f972b5542ad78192efe575de34c73a1",
+      "merged_pr": 10
+    },
+    {
+      "branch": "audit/application-harness-context-prompt-ragas-20261114",
+      "expected_sha": "92a7ccbce90207db5154b8319fc7b1fa61f7092a",
+      "merged_pr": 11
+    },
+    {
+      "branch": "audit/application-eval-regression-suite-20261114",
+      "expected_sha": "0f34b1f1a7f4061d695e1cfe0a5c9f5d16782dc5",
+      "merged_pr": 12
+    },
+    {
+      "branch": "docs/rag-deep-dive-20261114",
+      "expected_sha": "c3f3db4c246b3901e4a6ff8933487aaa0a7366c8",
+      "merged_pr": 13
+    },
+    {
+      "branch": "docs/agent-systematic-curriculum-20261114",
+      "expected_sha": "6b769d2a33bcca6cd764abe0698e977b39512fa2",
+      "merged_pr": 14
+    },
+    {
+      "branch": "docs/rag-source-ledger-completion-20261114",
+      "expected_sha": "fcc51d45916a4a93107b1fada2fff84cd5b9c178",
+      "merged_pr": 15
+    },
+    {
+      "branch": "docs/agentic-rl-posttraining-learning-20261114",
+      "expected_sha": "8cf892350a287f606e2b1f3c908ceded28e0ca48",
+      "merged_pr": 16
+    },
+    {
+      "branch": "docs/strict-audit-rl-agentic-rl-20261115",
+      "expected_sha": "2762a1d4da95e6597c8d6df76f3964a9f88f6b2f",
+      "merged_pr": 17
+    },
+    {
+      "branch": "audit/rag-strict-acceptance-20261115",
+      "expected_sha": "8e0bd6c6d39e01c9b196dec3f99c74ae8d33f0dc",
+      "merged_pr": 18
+    },
+    {
+      "branch": "docs/agent-deep-audit-20261115",
+      "expected_sha": "568e511cb640867ceddfe873bf2e7585a2ac7442",
+      "merged_pr": 19
+    },
+    {
+      "branch": "chore/learning-os-pr-issue-branch-governance-20261115",
+      "expected_sha": "b2ccf0484a9b5b9047e358b916b35c4b6c4beb59",
+      "merged_pr": 26
+    },
+    {
+      "branch": "docs/agent-priority-computer-use-20261115",
+      "expected_sha": "b75ea87078f6c9b7bfcce6f8fae768e4f723cee4",
+      "merged_pr": 27
+    },
+    {
+      "branch": "feat/llm-crossstack-upstream-demand-map-20261114",
+      "expected_sha": "164ab0419a7df9e5e80d8fefd4e3f7553f8a54e2",
+      "ancestor_of": "main"
+    },
+    {
+      "branch": "docs/agent-loop-and-loop-engineering-20261115",
+      "expected_sha": "d28ceb4edea5f0b9765f108eae05bdbc45722010",
+      "ancestor_of": "main"
+    }
+  ]
+}
