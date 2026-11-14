@@ -38,6 +38,8 @@
 | Agent 安全 | [OWASP Agentic Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) | 注入、越权、工具风险 |
 | 工程基础 | [FastAPI](https://fastapi.tiangolo.com/) / [OpenTelemetry](https://opentelemetry.io/docs/) | 接口和可观测性 |
 
+**Computer Use（P2 权威扩展）**：[Anthropic 官方 Computer Use Tool](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool) 与 [OpenAI 官方 Computer Use](https://developers.openai.com/api/docs/guides/tools-computer-use)。两者官方页面在 2026-11-15 已抽查可访问；实际工具版本和安全要求必须以对应模型和运行版本为准。
+
 ## 官方网站抽查（2026-11-15）
 
 - Anthropic Building Effective Agents：页面可打开、发布于 2024-12-19，并在正文注明部分工具生态已变化；用于经典架构思想，**不是**当前 SDK API 的全部证据。

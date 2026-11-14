@@ -12,7 +12,7 @@
 | 模块 4 Memory、RAG、六种协作模式 | [模块4](CORE-01-04.md) + [实验C](LABS.md) | 架构取舍与负例 | DOC_READY/MULTI_AGENT_NOT_RUN |
 | 模块 5 API/SSE/Celery/Redis/PostgreSQL/幂等/DLQ/回滚 | [模块5](CORE-05-08.md) + [实验D](LABS.md) | 故障注入清单 | DOC_READY/REAL_DB_NOT_RUN |
 | 模块 6 Tracing/Evals/Safety/成本/P95 | [模块6](CORE-05-08.md) + [19 固定案例](../labs/README.md) | 合成结果、独立分母 | SYNTHETIC_TESTED/REAL_EVAL_NOT_RUN |
-| 模块 7 MCP/Skills/A2A/Sandbox/Harness | [模块7](CORE-05-08.md) + [实验E](LABS.md) | 官方规范与操作卡 | DOC_READY/MCP_NOT_RUN |
+| 模块 7 MCP/Skills/A2A/Sandbox/Harness/Computer Use（P2） | [模块7](CORE-05-08.md) + [实验E](LABS.md) | 官方规范与操作卡 | DOC_READY/MCP_NOT_RUN |
 | 模块 8 工程交付/架构/面试 | [模块8](CORE-05-08.md) + [24 题](../AGENT-INTERVIEW-QUESTIONS.md) | 面试卡与独立迁移要求 | DOC_READY/LEARNER_UNASSESSED |
 | 10 条精选高质量资料、权威来源维护 | [来源抽查](SOURCES.md) | 2026-11-15 重点官方入口人工验证 | SOURCE_INDEX_READY |
 | 三递进项目及退款链路穿透式复盘 | [实验 A–E](LABS.md) + [项目协议](../AGENT-PRACTICE-AND-EVAL.md) | A 合成教学；B/C 真环境未运行 | PARTIAL |
