@@ -1,3 +1,9 @@
+## 2026-11-15 严格复验与实操缺口补齐
+
+[七部分逐项验收与证据表](LLM-Training/ACCEPTANCE-RL-AGENTIC-STRICT-20261115.md) · [真实小模型 SFT→GRPO 可执行实验（GPU NOT RUN）](LLM-Training/experiments/mini-posttrain-sft-grpo/README.md) · [标准库数据/奖励测试](LLM-Training/experiments/mini-posttrain-sft-grpo/data_and_reward.py)。此项延伸实验 03/05，保留原 M01–M12 与五类训练实验，不宣称用户真实 GPU 训练或 Agentic RL 已完成。
+
+---
+
 ## 新增｜RL / Agentic RL 与预训练、后训练学习闭环（2026-11-14）
 
 [跨模块完整学习路径](LLM-Training/reinforcement-learning/AGENTIC-RL-LEARNING-PATH.md) · [权威原始资料导航](LLM-Training/resources/RL-AGENTIC-PRIMARY-SOURCES.md) · [标准库多步工具与 Q-learning 教学实验](LLM-Training/labs/agentic-rl-trajectory/README.md) · [M08 真实模型实验桥（NOT RUN）](LLM-Training/experiments/agentic-rl-bridge/README.md)。
