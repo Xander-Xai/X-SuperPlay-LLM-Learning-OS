@@ -25,3 +25,7 @@ Tool selection accuracy、arguments exact/semantic match、JSON/schema validity�
 
 专题：[合成数据](../../data-engineering/synthetic-data-and-rejection-sampling.md) · [Tool mask](../../sft-peft/agent-tool-calling-loss-mask.md) · [LoRA](../../sft-peft/lora-qlora-full-sft.md)。
 
+
+## 与小模型后训练实操衔接（2026-11-15）
+
+先用 [小模型 LoRA SFT→GRPO 的标准库数据/Reward 与真实训练脚本](../mini-posttrain-sft-grpo/README.md) 学习 checkpoint、数据切分和 adapter 延续。这是**算术任务上的最小 SFT 示范**，不具备本实验要求的工具轨迹、多轮 chat template 与 tool message loss mask；本 **03 Agent Tool SFT** 状态依旧 **NOT RUN**，只有真正训练与任务级评估才能更新。
