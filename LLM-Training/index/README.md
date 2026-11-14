@@ -16,17 +16,29 @@
 python LLM-Training/tools/route_learning.py --list
 python LLM-Training/tools/route_learning.py --id tool-calling
 python LLM-Training/tools/route_learning.py --search '延迟'
+python LLM-Training/tools/route_learning.py --search 'QLoRA'
+python LLM-Training/tools/route_learning.py --search '工具调用'
+python LLM-Training/tools/route_learning.py --module M11
 python LLM-Training/tools/validate_learning_index.py
 python -m unittest discover -s LLM-Training/tools -p 'test_learning_index.py' -v
 ```
 
 **不会**扫描私人 GitHub 项目、自动下载模型、读取本地数据或以 CI 成功判定学员能力。索引内容是人工审校的**导航目录**而非智能语义搜索/不断同步的数据库。
 
+## 课程内可直接运行的验证
+
+- [DPO/GRPO 公式与奖励漏洞](../labs/preference-rl-math/README.md)
+- [Agent 任务级指标与 Wilson 区间](../labs/task-evaluation/README.md)
+- [合成工具执行安全边界](../labs/synthetic-tool-gateway/README.md)
+- [严格验收报告](../ACCEPTANCE-V3-AUDIT.md)
+
 ## 各索引字段含义
 
 `modules[].prerequisites` 是理解一个概念的**推荐必要基础**；并不意味着所有任务必须从第一个模块学起。`demands[].modules` 为从当前问题进入的**建议排查路径**，该顺序与通用拓扑不同。每个 demand 保留 `DESIGN_ONLY` 状态，真实操作要有实验日志另建证据卡。
 
 `sources[].url` 是来源入口；**这不证明每一版文档均适用于当前环境**。扩增来源时先核对公开可靠性、失效链接、许可证和版本。
+
+模块级 `sources` 指向权威来源 ID，`practice` 指向实际起步练习，`question` 指当前需求触发点，`gates` 指生产阶段需要的门禁。需求级 `aliases` 使常见中文/英文关键词可查；`--module` 可反向查哪些工程问题会用到某模块。**所有需求记录仍为 DESIGN_ONLY**。
 
 索引验收在现有 docs CI 中运行，只验证结构、关联 ID、有效仓内路径与状态约束；不能证实外部 HTTP 可达、性能提升或上线成功。
 

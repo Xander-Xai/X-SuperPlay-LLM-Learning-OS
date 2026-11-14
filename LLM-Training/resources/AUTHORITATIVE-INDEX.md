@@ -62,3 +62,13 @@
 
 通过 [learning-index.json](../index/learning-index.json) 机器索引检索模块/场景/来源；避免搜索关键词相似时误把第三方解释当官方标准。
 
+
+## 6. 官方资料如何直达每个模块（人工审核导航，非在线链接巡检）
+
+[learning-index.json](../index/learning-index.json) 提供 **12 模块 ↔ 官方来源 ID ↔ 起步实验 ↔ 生产门禁**的机器映射，终端可执行 `python LLM-Training/tools/route_learning.py --module M06`。查看每个 [M01–M12](../README.md) 页面也能直接找到对应论文/官方文档，不再只给一张全局大表。
+
+**版本相关的一个重要细节**：[TRL 官方 SFT 文档](https://huggingface.co/docs/trl/sft_trainer) 在当前接口说明：`assistant_only_loss=True` 需要能产生 generation mask 的 Chat Template（`{% generation %}` / `{% endgeneration %}`）；部分已支持的 Qwen3 模板会由 TRL 处理，但不能据此认定自定义模板、所有历史版本都正确。应在真实 Tokenizer 上断言每个 assistant/tool 边界，不要依赖本仓合成 Token Toy 代替验证。
+
+同样，[PyTorch FSDP2 当前官方文档](https://docs.pytorch.org/docs/main/distributed/fsdp.fully_shard.html) 说明了基于 DTensor 的分片与 All-Gather 生命周期；实际环境应以安装的 PyTorch 版本文档为准，不能假设所有 GPU 或后端都可复现。
+
+**事实边界**：原始论文、官方实现与公开 Model Card 可作为技术参考；来源被编目并不意味着全部外部 URL 已逐个 HTTP 验证，不意味着代码在本机跑过，也不意味着个人已掌握对应能力。

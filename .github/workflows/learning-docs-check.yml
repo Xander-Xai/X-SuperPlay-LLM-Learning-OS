@@ -19,8 +19,16 @@ jobs:
         run: python LLM-Training/tools/check_repo.py
       - name: Validate demand routes, source IDs and file index
         run: python LLM-Training/tools/validate_learning_index.py
-      - name: Run 8 offline demand-index contract tests
+      - name: Verify demand-index and source-to-module contracts
         run: python -m unittest discover -s LLM-Training/tools -p 'test_learning_index.py' -v
+      - name: Test toy DPO/GRPO formulas and reward hacking
+        run: |
+          python LLM-Training/labs/preference-rl-math/alignment_math.py
+          python -m unittest discover -s LLM-Training/labs/preference-rl-math -p 'test_*.py' -v
+      - name: Test synthetic task evaluation denominators and failures
+        run: |
+          python LLM-Training/labs/task-evaluation/evaluate.py
+          python -m unittest discover -s LLM-Training/labs/task-evaluation -p 'test_*.py' -v
       - name: Test synthetic tool gateway and run safe demo
         run: |
           python -m unittest discover -s LLM-Training/labs/synthetic-tool-gateway -p 'test_*.py' -v
@@ -29,6 +37,9 @@ jobs:
         run: |
           python LLM-Training/tools/route_learning.py --id tool-calling
           python LLM-Training/tools/route_learning.py --search 延迟
+          python LLM-Training/tools/route_learning.py --search QLoRA
+          python LLM-Training/tools/route_learning.py --search 工具调用
+          python LLM-Training/tools/route_learning.py --module M11
   cpu-toy:
     runs-on: ubuntu-latest
     steps:

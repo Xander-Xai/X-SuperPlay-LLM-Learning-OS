@@ -64,6 +64,8 @@ User Request → Tool Schema → Authorization → Function Call
 
 ## 3. 示例：端到端上线模拟测试协议
 
+**已有可运行的任务评测教学纵切**：[合成任务级评测](../labs/task-evaluation/README.md) 显示指标分母、失败样本与不确定性；它没有真实模型/引用裁判，也没有测吞吐/P95。
+
 **已有可运行的最小教学纵切**：[合成工具网关](../labs/synthetic-tool-gateway/README.md) 使用标准库实现白名单、角色授权、库存/引用验证、脱敏 trace 和负例；可从这里练习再添加真实 API、超时/幂等、模型输出、任务级评测。**该 Toy 没有部署/压测或真实 LLM，因此不是生产通过证据**。
 
 **SYNTHETIC 测试任务**：两个虚拟工具（`query_inventory`, `search_docs`）+ 20 个虚构产品和 20 篇证据文档。

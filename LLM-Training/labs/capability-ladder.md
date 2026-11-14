@@ -33,12 +33,16 @@
 
 ## 任务 C：训练后的对照与责任边界
 
+**先用标准库练公式**：[DPO/GRPO 数学与坏奖励实验](preference-rl-math/README.md)。尝试坏 verifier 让错误答案更高分、修改 beta 与组内奖励，再研究真正的 SFT checkpoint 和策略更新。
+
 - 同一个 SFT checkpoint 分叉 DPO/GRPO；数据、reward、选题范围需记录。
 - 用 held-out 测正确性/长度/错误样例，关注 reward 高但任务低的情形。
 - **迁移**：换验证器输入格式，证明 reward 不依赖训练集里固有标记。
 - 成果可以是“当前数据/算力不值得上 RL”。
 
 ## 任务 D：推理服务性能诊断
+
+**先练任务评测**：[合成 Agent 指标实验](task-evaluation/README.md) 将 Schema、Arguments、Execution、Citation、Refusal 与 E2E 分开，避免为了优化延迟损失正确率。
 
 - 选定一个可推理的公开小模型，用本机实际支持的服务/设备测 baseline。
 - 冷/热、1/多并发、短/长上下文，固定解码配置，分别记录 TTFT/E2E P95/tokens/s/VRAM。
