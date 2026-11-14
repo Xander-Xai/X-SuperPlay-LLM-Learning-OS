@@ -39,11 +39,18 @@
 
 | 层级 | 何种证据才可宣称通过 | 当前结论 |
 |---|---|---|
-| 文档 | 内链/必需文件/分类术语/结构一致 | 待本 PR CI 验证，不能预先宣称 PASS |
-| CPU 教学 | 标准库测试、数据独立性、奖励负例 | 待本 PR CI 验证；非 LLM 训练 |
+| 文档 | 内链/必需文件/分类术语/结构一致 | 已在 PR #17 首次 CI run 43615096128 的 docs 任务通过 |
+| CPU 教学 | 标准库测试、数据独立性、奖励负例 | 已在 PR #17 首次 CI run 43615096128 的 docs 任务通过；非 LLM 训练 |
 | 真实单轮 GRPO | CUDA 真实日志、模型参数/adapter 更新、独立 dev/test、失败分析 | **NOT RUN** |
 | 真实多步 Agentic RL | 可重置的环境、LLM tool rollout、token mask、真实策略更新、A/B/C 独立对照 | **NOT RUN** |
 | 学员个人能力 | L0–L4 Rubric 的自主复述、动手、诊断和陌生迁移证据 | **NOT ASSESSED** |
 | 生产上线 | G0–G8 工程/安全门禁 | **NOT ASSESSED** |
 
 结论：**仓库的学习入口和实验设计可以完整覆盖原七部分，但 CPU 合成实验通过不等于用户已经训练出 Agentic RL 模型**。文档/CI 结果应与真实 GPU、最终测试结果明确分开。实现日志以 GitHub Actions 同一 commit 的真实结论为准。
+
+## 5. GitHub Actions 验收证据
+
+- [PR #17 首次完整测试](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/actions/runs/43615096128)：针对提交 `6a119521d95c8df985071f3f98fb02ed6e1a305e`，`docs` 与 `cpu-toy` 均为 **SUCCESS**。
+- `docs` 明确包含：仓库模块/状态/相对链接检查、需求索引与 Atlas 校验、DPO/GRPO 数学负例、**新算术数据与奖励单测、训练脚本语法检查**、Agentic Q-learning CPU 实验。
+- `cpu-toy`：保留既有 TinyGPT/Shift-Mask 等 CPU 教学链路测试。
+- 此结果只对所指提交负责，合并主分支后需再次核对对应 push run；**未运行 GPU 训练，未生成真实模型效果指标**。
