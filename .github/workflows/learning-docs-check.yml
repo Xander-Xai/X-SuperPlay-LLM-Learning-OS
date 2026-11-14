@@ -35,6 +35,10 @@ jobs:
           python LLM-Training/application-engineering/labs/evaluate_benchmark.py
           python LLM-Training/application-engineering/labs/ragas_live_optional.py
           python -m unittest discover -s LLM-Training/application-engineering/labs -p 'test_*.py' -v
+      - name: Test RAG retrieval micro-lab (synthetic BM25/RRF/ACL and metrics)
+        run: |
+          python LLM-Training/application-engineering/rag-deep-dive/lab/retrieval_eval.py
+          python -m unittest discover -s LLM-Training/application-engineering/rag-deep-dive/lab -p 'test_*.py' -v
       - name: Validate 90 core foundation topics and canonical level wording
         run: python LLM-Training/tools/validate_foundation_coverage.py
       - name: Test foundation coverage, local links and known contradictions
