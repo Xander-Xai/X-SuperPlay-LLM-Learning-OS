@@ -1,5 +1,7 @@
 # 权威资料索引：理论 → 源码 → 实验 → 限制
 
+**补充专业基础官方资源**：[Dive into Deep Learning](https://d2l.ai/chapter_preliminaries/index.html)（数学/梯度/概率） · [Hugging Face Tokenizers 第 6 章](https://huggingface.co/learn/llm-course/en/chapter6/1)（BPE/WordPiece/Unigram） · [PyTorch 复现性](https://pytorch.org/docs/stable/notes/randomness.html)（跨设备/版本限制） · [Dataset Cards](https://huggingface.co/docs/hub/en/datasets-cards)。按 [90 项核心知识目录](../index/FOUNDATION-COVERAGE.md) 查阅，避免另造并行课程。
+
 **技术框架会变**：针对 2026-11-14 抽查的 [TRL、vLLM、MCP 运行时变化与最小实验](OFFICIAL-RUNTIME-DELTA-20261114.md) 单独建了一张问题卡，避免只有书目而没有实际验收要求。
 
 **新增六域纵向参考导航**：[AI-Learning-OS 上游 33 主题逐条知识与官方链接](UPSTREAM-RESOURCE-MAP.md)；先看 [全栈 Atlas](../knowledge-graph/LLM-FULL-STACK-ATLAS.md)，需要时才深入本文当前训练资源分组。课程不会强制用户预读所有外部链接。

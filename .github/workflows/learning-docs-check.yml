@@ -21,6 +21,18 @@ jobs:
         run: python LLM-Training/tools/validate_learning_index.py
       - name: Validate pinned six-domain upstream atlas and typed relations
         run: python LLM-Training/tools/validate_atlas.py
+      - name: Validate 90 core foundation topics and canonical level wording
+        run: python LLM-Training/tools/validate_foundation_coverage.py
+      - name: Test foundation coverage, local links and known contradictions
+        run: python -m unittest discover -s LLM-Training/tools -p 'test_foundation_coverage.py' -v
+      - name: Test local foundation concept router
+        run: python -m unittest discover -s LLM-Training/tools -p 'test_route_foundations.py' -v
+      - name: Smoke-test foundation concepts across math, data, model and evaluation
+        run: |
+          python LLM-Training/tools/route_foundations.py --search WordPiece
+          python LLM-Training/tools/route_foundations.py --search 信息熵
+          python LLM-Training/tools/route_foundations.py --id M03.04
+          python LLM-Training/tools/route_foundations.py --module M10
       - name: Test six-domain atlas routing, sources, snapshot and negative cases
         run: python -m unittest discover -s LLM-Training/tools -p 'test_atlas.py' -v
       - name: Smoke-test full-stack source and need lookup

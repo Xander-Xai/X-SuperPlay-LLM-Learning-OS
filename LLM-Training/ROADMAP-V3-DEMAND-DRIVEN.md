@@ -1,5 +1,11 @@
 # LLM Learning Roadmap V3｜需求驱动、知识依赖、实战到生产能力
 
+## 基础知识补全与非线性学习的统一入口
+
+旧 M01–M12 主干已经覆盖，但部分概念只有术语，本次补充 [90 条核心基础查漏目录](index/FOUNDATION-COVERAGE.md)，每一条连到专业/白话卡、实验和权威原始资料。重点 [数学/信息论](fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md)、[Tokenizer/数据](data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md)、[架构家族](fundamentals/MODEL-FAMILIES-AND-GENERATION.md)、[训练/评估复现](training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md)。
+
+**学习等级唯一依据**：[Rubric](assessments/CAPABILITY-RUBRIC.md)：L0 定位、L1 理解、L2 实现、L3 诊断/对照、L4 陌生迁移。**生产上线 G0–G8 是独立门禁，不能把 L4 等同必须上线。**
+
 > **本文件是在 [V2.0（M01–M12）](ROADMAP-V2.md) 基础上的扩展，不废弃旧实验，也不要求依次学完 12 章。**
 >
 > 状态：**CURRICULUM READY / LEARNER UNASSESSED / PRODUCTION NOT VERIFIED**。本仓是独立的 **LLM 专项学习操作系统**，目标覆盖研发与上线需要的知识和技能；它不是某一个下游产品的研发仓，也不承接客户/订单事实。真实产品源码与线上数据属于其各自仓库。
@@ -29,7 +35,7 @@
 - [33 个主题的上游一键链接 + 官方参考](resources/UPSTREAM-RESOURCE-MAP.md)：按领域直接指向上游固定文件、专业原理和官方资料；当前不会全部精读也能知道将来去哪找。
 - [12 张需求驱动任务卡](demand-driven/AI-NATIVE-NEED-ROUTES.md)：从 RAG 引用、Tool Calling、显存、GRPO、KV Cache、多模态、模型发布、API 选型等任意当前问题进入。
 - [AI-Native 导师提示词与学习闭环](learning-method/AI-NATIVE-LEARNING-LOOP.md)：专业定义 + 大白话 + 公式/接口 + 两种反例 + 最小可运行实验 + 未知场景迁移 + 停止规则。
-- [可检索 Atlas 目录](index/upstream-knowledge-index.json)：6 域、33 主题、30 条类型化知识关系、12 需求、21 官方入口；原有 [12 模块/18 需求索引](index/learning-index.json) 保持独立。
+- [可检索 Atlas 目录](index/upstream-knowledge-index.json)：6 域、33 主题、30 条类型化知识关系、12 需求、21 官方入口；当前 [12 模块/19 需求/25 来源专项索引](index/learning-index.json) 保持独立（历史 V3 首版曾为 18 需求）。
 
 **明确定位**：上游的历史深工程 M00–M17 与本仓 M01–M12 编号不同；全栈主题使用 F/S/P/E/A/O + 数字，也不是学习顺序。RAG、Agent、MCP 属应用体系，不改写为后训练的三个新模块。知识地图不强制每个主题到 L3/L4；按需要先 L0 知道在哪里，出现真实 Gap 再做深度学习。
 

@@ -1,5 +1,7 @@
 # 权威学习资源与论文索引（按需求查，不要求全读）
 
+**新增基础权威资料**：[D2L 基础数学/统计](https://d2l.ai/chapter_preliminaries/index.html) · [HF Tokenizers 第 6 章](https://huggingface.co/learn/llm-course/en/chapter6/1) · [PyTorch Reproducibility](https://pytorch.org/docs/stable/notes/randomness.html)。现可从 [90 个概念索引](../index/FOUNDATION-COVERAGE.md) 按问题直接跳到需要的资料，不必读完所有课程。
+
 > 学习时以原项目 README/官方文档**当前版本**为准；GitHub main 分支和框架 API 可能调整。第三方项目是参考资源，不复制其代码或数据到本仓库。
 
 四个主线资源的职责与新增专项资料，参见 [训练来源角色表](../resources/TRAINING-SOURCE-ROLES.md)。此表不要求把 MiniMind、nanochat、LitGPT 等重复跑一遍；已有论文目录作为统一入口保留。

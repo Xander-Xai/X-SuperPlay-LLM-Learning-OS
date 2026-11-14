@@ -147,7 +147,7 @@ flowchart LR
 
 ## 7. 学习验收与生产上线不能混淆
 
-**L1 理解**：专业解释 + 大白话 + 反例；**L2 实现**：代码可执行和可修改；**L3 迁移**：陌生任务与排错；**L4 生产**：依 [G0–G8](../production/PRODUCTION-READINESS.md) 留下权限、SLO、监控、回滚和真实用户证据。
+**唯一能力等级**：L0 定位→L1 理解→L2 独立实现→L3 诊断与受控对照→L4 陌生任务独立迁移。**真实生产另过 [G0–G8](../production/PRODUCTION-READINESS.md) 门禁**，不是 L4 的定义；详见 [Rubric](../assessments/CAPABILITY-RUBRIC.md)。
 
 索引完成/CI 通过/CPU Toy 通过，只证明课程资产的局部正确性，**不证明 Qwen 已训练、个人已掌握或产品已上线**。本仓是学习系统，真实客户数据与部署证据由相应工程项目仓维护。
 
@@ -160,3 +160,7 @@ flowchart LR
 ## 本次新增的训练专线（不改变六域关系）
 
 [训练目标/信号总图](TRAINING-SIGNAL-AND-LIFECYCLE.md) 用一个库存 Tool Call 任务比较 Pretrain/CPT/SFT/DPO/GRPO 与 RAG/Agent；[实验 A–E](../experiments/EXPERIMENTS-A-E-CROSSWALK.md) 对应既有训练计划、其中 [TinyGPT CPU](../labs/tiny-gpt/README.md) 补足最小模型代码；[U1–U6](../learning-method/SIX-CAPABILITY-UNITS.md) 是验收覆盖目标，不是六周必修。
+
+## 基础概念与能力等级的统一索引
+
+六域的 [33 个宏观主题](../index/upstream-knowledge-index.json) 负责全栈关系；新增 [90 个核心基础词条](../index/FOUNDATION-COVERAGE.md) 负责直接找到 M01–M12 对应公式、反例、资料和实操。等级含义以 [L0–L4 Rubric](../assessments/CAPABILITY-RUBRIC.md) 为准，生产 G0–G8 独立。

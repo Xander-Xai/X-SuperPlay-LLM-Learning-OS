@@ -1,12 +1,14 @@
 # 学习进度、里程碑验收与下次行动
 
+**2026-11-14 课程补充**：[90 个核心概念入口](index/FOUNDATION-COVERAGE.md) 与 [数学](fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md)、[Tokenizer](data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md)、[架构家族](fundamentals/MODEL-FAMILIES-AND-GENERATION.md)、[复现/评估](training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) 已落盘；**不改变本文件真实 MiniMind/Qwen 实验 NOT STARTED 状态**。
+
 **第四轮目录拓展仅限知识覆盖**：[六域知识 Atlas](knowledge-graph/LLM-FULL-STACK-ATLAS.md) + [上游参考资源](resources/UPSTREAM-RESOURCE-MAP.md) + [12 张跨域需求卡](demand-driven/AI-NATIVE-NEED-ROUTES.md)。完成索引与静态验收不改变下方任何模型训练 NOT STARTED 状态，不等于个人学习成果。
 
 **新增第三轮深入验收**：[V3 审计报告](ACCEPTANCE-V3-AUDIT.md)：模块理论/实操/来源已深化，新增 DPO/GRPO 数学和任务评估 Toy；它们不代表真实模型训练或个人能力已通过。
 
 **V3 需求驱动课程已补充设计文档**：[V3 Roadmap](ROADMAP-V3-DEMAND-DRIVEN.md) · [机器索引](index/README.md) · [能力评分](assessments/CAPABILITY-RUBRIC.md)。本次新增索引和 CI 不代表学习者完成 L0–L4，也不代表任何 GPU 训练已执行。
 
-状态定义：NOT STARTED / IN PROGRESS / READY FOR REVIEW / VERIFIED。**文档落盘不等于训练已跑通**。
+**学习/执行进度状态**：NOT STARTED / IN PROGRESS / READY FOR REVIEW / VERIFIED；实验 README 的 NOT RUN / RUNNING / PASS / FAIL / INCONCLUSIVE 是另一套**运行证据状态**，不能用课程静态文件或 CPU Toy 直接换算。**文档落盘不等于训练已跑通**。
 
 | 阶段 | 状态 | 验收依据 | 证据路径 |
 |---|---|---|---|
@@ -40,7 +42,7 @@
 3. 在 MiniMind 原实现旁复写最小 RoPE/RMSNorm/SwiGLU/Attention 测试，并记录误差。
 4. 按 [实验模板](experiments/EXPERIMENT-TEMPLATE.md) 建立第一次实验记录，再执行 Pretrain 和 SFT。
 
-默认学习节奏：第一周白盒基础，第二周 SFT/Mask，第三周 CPT，第四周真实 Agent SFT，第五周 DPO，第六周 GRPO，第七周部署与复盘；如任务或面试需求变化，按依赖图跳学，**以验收结果而不是日期作为完成标准**。
+**历史示例排期（非默认执行顺序）**：过去可用白盒→SFT→CPT→Tool SFT→DPO→GRPO→部署覆盖主要能力。现在必须按 [需求驱动 V3](ROADMAP-V3-DEMAND-DRIVEN.md) 从当前问题跳入、仅补必要前置；不是固定第一周或第七周学习，也不能按日期证明掌握。
 
 ## 记录行为
 

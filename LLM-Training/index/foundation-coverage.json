@@ -1,0 +1,923 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-14",
+  "scope": "Bounded essentials: LLM foundations/training/posttraining/evaluation/serving/agent/multimodal; NOT every frontier technique and NOT learner mastery.",
+  "canonical_module_ids": [
+    "M01",
+    "M02",
+    "M03",
+    "M04",
+    "M05",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "M10",
+    "M11",
+    "M12"
+  ],
+  "canonical_levels_doc": "LLM-Training/assessments/CAPABILITY-RUBRIC.md",
+  "runtime_governance_doc": "LLM-Training/production/PRODUCTION-READINESS.md",
+  "topics": [
+    {
+      "id": "M01.01",
+      "module": "M01",
+      "title": "Tensor/Shape/Stride/Broadcast",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.02",
+      "module": "M01",
+      "title": "矩阵乘法与张量维度",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.03",
+      "module": "M01",
+      "title": "链式法则与 Autograd",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.04",
+      "module": "M01",
+      "title": "条件概率和最大似然",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.05",
+      "module": "M01",
+      "title": "Softmax 与交叉熵",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.06",
+      "module": "M01",
+      "title": "信息熵/KL/BPB/PPL",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.07",
+      "module": "M01",
+      "title": "低秩/SVD 与 LoRA",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.08",
+      "module": "M01",
+      "title": "AdamW/LR/梯度累积",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.09",
+      "module": "M01",
+      "title": "数值稳定/混合精度",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.10",
+      "module": "M01",
+      "title": "泛化/正则化/过拟合",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M01.11",
+      "module": "M01",
+      "title": "统计置信区间/假设检验",
+      "guide": "LLM-Training/fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://d2l.ai/chapter_preliminaries/index.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.01",
+      "module": "M02",
+      "title": "UTF-8/Byte/Character/Token",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.02",
+      "module": "M02",
+      "title": "BPE/WordPiece/Unigram",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.03",
+      "module": "M02",
+      "title": "Special Tokens/BOS/EOS/PAD",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.04",
+      "module": "M02",
+      "title": "Tokenizer/Chat Template 版本",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.05",
+      "module": "M02",
+      "title": "Padding/Truncation/Packing",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.06",
+      "module": "M02",
+      "title": "因果 Mask 与文档边界",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.07",
+      "module": "M02",
+      "title": "数据许可/Privacy/PII",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.08",
+      "module": "M02",
+      "title": "精确去重/近重复去重",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.09",
+      "module": "M02",
+      "title": "Train/Val/Test 任务族切分",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.10",
+      "module": "M02",
+      "title": "语料混合/采样权重",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M02.11",
+      "module": "M02",
+      "title": "数据污染/质量过滤/数据卡",
+      "guide": "LLM-Training/data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter6/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.01",
+      "module": "M03",
+      "title": "Encoder-only/Decoder-only/Encoder-Decoder",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.02",
+      "module": "M03",
+      "title": "Embedding 与位置编码",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.03",
+      "module": "M03",
+      "title": "Scaled Dot-Product QKV",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.04",
+      "module": "M03",
+      "title": "因果遮挡 Causal Mask 的未来隔离",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.05",
+      "module": "M03",
+      "title": "残差/RMSNorm/SwiGLU/FFN",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.06",
+      "module": "M03",
+      "title": "RoPE/相对位置",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.07",
+      "module": "M03",
+      "title": "MHA/MQA/GQA/MLA",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.08",
+      "module": "M03",
+      "title": "FlashAttention 的 IO 机制",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.09",
+      "module": "M03",
+      "title": "训练并行 vs 自回归生成",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M03.10",
+      "module": "M03",
+      "title": "MoE 路由入门",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M04.01",
+      "module": "M04",
+      "title": "Next Token CE 与 Shift",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
+      "official_source": "https://cs336.stanford.edu/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M04.02",
+      "module": "M04",
+      "title": "初始化/Batch/Token Budget",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
+      "official_source": "https://cs336.stanford.edu/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M04.03",
+      "module": "M04",
+      "title": "Backward 与 Optimizer Step",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
+      "official_source": "https://cs336.stanford.edu/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M04.04",
+      "module": "M04",
+      "title": "Scheduler/Warmup/Cosine",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
+      "official_source": "https://cs336.stanford.edu/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M04.05",
+      "module": "M04",
+      "title": "Checkpoints 完整训练状态",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
+      "official_source": "https://cs336.stanford.edu/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M04.06",
+      "module": "M04",
+      "title": "Held-out Validation 与复现",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
+      "official_source": "https://cs336.stanford.edu/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M04.07",
+      "module": "M04",
+      "title": "Scaling Laws 参数 Tokens FLOPs",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
+      "official_source": "https://cs336.stanford.edu/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M05.01",
+      "module": "M05",
+      "title": "CPT/Mid-training 与 Base",
+      "guide": "LLM-Training/continued-pretraining/cpt-replay-wsd.md",
+      "practice": "LLM-Training/experiments/02-qwen-cpt-replay/README.md",
+      "official_source": "https://github.com/Lightning-AI/litgpt",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M05.02",
+      "module": "M05",
+      "title": "领域语料配比/Replay",
+      "guide": "LLM-Training/continued-pretraining/cpt-replay-wsd.md",
+      "practice": "LLM-Training/experiments/02-qwen-cpt-replay/README.md",
+      "official_source": "https://github.com/Lightning-AI/litgpt",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M05.03",
+      "module": "M05",
+      "title": "灾难性遗忘与通用能力",
+      "guide": "LLM-Training/continued-pretraining/cpt-replay-wsd.md",
+      "practice": "LLM-Training/experiments/02-qwen-cpt-replay/README.md",
+      "official_source": "https://github.com/Lightning-AI/litgpt",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M05.04",
+      "module": "M05",
+      "title": "学习率调度 WSD/余弦",
+      "guide": "LLM-Training/continued-pretraining/cpt-replay-wsd.md",
+      "practice": "LLM-Training/experiments/02-qwen-cpt-replay/README.md",
+      "official_source": "https://github.com/Lightning-AI/litgpt",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M05.05",
+      "module": "M05",
+      "title": "CPT vs RAG 的免训练基线",
+      "guide": "LLM-Training/continued-pretraining/cpt-replay-wsd.md",
+      "practice": "LLM-Training/experiments/02-qwen-cpt-replay/README.md",
+      "official_source": "https://github.com/Lightning-AI/litgpt",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M06.01",
+      "module": "M06",
+      "title": "Instruction SFT/Assistant Mask",
+      "guide": "LLM-Training/sft-peft/agent-tool-calling-loss-mask.md",
+      "practice": "LLM-Training/experiments/03-agent-tool-sft/README.md",
+      "official_source": "https://huggingface.co/docs/trl/sft_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M06.02",
+      "module": "M06",
+      "title": "真实 Chat Template Generation 区间",
+      "guide": "LLM-Training/sft-peft/agent-tool-calling-loss-mask.md",
+      "practice": "LLM-Training/experiments/03-agent-tool-sft/README.md",
+      "official_source": "https://huggingface.co/docs/trl/sft_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M06.03",
+      "module": "M06",
+      "title": "Full Fine-tuning vs LoRA",
+      "guide": "LLM-Training/sft-peft/agent-tool-calling-loss-mask.md",
+      "practice": "LLM-Training/experiments/03-agent-tool-sft/README.md",
+      "official_source": "https://huggingface.co/docs/trl/sft_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M06.04",
+      "module": "M06",
+      "title": "QLoRA 基座量化与适配器",
+      "guide": "LLM-Training/sft-peft/agent-tool-calling-loss-mask.md",
+      "practice": "LLM-Training/experiments/03-agent-tool-sft/README.md",
+      "official_source": "https://huggingface.co/docs/trl/sft_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M06.05",
+      "module": "M06",
+      "title": "Tool Call 轨迹/Observation Mask",
+      "guide": "LLM-Training/sft-peft/agent-tool-calling-loss-mask.md",
+      "practice": "LLM-Training/experiments/03-agent-tool-sft/README.md",
+      "official_source": "https://huggingface.co/docs/trl/sft_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M06.06",
+      "module": "M06",
+      "title": "数据合成/Verifier/Rejection Sampling",
+      "guide": "LLM-Training/sft-peft/agent-tool-calling-loss-mask.md",
+      "practice": "LLM-Training/experiments/03-agent-tool-sft/README.md",
+      "official_source": "https://huggingface.co/docs/trl/sft_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M06.07",
+      "module": "M06",
+      "title": "训练与评估数据隔离",
+      "guide": "LLM-Training/sft-peft/agent-tool-calling-loss-mask.md",
+      "practice": "LLM-Training/experiments/03-agent-tool-sft/README.md",
+      "official_source": "https://huggingface.co/docs/trl/sft_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M07.01",
+      "module": "M07",
+      "title": "Chosen/Rejected 偏好对与标签偏差",
+      "guide": "LLM-Training/alignment/reward-model-orpo.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M07.02",
+      "module": "M07",
+      "title": "Reference Policy 与 DPO beta",
+      "guide": "LLM-Training/alignment/reward-model-orpo.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M07.03",
+      "module": "M07",
+      "title": "Reward Model/PRM",
+      "guide": "LLM-Training/alignment/reward-model-orpo.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M07.04",
+      "module": "M07",
+      "title": "ORPO/离线/在线偏好区分",
+      "guide": "LLM-Training/alignment/reward-model-orpo.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M07.05",
+      "module": "M07",
+      "title": "Preference Win Rate 与事实正确性",
+      "guide": "LLM-Training/alignment/reward-model-orpo.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M08.01",
+      "module": "M08",
+      "title": "RL 术语 State/Action/Reward",
+      "guide": "LLM-Training/reinforcement-learning/ppo-rlhf-fundamentals.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/grpo_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M08.02",
+      "module": "M08",
+      "title": "Policy Gradient 与 Advantage",
+      "guide": "LLM-Training/reinforcement-learning/ppo-rlhf-fundamentals.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/grpo_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M08.03",
+      "module": "M08",
+      "title": "PPO/Clipping/Value-Critic",
+      "guide": "LLM-Training/reinforcement-learning/ppo-rlhf-fundamentals.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/grpo_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M08.04",
+      "module": "M08",
+      "title": "GRPO Group Advantage/Zero Variance",
+      "guide": "LLM-Training/reinforcement-learning/ppo-rlhf-fundamentals.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/grpo_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M08.05",
+      "module": "M08",
+      "title": "RLVR 的 Verifiable Reward",
+      "guide": "LLM-Training/reinforcement-learning/ppo-rlhf-fundamentals.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/grpo_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M08.06",
+      "module": "M08",
+      "title": "KL/Reference/Reward Hacking",
+      "guide": "LLM-Training/reinforcement-learning/ppo-rlhf-fundamentals.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/grpo_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M08.07",
+      "module": "M08",
+      "title": "Agentic RL Tool Trajectory",
+      "guide": "LLM-Training/reinforcement-learning/ppo-rlhf-fundamentals.md",
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "official_source": "https://huggingface.co/docs/trl/grpo_trainer",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M09.01",
+      "module": "M09",
+      "title": "Weights/Grads/Optimizer/Activation 显存",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/training-systems/memory-and-distributed.md",
+      "official_source": "https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M09.02",
+      "module": "M09",
+      "title": "BF16/FP16/FP8 基本区别",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/training-systems/memory-and-distributed.md",
+      "official_source": "https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M09.03",
+      "module": "M09",
+      "title": "Gradient Checkpointing 与 Kernel",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/training-systems/memory-and-distributed.md",
+      "official_source": "https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M09.04",
+      "module": "M09",
+      "title": "DDP 与 FSDP/ZeRO",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/training-systems/memory-and-distributed.md",
+      "official_source": "https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M09.05",
+      "module": "M09",
+      "title": "TP/PP/CP/EP 并行维度",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/training-systems/memory-and-distributed.md",
+      "official_source": "https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M09.06",
+      "module": "M09",
+      "title": "Profiler/HBM/通信/吞吐",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/training-systems/memory-and-distributed.md",
+      "official_source": "https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M09.07",
+      "module": "M09",
+      "title": "Resume Sampler/RNG/Optimizer 状态",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/training-systems/memory-and-distributed.md",
+      "official_source": "https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M10.01",
+      "module": "M10",
+      "title": "PPL/BPB/Tokenizer 可比性",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "official_source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M10.02",
+      "module": "M10",
+      "title": "EM/Accuracy/Precision/Recall/F1",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "official_source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M10.03",
+      "module": "M10",
+      "title": "Train/Val/Test 泄漏与近重复",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "official_source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M10.04",
+      "module": "M10",
+      "title": "RAG Recall@k/证据引用支持",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "official_source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M10.05",
+      "module": "M10",
+      "title": "Tool JSON/Args/Execution/E2E",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "official_source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M10.06",
+      "module": "M10",
+      "title": "置信区间/Wilson/Paired Bootstrap",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "official_source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M10.07",
+      "module": "M10",
+      "title": "GRPO Reward/Accuracy/长度退化",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "official_source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M10.08",
+      "module": "M10",
+      "title": "Benchmark/模型对比与消融",
+      "guide": "LLM-Training/training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md",
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "official_source": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M11.01",
+      "module": "M11",
+      "title": "Prefill/Decode/KV Cache",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/experiments/06-deployment/README.md",
+      "official_source": "https://docs.vllm.ai/en/latest/usage/security/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M11.02",
+      "module": "M11",
+      "title": "Temperature/Top-k/Top-p/Best-of-N",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/experiments/06-deployment/README.md",
+      "official_source": "https://docs.vllm.ai/en/latest/usage/security/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M11.03",
+      "module": "M11",
+      "title": "TTFT/TPOT/P95/Token 吞吐",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/experiments/06-deployment/README.md",
+      "official_source": "https://docs.vllm.ai/en/latest/usage/security/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M11.04",
+      "module": "M11",
+      "title": "量化/蒸馏/Adapter Merge",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/experiments/06-deployment/README.md",
+      "official_source": "https://docs.vllm.ai/en/latest/usage/security/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M11.05",
+      "module": "M11",
+      "title": "Batching/Serving/Queue/Cost",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/experiments/06-deployment/README.md",
+      "official_source": "https://docs.vllm.ai/en/latest/usage/security/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M11.06",
+      "module": "M11",
+      "title": "API Key 与全路径网关鉴权",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/experiments/06-deployment/README.md",
+      "official_source": "https://docs.vllm.ai/en/latest/usage/security/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M11.07",
+      "module": "M11",
+      "title": "模型版本/回归/灰度/回滚",
+      "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
+      "practice": "LLM-Training/experiments/06-deployment/README.md",
+      "official_source": "https://docs.vllm.ai/en/latest/usage/security/",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M12.01",
+      "module": "M12",
+      "title": "MoE/Router/Expert Load Balance",
+      "guide": "LLM-Training/advanced/M11-M12.md",
+      "practice": "LLM-Training/demand-driven/AI-NATIVE-NEED-ROUTES.md",
+      "official_source": "https://huggingface.co/docs/transformers/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M12.02",
+      "module": "M12",
+      "title": "长上下文位置和 Retrieval 退化",
+      "guide": "LLM-Training/advanced/M11-M12.md",
+      "practice": "LLM-Training/demand-driven/AI-NATIVE-NEED-ROUTES.md",
+      "official_source": "https://huggingface.co/docs/transformers/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M12.03",
+      "module": "M12",
+      "title": "VLM/图文音视频对齐",
+      "guide": "LLM-Training/advanced/M11-M12.md",
+      "practice": "LLM-Training/demand-driven/AI-NATIVE-NEED-ROUTES.md",
+      "official_source": "https://huggingface.co/docs/transformers/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M12.04",
+      "module": "M12",
+      "title": "Agentic RL 与工具环境状态",
+      "guide": "LLM-Training/advanced/M11-M12.md",
+      "practice": "LLM-Training/demand-driven/AI-NATIVE-NEED-ROUTES.md",
+      "official_source": "https://huggingface.co/docs/transformers/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    },
+    {
+      "id": "M12.05",
+      "module": "M12",
+      "title": "Test-Time Compute/Verifier/多候选",
+      "guide": "LLM-Training/advanced/M11-M12.md",
+      "practice": "LLM-Training/demand-driven/AI-NATIVE-NEED-ROUTES.md",
+      "official_source": "https://huggingface.co/docs/transformers/index",
+      "availability": "CURRICULUM_POINTER_ONLY",
+      "practice_evidence": "NOT_VERIFIED_FOR_THIS_TOPIC"
+    }
+  ]
+}

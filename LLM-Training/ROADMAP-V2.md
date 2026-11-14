@@ -10,7 +10,7 @@
 
 目标是独立解释和复现 **文本数据 → Tokenizer → Transformer → Pretrain →（可选 CPT）→ SFT → 偏好对齐 / 强化学习 → 评估 → 压缩部署 → Agent 应用**。不是顺序阅读所有论文，更不是机械跑几条 Trainer 命令。
 
-- **主线一：MiniMind**。在同一代码库中理解 RoPE、RMSNorm、SwiGLU、Attention、Pretrain、SFT；不新建重复的 TinyGPT 项目。
+- **主线一：MiniMind**。在同一代码库中理解 RoPE、RMSNorm、SwiGLU、Attention、Pretrain、SFT；不重复新建完整的大模型训练框架。本仓另有 [极小 TinyGPT CPU 教学 Toy](labs/tiny-gpt/README.md)，只验证基础 Attention/Loss/Optimizer，不与 MiniMind 竞争真实训练主线。
 - **主线二：Qwen3-0.6B-Base + Transformers/PEFT/TRL**。做 CPT、防遗忘、Tool SFT、DPO、GRPO 对照。不同训练阶段尽量使用同一个初始模型和规范化数据。
 - **辅助：CS336** 是理论和系统设计参考；**Raschka** 用于张量和数学薄弱点；**nanochat** 留到最后精读。
 - **训练阶段 ≠ 训练技术**：Pretrain/CPT/SFT/DPO/RL 是目标/流程；LoRA/QLoRA/量化是降低训练或推理成本的技术。
@@ -33,7 +33,7 @@
 | [M11 Distillation / Serving](modules/M11.md) | 蒸馏、量化、Adapter 合并、vLLM、吞吐和延迟 | P1 |
 | [M12 Advanced](modules/M12.md) | MoE、长上下文、多模态、Agentic RL、test-time compute | P2 |
 
-**学习深度**：L1 会解释（定义、例子、边界）；L2 会实现和调试（源码、日志、对照）；L3 会推导和做消融。M01–M04、M06–M08 至少 L2；其余按需求 L1/L2。
+**历史 V2 学习深度标签（非当前统一等级）**：V2 将 L1=解释、L2=实现/调试、L3=推导/消融；当前 V3 的唯一规范为 [L0 定位→L1 理解→L2 实现→L3 诊断/比较→L4 陌生迁移](assessments/CAPABILITY-RUBRIC.md)，**旧成绩不可机械换算**。M01–M04、M06–M08 至少 L2；其余按需求 L1/L2。
 
 ## 2. 四个里程碑（灵活 5–7 周，不是强制进度）
 
