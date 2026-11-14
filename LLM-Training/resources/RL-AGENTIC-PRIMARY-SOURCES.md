@@ -41,14 +41,14 @@
 
 ## 核验与版本漂移记录模板
 
-\`\`\`text
+```text
 source_url / checked_at / document_revision_or_commit
 needed_feature / installed_library_version / feature_present(Y/N)
 minimal_repro_command / expected_observation / observed_observation
 compatibility_break / fallback / linked_experiment_run_id
-\`\`\`
+```
 
-**已发现的明确风险**：官方 TRL GRPO 当前 Agent Training 页面使用 \`environment_factory\`、\`tools\`，早期资料可能没有这些接口；当前环境示例注明 \`transformers>=5.2.0\`。Agent Lightning 2026 v1.0 与旧 v0.x 架构有明显差别。不要将未核实的旧命令当成固定“可直接运行”配置。
+**已发现的明确风险**：官方 TRL GRPO 当前 Agent Training 页面使用 `environment_factory`、`tools`，早期资料可能没有这些接口；当前环境示例注明 `transformers>=5.2.0`。Agent Lightning 2026 v1.0 与旧 v0.x 架构有明显差别。不要将未核实的旧命令当成固定“可直接运行”配置。
 
 **外链质量标准**：官方身份/作者 → 可稳定定位原文 → 与当前目标直接相关 → 可记录版本 → 具有可测行为。**每次复验外链状态不能依靠本仓 CI 本地链接检查**；CI 主要验证相对路径和教学代码。
 
