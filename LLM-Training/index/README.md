@@ -6,9 +6,11 @@
 - [完整训练/推理/应用关系图](../knowledge-graph/LLM-FULL-STACK-ATLAS.md) · [上游/官方逐项链接](../resources/UPSTREAM-RESOURCE-MAP.md) · [按需学任务卡](../demand-driven/AI-NATIVE-NEED-ROUTES.md)。
 - [命令行 Atlas 检索](../tools/route_atlas.py)：--search RAG、--topic A04、--need N02、--domain A。原有 route_learning.py 继续提供 M01–M12 的模块级路由。
 
+训练专项目录已扩充为 **12 模块 / 19 条需求 / 25 个权威来源**（新增 TinyGPT、Megatron Core、Pythia、LitGPT、Alignment Handbook、smol-course）。参见 [TinyGPT 实验 A](../labs/tiny-gpt/README.md)、[实验 A–E](../experiments/EXPERIMENTS-A-E-CROSSWALK.md) 和 [U1–U6 能力单元](../learning-method/SIX-CAPABILITY-UNITS.md)。新增内容是旧索引的增量，不建立额外编号体系。
+
 本目录同时提供**机器可检索入口**和**人类可读的知识与跨仓导航**：
 
-- [learning-index.json](learning-index.json)：固定的 12 个模块 ID、前置依赖、18 种需求入口、5 条能力纵线、20 条权威来源及生产门禁映射。
+- [learning-index.json](learning-index.json)：固定的 12 个模块 ID、前置依赖、19 种需求入口、5 条能力纵线、25 条权威来源及生产门禁映射。
 - [上游/本仓关系与编号映射](UPSTREAM-DOWNSTREAM.md)：上游 Atlas、旧 M00–M17、模型源码仓、本专项学习仓、实际产品仓的事实边界。
 - [总路线 V3](../ROADMAP-V3-DEMAND-DRIVEN.md)：使用方式、领域深度和生产能力，而不是僵化日历。
 - [需求索引](../demand-driven/README.md)、[关系图](../knowledge-graph/dependency-and-capability-map.md)。

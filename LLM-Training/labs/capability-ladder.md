@@ -13,6 +13,8 @@
 | 5 陌生迁移 | 换任务族、工具、数据域或模型 | 独立测试与新错误分类 | 不借用答案或泄漏测试 |
 | 6 生产演练 | 负载、权限、观测、回滚 | release packet + Go/No-Go | 故障时定位和恢复 |
 
+原理实战可先做 [真正可训练 TinyGPT CPU](tiny-gpt/README.md)，与既有 Mask/Shift Toy 互补。前者完整跑 Decoder 自注意力与反向更新，后者聚焦 Assistant Label 掩码；均非 GPU/模型泛化证明。
+
 ## 任务 A：谁在算 Loss？
 
 - 看 [CPU Shift/Mask](README.md) 的 5 个测试，复现 `-100`、shift-one、梯度位置。

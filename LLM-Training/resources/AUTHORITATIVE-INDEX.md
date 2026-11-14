@@ -6,6 +6,8 @@
 
 > 来源分级：**P0 官方规范/论文原文/项目官方源码；P1 作者公开的课程与工程教程；P2 第三方博客或社区案例仅用于发现问题，不能代替结论。** 网址会变化，使用时固定版本/日期。此表是供学习的**资料目录**，不是声称所有资源已经本机运行。
 
+四个主学习源及新增专项的具体场景入口见 [TRAINING-SOURCE-ROLES.md](TRAINING-SOURCE-ROLES.md)。其中 DataComp-LM 的官方链接是 mlfoundations/dclm，Megatron Core 需按部署版本对照 TP/PP/CP/EP，Pythia 是观察公开训练 Checkpoint 的来源，不是训练结果本身。
+
 ## 1. 基础、数据与训练（M01–M05）
 
 | 需求 | 主要原始来源 | 应检查什么 | 跟哪个练习关联 |

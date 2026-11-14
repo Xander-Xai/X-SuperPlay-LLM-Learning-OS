@@ -99,6 +99,8 @@ def validate(index: dict) -> list[str]:
         mid = m.get("id")
         _repo_file(m.get("path"), problems, f"module {mid}")
         _repo_file(m.get("practice"), problems, f"module {mid}.practice")
+        if "practice_toy" in m:
+            _repo_file(m.get("practice_toy"), problems, f"module {mid}.practice_toy")
         if not isinstance(m.get("question"), str) or len(m["question"].strip()) < 8:
             problems.append(f"module {mid}: missing concrete entry question")
         deps = m.get("prerequisites", [])

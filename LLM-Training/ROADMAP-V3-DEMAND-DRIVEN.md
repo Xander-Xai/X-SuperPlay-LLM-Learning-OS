@@ -4,6 +4,18 @@
 >
 > 状态：**CURRICULUM READY / LEARNER UNASSESSED / PRODUCTION NOT VERIFIED**。本仓是独立的 **LLM 专项学习操作系统**，目标覆盖研发与上线需要的知识和技能；它不是某一个下游产品的研发仓，也不承接客户/订单事实。真实产品源码与线上数据属于其各自仓库。
 
+## 用户训练路线补充：不另建课程，补实战与资源（2026-11-14）
+
+原有 12 模块、4 里程碑、六域知识地图与需求路由保留。本次新增：
+
+1. [手写 TinyGPT CPU](labs/tiny-gpt/README.md)：用合成字符语料完整追踪 Embedding→Attention→Mask→Loss→Gradient→AdamW→Checkpoint，补足旧版伪 Logits Toy 的不足。
+2. [五类实验 A–E 与现有 01–06 的交叉索引](experiments/EXPERIMENTS-A-E-CROSSWALK.md)：明确 MiniMind、CPT/SFT/QLoRA、DPO、GRPO 的**可选分支**与真实训练验收。
+3. [六个能力单元 U1–U6](learning-method/SIX-CAPABILITY-UNITS.md)：按需选择并留下代码、日志、对照、反例，不按周数机械学习。
+4. [专业公式、白话类比、库存 Tool 示例与训练信号关系图](knowledge-graph/TRAINING-SIGNAL-AND-LIFECYCLE.md)。
+5. [四主资源+Pythia/Megatron Core/LitGPT/Alignment Handbook/smol-course](resources/TRAINING-SOURCE-ROLES.md)，已加入模块/需求机器索引。
+
+未来可由训练 Loss、显存 OOM、Tool SFT Mask 或 GRPO Reward 等真实卡点直接进入；不要求把 A–E 依次通关。
+
 ## 2026-11-14 复验补丁：关系反查 + 最新工程边界
 
 在六域全景与 33 个知识主题基础上，可用 CLI **--relate A04** 查看一个知识点与其他知识的出入关系，用 **--path A04 O02** 探索“工具调用 → Agent → 可观测性”的已编目概念连接。原始边的语义和方向会显示，**从某点能找到路径，不意味着该路径的节点必须依次学习**。

@@ -20,6 +20,8 @@
 
 **学习资料验收见 [ACCEPTANCE-V2](ACCEPTANCE-V2.md)：文档合规通过不代表训练实验通过。**
 
+新增 [实验 A TinyGPT](labs/tiny-gpt/README.md)、[A–E 对照](experiments/EXPERIMENTS-A-E-CROSSWALK.md) 和 [U1–U6 能力单元](learning-method/SIX-CAPABILITY-UNITS.md)。**这只是学习路径补全，不改变旧 MiniMind/Qwen 训练的 NOT RUN 状态。**
+
 ## 四个阶段退出门槛
 
 - [ ] **阶段一**：能追踪一个 batch 的完整参数更新；张量/Mask 测试、Checkpoint 和独立验证曲线存在。

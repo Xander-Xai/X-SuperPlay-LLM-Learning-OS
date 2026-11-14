@@ -15,6 +15,10 @@
 
 **编号说明**：01–05 为 5 类训练实验；06 是部署与系统验收（不是第六类训练方法）。每个实验的 NOT RUN 状态表示尚未执行 GPU 训练。
 
+## 与用户给出的五组实验 A–E 对齐
+
+[完整实验 A–E / 现有 01–06 交叉映射](EXPERIMENTS-A-E-CROSSWALK.md)；新增 [CPU TinyGPT](../labs/tiny-gpt/README.md) 是教学实验 A，旧 01–05 保持真实训练待运行，06 是部署能力验收（不是训练算法）。不要用教学 Toy 绿灯升级原有 MiniMind/Qwen 的状态。
+
 ## 运行顺序与分叉
 
 ~~~mermaid

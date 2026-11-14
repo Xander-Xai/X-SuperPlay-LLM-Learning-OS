@@ -1,3 +1,9 @@
+## 新增：完整训练专项的实战与来源补全（2026-11-14）
+
+[训练信号主干（专业原理/白话）](LLM-Training/knowledge-graph/TRAINING-SIGNAL-AND-LIFECYCLE.md) · [实验 A–E 与原 01–06 对照](LLM-Training/experiments/EXPERIMENTS-A-E-CROSSWALK.md) · [可执行手写 TinyGPT](LLM-Training/labs/tiny-gpt/README.md) · [六项能力单元（非六周课表）](LLM-Training/learning-method/SIX-CAPABILITY-UNITS.md) · [四个主资源职责与专项参考](LLM-Training/resources/TRAINING-SOURCE-ROLES.md)。
+
+保留原 V3、M01–M12、六域 Atlas 与现有实验目录，不再建立一套冲突的 01–12 章节。新增 CPU TinyGPT 是教学运行，绝不代表 MiniMind/Qwen GPU 训练已完成。
+
 ## 再验收更新｜关系可反查 + 官方工程变更核查（2026-11-14）
 
 [Atlas 关系探索](LLM-Training/index/README.md)现支持按主题查看入边/出边以及两个概念之间的**关联路径**；不会把关联路径误当成必修课程顺序。[TRL、vLLM、MCP 官方变化与上线检查](LLM-Training/resources/OFFICIAL-RUNTIME-DELTA-20261114.md) 已补入 M06/M08/M11 和生产门禁。[最新严格复验](LLM-Training/ACCEPTANCE-RECHECK-20261114.md)记录课程验证与尚未执行的模型实验。

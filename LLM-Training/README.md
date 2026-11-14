@@ -1,5 +1,12 @@
 # LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
 
+## 训练专项新增入口：把原理真正跑起来
+
+- [从原始语料到 Base/Chat/Reasoning：训练信号与库存 Tool Call 案例](knowledge-graph/TRAINING-SIGNAL-AND-LIFECYCLE.md)；
+- [实验 A：完整可训练的最小 Decoder-only TinyGPT](labs/tiny-gpt/README.md)（真实 PyTorch QKV、Mask、CE、反向传播、AdamW 和临时 Checkpoint；不同于既有伪 Logits Toy）；
+- [A–E 五组实验对应原 01–06](experiments/EXPERIMENTS-A-E-CROSSWALK.md) 与 [U1–U6 六个能力单元](learning-method/SIX-CAPABILITY-UNITS.md)（按需跳学）；
+- [CS336 / MiniMind / Raschka / nanochat 的四种职责和新增专项来源](resources/TRAINING-SOURCE-ROLES.md) · [本轮验收](ACCEPTANCE-TRAINING-ROADMAP-20261114.md)。
+
 ## 新增：如何反查关系及查询动态框架约束
 
 - [官方实现变化检查单（TRL Assistant Mask / Tool GRPO Prefix / vLLM 全路径鉴权 / MCP）](resources/OFFICIAL-RUNTIME-DELTA-20261114.md)。

@@ -156,3 +156,7 @@ flowchart LR
 已将 30 条类型化关系接入离线关系查询工具：**python LLM-Training/tools/route_atlas.py --relate A04** 显示 Tool Calling 的出边 A04→A05（提供 Agent 动作）和入边 O03→A04（系统安全保护）；**--path A04 O02** 可以探索它到 Observability 的最短**无向关联链**，同时保留每条边的真实方向与解释。不能把反向遍历误读为技术前置关系。
 
 当需要真实工程版本判断时，不靠概念图猜测，转到 [官方实现变化与工程测试清单](../resources/OFFICIAL-RUNTIME-DELTA-20261114.md)；其中区分 SFT Mask、工具型 GRPO 前缀稳定性、服务端鉴权、MCP 协议兼容。
+
+## 本次新增的训练专线（不改变六域关系）
+
+[训练目标/信号总图](TRAINING-SIGNAL-AND-LIFECYCLE.md) 用一个库存 Tool Call 任务比较 Pretrain/CPT/SFT/DPO/GRPO 与 RAG/Agent；[实验 A–E](../experiments/EXPERIMENTS-A-E-CROSSWALK.md) 对应既有训练计划、其中 [TinyGPT CPU](../labs/tiny-gpt/README.md) 补足最小模型代码；[U1–U6](../learning-method/SIX-CAPABILITY-UNITS.md) 是验收覆盖目标，不是六周必修。

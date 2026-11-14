@@ -2,6 +2,8 @@
 
 > 学习时以原项目 README/官方文档**当前版本**为准；GitHub main 分支和框架 API 可能调整。第三方项目是参考资源，不复制其代码或数据到本仓库。
 
+四个主线资源的职责与新增专项资料，参见 [训练来源角色表](../resources/TRAINING-SOURCE-ROLES.md)。此表不要求把 MiniMind、nanochat、LitGPT 等重复跑一遍；已有论文目录作为统一入口保留。
+
 ## 四个主要学习源
 
 | 资源 | 唯一职责 | 入口 |
@@ -50,3 +52,14 @@
 
 若发现失效链接：在文档更新中记录原 URL、可用替代 URL、检查日期，不默默删除来源。
 
+
+## 按具体问题选论文（增量）
+
+- 模型规模/Token/算力预算：[Chinchilla](https://arxiv.org/abs/2203.15556)；写出可检验的 Scaling 假设。
+- SFT→Reward→PPO 历史配方：[InstructGPT](https://arxiv.org/abs/2203.02155)；区分历史流程与现代分支。
+- 离线偏好相对概率：[DPO](https://arxiv.org/abs/2305.18290) + [公式 Toy](../labs/preference-rl-math/README.md)。
+- Group Advantage 与可验证推理：[DeepSeekMath](https://arxiv.org/abs/2402.03300) / [DeepSeek-R1](https://arxiv.org/abs/2501.12948)；拆开训练信号与策略优化。
+- 训练中能力变化：[Pythia](https://github.com/EleutherAI/pythia) 的中途 Checkpoint，不能把使用 Checkpoint 说成亲自训练。
+- 并行系统：[NVIDIA Megatron Core](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) 区分 DP/TP/PP/CP/EP。
+
+每篇只留下：问题→公式→源码实现→可测假设→失败反例→适用边界。
