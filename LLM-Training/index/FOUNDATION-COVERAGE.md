@@ -1,0 +1,106 @@
+# 大模型核心基础覆盖目录｜按概念直接找到定义、源码与实战
+
+> **覆盖口径**：收录 90 个可直接导航的核心知识点，覆盖 M01–M12；它是针对大模型基础训练/应用工程的有界查漏地图，不是全 AI 研究领域“无遗漏”的数学证明。每条记录指向讲义、实验入口和官方参考；**目录存在不等于学习者会了、GPU 训练已跑或产品已发布**。
+
+## 用法：不用按目录顺序读
+
+碰到关键词，先在下表或 [JSON](foundation-coverage.json) 找到对应模块及专题卡；阅读**专业定义+白话**后做一个独立负例。若只是定位知识，停在 L0；若要证明会实现，按 [Rubric](../assessments/CAPABILITY-RUBRIC.md) 提供证据。
+
+**最常被遗漏的基础专题：** [数学/统计/信息论](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) · [Tokenizer/数据治理](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) · [架构家族/生成原理](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) · [训练可靠性/评估指标](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md)。
+
+## 课程覆盖清单
+
+| ID | 核心知识点 | 所属模块 | 具体讲义 | 实践入口 | 官方参考 |
+|---|---|---|---|---|---|
+| M01.01 | Tensor/Shape/Stride/Broadcast | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.02 | 矩阵乘法与张量维度 | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.03 | 链式法则与 Autograd | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.04 | 条件概率和最大似然 | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.05 | Softmax 与交叉熵 | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.06 | 信息熵/KL/BPB/PPL | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.07 | 低秩/SVD 与 LoRA | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.08 | AdamW/LR/梯度累积 | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.09 | 数值稳定/混合精度 | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.10 | 泛化/正则化/过拟合 | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M01.11 | 统计置信区间/假设检验 | [M01](../modules/M01.md) | [专题](../fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://d2l.ai/chapter_preliminaries/index.html) |
+| M02.01 | UTF-8/Byte/Character/Token | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.02 | BPE/WordPiece/Unigram | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.03 | Special Tokens/BOS/EOS/PAD | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.04 | Tokenizer/Chat Template 版本 | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.05 | Padding/Truncation/Packing | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.06 | 因果 Mask 与文档边界 | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.07 | 数据许可/Privacy/PII | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.08 | 精确去重/近重复去重 | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.09 | Train/Val/Test 任务族切分 | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.10 | 语料混合/采样权重 | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M02.11 | 数据污染/质量过滤/数据卡 | [M02](../modules/M02.md) | [专题](../data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) | [练习/计划](../labs/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter6/1) |
+| M03.01 | Encoder-only/Decoder-only/Encoder-Decoder | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.02 | Embedding 与位置编码 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.03 | Scaled Dot-Product QKV | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.04 | Causal Mask 的未来隔离 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.05 | 残差/RMSNorm/SwiGLU/FFN | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.06 | RoPE/相对位置 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.07 | MHA/MQA/GQA/MLA | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.08 | FlashAttention 的 IO 机制 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.09 | 训练并行 vs 自回归生成 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.10 | MoE 路由入门 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M04.01 | Next Token CE 与 Shift | [M04](../modules/M04.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md) | [原始资料](https://cs336.stanford.edu/) |
+| M04.02 | 初始化/Batch/Token Budget | [M04](../modules/M04.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md) | [原始资料](https://cs336.stanford.edu/) |
+| M04.03 | Backward 与 Optimizer Step | [M04](../modules/M04.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md) | [原始资料](https://cs336.stanford.edu/) |
+| M04.04 | Scheduler/Warmup/Cosine | [M04](../modules/M04.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md) | [原始资料](https://cs336.stanford.edu/) |
+| M04.05 | Checkpoints 完整训练状态 | [M04](../modules/M04.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md) | [原始资料](https://cs336.stanford.edu/) |
+| M04.06 | Held-out Validation 与复现 | [M04](../modules/M04.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md) | [原始资料](https://cs336.stanford.edu/) |
+| M04.07 | Scaling Laws 参数 Tokens FLOPs | [M04](../modules/M04.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md) | [原始资料](https://cs336.stanford.edu/) |
+| M05.01 | CPT/Mid-training 与 Base | [M05](../modules/M05.md) | [专题](../continued-pretraining/cpt-replay-wsd.md) | [练习/计划](../experiments/02-qwen-cpt-replay/README.md) | [原始资料](https://github.com/Lightning-AI/litgpt) |
+| M05.02 | 领域语料配比/Replay | [M05](../modules/M05.md) | [专题](../continued-pretraining/cpt-replay-wsd.md) | [练习/计划](../experiments/02-qwen-cpt-replay/README.md) | [原始资料](https://github.com/Lightning-AI/litgpt) |
+| M05.03 | 灾难性遗忘与通用能力 | [M05](../modules/M05.md) | [专题](../continued-pretraining/cpt-replay-wsd.md) | [练习/计划](../experiments/02-qwen-cpt-replay/README.md) | [原始资料](https://github.com/Lightning-AI/litgpt) |
+| M05.04 | 学习率调度 WSD/余弦 | [M05](../modules/M05.md) | [专题](../continued-pretraining/cpt-replay-wsd.md) | [练习/计划](../experiments/02-qwen-cpt-replay/README.md) | [原始资料](https://github.com/Lightning-AI/litgpt) |
+| M05.05 | CPT vs RAG 的免训练基线 | [M05](../modules/M05.md) | [专题](../continued-pretraining/cpt-replay-wsd.md) | [练习/计划](../experiments/02-qwen-cpt-replay/README.md) | [原始资料](https://github.com/Lightning-AI/litgpt) |
+| M06.01 | Instruction SFT/Assistant Mask | [M06](../modules/M06.md) | [专题](../sft-peft/agent-tool-calling-loss-mask.md) | [练习/计划](../experiments/03-agent-tool-sft/README.md) | [原始资料](https://huggingface.co/docs/trl/sft_trainer) |
+| M06.02 | 真实 Chat Template Generation 区间 | [M06](../modules/M06.md) | [专题](../sft-peft/agent-tool-calling-loss-mask.md) | [练习/计划](../experiments/03-agent-tool-sft/README.md) | [原始资料](https://huggingface.co/docs/trl/sft_trainer) |
+| M06.03 | Full Fine-tuning vs LoRA | [M06](../modules/M06.md) | [专题](../sft-peft/agent-tool-calling-loss-mask.md) | [练习/计划](../experiments/03-agent-tool-sft/README.md) | [原始资料](https://huggingface.co/docs/trl/sft_trainer) |
+| M06.04 | QLoRA 基座量化与适配器 | [M06](../modules/M06.md) | [专题](../sft-peft/agent-tool-calling-loss-mask.md) | [练习/计划](../experiments/03-agent-tool-sft/README.md) | [原始资料](https://huggingface.co/docs/trl/sft_trainer) |
+| M06.05 | Tool Call 轨迹/Observation Mask | [M06](../modules/M06.md) | [专题](../sft-peft/agent-tool-calling-loss-mask.md) | [练习/计划](../experiments/03-agent-tool-sft/README.md) | [原始资料](https://huggingface.co/docs/trl/sft_trainer) |
+| M06.06 | 数据合成/Verifier/Rejection Sampling | [M06](../modules/M06.md) | [专题](../sft-peft/agent-tool-calling-loss-mask.md) | [练习/计划](../experiments/03-agent-tool-sft/README.md) | [原始资料](https://huggingface.co/docs/trl/sft_trainer) |
+| M06.07 | 训练与评估数据隔离 | [M06](../modules/M06.md) | [专题](../sft-peft/agent-tool-calling-loss-mask.md) | [练习/计划](../experiments/03-agent-tool-sft/README.md) | [原始资料](https://huggingface.co/docs/trl/sft_trainer) |
+| M07.01 | Chosen/Rejected 偏好对与标签偏差 | [M07](../modules/M07.md) | [专题](../alignment/reward-model-orpo.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/index) |
+| M07.02 | Reference Policy 与 DPO beta | [M07](../modules/M07.md) | [专题](../alignment/reward-model-orpo.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/index) |
+| M07.03 | Reward Model/PRM | [M07](../modules/M07.md) | [专题](../alignment/reward-model-orpo.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/index) |
+| M07.04 | ORPO/离线/在线偏好区分 | [M07](../modules/M07.md) | [专题](../alignment/reward-model-orpo.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/index) |
+| M07.05 | Preference Win Rate 与事实正确性 | [M07](../modules/M07.md) | [专题](../alignment/reward-model-orpo.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/index) |
+| M08.01 | RL 术语 State/Action/Reward | [M08](../modules/M08.md) | [专题](../reinforcement-learning/ppo-rlhf-fundamentals.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/grpo_trainer) |
+| M08.02 | Policy Gradient 与 Advantage | [M08](../modules/M08.md) | [专题](../reinforcement-learning/ppo-rlhf-fundamentals.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/grpo_trainer) |
+| M08.03 | PPO/Clipping/Value-Critic | [M08](../modules/M08.md) | [专题](../reinforcement-learning/ppo-rlhf-fundamentals.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/grpo_trainer) |
+| M08.04 | GRPO Group Advantage/Zero Variance | [M08](../modules/M08.md) | [专题](../reinforcement-learning/ppo-rlhf-fundamentals.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/grpo_trainer) |
+| M08.05 | RLVR 的 Verifiable Reward | [M08](../modules/M08.md) | [专题](../reinforcement-learning/ppo-rlhf-fundamentals.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/grpo_trainer) |
+| M08.06 | KL/Reference/Reward Hacking | [M08](../modules/M08.md) | [专题](../reinforcement-learning/ppo-rlhf-fundamentals.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/grpo_trainer) |
+| M08.07 | Agentic RL Tool Trajectory | [M08](../modules/M08.md) | [专题](../reinforcement-learning/ppo-rlhf-fundamentals.md) | [练习/计划](../labs/preference-rl-math/README.md) | [原始资料](https://huggingface.co/docs/trl/grpo_trainer) |
+| M09.01 | Weights/Grads/Optimizer/Activation 显存 | [M09](../modules/M09.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../training-systems/memory-and-distributed.md) | [原始资料](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) |
+| M09.02 | BF16/FP16/FP8 基本区别 | [M09](../modules/M09.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../training-systems/memory-and-distributed.md) | [原始资料](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) |
+| M09.03 | Gradient Checkpointing 与 Kernel | [M09](../modules/M09.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../training-systems/memory-and-distributed.md) | [原始资料](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) |
+| M09.04 | DDP 与 FSDP/ZeRO | [M09](../modules/M09.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../training-systems/memory-and-distributed.md) | [原始资料](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) |
+| M09.05 | TP/PP/CP/EP 并行维度 | [M09](../modules/M09.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../training-systems/memory-and-distributed.md) | [原始资料](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) |
+| M09.06 | Profiler/HBM/通信/吞吐 | [M09](../modules/M09.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../training-systems/memory-and-distributed.md) | [原始资料](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) |
+| M09.07 | Resume Sampler/RNG/Optimizer 状态 | [M09](../modules/M09.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../training-systems/memory-and-distributed.md) | [原始资料](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) |
+| M10.01 | PPL/BPB/Tokenizer 可比性 | [M10](../modules/M10.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../labs/task-evaluation/README.md) | [原始资料](https://github.com/EleutherAI/lm-evaluation-harness) |
+| M10.02 | EM/Accuracy/Precision/Recall/F1 | [M10](../modules/M10.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../labs/task-evaluation/README.md) | [原始资料](https://github.com/EleutherAI/lm-evaluation-harness) |
+| M10.03 | Train/Val/Test 泄漏与近重复 | [M10](../modules/M10.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../labs/task-evaluation/README.md) | [原始资料](https://github.com/EleutherAI/lm-evaluation-harness) |
+| M10.04 | RAG Recall@k/证据引用支持 | [M10](../modules/M10.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../labs/task-evaluation/README.md) | [原始资料](https://github.com/EleutherAI/lm-evaluation-harness) |
+| M10.05 | Tool JSON/Args/Execution/E2E | [M10](../modules/M10.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../labs/task-evaluation/README.md) | [原始资料](https://github.com/EleutherAI/lm-evaluation-harness) |
+| M10.06 | 置信区间/Wilson/Paired Bootstrap | [M10](../modules/M10.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../labs/task-evaluation/README.md) | [原始资料](https://github.com/EleutherAI/lm-evaluation-harness) |
+| M10.07 | GRPO Reward/Accuracy/长度退化 | [M10](../modules/M10.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../labs/task-evaluation/README.md) | [原始资料](https://github.com/EleutherAI/lm-evaluation-harness) |
+| M10.08 | Benchmark/模型对比与消融 | [M10](../modules/M10.md) | [专题](../training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) | [练习/计划](../labs/task-evaluation/README.md) | [原始资料](https://github.com/EleutherAI/lm-evaluation-harness) |
+| M11.01 | Prefill/Decode/KV Cache | [M11](../modules/M11.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../experiments/06-deployment/README.md) | [原始资料](https://docs.vllm.ai/en/latest/usage/security/) |
+| M11.02 | Temperature/Top-k/Top-p/Best-of-N | [M11](../modules/M11.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../experiments/06-deployment/README.md) | [原始资料](https://docs.vllm.ai/en/latest/usage/security/) |
+| M11.03 | TTFT/TPOT/P95/Token 吞吐 | [M11](../modules/M11.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../experiments/06-deployment/README.md) | [原始资料](https://docs.vllm.ai/en/latest/usage/security/) |
+| M11.04 | 量化/蒸馏/Adapter Merge | [M11](../modules/M11.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../experiments/06-deployment/README.md) | [原始资料](https://docs.vllm.ai/en/latest/usage/security/) |
+| M11.05 | Batching/Serving/Queue/Cost | [M11](../modules/M11.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../experiments/06-deployment/README.md) | [原始资料](https://docs.vllm.ai/en/latest/usage/security/) |
+| M11.06 | API Key 与全路径网关鉴权 | [M11](../modules/M11.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../experiments/06-deployment/README.md) | [原始资料](https://docs.vllm.ai/en/latest/usage/security/) |
+| M11.07 | 模型版本/回归/灰度/回滚 | [M11](../modules/M11.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../experiments/06-deployment/README.md) | [原始资料](https://docs.vllm.ai/en/latest/usage/security/) |
+| M12.01 | MoE/Router/Expert Load Balance | [M12](../modules/M12.md) | [专题](../advanced/M11-M12.md) | [练习/计划](../demand-driven/AI-NATIVE-NEED-ROUTES.md) | [原始资料](https://huggingface.co/docs/transformers/index) |
+| M12.02 | 长上下文位置和 Retrieval 退化 | [M12](../modules/M12.md) | [专题](../advanced/M11-M12.md) | [练习/计划](../demand-driven/AI-NATIVE-NEED-ROUTES.md) | [原始资料](https://huggingface.co/docs/transformers/index) |
+| M12.03 | VLM/图文音视频对齐 | [M12](../modules/M12.md) | [专题](../advanced/M11-M12.md) | [练习/计划](../demand-driven/AI-NATIVE-NEED-ROUTES.md) | [原始资料](https://huggingface.co/docs/transformers/index) |
+| M12.04 | Agentic RL 与工具环境状态 | [M12](../modules/M12.md) | [专题](../advanced/M11-M12.md) | [练习/计划](../demand-driven/AI-NATIVE-NEED-ROUTES.md) | [原始资料](https://huggingface.co/docs/transformers/index) |
+| M12.05 | Test-Time Compute/Verifier/多候选 | [M12](../modules/M12.md) | [专题](../advanced/M11-M12.md) | [练习/计划](../demand-driven/AI-NATIVE-NEED-ROUTES.md) | [原始资料](https://huggingface.co/docs/transformers/index) |
+
+**证据纪律**：矩阵中所有练习链接仅表示**可定位的入口**。即使某个 CPU Toy 已在 CI 运行，也只能说明局部代码通过。MiniMind/Qwen 的真正 CPT/SFT/DPO/GRPO 与多卡/上线测试仍需各自日志；见 [实验索引](../experiments/README.md) 和 [学习进度](../learning-progress.md)。

@@ -41,7 +41,7 @@ python -m unittest discover -s LLM-Training/labs/tiny-gpt -p 'test_*.py' -v
 - L1：你能画出 Batch/Tensor/Vocab 的维度，并白话解释 Attention、梯度和更新；
 - L2：代码、单测、负例都在自己环境跑通，留命令与日志；
 - L3：换一份自己设计的公开/虚构字符数据仍能定位 Loss 不降、Mask 错位和数值异常；
-- L4：本 Toy **不能证明生产上线能力**。进入 [MiniMind Runbook](../../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md)，再处理真实 Tokenizer、RoPE、Checkpoint、数据污染和独立验证。
+- L4：换陌生字符语料、独立定位错误并提供受控对照才可申请迁移能力验收。**生产上线是另行触发的 G0–G8 门禁，不是 L4 的定义**。本 Toy 仍不能证明生产上线能力；进入 [MiniMind Runbook](../../experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md)，再处理真实 Tokenizer、RoPE、Checkpoint、数据污染和独立验证。
 
 **参考**：[Stanford CS336 作业 A1](https://cs336.stanford.edu/) · [Raschka《LLMs-from-scratch》](https://github.com/rasbt/LLMs-from-scratch) · [MiniMind](https://github.com/jingyaogong/minimind)。
 

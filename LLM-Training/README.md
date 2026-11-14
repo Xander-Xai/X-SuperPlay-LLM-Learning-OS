@@ -1,5 +1,11 @@
 # LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
 
+## 90 个核心基础词条：日常按需反查
+
+[90 项核心知识点目录](index/FOUNDATION-COVERAGE.md) · [离线关键词检索](tools/route_foundations.py) · [数学/统计](fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) · [Tokenizer](data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) · [Encoder/Decoder](fundamentals/MODEL-FAMILIES-AND-GENERATION.md) · [训练复现和评估](training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md)。
+
+**六域 33 宏观主题负责认知全貌，90 个词条负责基础查漏，M01–M12 负责实战深度。L0–L4 只以 [Rubric](assessments/CAPABILITY-RUBRIC.md) 为准，生产 G0–G8 单独验收。**
+
 ## 训练专项新增入口：把原理真正跑起来
 
 - [从原始语料到 Base/Chat/Reasoning：训练信号与库存 Tool Call 案例](knowledge-graph/TRAINING-SIGNAL-AND-LIFECYCLE.md)；
@@ -23,8 +29,8 @@
 ## 本仓当前 V3 导航｜从需求跳学，不按线性顺序打卡
 
 - [Roadmap V3：深度覆盖、知识依赖与生产能力](ROADMAP-V3-DEMAND-DRIVEN.md)
-- [需求入口和 18 张机器索引卡](demand-driven/README.md) · [一个实战任务卡模板](demand-driven/DEMAND-CARD-TEMPLATE.md) · [五个真实工程故障的合成教学案例](demand-driven/worked-demand-cards.md)
-- [知识依赖图 V3](knowledge-graph/dependency-and-capability-map.md) · [20 份权威来源导航](resources/AUTHORITATIVE-INDEX.md)
+- [需求入口和 19 张机器索引卡](demand-driven/README.md) · [一个实战任务卡模板](demand-driven/DEMAND-CARD-TEMPLATE.md) · [五个真实工程故障的合成教学案例](demand-driven/worked-demand-cards.md)
+- [知识依赖图 V3](knowledge-graph/dependency-and-capability-map.md) · [25 份权威来源导航](resources/AUTHORITATIVE-INDEX.md)
 - **可运行课程纵切**：[CPU Loss Mask](labs/README.md) · [DPO/GRPO 数学与 Reward Hacking](labs/preference-rl-math/README.md) · [Agent 任务级指标评测](labs/task-evaluation/README.md) · [合成 Tool Gateway](labs/synthetic-tool-gateway/README.md)。
 - [可运行合成工具网关实验](labs/synthetic-tool-gateway/README.md)（标准库即可运行，验证工具授权/参数/证据/负例，不冒充大模型训练）
 - [L0–L4 独立能力 Rubric](assessments/CAPABILITY-RUBRIC.md) · [实战阶梯](labs/capability-ladder.md) · [生产 Go/No-Go](production/PRODUCTION-READINESS.md)
@@ -36,7 +42,7 @@
 
 ---
 
-**从此页进入 12 个模块，而不是按日历从头到尾死读。** 本仓库内容为学习资料/实验计划；GPU 训练结果仍标记 NOT RUN。最新审核记录见 [验收报告](ACCEPTANCE-V2.md)。
+**从此页进入 12 个模块，而不是按日历从头到尾死读。** 本仓库内容为学习资料/实验计划；GPU 训练结果仍标记 NOT RUN。最新审计见 [基础查漏与一致性复验](ACCEPTANCE-FOUNDATION-CONSISTENCY-20261114.md)，历史 V2 验收见 [旧报告](ACCEPTANCE-V2.md)。
 
 ## 一眼看懂路线
 
@@ -69,7 +75,7 @@ M11 蒸馏/量化/部署 → Agent/RAG 应用反馈；M12 前沿专题按需选�
 | M11 蒸馏、Serving | [M11](modules/M11.md) | P1 | L1→L2 |
 | M12 高级专题 | [M12](modules/M12.md) | P2 | L1 |
 
-L1：能解释定义、依赖、公式和边界；L2：能够定位源码、运行实验、排查问题、用真实日志验收；L3：可推导、消融和扩展实现。详见 [知识依赖图](knowledge-graph/concept-dependencies.md)。
+**历史 V2 深度提示（非新等级）**：旧 L1=解释、L2=源码实现、L3=推导/消融。当前 L0–L4 以 [Rubric](assessments/CAPABILITY-RUBRIC.md) 统一：L3=诊断/比较，L4=陌生迁移；上线另过 G0–G8。详见 [知识依赖图](knowledge-graph/concept-dependencies.md)。
 
 ## 4 个里程碑、5 类训练实验 + 1 个部署验收
 

@@ -1,5 +1,21 @@
 # LLM-Learning-OS 专项仓索引
 
+## 三层索引与日常查询
+
+- **细颗粒基础**：[90 项概念](FOUNDATION-COVERAGE.md) · [JSON](foundation-coverage.json)，链接到原理、练习和官方原始资料；
+- **全栈全景**：[33 项六域主题](upstream-knowledge-index.json)，理解知识域关系；
+- **按需实践**：[12 模块、19 条需求、25 个训练来源](learning-index.json)，用于研发卡点反查。
+
+~~~bash
+python LLM-Training/tools/route_foundations.py --search WordPiece
+python LLM-Training/tools/route_foundations.py --search 信息熵
+python LLM-Training/tools/route_foundations.py --module M10
+python LLM-Training/tools/route_foundations.py --id M03.04
+python LLM-Training/tools/validate_foundation_coverage.py
+~~~
+
+**说明**：仅是离线字符串检索与课程覆盖导航，未执行真实模型训练或个人能力测评。
+
 **上游全栈 Atlas 扩展（2026-11-14）**：
 
 - [33 主题/6 域/30 类型关系/12 需求机器目录](upstream-knowledge-index.json) · [已对 Git 树核对的 23 个上游路径清单](upstream-path-manifest.json)。
