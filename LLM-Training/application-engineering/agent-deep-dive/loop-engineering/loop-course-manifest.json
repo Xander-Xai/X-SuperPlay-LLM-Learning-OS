@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-15",
+  "scope": "Existing APP-AGENT / APP-HARNESS cross-cutting course, not a new M module",
+  "canonical_rubric": "LLM-Training/assessments/CAPABILITY-RUBRIC.md",
+  "chapters": [
+    "Agent Loop",
+    "Outer Loop Engineering",
+    "Independent Verification",
+    "State and Idempotency",
+    "Bounded Retry and Escalation",
+    "Project Evaluation"
+  ],
+  "weeks": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "labs": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "source_urls": [
+    "https://www.ibm.com/think/topics/loop-engineering",
+    "https://www.anthropic.com/research/building-effective-agents",
+    "https://arxiv.org/abs/2608.21884",
+    "https://docs.langchain.com/oss/python/langgraph/persistence",
+    "https://openai.github.io/openai-agents-python/running_agents/"
+  ],
+  "required_files": [
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/README.md",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/CORE.md",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/SOURCES.md",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/ROADMAP.md",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/LABS.md",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/CASE-STUDY.md",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/COVERAGE.md",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/labs/README.md",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/labs/outer_loop.py",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/labs/test_outer_loop.py",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/loop-course-manifest.json",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/validate_loop_course.py",
+    "LLM-Training/application-engineering/agent-deep-dive/loop-engineering/test_loop_course.py",
+    "LLM-Training/application-engineering/labs/mini_agent_loop.py",
+    "LLM-Training/assessments/CAPABILITY-RUBRIC.md"
+  ],
+  "states": {
+    "curriculum": "DOC_READY",
+    "toy": "SYNTHETIC_TESTED",
+    "real_model": "NOT_RUN",
+    "distributed": "NOT_RUN",
+    "production": "NOT_RUN",
+    "learner": "UNASSESSED"
+  }
+}

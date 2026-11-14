@@ -4,6 +4,8 @@
 
 ## 从这里开始
 
+**专项深入：Agent Loop 与 Loop Engineering**：[知识体系与架构](loop-engineering/README.md) → [4 周学习策略](loop-engineering/ROADMAP.md) → [Outer Loop 离线实验](loop-engineering/labs/README.md)。先学已有 Mini Agent Loop，再补任务触发、独立 Verifier、持久状态、预算与人工升级。
+
 1. **先看自己缺什么**：[8 个知识模块逐项深度覆盖](CORE-01-04.md) / [后 4 个模块](CORE-05-08.md)；每个模块有专业机制、白话解释、输入输出、决策取舍、真实失败类型和复现题。
 2. **把学习计划变成操作**：[8 周任务卡与前三天逐小时执行](STUDY-SCHEDULE.md)；可压缩和跳学，不能直接将阅读打卡算掌握。
 3. **按问题查官方**：[带权威等级和使用条件的来源](SOURCES.md)；尽量长期入口，对日期和版本敏感的规范需记录使用版本。

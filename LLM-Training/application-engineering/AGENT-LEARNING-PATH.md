@@ -6,6 +6,8 @@
 
 ## 目标和训练方法
 
+**延伸专题**：[Agent Loop × Loop Engineering](agent-deep-dive/loop-engineering/README.md) 将本路线 Week 1 的单次 Agent 执行扩展为「外部触发 → Agent Run → 独立验收 → 反馈重试 → 有界停止」的任务治理循环。它是 Harness/评测/生产的交叉主题，不新增第 9 层。
+
 面向已有 RAG、LangGraph、多智能体项目经验，但需要补齐执行机制的开发者。完成后应能：独立实现 Agent Loop；说明模型提出工具调用与后端执行的边界；设计状态机、权限、审批、幂等和恢复；建立可复现任务级评测；解释为什么选择或放弃多 Agent。
 
 - 8 周是每天约 2–3 小时的参考节奏，并非强制课表。按真实问题优先，遵守 [AI-Native 按需学习闭环](../learning-method/AI-NATIVE-LEARNING-LOOP.md)。

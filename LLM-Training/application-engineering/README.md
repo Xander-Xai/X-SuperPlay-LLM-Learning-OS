@@ -2,6 +2,8 @@
 
 ## Agent 完整专项入口
 
+**Loop Engineering 进阶**：[完整专题](agent-deep-dive/loop-engineering/README.md) · [实现/评测边界](agent-deep-dive/loop-engineering/CORE.md) · [课堂实验](agent-deep-dive/loop-engineering/labs/README.md)。区分单次模型工具循环与跨运行任务验收反馈循环。
+
 **完整深度课件**：[课程入口](agent-deep-dive/README.md) / [1–4 模块](agent-deep-dive/CORE-01-04.md) / [5–8 模块](agent-deep-dive/CORE-05-08.md) / [实验 A–E](agent-deep-dive/LABS.md) / [官方来源](agent-deep-dive/SOURCES.md)。课程为现有 APP-AGENT/APP-HARNESS 的深化，不新增横向主题。
 
 [8 周可选主线](AGENT-LEARNING-PATH.md) · [官方权威资料](AGENT-OFFICIAL-RESOURCES.md) · [三项目/评测协议](AGENT-PRACTICE-AND-EVAL.md) · [纯 Python Agent Loop](labs/MINI-AGENT-LOOP.md) · [24 道闭卷题](AGENT-INTERVIEW-QUESTIONS.md)。是现有 APP-AGENT/APP-HARNESS 的纵向学习路径，不改变此目录 10 条横向专题计数；本仓仅完成合成离线实验的合同验证。

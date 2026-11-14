@@ -1,5 +1,7 @@
 # 原始要求与实际落盘的逐项覆盖台账
 
+**后续新专题**：[Agent Loop / Loop Engineering 覆盖表](loop-engineering/COVERAGE.md) 增加外层 Trigger、独立 Verifier、State Persistence、Bounded Retry、Stagnation、Escalation 的学习与测试；本表原 A1–A8 八模块编号不改变。
+
 > 本表只说明资料、实验规格和合成测试**存在**，不是学习者已掌握，更不是生产上线通过。适用原始用户输入的八层知识地图、八周计划、三项目、精选资料与前三天动作。
 
 | 原要求 | 对应文档 | 可核验结果 | 状态 |
