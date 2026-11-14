@@ -1,3 +1,13 @@
+## 新增：六域大模型全景与上游知识打通（2026-11-14）
+
+现在先看 [**大模型全链路知识地图（专业原理 + 白话 + 关系图）**](LLM-Training/knowledge-graph/LLM-FULL-STACK-ATLAS.md)，再按当前问题进入 [**12 条需求驱动任务卡**](LLM-Training/demand-driven/AI-NATIVE-NEED-ROUTES.md)，沿 [**33 主题上游/官方直达索引**](LLM-Training/resources/UPSTREAM-RESOURCE-MAP.md) 找材料。也可以用 [AI-Native 导师学习协议](LLM-Training/learning-method/AI-NATIVE-LEARNING-LOOP.md) 做单点讲解与实操验收。
+
+**核心理念**：知识地图完整 ≠ 要按地图逐章学习；按真实问题从任一点进入 → 最小前置 → 真实/合成实战 → 负例/迁移 → 达标停止。现有 M01–M12 与全部训练实验保留，不绑定任何固定下游产品。新增索引基于上游 2026-11-14 提交快照；课程 CI 不代表 GPU 训练或个人学习通过。
+
+**查询示例**：python LLM-Training/tools/route_atlas.py --search RAG；另有 --need N02 / --topic A04 / --domain A。
+
+---
+
 ## 当前入口：需求驱动的 LLM 专项学习 V3（2026-11-14）
 
 **本仓是独立的 LLM 学习与能力验收体系，不是某个下游产品的交付代码仓。** 保留 V2 的 M01–M12、MiniMind 白盒与 Qwen3 实验；学习时按工程问题跳到对应模块，不必机械从第 1 章开始。生产能力通过多种可迁移切片验收，而不是让本仓绑定一个 Agent 项目。

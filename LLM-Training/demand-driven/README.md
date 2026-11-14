@@ -1,5 +1,7 @@
 # 按需求跳学｜从失败现象反查最短知识依赖
 
+**完整大模型六域版本**：新增 [12 张跨训练/推理/应用/生产的任务卡](AI-NATIVE-NEED-ROUTES.md)、[全局知识关系](../knowledge-graph/LLM-FULL-STACK-ATLAS.md) 与 [AI 原生学习协议](../learning-method/AI-NATIVE-LEARNING-LOOP.md)。以下原有 18 条症状索引仍可用，面向 M01–M12 训练模块；两套索引分别负责全栈概念广度和训练专项深度。
+
 **用户真实问题优先于课程顺序**。这里的“需求”包含：工程故障、科研问题、职业任务、纯兴趣问题、准备上线的产品需求；不必先拥有真实客户项目，才能学习底层知识。训练卡可以是 **SELF_CHOSEN / SYNTHETIC / AUTHORIZED_TASK / HISTORICAL**，不得将模拟需求写成已成交业务。
 
 ## 1. 需求分流：先问要不要训练

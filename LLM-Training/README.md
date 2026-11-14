@@ -1,5 +1,12 @@
 # LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
 
+## 全栈 6 域知识入口（优先看这组，不改变 12 模块原有编号）
+
+- **完整大模型全景与关系图**：[LLM 全链路 Atlas](knowledge-graph/LLM-FULL-STACK-ATLAS.md)（包含训练与推理两条不同链路、六域与多模态、11 组易混淆原理）。
+- **上游+官方资料逐项链接**：[33 主题知识资料总索引](resources/UPSTREAM-RESOURCE-MAP.md) · [机器索引](index/upstream-knowledge-index.json)（固定上游 SHA，不复制大段内容）。
+- **需求驱动而非机械课程**：[12 条问题实战卡](demand-driven/AI-NATIVE-NEED-ROUTES.md) · [AI-Native 学习闭环](learning-method/AI-NATIVE-LEARNING-LOOP.md) · [终端查询](tools/route_atlas.py)。
+- **本轮审查材料**：[全栈跨仓扩展验收范围](ACCEPTANCE-FULL-STACK-20261114.md)。
+
 ## 本仓当前 V3 导航｜从需求跳学，不按线性顺序打卡
 
 - [Roadmap V3：深度覆盖、知识依赖与生产能力](ROADMAP-V3-DEMAND-DRIVEN.md)

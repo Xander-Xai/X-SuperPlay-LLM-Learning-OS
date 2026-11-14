@@ -1,5 +1,11 @@
 # LLM-Learning-OS 专项仓索引
 
+**上游全栈 Atlas 扩展（2026-11-14）**：
+
+- [33 主题/6 域/30 类型关系/12 需求机器目录](upstream-knowledge-index.json) · [已对 Git 树核对的 23 个上游路径清单](upstream-path-manifest.json)。
+- [完整训练/推理/应用关系图](../knowledge-graph/LLM-FULL-STACK-ATLAS.md) · [上游/官方逐项链接](../resources/UPSTREAM-RESOURCE-MAP.md) · [按需学任务卡](../demand-driven/AI-NATIVE-NEED-ROUTES.md)。
+- [命令行 Atlas 检索](../tools/route_atlas.py)：--search RAG、--topic A04、--need N02、--domain A。原有 route_learning.py 继续提供 M01–M12 的模块级路由。
+
 本目录同时提供**机器可检索入口**和**人类可读的知识与跨仓导航**：
 
 - [learning-index.json](learning-index.json)：固定的 12 个模块 ID、前置依赖、18 种需求入口、5 条能力纵线、20 条权威来源及生产门禁映射。
@@ -42,3 +48,16 @@ python -m unittest discover -s LLM-Training/tools -p 'test_learning_index.py' -v
 
 索引验收在现有 docs CI 中运行，只验证结构、关联 ID、有效仓内路径与状态约束；不能证实外部 HTTP 可达、性能提升或上线成功。
 
+
+## 全栈 Atlas 离线验收命令
+
+~~~bash
+python LLM-Training/tools/route_atlas.py --need N02
+python LLM-Training/tools/route_atlas.py --topic A04
+python LLM-Training/tools/route_atlas.py --domain E
+python LLM-Training/tools/route_atlas.py --search RAG
+python LLM-Training/tools/validate_atlas.py
+python -m unittest discover -s LLM-Training/tools -p 'test_atlas.py' -v
+~~~
+
+Atlas 的上游路径已在固定 SHA 的 Git 树验证；测试不会在线校验每个第三方 URL，也不会自动更新来源或替代自己做实验。
