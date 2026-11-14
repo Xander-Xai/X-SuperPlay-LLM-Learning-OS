@@ -103,3 +103,13 @@ release/
 
 学习对应模块：[M10](../modules/M10.md)（评测） · [M11](../modules/M11.md)（推理） · [M09](../modules/M09.md)（性能/恢复） · [M06](../modules/M06.md)（工具微调） · [M02](../modules/M02.md)（数据和许可）。**定义什么叫“学会”**见 [能力 Rubric](../assessments/CAPABILITY-RUBRIC.md)，所有工程关键事实回到项目仓以原始证据核实。
 
+## 应用层补充门禁：Harness / Context / Prompt / Ragas（不新增 G9）
+
+[应用工程完整路线](../application-engineering/README.md) 已将 Prompt 版本/输出 Schema、Context Token Budget/文档权限、RAG 证据与来源、Agent Harness 事务/审批/幂等、Ragas/Trace Eval 等工程能力落到可查手册。
+
+- **G2 功能**：Prompt/模型/工具版本固定，JSON 合法和任务业务正确分开；Ragas 分数只是辅助评测，不代替人工定标/任务集。
+- **G3 安全**：RAG/Context 中的文件与工具返回为低信任输入，必须在检索、工具、数据库/网关执行服务端 ACL；Prompt Injection 专项负例不能只看 LLM 是否拒绝。
+- **G4 可靠性**：Harness 重试/恢复需要幂等、步数限制、可恢复的真实状态；摘要不是数据库事务 Checkpoint。
+- **G5–G7 交付**：固定并发/Token 预算的 TTFT/P95、脱敏 Trace、版本/灰度/回滚；未实际运行不得宣称通过。
+
+[合成纵切](../application-engineering/labs/README.md) 仅证明教学合同，**不能**升级本生产门禁结论或真实用户验收状态。

@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-14",
+  "scope": "Application engineering overlay of existing 12-module training roadmap; distinct from 90 foundation topics, 33 upstream macro topics and 19 training demands.",
+  "upstream_repo": "Xander-Xai/X-SuperPlay-AI-Learning-OS",
+  "upstream_snapshot_sha": "59ea4e509507378860519d165113e21a9a9eb4d7",
+  "canonical_training_index": "LLM-Training/index/learning-index.json",
+  "canonical_foundations_index": "LLM-Training/index/foundation-coverage.json",
+  "canonical_rubric": "LLM-Training/assessments/CAPABILITY-RUBRIC.md",
+  "production_gates": "LLM-Training/production/PRODUCTION-READINESS.md",
+  "tracks": [
+    {
+      "id": "APP-PROMPT",
+      "title": "Prompt Engineering",
+      "guide": "LLM-Training/application-engineering/PROMPT-ENGINEERING.md",
+      "upstream_path": "docs/market/prompt-engineering-demand-to-practice-20261029.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/market/prompt-engineering-demand-to-practice-20261029.md",
+      "modules": [
+        "M02",
+        "M06",
+        "M10"
+      ],
+      "concepts": [
+        "任务定义与角色边界",
+        "Few-shot与输出Schema",
+        "Prompt版本管理",
+        "安全拒答/负例",
+        "Prompt A/B受控比较"
+      ],
+      "official_sources": [
+        "https://developers.openai.com/api/docs/guides/prompt-engineering",
+        "https://huggingface.co/docs/trl/sft_trainer"
+      ],
+      "aliases": [
+        "提示词",
+        "prompt",
+        "Prompt Engineering"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-CONTEXT",
+      "title": "Context Engineering",
+      "guide": "LLM-Training/application-engineering/CONTEXT-ENGINEERING.md",
+      "upstream_path": "docs/market/context-engineering-demand-to-lab-20261029.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/market/context-engineering-demand-to-lab-20261029.md",
+      "modules": [
+        "M02",
+        "M03",
+        "M10",
+        "M11"
+      ],
+      "concepts": [
+        "每轮上下文构造",
+        "Token预算与压缩",
+        "历史/长期记忆",
+        "检索证据与时效",
+        "来源/权限隔离",
+        "恶意工具内容边界"
+      ],
+      "official_sources": [
+        "https://www.anthropic.com/research/effective-context-engineering-for-ai-agents",
+        "https://docs.langchain.com/oss/python/learn"
+      ],
+      "aliases": [
+        "上下文工程",
+        "context",
+        "compaction"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-RAG",
+      "title": "RAG Engineering",
+      "guide": "LLM-Training/application-engineering/RAG-ENGINEERING.md",
+      "upstream_path": "docs/practice/rag/README.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/practice/rag/README.md",
+      "modules": [
+        "M02",
+        "M03",
+        "M10"
+      ],
+      "concepts": [
+        "解析/OCR/Chunk",
+        "Sparse/Dense/Hybrid",
+        "RRF/Rerank",
+        "ACL/Version/Freshness",
+        "Evidence Gate/Citation",
+        "Retrieval与E2E"
+      ],
+      "official_sources": [
+        "https://docs.langchain.com/oss/python/langchain/retrieval",
+        "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/"
+      ],
+      "aliases": [
+        "RAG",
+        "检索增强",
+        "混合检索"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-RAGAS",
+      "title": "Ragas Evaluation",
+      "guide": "LLM-Training/application-engineering/RAGAS-EVALUATION.md",
+      "upstream_path": "docs/market/market-driven-rag-learning-loop.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/market/market-driven-rag-learning-loop.md",
+      "modules": [
+        "M10"
+      ],
+      "concepts": [
+        "Context Precision/Recall",
+        "Faithfulness与相关性",
+        "Noise Sensitivity",
+        "Tool Call/Goal Accuracy",
+        "LLM Judge校准",
+        "统计与分母"
+      ],
+      "official_sources": [
+        "https://docs.ragas.io/en/latest/getstarted/quickstart/",
+        "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/"
+      ],
+      "aliases": [
+        "Ragas",
+        "评测",
+        "Faithfulness",
+        "RAGA"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-AGENT",
+      "title": "Agent / Tool Calling",
+      "guide": "LLM-Training/application-engineering/AGENT-HARNESS-ENGINEERING.md",
+      "upstream_path": "docs/market/agent-market-to-lab-20261029.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/market/agent-market-to-lab-20261029.md",
+      "modules": [
+        "M06",
+        "M08",
+        "M10"
+      ],
+      "concepts": [
+        "Task Loop与Stop Rule",
+        "Tool Schema与返回",
+        "状态机/工具观察",
+        "Function Call与MCP",
+        "工具数据越权负例"
+      ],
+      "official_sources": [
+        "https://openai.github.io/openai-agents-python/testing/",
+        "https://docs.langchain.com/oss/python/learn"
+      ],
+      "aliases": [
+        "Agent",
+        "智能体",
+        "Tool Calling"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-HARNESS",
+      "title": "Agent Harness Engineering",
+      "guide": "LLM-Training/application-engineering/AGENT-HARNESS-ENGINEERING.md",
+      "upstream_path": "HARNESS-ENGINEERING-LEARNING-20261029.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/HARNESS-ENGINEERING-LEARNING-20261029.md",
+      "modules": [
+        "M06",
+        "M09",
+        "M10",
+        "M11"
+      ],
+      "concepts": [
+        "执行与停止",
+        "权限/审批",
+        "幂等/恢复",
+        "Context与工具隔离",
+        "Trace/Replay",
+        "CI Regression与发布"
+      ],
+      "official_sources": [
+        "https://cloud.google.com/discover/agent-harness",
+        "https://openai.com/index/harness-engineering/",
+        "https://openai.github.io/openai-agents-python/tracing/"
+      ],
+      "aliases": [
+        "Harness",
+        "智能体运行",
+        "Agent Harness"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-TOOLS",
+      "title": "Tool/MCP Safety",
+      "guide": "LLM-Training/application-engineering/AGENT-HARNESS-ENGINEERING.md",
+      "upstream_path": "docs/labs/harness-verification-sandbox-20261029/README.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/labs/harness-verification-sandbox-20261029/README.md",
+      "modules": [
+        "M06",
+        "M08",
+        "M10"
+      ],
+      "concepts": [
+        "Tool Allowlist",
+        "Schema/Role/ACL",
+        "MCP不是权限",
+        "重复副作用/Approval",
+        "输出信任边界"
+      ],
+      "official_sources": [
+        "https://openai.github.io/openai-agents-python/guardrails/",
+        "https://modelcontextprotocol.io/specification/2026-07-28"
+      ],
+      "aliases": [
+        "MCP",
+        "工具权限",
+        "Tool Gateway"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-EVAL",
+      "title": "Task / Trace Evals",
+      "guide": "LLM-Training/application-engineering/RAGAS-EVALUATION.md",
+      "upstream_path": "docs/assessments/ai-native-agent-rubric-20261029.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/assessments/ai-native-agent-rubric-20261029.md",
+      "modules": [
+        "M10",
+        "M11"
+      ],
+      "concepts": [
+        "固定任务集/Gold",
+        "Agent Trace Grading",
+        "Task Success与分母",
+        "权限/拒绝负例",
+        "延迟/成本/回归"
+      ],
+      "official_sources": [
+        "https://developers.openai.com/api/docs/guides/trace-grading",
+        "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/"
+      ],
+      "aliases": [
+        "Evals",
+        "Trace Grading",
+        "任务评测"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-PRODUCTION",
+      "title": "Project/Product/Production Engineering",
+      "guide": "LLM-Training/application-engineering/PROJECT-PRODUCTION-ENGINEERING.md",
+      "upstream_path": "docs/market/market-driven-rag-learning-loop.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/market/market-driven-rag-learning-loop.md",
+      "modules": [
+        "M09",
+        "M10",
+        "M11"
+      ],
+      "concepts": [
+        "PRD/任务契约",
+        "不训练基线",
+        "薄纵切MVP",
+        "服务鉴权/成本/观测",
+        "版本回滚与反馈",
+        "G0–G8 Gate"
+      ],
+      "official_sources": [
+        "https://openai.com/index/harness-engineering/",
+        "https://openai.github.io/openai-agents-python/testing/"
+      ],
+      "aliases": [
+        "项目工程",
+        "产品工程",
+        "Production",
+        "Project"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    },
+    {
+      "id": "APP-SECURITY",
+      "title": "Application Security/Injection",
+      "guide": "LLM-Training/application-engineering/PROJECT-PRODUCTION-ENGINEERING.md",
+      "upstream_path": "docs/labs/harness-verification-sandbox-20261029/README.md",
+      "upstream_url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/labs/harness-verification-sandbox-20261029/README.md",
+      "modules": [
+        "M02",
+        "M10",
+        "M11"
+      ],
+      "concepts": [
+        "Prompt Injection/低信任内容",
+        "Server ACL/租户隔离",
+        "密钥管理/日志脱敏",
+        "Tool审批/幂等",
+        "安全负例/撤销权限"
+      ],
+      "official_sources": [
+        "https://genai.owasp.org/",
+        "https://openai.github.io/openai-agents-python/guardrails/"
+      ],
+      "aliases": [
+        "Prompt Injection",
+        "权限",
+        "安全工程"
+      ],
+      "practice": "LLM-Training/application-engineering/labs/README.md",
+      "status": "CURRICULUM_ONLY",
+      "execution_evidence": "NOT_RUN_REAL_MODEL_OR_PRODUCTION"
+    }
+  ]
+}

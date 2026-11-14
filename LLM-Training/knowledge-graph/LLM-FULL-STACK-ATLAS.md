@@ -164,3 +164,11 @@ flowchart LR
 ## 基础概念与能力等级的统一索引
 
 六域的 [33 个宏观主题](../index/upstream-knowledge-index.json) 负责全栈关系；新增 [90 个核心基础词条](../index/FOUNDATION-COVERAGE.md) 负责直接找到 M01–M12 对应公式、反例、资料和实操。等级含义以 [L0–L4 Rubric](../assessments/CAPABILITY-RUBRIC.md) 为准，生产 G0–G8 独立。
+
+## 应用层专业补全（RAG、Ragas、Agent Harness、Prompt、Context）
+
+六域 Atlas 里 **A 应用域**已经包含 Prompt/RAG/Tools/Agent，但之前缺少 Harness、Context 和 Ragas **从定义到工程测试**的直达学习入口。现由 [应用层总入口](../application-engineering/README.md) 统一管理，图在 [跨层依赖与容易混淆的概念](../application-engineering/ROADMAP-RELATIONS.md)。
+
+- **RAG** 提供有权限的检索证据；**Context** 组装本轮全部可用 Token；**Prompt** 定义指令与输出契约；**Agent** 提议工具动作；**Harness** 执行、约束、重试、恢复和记录；**Ragas/Evals** 评测检索、事实支持和任务成功；**生产门禁**审核服务/成本/安全/回滚。
+- 这 10 项横向专题与原有 33 个宏观主题、12 个训练模块、90 个基础条目属于不同分类层次，不能合并为总课程完成百分比。
+- [离线教学 Lab](../application-engineering/labs/README.md) 只验证合成分层合同，不证明大模型安全、真实 RAG 或上线。

@@ -1,6 +1,12 @@
 # 按需求跳学｜从失败现象反查最短知识依赖
 
-**完整大模型六域版本**：新增 [12 张跨训练/推理/应用/生产的任务卡](AI-NATIVE-NEED-ROUTES.md)、[全局知识关系](../knowledge-graph/LLM-FULL-STACK-ATLAS.md) 与 [AI 原生学习协议](../learning-method/AI-NATIVE-LEARNING-LOOP.md)。以下原有 18 条症状索引仍可用，面向 M01–M12 训练模块；两套索引分别负责全栈概念广度和训练专项深度。
+## 本轮新增应用工程需求入口
+
+[10 项应用工程专题及检索命令](../application-engineering/index/README.md) 补充 **RAG / Ragas / Agent Harness / Context / Prompt / Tool Safety / Trace Eval / Project Engineering** 等横向能力。与原训练 [19 条需求](../index/learning-index.json) 及 [12 张六域卡](AI-NATIVE-NEED-ROUTES.md) 并存，不是另外一个按周打卡计划。
+
+遇到引用不可信 → [RAG/Eval](../application-engineering/RAGAS-EVALUATION.md)；上下文变长/遗漏约束 → [Context](../application-engineering/CONTEXT-ENGINEERING.md)；工具越权/长任务失败 → [Harness](../application-engineering/AGENT-HARNESS-ENGINEERING.md)；输出格式/版本回归 → [Prompt](../application-engineering/PROMPT-ENGINEERING.md)。
+
+**完整大模型六域版本**：新增 [12 张跨训练/推理/应用/生产的任务卡](AI-NATIVE-NEED-ROUTES.md)、[全局知识关系](../knowledge-graph/LLM-FULL-STACK-ATLAS.md) 与 [AI 原生学习协议](../learning-method/AI-NATIVE-LEARNING-LOOP.md)。以下原有 19 条训练症状索引仍可用，面向 M01–M12 训练模块；两套索引分别负责全栈概念广度和训练专项深度。
 
 **用户真实问题优先于课程顺序**。这里的“需求”包含：工程故障、科研问题、职业任务、纯兴趣问题、准备上线的产品需求；不必先拥有真实客户项目，才能学习底层知识。训练卡可以是 **SELF_CHOSEN / SYNTHETIC / AUTHORIZED_TASK / HISTORICAL**，不得将模拟需求写成已成交业务。
 

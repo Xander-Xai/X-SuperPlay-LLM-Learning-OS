@@ -1,5 +1,13 @@
 # LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
 
+## 完整应用工程横切：RAG / Ragas / Agent / Harness / Context / Prompt
+
+- [应用工程完整入口](application-engineering/README.md)：专业定义、大白话类比、知识依赖图、按需任务路由、上游专项和官方链接。
+- [RAG](application-engineering/RAG-ENGINEERING.md) / [Ragas 评测](application-engineering/RAGAS-EVALUATION.md) / [Context Engineering](application-engineering/CONTEXT-ENGINEERING.md) / [Prompt Engineering](application-engineering/PROMPT-ENGINEERING.md) / [Agent Harness](application-engineering/AGENT-HARNESS-ENGINEERING.md) / [Project/Production Engineering](application-engineering/PROJECT-PRODUCTION-ENGINEERING.md)。
+- [10 项专题机器索引](application-engineering/index/README.md) 与 [20 条标准库合成实验测试](application-engineering/labs/README.md)：学习入口和安全失败负例，不是模型真实任务结果。
+
+**本目录仍然保持 M01–M12 训练模块完整**；应用工程作为横向知识层，与 M06 Tool Calling、M08 Agentic RL、M10 Eval、M11 Serving 交叉。
+
 ## 90 个核心基础词条：日常按需反查
 
 [90 项核心知识点目录](index/FOUNDATION-COVERAGE.md) · [离线关键词检索](tools/route_foundations.py) · [数学/统计](fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md) · [Tokenizer](data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md) · [Encoder/Decoder](fundamentals/MODEL-FAMILIES-AND-GENERATION.md) · [训练复现和评估](training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md)。

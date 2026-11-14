@@ -1,5 +1,11 @@
 # LLM Learning Roadmap V3｜需求驱动、知识依赖、实战到生产能力
 
+## 全链路最后一层：训练模型与工程应用之间的运行时
+
+[新增应用工程专题](application-engineering/README.md) 不再增加 M13，而是在六域 Atlas 中将 **Prompt → Context(含RAG) → Agent/Tool → Harness → Ragas/Trace Evals → Production** 清晰串起来；[关系与误区](application-engineering/ROADMAP-RELATIONS.md) 区分 Tool Calling/MCP/服务端鉴权、RAG/Ragas、Agent Harness/lm-evaluation-harness。根据故障选其中一个点学习，其他内容保留 L0。
+
+**上游已存在** Harness、Context、Prompt、RAG 教学路线与代码，本仓按固定 Git SHA 提供对应入口，不复制上游市场事实和学习进度；新加的 [20 条合成 CPU 实验单测](application-engineering/labs/README.md) 只是验证分层逻辑，非真实 LLM Agent/Ragas 评估。
+
 ## 基础知识补全与非线性学习的统一入口
 
 旧 M01–M12 主干已经覆盖，但部分概念只有术语，本次补充 [90 条核心基础查漏目录](index/FOUNDATION-COVERAGE.md)，每一条连到专业/白话卡、实验和权威原始资料。重点 [数学/信息论](fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md)、[Tokenizer/数据](data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md)、[架构家族](fundamentals/MODEL-FAMILIES-AND-GENERATION.md)、[训练/评估复现](training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md)。
