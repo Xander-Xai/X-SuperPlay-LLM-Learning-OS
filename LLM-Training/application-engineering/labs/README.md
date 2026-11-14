@@ -1,5 +1,7 @@
 # 离线教学纵切：Prompt → RAG Context → Scripted Agent → Harness → Eval
 
+**Agent 真模型协议教学（可选）**：[操作与风险](REAL-LLM-OPTIONAL.md) · [无网络 FakeClient 单测](test_real_llm_optional.py)；默认不开启付费调用，不把合成实验当生产验收。
+
 **状态：SYNTHETIC_CPU / NO LLM OR RAGAS.** 本实验只依赖 Python 3.11 标准库，固定 6 条虚构文档、模拟库存、纯字符串检索；没有 Embedding、BM25、真实 Tokenizer、模型推理、联网、数据库事务、Ragas Judge、真正用户数据或 OS 沙箱。
 
 ## 命令（仓库根目录）

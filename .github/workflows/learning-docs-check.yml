@@ -50,6 +50,14 @@ jobs:
         run: |
           python LLM-Training/application-engineering/labs/mini_agent_loop.py
           python -m unittest discover -s LLM-Training/application-engineering/labs -p 'test_mini_agent_loop.py' -v
+      - name: Validate Agent deep-dive coverage, sources and canonical rubric
+        run: |
+          python LLM-Training/application-engineering/agent-deep-dive/validate_agent_curriculum.py
+          python -m unittest discover -s LLM-Training/application-engineering/agent-deep-dive -p 'test_agent_curriculum.py' -v
+      - name: Verify optional provider tool-call protocol offline
+        run: |
+          python LLM-Training/application-engineering/labs/real_llm_optional.py
+          python -m unittest discover -s LLM-Training/application-engineering/labs -p 'test_real_llm_optional.py' -v
       - name: Validate 90 core foundation topics and canonical level wording
         run: python LLM-Training/tools/validate_foundation_coverage.py
       - name: Test foundation coverage, local links and known contradictions
