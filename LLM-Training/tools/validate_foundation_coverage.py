@@ -24,7 +24,7 @@ REQUIRED_TOPICS = {
     "M02.02": "BPE/WordPiece/Unigram",
     "M02.07": "数据许可/Privacy/PII",
     "M03.01": "Encoder-only/Decoder-only/Encoder-Decoder",
-    "M03.04": "Causal Mask 的未来隔离",
+    "M03.04": "因果遮挡 Causal Mask 的未来隔离",
     "M04.05": "Checkpoints 完整训练状态",
     "M05.03": "灾难性遗忘与通用能力",
     "M06.02": "真实 Chat Template Generation 区间",

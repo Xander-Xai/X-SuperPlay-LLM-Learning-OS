@@ -37,7 +37,7 @@
 | M03.01 | Encoder-only/Decoder-only/Encoder-Decoder | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
 | M03.02 | Embedding 与位置编码 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
 | M03.03 | Scaled Dot-Product QKV | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
-| M03.04 | Causal Mask 的未来隔离 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
+| M03.04 | 因果遮挡 Causal Mask 的未来隔离 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
 | M03.05 | 残差/RMSNorm/SwiGLU/FFN | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
 | M03.06 | RoPE/相对位置 | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |
 | M03.07 | MHA/MQA/GQA/MLA | [M03](../modules/M03.md) | [专题](../fundamentals/MODEL-FAMILIES-AND-GENERATION.md) | [练习/计划](../labs/tiny-gpt/README.md) | [原始资料](https://huggingface.co/learn/llm-course/en/chapter1/1) |

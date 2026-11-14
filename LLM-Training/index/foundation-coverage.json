@@ -272,7 +272,7 @@
     {
       "id": "M03.04",
       "module": "M03",
-      "title": "Causal Mask 的未来隔离",
+      "title": "因果遮挡 Causal Mask 的未来隔离",
       "guide": "LLM-Training/fundamentals/MODEL-FAMILIES-AND-GENERATION.md",
       "practice": "LLM-Training/labs/tiny-gpt/README.md",
       "official_source": "https://huggingface.co/learn/llm-course/en/chapter1/1",
