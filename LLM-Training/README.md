@@ -10,6 +10,8 @@
 
 ## 新增 Agent 学习贯通入口
 
+**Agent Loop → Loop Engineering 学习衔接**：[双层任务循环专题](application-engineering/agent-deep-dive/loop-engineering/README.md) · [原理细节](application-engineering/agent-deep-dive/loop-engineering/CORE.md) · [四周实践](application-engineering/agent-deep-dive/loop-engineering/ROADMAP.md)。
+
 **逐项深学与命令**：[Agent 深学入口](application-engineering/agent-deep-dive/README.md) · [8 周＋前三天操作](application-engineering/agent-deep-dive/STUDY-SCHEDULE.md) · [严格覆盖台账](application-engineering/agent-deep-dive/COVERAGE.md)。
 
 [Agent 学习路线](application-engineering/AGENT-LEARNING-PATH.md)｜[官方资料](application-engineering/AGENT-OFFICIAL-RESOURCES.md)｜[实践评测](application-engineering/AGENT-PRACTICE-AND-EVAL.md)｜[Mini Loop](application-engineering/labs/MINI-AGENT-LOOP.md)｜[面试题](application-engineering/AGENT-INTERVIEW-QUESTIONS.md)。与现有 APP-AGENT/APP-HARNESS 和 M01–M12 交叉关联，学习时间是建议而非硬性模块，个人和生产状态保持未验证。

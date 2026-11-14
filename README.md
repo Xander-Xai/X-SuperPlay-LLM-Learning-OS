@@ -16,6 +16,8 @@
 
 ## Agent 系统化学习专项（2026-11-14）
 
+**新增：Agent Loop × Loop Engineering（2026-11-15）**：[完整课程入口](LLM-Training/application-engineering/agent-deep-dive/loop-engineering/README.md) · [内外层循环机制](LLM-Training/application-engineering/agent-deep-dive/loop-engineering/CORE.md) · [4 周及前三天学习计划](LLM-Training/application-engineering/agent-deep-dive/loop-engineering/ROADMAP.md) · [六组实验和离线源码](LLM-Training/application-engineering/agent-deep-dive/loop-engineering/LABS.md) · [官方资料](LLM-Training/application-engineering/agent-deep-dive/loop-engineering/SOURCES.md)。这是原有 APP-AGENT/APP-HARNESS 的补充，不新增课程编号；Toy 测试不代表生产系统已经验收。
+
 **2026-11-15 原文逐项补齐与复验**：[Agent 深度学习总入口](LLM-Training/application-engineering/agent-deep-dive/README.md) · [原理与状态机](LLM-Training/application-engineering/agent-deep-dive/CORE-01-04.md) · [生产/评测/协议](LLM-Training/application-engineering/agent-deep-dive/CORE-05-08.md) · [8 周及前三天执行日历](LLM-Training/application-engineering/agent-deep-dive/STUDY-SCHEDULE.md) · [官方来源复核](LLM-Training/application-engineering/agent-deep-dive/SOURCES.md) · [逐项覆盖台账](LLM-Training/application-engineering/agent-deep-dive/COVERAGE.md)。沿用原有 APP-AGENT 等专题与 L0–L4，不宣称真实模型/生产系统已运行。
 
 [**Agent 8 周可选学习主线**](LLM-Training/application-engineering/AGENT-LEARNING-PATH.md) · [权威资料精读表](LLM-Training/application-engineering/AGENT-OFFICIAL-RESOURCES.md) · [项目/任务评测](LLM-Training/application-engineering/AGENT-PRACTICE-AND-EVAL.md) · [纯 Python Agent Loop](LLM-Training/application-engineering/labs/MINI-AGENT-LOOP.md) · [24 道面试题](LLM-Training/application-engineering/AGENT-INTERVIEW-QUESTIONS.md)。归属现有 APP-AGENT/APP-HARNESS，不增加训练模块或应用专题；可运行测试为合成场景，不能当作真实 Agent 或生产验证。

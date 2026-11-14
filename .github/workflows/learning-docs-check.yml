@@ -50,6 +50,12 @@ jobs:
         run: |
           python LLM-Training/application-engineering/labs/mini_agent_loop.py
           python -m unittest discover -s LLM-Training/application-engineering/labs -p 'test_mini_agent_loop.py' -v
+      - name: Validate Agent Loop and Loop Engineering curriculum and toy tests
+        run: |
+          python LLM-Training/application-engineering/agent-deep-dive/loop-engineering/validate_loop_course.py
+          python -m unittest discover -s LLM-Training/application-engineering/agent-deep-dive/loop-engineering -p 'test_loop_course.py' -v
+          python LLM-Training/application-engineering/agent-deep-dive/loop-engineering/labs/outer_loop.py
+          python -m unittest discover -s LLM-Training/application-engineering/agent-deep-dive/loop-engineering/labs -p 'test_outer_loop.py' -v
       - name: Validate Agent deep-dive coverage, sources and canonical rubric
         run: |
           python LLM-Training/application-engineering/agent-deep-dive/validate_agent_curriculum.py

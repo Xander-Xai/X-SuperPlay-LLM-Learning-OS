@@ -1,5 +1,7 @@
 # Agent 与 Harness Engineering｜模型之外的执行和控制系统
 
+**Loop Engineering 不是 Harness 的替代名称**：Harness 负责执行环境、工具/权限/状态/沙箱；[Loop Engineering 专题](agent-deep-dive/loop-engineering/README.md) 进一步把任务触发、整次 Agent Run、独立验证、反馈、重试与停止组织成受控循环。两者可合并实现，不必套两层 while。
+
 **专业定义**：Agent 是围绕任务不断选择动作/工具/观察的策略与工作流；Harness 是支撑 Agent 可靠运行的**执行循环、工具适配、状态持久化、隔离、权限、容错、可观测、测试与恢复机制**。大白话：模型是提出方案的员工，Harness 是有门禁、工具、流水线、记录和质检的工作环境。
 
 ## 1. Harness 不等于“装几个 MCP/Skill”
