@@ -35,6 +35,14 @@ REQUIRED = [
     "LLM-Training/tools/route_learning.py",
     "LLM-Training/tools/validate_learning_index.py",
     "LLM-Training/tools/test_learning_index.py",
+    "LLM-Training/ACCEPTANCE-V3-AUDIT.md",
+    "LLM-Training/labs/preference-rl-math/README.md",
+    "LLM-Training/labs/preference-rl-math/alignment_math.py",
+    "LLM-Training/labs/preference-rl-math/test_alignment_math.py",
+    "LLM-Training/labs/task-evaluation/README.md",
+    "LLM-Training/labs/task-evaluation/evaluate.py",
+    "LLM-Training/labs/task-evaluation/synthetic_cases.json",
+    "LLM-Training/labs/task-evaluation/test_evaluate.py",
     "LLM-Training/labs/synthetic-tool-gateway/README.md",
     "LLM-Training/labs/synthetic-tool-gateway/gateway.py",
     "LLM-Training/labs/synthetic-tool-gateway/run_demo.py",
@@ -74,6 +82,18 @@ def main() -> int:
             failures.append(f"Experiment missing an explicit supported status: {exp.relative_to(ROOT)}")
         elif status.group(1) in {"PASS", "FAIL", "INCONCLUSIVE"} and "## 实际运行证据" not in content:
             failures.append(f"Experiment marked {status.group(1)} without evidence heading: {exp.relative_to(ROOT)}")
+    required_depth_markers = [
+        "## V3 深入：", "### 机制：", "### 大白话：", "### 可执行学习任务",
+        "**失败注入 / 负例：**", "**模块主参考", "**本次能力退出门槛：**",
+    ]
+    for i in range(1, 13):
+        path = ROOT / f"LLM-Training/modules/M{i:02d}.md"
+        if not path.is_file():
+            continue
+        content = path.read_text(encoding="utf-8")
+        for marker in required_depth_markers:
+            if marker not in content:
+                failures.append(f"Module M{i:02d} missing V3 depth section: {marker}")
     for issue in failures:
         print("ERROR:", issue, file=sys.stderr)
     print(f"Documentation QA: markdown={len(markdown)}, local_links={local_links}, required={len(REQUIRED)}, issues={len(failures)}")

@@ -5,9 +5,12 @@
 - [Roadmap V3：深度覆盖、知识依赖与生产能力](ROADMAP-V3-DEMAND-DRIVEN.md)
 - [需求入口和 18 张机器索引卡](demand-driven/README.md) · [一个实战任务卡模板](demand-driven/DEMAND-CARD-TEMPLATE.md) · [五个真实工程故障的合成教学案例](demand-driven/worked-demand-cards.md)
 - [知识依赖图 V3](knowledge-graph/dependency-and-capability-map.md) · [20 份权威来源导航](resources/AUTHORITATIVE-INDEX.md)
+- **可运行课程纵切**：[CPU Loss Mask](labs/README.md) · [DPO/GRPO 数学与 Reward Hacking](labs/preference-rl-math/README.md) · [Agent 任务级指标评测](labs/task-evaluation/README.md) · [合成 Tool Gateway](labs/synthetic-tool-gateway/README.md)。
 - [可运行合成工具网关实验](labs/synthetic-tool-gateway/README.md)（标准库即可运行，验证工具授权/参数/证据/负例，不冒充大模型训练）
 - [L0–L4 独立能力 Rubric](assessments/CAPABILITY-RUBRIC.md) · [实战阶梯](labs/capability-ladder.md) · [生产 Go/No-Go](production/PRODUCTION-READINESS.md)
 - [机器索引与上下游双向关系](index/README.md) · [命令行按需检索](tools/route_learning.py)
+
+**V3 深度补充**：M01–M12 的独立页面现包含专业机制、白话类比、可操作实验、注入失败样本、模块级权威参考与 Go/No-Go。验收记录见 [V3 审计](ACCEPTANCE-V3-AUDIT.md)。
 
 **定位**：这是训练、推理、Agent、RAG 与评测等技能的学习基地；学到的知识可用于多种下游产品，但不要求本仓服务某个固定项目。原有的 [V2 十二模块导航](ROADMAP-V2.md) 和 5 类训练实验继续有效。
 

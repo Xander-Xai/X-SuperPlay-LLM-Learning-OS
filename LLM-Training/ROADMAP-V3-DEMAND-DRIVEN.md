@@ -141,3 +141,16 @@ flowchart LR
 
 **上游/下游分工**：[跨仓入口与知识权威](index/UPSTREAM-DOWNSTREAM.md)。
 
+
+## 10. 第三轮严格验收补强：所有模块都必须带可执行的深挖任务
+
+原 V3 仅有全局概览，M01–M12 独立内容仍偏概要。本次已在[12 模块学习中心](README.md)逐个补充：**专业原理 → 白话解释 → 具体输入/输出 → 受控实践 → 失败反例 → 官方来源 → 能力门槛**。模块不只是培训大纲，按实际需求任意进入即可。
+
+**三条可立即运行的跨环节练习线**：
+1. M06 工具可信边界：[标准库 Gateway](labs/synthetic-tool-gateway/README.md)，验证授权/参数/证据，不依赖模型。
+2. M07/M08 后训练核心：[DPO/GRPO 数学实验](labs/preference-rl-math/README.md)，学习 log-ratio、组内奖励方差和 Reward Hacking；不冒充真正策略更新。
+3. M10 评估：[任务级离线指标实验](labs/task-evaluation/README.md)，区分 Tool selection、参数、执行、引用、拒答和 E2E 的分母与不确定性。
+
+[机器索引](index/learning-index.json)现为每个模块记录 `sources`、`practice`、`question` 与 `gates`，问题路由有中英同义词并支持按模块反查：`python LLM-Training/tools/route_learning.py --module M11`。但这仍是**人工策划的关键词入口**，不是无限语义检索或自动获取私人项目需求。
+
+后续若要完成真实 Qwen 微调、线上负载及独立技能评估，仍须在有权限的环境实际执行并留下可审查记录。第三轮 [验收报告](ACCEPTANCE-V3-AUDIT.md)只验收课程资产和静态/教学运行，不虚构 GPU 训练结果。

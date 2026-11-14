@@ -16,7 +16,16 @@
       "id": "M01",
       "title": "数学 Autograd 数值稳定",
       "path": "LLM-Training/modules/M01.md",
-      "prerequisites": []
+      "prerequisites": [],
+      "sources": [
+        "SRC-PYTORCH",
+        "SRC-CS336"
+      ],
+      "practice": "LLM-Training/labs/README.md",
+      "question": "OOM、NaN、梯度与训练显存如何归因？",
+      "gates": [
+        "G5"
+      ]
     },
     {
       "id": "M02",
@@ -24,6 +33,16 @@
       "path": "LLM-Training/modules/M02.md",
       "prerequisites": [
         "M01"
+      ],
+      "sources": [
+        "SRC-DCLM",
+        "SRC-TRL"
+      ],
+      "practice": "LLM-Training/data-engineering/tokenizer-and-packing.md",
+      "question": "训练数据质量、packing、泄漏和许可如何验收？",
+      "gates": [
+        "G1",
+        "G2"
       ]
     },
     {
@@ -33,6 +52,16 @@
       "prerequisites": [
         "M01",
         "M02"
+      ],
+      "sources": [
+        "SRC-MINIMIND",
+        "SRC-CS336"
+      ],
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/README.md",
+      "question": "Attention/RoPE/GQA/KV 为什么影响训练与推理？",
+      "gates": [
+        "G2",
+        "G5"
       ]
     },
     {
@@ -43,6 +72,16 @@
         "M01",
         "M02",
         "M03"
+      ],
+      "sources": [
+        "SRC-MINIMIND",
+        "SRC-CS336"
+      ],
+      "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
+      "question": "一个 Batch 如何从 token 更新到可恢复 checkpoint？",
+      "gates": [
+        "G1",
+        "G2"
       ]
     },
     {
@@ -52,6 +91,17 @@
       "prerequisites": [
         "M04",
         "M10"
+      ],
+      "sources": [
+        "SRC-CS336",
+        "SRC-QWEN3"
+      ],
+      "practice": "LLM-Training/experiments/02-qwen-cpt-replay/README.md",
+      "question": "领域知识缺口应该做 CPT 还是 RAG？",
+      "gates": [
+        "G0",
+        "G1",
+        "G2"
       ]
     },
     {
@@ -62,6 +112,18 @@
         "M01",
         "M02",
         "M10"
+      ],
+      "sources": [
+        "SRC-TRL",
+        "SRC-PEFT",
+        "SRC-QWEN-TOOLS"
+      ],
+      "practice": "LLM-Training/labs/synthetic-tool-gateway/README.md",
+      "question": "Tool Call 参数、模板、SFT mask 出错时如何训练和排错？",
+      "gates": [
+        "G2",
+        "G3",
+        "G4"
       ]
     },
     {
@@ -71,6 +133,15 @@
       "prerequisites": [
         "M06",
         "M10"
+      ],
+      "sources": [
+        "SRC-DPO-PAPER",
+        "SRC-TRL"
+      ],
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "question": "为什么 DPO 的 Loss 下降却使任务行为退化？",
+      "gates": [
+        "G2"
       ]
     },
     {
@@ -80,6 +151,17 @@
       "prerequisites": [
         "M06",
         "M10"
+      ],
+      "sources": [
+        "SRC-GRPO-PAPER",
+        "SRC-TRL",
+        "SRC-UNSLOTH"
+      ],
+      "practice": "LLM-Training/labs/preference-rl-math/README.md",
+      "question": "如何理解和诊断 GRPO Group Reward、KL 和奖励投机？",
+      "gates": [
+        "G2",
+        "G5"
       ]
     },
     {
@@ -88,13 +170,34 @@
       "path": "LLM-Training/modules/M09.md",
       "prerequisites": [
         "M01"
+      ],
+      "sources": [
+        "SRC-PYTORCH",
+        "SRC-FSDP",
+        "SRC-VERL"
+      ],
+      "practice": "LLM-Training/training-systems/memory-and-distributed.md",
+      "question": "显存、通信、Rollout 与训练引擎如何分工？",
+      "gates": [
+        "G5",
+        "G6"
       ]
     },
     {
       "id": "M10",
       "title": "Evaluation Benchmarks 泄漏 回归",
       "path": "LLM-Training/modules/M10.md",
-      "prerequisites": []
+      "prerequisites": [],
+      "sources": [
+        "SRC-LMEVAL",
+        "SRC-TRL"
+      ],
+      "practice": "LLM-Training/labs/task-evaluation/README.md",
+      "question": "怎样把 JSON 正确率与最终工具执行/引用成功率分开？",
+      "gates": [
+        "G2",
+        "G8"
+      ]
     },
     {
       "id": "M11",
@@ -103,6 +206,20 @@
       "prerequisites": [
         "M03",
         "M10"
+      ],
+      "sources": [
+        "SRC-VLLM",
+        "SRC-OTEL",
+        "SRC-OWASP"
+      ],
+      "practice": "LLM-Training/production/PRODUCTION-READINESS.md",
+      "question": "模型如何在 P95、并发、安全和回滚约束下上线？",
+      "gates": [
+        "G2",
+        "G3",
+        "G5",
+        "G6",
+        "G7"
       ]
     },
     {
@@ -112,6 +229,17 @@
       "prerequisites": [
         "M03",
         "M08"
+      ],
+      "sources": [
+        "SRC-ATLAS",
+        "SRC-CS336",
+        "SRC-VERL"
+      ],
+      "practice": "LLM-Training/advanced/M11-M12.md",
+      "question": "什么时候选择 MoE、多模态或 Agentic RL 而不是普通 RAG？",
+      "gates": [
+        "G0",
+        "G2"
       ]
     }
   ],
@@ -277,7 +405,15 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "RAG",
+        "检索增强",
+        "幻觉",
+        "引用",
+        "无证据",
+        "cite"
+      ]
     },
     {
       "id": "tool-calling",
@@ -298,7 +434,15 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "工具调用",
+        "function calling",
+        "tool call",
+        "参数错误",
+        "JSON参数",
+        "工具选择"
+      ]
     },
     {
       "id": "gpu-oom",
@@ -317,7 +461,14 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "OOM",
+        "显存不足",
+        "爆显存",
+        "内存溢出",
+        "梯度累积"
+      ]
     },
     {
       "id": "cpt-forgetting",
@@ -337,7 +488,13 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "CPT",
+        "防遗忘",
+        "Replay",
+        "领域适配"
+      ]
     },
     {
       "id": "qwen-finetune",
@@ -359,7 +516,15 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "Qwen",
+        "微调",
+        "SFT",
+        "LoRA",
+        "QLoRA",
+        "PEFT"
+      ]
     },
     {
       "id": "data-contamination",
@@ -377,7 +542,14 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "数据污染",
+        "去重",
+        "packing",
+        "Tokenizer",
+        "数据清洗"
+      ]
     },
     {
       "id": "dpo-regression",
@@ -396,7 +568,13 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "DPO",
+        "偏好数据",
+        "偏好对齐",
+        "对齐退化"
+      ]
     },
     {
       "id": "grpo-reward-hacking",
@@ -417,7 +595,14 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "GRPO",
+        "Reward Hacking",
+        "奖励投机",
+        "RLVR",
+        "RL"
+      ]
     },
     {
       "id": "agentic-rl",
@@ -438,7 +623,13 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "Agentic RL",
+        "多步工具",
+        "强化学习",
+        "轨迹"
+      ]
     },
     {
       "id": "serving-p95",
@@ -459,7 +650,15 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "vllm",
+        "推理服务",
+        "延迟",
+        "吞吐",
+        "TTFT",
+        "p95"
+      ]
     },
     {
       "id": "quantization",
@@ -480,7 +679,14 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "量化",
+        "蒸馏",
+        "Merge",
+        "int4",
+        "int8"
+      ]
     },
     {
       "id": "distributed-rl",
@@ -499,7 +705,14 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "分布式",
+        "verl",
+        "DDP",
+        "FSDP",
+        "ZeRO"
+      ]
     },
     {
       "id": "nan-loss",
@@ -518,7 +731,13 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "NaN",
+        "loss爆炸",
+        "学习率",
+        "梯度爆炸"
+      ]
     },
     {
       "id": "attention-whitebox",
@@ -537,7 +756,13 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "Attention",
+        "RoPE",
+        "Transformer",
+        "KV Cache"
+      ]
     },
     {
       "id": "multimodal",
@@ -559,7 +784,13 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "多模态",
+        "VLM",
+        "长上下文",
+        "MoE"
+      ]
     },
     {
       "id": "start-without-project",
@@ -580,7 +811,13 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "从零学习",
+        "项目驱动",
+        "基础原理",
+        "训练全流程"
+      ]
     },
     {
       "id": "model-selection",
@@ -601,7 +838,14 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "API",
+        "自托管",
+        "成本",
+        "是否训练",
+        "模型选型"
+      ]
     },
     {
       "id": "production-agent",
@@ -627,7 +871,15 @@
       ],
       "entry": "LLM-Training/demand-driven/README.md",
       "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
-      "status": "DESIGN_ONLY"
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "上线",
+        "生产",
+        "部署",
+        "运维",
+        "回滚",
+        "Agent"
+      ]
     }
   ],
   "tracks": [
@@ -704,7 +956,18 @@
       "G6",
       "G7",
       "G8"
-    ]
+    ],
+    "gate_labels": {
+      "G0": "方案选择与基线",
+      "G1": "数据、隐私与许可",
+      "G2": "任务正确性及回归",
+      "G3": "鉴权与安全",
+      "G4": "调用超时/幂等/可靠性",
+      "G5": "性能、成本与容量",
+      "G6": "可观测性与告警",
+      "G7": "发布与回滚",
+      "G8": "持续反馈与复测"
+    }
   },
   "assessments": {
     "entry": "LLM-Training/assessments/CAPABILITY-RUBRIC.md",

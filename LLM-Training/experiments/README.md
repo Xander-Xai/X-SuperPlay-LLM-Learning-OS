@@ -32,6 +32,15 @@ flowchart LR
 
 **注**：02 的 CPT 以同一 Qwen Base 为起点作诊断实验，不必把 CPT 结果串联到 03；03 可以直接从原始 Base 做 SFT。04/05 均从同一个经过验证的 SFT Checkpoint 分叉。
 
+## 可先做、不占 GPU 的原理与评估练习
+
+- [SFT Mask/Shift](../labs/README.md)（PyTorch CPU）。
+- [DPO/GRPO 数学与奖励投机](../labs/preference-rl-math/README.md)（Python 标准库）。
+- [工具授权与引用边界](../labs/synthetic-tool-gateway/README.md)（Python 标准库）。
+- [多维度任务评测](../labs/task-evaluation/README.md)（Python 标准库）。
+
+以上只验证部分学习合同，**不表示实验 01–06 已运行或通过**。
+
 ## 运行前通用检查
 
 - [ ] 固定 commit / 模型 revision / tokenizer / 数据 hash。

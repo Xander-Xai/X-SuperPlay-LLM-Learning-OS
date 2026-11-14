@@ -2,6 +2,8 @@
 
 **状态：NOT RUN**。以实验 03 的**同一 SFT Checkpoint** 为起点，先比较独立 DPO 分支，不与 GRPO 混杂。
 
+**开始前的无 GPU 演练**：[DPO 相对 log-prob / beta / 失真 reward 数值实验](../../labs/preference-rl-math/README.md)。通过玩具单测只说明理解公式，不构成 DPO 模型训练完成。
+
 ## 输入
 
 prompt + chosen + rejected。偏好对来源分两组：A 外部/教师，B 当前 SFT 模型自采样若干候选后自动验证与人工抽检。匹配数据条数、任务类别、奖励质量与训练预算。**B 训练固定数据集仍是离线 DPO，不是在线 DPO。**

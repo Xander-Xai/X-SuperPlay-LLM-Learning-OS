@@ -6,6 +6,8 @@
 - [机器索引（12 模块 / 18 需求 / 20 来源）](LLM-Training/index/README.md) · [权威资料](LLM-Training/resources/AUTHORITATIVE-INDEX.md) · [上线门禁](LLM-Training/production/PRODUCTION-READINESS.md)
 - [上游 AI-Learning-OS 的责任分工与旧 M00–M17 映射](LLM-Training/index/UPSTREAM-DOWNSTREAM.md)
 
+**第三轮课程深入验收入口**：[12 模块 V3 原理+实战](LLM-Training/README.md) · [DPO/GRPO 数学实验](LLM-Training/labs/preference-rl-math/README.md) · [Agent 任务级评测](LLM-Training/labs/task-evaluation/README.md) · [V3 审计报告](LLM-Training/ACCEPTANCE-V3-AUDIT.md)。
+
 **状态边界**：课程、索引与教学 CI 可以审查，但 MiniMind/Qwen GPU 实验仍需真实日志；学员能力和生产上线不因文档/CI 通过自动升级。
 
 ---

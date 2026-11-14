@@ -42,6 +42,8 @@ flowchart TD
 | 新领域要做多模态 | 先定位视觉/文本失效 | [M12](../modules/M12.md) → [M02](../modules/M02.md)/[M10](../modules/M10.md) | 多模态评测 |
 | 学训练全栈但无真实项目 | 选择一项合成可核验任务 | [五类实验](../experiments/README.md) → [能力阶梯](../labs/capability-ladder.md) | 迁移演练 |
 
+**新路由用法**：`--search QLoRA`、`--search 工具调用`、`--module M11`，按中英别名或模块反查；它是静态关键词索引，不能理解任意自然语言意图，未命中时用 [需求卡模板](DEMAND-CARD-TEMPLATE.md) 扩增。
+
 **完整可机读路由**：[learning-index.json](../index/learning-index.json)。终端查看：`python LLM-Training/tools/route_learning.py --list` 或 `--id tool-calling`。脚本不联网、不读取私人仓库。
 
 ## 3. 一个训练会话只解决一个明确的问题
@@ -64,6 +66,12 @@ flowchart TD
 ```
 
 一张任务卡只记录“今天此需求的掌握”，不升级整仓所有知识点。一个小测试成功，最多证明这个**局部合同**成立。
+
+## 可直接运行的三项补课
+
+- 对齐/DPO/RL 原理：[DPO/GRPO 组内优势与奖励投机公式实验](../labs/preference-rl-math/README.md)（无模型训练）
+- 模型/Agent 最终任务如何量化：[合成任务级评测](../labs/task-evaluation/README.md)（非真实延迟/生产基准）
+- 工具权限/参数/证据如何守住系统边界：[合成工具网关](../labs/synthetic-tool-gateway/README.md)（非真实服务）
 
 ## 5. 可直接复制的材料
 

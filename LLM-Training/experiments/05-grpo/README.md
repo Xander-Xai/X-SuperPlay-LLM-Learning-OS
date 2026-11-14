@@ -2,6 +2,8 @@
 
 **状态：NOT RUN**。从与 DPO 相同的 SFT Checkpoint 分叉；先实现原生 TRL 的小模型可验证奖励闭环。
 
+**开始前的无 GPU 演练**：[GRPO Group Advantage / zero-variance / 奖励投机](../../labs/preference-rl-math/README.md)。该练习没有策略更新，真实实验需另行执行。
+
 ## 阶段
 
 - [ ] 从简单算术或确定性任务抽取训练/held-out，先测模型原始正确率。
