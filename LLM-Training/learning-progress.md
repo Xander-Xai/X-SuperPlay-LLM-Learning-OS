@@ -1,3 +1,5 @@
+**2026-11-15 RL/Agentic RL 严格复验**：[七部分逐项覆盖与证据](ACCEPTANCE-RL-AGENTIC-STRICT-20261115.md)；新增 [可选真实小模型 SFT→GRPO 运行指南](experiments/mini-posttrain-sft-grpo/README.md) 及标准库合成数据/奖励单测。新增课程和 CUDA 训练脚本已落盘，**真正 0.6B SFT/GRPO/Agentic RL 的 GPU 运行均 NOT STARTED / NOT RUN；个人掌握度尚未验收**。后续只以可复现日志、独立测试和 [L0–L4 Rubric](assessments/CAPABILITY-RUBRIC.md) 更新状态。
+
 **2026-11-14 RL/Agentic RL 资料增量**：[理论路径](reinforcement-learning/AGENTIC-RL-LEARNING-PATH.md)、[权威原始来源](resources/RL-AGENTIC-PRIMARY-SOURCES.md)、[CPU 合成工具环境/Tabular Q-learning](labs/agentic-rl-trajectory/README.md)、[真实模型实验桥](experiments/agentic-rl-bridge/README.md)。状态为 **DOCS + SYNTHETIC TABULAR LAB**；原 03/05 真实 SFT/GRPO 与 Agentic RL GPU 仍 NOT STARTED / NOT RUN，个人能力不因仓库合并而升级。
 
 # 学习进度、里程碑验收与下次行动
