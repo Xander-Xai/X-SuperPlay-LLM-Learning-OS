@@ -19,12 +19,12 @@
 
 ### Base/Chat/Reasoning 训练闭环
 
-\`\`\`text
+```text
 语料 → tokenizer/packing → next-token CE → Base
   └─ 指令/工具轨迹 → assistant-only SFT CE → Instruct/Tool Agent Policy
                         ├─ chosen/rejected → DPO/偏好优化
                         └─ on-policy rollout → 验证器/RM → PPO/GRPO 等 RL → eval
-\`\`\`
+```
 
 - Pretrain、CPT、SFT 可能都用 CE，但**初始化、数据分布、Loss mask、评估目标**不同。
 - “能力形成”是连续的，不能按单篇论文把 Base/Instruct/Reasoning 理解成普适固定流水线。
@@ -32,7 +32,7 @@
 
 ### Agentic RL 训练闭环
 
-\`\`\`text
+```text
 任务 / 可重置环境
    ↓ reset（固定任务 ID、seed、快照）
 Agent Harness（Prompt/Context/工具权限/超时/重试）
@@ -44,7 +44,7 @@ Agent Harness（Prompt/Context/工具权限/超时/重试）
 Trainer 更新 θ（或 LoRA adapter）
    ↓ 独立 held-out 环境评估 + 长度/延迟/费用 + 回归
 更新或回滚；绝不直接拿训练 Reward 当真实任务成功率
-\`\`\`
+```
 
 **必要区别**：Agent 只执行、仅调整 Prompt、或离线做行为分析，均不构成 Agentic RL。必须至少存在动作/策略相关训练反馈和**真实策略参数更新**；测试轨迹、优化工具 schema 本身不能假冒模型 RL。已有 [Agent Harness 工程笔记](../application-engineering/AGENT-HARNESS-ENGINEERING.md) 负责执行层，本页负责训练层。
 
