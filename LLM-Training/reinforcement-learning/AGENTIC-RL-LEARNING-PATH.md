@@ -134,3 +134,17 @@ GRPO 的入门近似：对同一 prompt/**同一起始状态**生成 G 条轨迹
 10. 为什么完整任务成功率、成本、违规率、训练 Reward 必须同时看？
 
 **退出标准**：至少答出每问的机制、一个反例、可运行/可检查证据；真实 GPU/Agentic RL 训练没执行就保持 NOT RUN。后续：[官方资料索引](../resources/RL-AGENTIC-PRIMARY-SOURCES.md)、[实验桥](../experiments/agentic-rl-bridge/README.md)、[实验模板](../experiments/EXPERIMENT-TEMPLATE.md)。
+
+## 10. 七部分资料严格复验后的 P0/P1/P2 取舍与真实训练入口（2026-11-15）
+
+| 优先级 | 当前先做什么 | 合格证据 |
+|---|---|---|
+| P0 基础 | M04 Transformer/Pretrain、M06 SFT/LoRA/QLoRA，M07 DPO，M08 RL/PPO/GRPO/RLHF/RLVR | 能画 Base→SFT→RL 关系图，讲清 CE、偏好目标、奖励、Advantage、KL 和每种方法的边界 |
+| P0 Agent 实践 | Harness、Tool Calling、轨迹、独立评估与权限硬门禁 | 用 [合成沙盒](../labs/agentic-rl-trajectory/README.md) 区分任务执行与参数更新 |
+| P1 实践 | 0.5B–1.5B 规模的 LoRA SFT、RLVR GRPO、独立对照 | 按 [小模型 SFT→GRPO runbook](../experiments/mini-posttrain-sft-grpo/README.md) 留下真实模型 checkpoint、日志与 held-out 结果；没有 GPU 运行保持 NOT RUN |
+| P1 Agentic RL | Rollout、Reward、Credit Assignment、多轮重置 | 使用 [多步环境实验桥](../experiments/agentic-rl-bridge/README.md) 构建同基线 A/B/C，不能只给代码截图 |
+| P2 进阶 | verl、Agent Lightning、异步 Rollout/分布式训练 | 识别 Actor/Trainer/Reference/Reward/Environment 边界、异步策略滞后，按岗位再深入 |
+
+**对 AI 应用工程求职的起始投入建议：70% RAG/Agent/后端工程化、20% 预训练与后训练原理、10% Agentic RL 小实验**；不是行业统计或硬性比率，RL 算法岗可提高后两项权重。已有项目经验不是自动通过本仓 L0–L4 的证明。
+
+第 2 周原定“小模型后训练”现在有[实际命令与评估流程](../experiments/mini-posttrain-sft-grpo/README.md)：先做离线数据/Reward 单测，再在**用户 GPU 上实际运行** LoRA SFT→GRPO→dev/test 对照；当前仅完成代码落盘和 CPU 测试设计，不能预填 GPU PASS。第 3 周的表格 Q-learning 是 Agent 环境结构教学，真正多轮 **LLM Agentic RL** 仍另行验收。[七部分完整核对表](../ACCEPTANCE-RL-AGENTIC-STRICT-20261115.md)。
