@@ -16,6 +16,16 @@ python -m unittest discover -s LLM-Training/application-engineering/rag-deep-div
 - 包括跨租户、角色、失效版本和含恶意指令文档的样例。只有检索/排序层，没有模型遵循文档指令的行为。
 - 自动测试用负例证明：RRF 不同排序、授权过滤、生效状态、错误预测分母、返回非授权文档、Gold 缺失格式都会被检查。
 
+## 高一级的真实 Embedding 本地实验（可选、默认不运行）
+
+~~~bash
+python LLM-Training/application-engineering/rag-deep-dive/lab/real_embedding_eval.py
+# 自己在隔离环境安装 sentence-transformers 并下载获许可模型后，才可手动运行：
+python LLM-Training/application-engineering/rag-deep-dive/lab/real_embedding_eval.py --model-path /absolute/path/to/local/bge-base-zh-v1.5 --k 5
+~~~
+
+真实接口只接受已存在的本地目录，不会自动下载模型；向量在内存中计算余弦并评估 [合成 120 题](../goldset/README.md)。没有真实 ES/Milvus/HNSW、LLM/Ragas、知识库效果或正式权限测试。模型 revision 和依赖版本须由学习者记录。
+
 ## 教学边界与下一步
 
 BM25 的输入是手工 term list，不是中文语言学分词或 ES analyzer；dense_stub 是人工名单，不能证明语义检索实际质量；空结果的拒答 proxy 不构成 Evidence Gate；文档标记的角色列表仅教学策略，不是真实后端安全实现。不同 baseline 结果仅适用于这些合成数据。

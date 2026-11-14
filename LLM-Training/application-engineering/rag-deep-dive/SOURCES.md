@@ -37,6 +37,14 @@
 | S27 | R02/R10 | [PaddleOCR 官方仓库](https://github.com/PaddlePaddle/PaddleOCR) | OCR/结构化解析质量与版本 | 官方源码抽查，实际 OCR 未运行 |
 | S28 | R03/R10 | [OpenAI CLIP 官方仓库](https://github.com/openai/CLIP) | 图文对比学习/相容向量空间 | 官方源码抽查，实际 CLIP 未运行 |
 
+
+| S29 | R05 | [RRF 原始 SIGIR 论文 DOI](https://doi.org/10.1145/1571941.1572114) | 排名融合原理 | 一手论文，2026-11-15 页面核对 |
+| S30 | R04 | [HNSW 原论文](https://arxiv.org/abs/1603.09320) | 图结构、ef/M、召回-效率权衡 | 一手论文，2026-11-15 论文核对 |
+| S31 | R06 | [HyDE 原论文](https://arxiv.org/abs/2212.10496) | 生成假设文本作为检索表示，不是事实证据 | 一手论文，版本/实施待核 |
+| S32 | R10 | [Corrective RAG 论文](https://arxiv.org/abs/2401.15884) | 检索纠错与补检 | 一手论文，2026-11-15 论文核对 |
+| S33 | R10 | [Adaptive RAG 论文](https://arxiv.org/abs/2403.14403) | 按查询复杂度选择检索策略 | 一手论文，2026-11-15 论文核对 |
+| S34 | R07/R08 | [Ragas 稳定版 RAG 教程](https://docs.ragas.io/en/stable/tutorials/rag/) | 逐步评估 RAG 与数据录入 | 官方 stable 页面，2026-11-15 核对；使用时仍固定包版本 |
+
 ## 资料取用策略
 
 - 第一次：先看本专项对应 Rxx 讲义，选该行 1 个 P0 原文/官方手册，回答“它为什么有效/何时失效”。

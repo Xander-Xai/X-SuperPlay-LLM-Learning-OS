@@ -39,6 +39,13 @@ jobs:
         run: |
           python LLM-Training/application-engineering/rag-deep-dive/lab/retrieval_eval.py
           python -m unittest discover -s LLM-Training/application-engineering/rag-deep-dive/lab -p 'test_*.py' -v
+      - name: Validate 80-doc 120-case synthetic RAG gold set and fail-closed fixtures
+        run: |
+          python LLM-Training/application-engineering/rag-deep-dive/goldset/evaluate.py --mode bm25 --k 5
+          python LLM-Training/application-engineering/rag-deep-dive/goldset/evaluate.py --mode rewrite_bm25 --k 5
+          python LLM-Training/application-engineering/rag-deep-dive/goldset/evaluate.py --mode multiquery_rrf --k 5
+          python -m unittest discover -s LLM-Training/application-engineering/rag-deep-dive/goldset -p 'test_*.py' -v
+          python LLM-Training/application-engineering/rag-deep-dive/lab/real_embedding_eval.py
       - name: Test deterministic Mini Agent Loop with negative cases
         run: |
           python LLM-Training/application-engineering/labs/mini_agent_loop.py

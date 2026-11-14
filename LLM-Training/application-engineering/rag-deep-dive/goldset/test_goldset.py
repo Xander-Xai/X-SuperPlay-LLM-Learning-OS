@@ -29,7 +29,7 @@ class GoldSetTests(unittest.TestCase):
         self.assertIsNone(r["buckets"]["no_answer"]["mrr_at_k"])
 
     def test_rewrite_changes_multiturn_retrieval(self):
-        case = next(x for x in self.data["cases"] if x["question_type"] == "multi_turn")
+        case = next(x for x in reversed(self.data["cases"]) if x["question_type"] == "multi_turn")
         before = retrieve(self.data, case, "bm25")[:1]
         after = retrieve(self.data, case, "rewrite_bm25")[:1]
         self.assertNotEqual(before, after)
