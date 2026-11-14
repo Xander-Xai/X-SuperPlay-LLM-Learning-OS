@@ -78,13 +78,13 @@ class GitHub:
             raise RuntimeError(f"HTTP {exc.code} for {method} {path}: {details}") from exc
 
     def branch(self, name):
-        return self.api("GET", "branches/" + quote(name, safe=""), absent_ok=True)
+        return self.api("GET", "branches/" + quote(name, safe="/"), absent_ok=True)
 
     def pr(self, number):
         return self.api("GET", "pulls/" + str(number))
 
     def compare(self, name):
-        return self.api("GET", "compare/main..." + quote(name, safe=""))
+        return self.api("GET", "compare/main..." + quote(name, safe="/"))
 
     def pull_requests(self, state):
         all_prs = []
@@ -133,9 +133,9 @@ def main(argv=None):
     group.add_argument("--dry-run", action="store_true")
     group.add_argument("--apply", action="store_true")
     args = parser.parse_args(argv)
-    if args.apply and (os.environ.get("GITHUB_EVENT_NAME") != "push"
+    if args.apply and (os.environ.get("GITHUB_EVENT_NAME") not in ("push", "workflow_dispatch")
                        or os.environ.get("GITHUB_REF") != "refs/heads/main"):
-        raise RuntimeError("Deletion requires a main push GitHub Actions event")
+        raise RuntimeError("Deletion requires a main-branch GitHub Actions push or manual dispatch")
     api = GitHub(os.environ.get("GITHUB_REPOSITORY", ""), os.environ.get("GITHUB_TOKEN", ""))
     items = load_manifest()
     open_prs = api.pull_requests("open")
