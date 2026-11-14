@@ -28,7 +28,7 @@
 - `docs` 和 `cpu-toy` 工作流（若改动相关）必须 success；不能绕过失败只为显示已合并。涉及外部 GPU/LLM 的 PR 必须说明 **CI 未覆盖范围**。
 - 优先 Squash merge；**合并后再次确认 main 上对应 push CI**。主分支与并行 PR 并发更新时先同步头部并重新验证，不能把旧 SHA 的成功挪用为新 SHA 成功。
 - **分支删除门禁**：只有 PR 已 merged/原分支为 main 的祖先、无仍开放 PR 引用、非保护分支且没有未经审查的新 commit 时才删除；先保留 GitHub 上 PR、squash commit 与测试记录用于审计。删除前后的 branch 列表都应核对。
-- 禁止用 `update_ref` force/reset 来冒充删除分支；删除需要 GitHub 具备删除引用权限的明确操作，缺少工具时创建 Issue 并记录阻塞，不夸称完成。
+- 禁止用 `update_ref` force/reset 来冒充删除分支；删除须调用受权限限制的 GitHub API 并回读。仓库已有 [受审、SHA-pinned、只对 main 执行的清理工作流](LLM-Training/governance/README.md)，每个清理候选须对应已合并 PR 或 main 祖先，且实时检验无开放 PR、无 SHA 变更；权限不足必须停下并留下 Issue。
 
 ## 4. 资料与实验质量
 
