@@ -7,7 +7,7 @@
 | 1 | [Anthropic: Building Effective Agents](https://www.anthropic.com/research/building-effective-agents) | P0，一手工程，2024-12-19 | Agent Loop、Workflow vs Agent、Evaluator-Optimizer、复杂度取舍 |
 | 2 | [OpenAI Agents SDK: Running Agents](https://openai.github.io/openai-agents-python/running_agents/) | P0，框架官方，动态版本 | Runner、Tool、Handoff、模型决策次数与结束 |
 | 3 | [IBM: What Is Loop Engineering?](https://www.ibm.com/think/topics/loop-engineering) | P0，一手工程解释，2026-07-17 | 为何将任务触发、验证和自动迭代当成工程对象 |
-| 4 | [Loop Engineering: Building Blocks, Adoption, and Impact](https://arxiv.org/abs/2608.21884) | P1，2026-08-22 探索性研究/预印本 | 触发器、机器可检终止、持久状态、Verifier、预算、人类升级 |
+| 4 | [Loop Engineering: Building Blocks, Adoption, and Impact](https://arxiv.org/abs/2608.21884) | P1，2026-08-22 首次提交的探索性研究/预印本（已有修订版本，使用时核对 arXiv 当前版本） | 触发器、机器可检终止、持久状态、Verifier、预算、人类升级 |
 | 5 | [LangGraph: Persistence](https://docs.langchain.com/oss/python/langgraph/persistence) | P0，框架官方 | Checkpointer、thread_id 与 Store |
 | 6 | [LangGraph: Interrupts](https://docs.langchain.com/oss/python/langgraph/interrupts) | P0，框架官方 | HITL、恢复与重新执行 |
 | 7 | [LangGraph: Durable Execution](https://docs.langchain.com/oss/python/langgraph/durable-execution) | P0，框架官方 | Task 边界、持久运行与副作用 |

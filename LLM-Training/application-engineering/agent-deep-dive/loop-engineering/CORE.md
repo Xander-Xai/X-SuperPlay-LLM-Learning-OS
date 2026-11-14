@@ -53,7 +53,7 @@ Coding Agent 输出「修好了」，但代码不一定能通过测试；客服 
 | 组件 | 输入与输出 | 工程难点 | 典型负例 |
 |---|---|---|---|
 | Trigger | Webhook/cron/manual→稳定 task_id | 事件去重、调度可靠性 | GitHub webhook 至少一次投递 |
-| Task Contract | 受信目标、scope、验收项、身份与资源限额 | 验收标准先冻结 | Agent 自己修改测试让它通过 |
+| Task Contract | 公开 goal、隐藏 verifier target、scope、身份与资源限额 | Agent 要知道任务，但不能获得隐藏答案或修改验证器 | Agent 自己修改测试让它通过 |
 | Runner / Harness | Agent run_id、工具、上下文、沙箱 | 权限、工具执行、超时/计费 | 不受限工具一直循环 |
 | Independent Verifier | 固定的 CI/业务 DB/文件内容/ACL oracle→pass + failed_checks | 不以自评为准；测试强度充分 | Final 说成功但环境失败 |
 | Persistence | task_id、attempt、状态、反馈摘要、artifact/hash、verifier_revision | 重放一致性与并发 | 进程重启重新退款 |
@@ -62,6 +62,13 @@ Coding Agent 输出「修好了」，但代码不一定能通过测试；客服 
 这些是课程抽象，并非 Loop Engineering 已存在行业强制标准。
 
 **Task State（任务状态）**归属外层 Orchestrator，不等同于单个 Agent 的 Messages/Thread State，也不应替代真实业务数据库。
+
+### Runner 该看到什么，Verifier 又该保密什么？
+
+- **Runner 可见**：公开任务目标（goal）、允许的范围、当前尝试次数，以及上一轮的**可行动反馈**（失败检查 ID、必要错误摘要、待修复范围）。没有清晰目标，自动重试只是盲猜。
+- **Verifier 私有**：冻结的验收集/目标 target、版本、可信 CI 和检查脚本、访问权限；模型不能修改或自己给自己打分。
+- **强边界提醒**：将 goal 和 target 分成两个 Python 变量、两个对象，仍然不是安全隔离。同进程不可信代码仍可能访问文件或修改 Verifier；生产需要独立的测试权限与沙箱。
+- **反馈约束**：给出能指导修复的失败事实，但不能直接泄露隐藏答案、敏感凭据或扩大权限。
 
 ## 3. 一个严谨的任务状态机
 

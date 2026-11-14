@@ -107,18 +107,23 @@ class OuterLoop:
         self.store = store
         self.verifier = verifier or IndependentVerifier()
 
-    def submit(self, trigger_id: str, target: str, *, tenant="A", actor="demo",
-               max_attempts=3, max_units=3) -> dict:
-        # Identity is provided by trusted caller in this toy, never model-generated.
+    def submit(self, trigger_id: str, target: str, *, goal=None,
+               tenant="A", actor="demo", max_attempts=3, max_units=3) -> dict:
+        # Public goal guides the runner; hidden target is a frozen verifier oracle.
+        # A generic goal remains only for backwards-compatible synthetic tests.
+        if goal is None:
+            goal = "Produce a valid synthetic task artifact"
+        # Identity and goal arrive from trusted orchestration, not model output.
         if not all(isinstance(x, str) and x.strip()
-                   for x in (trigger_id, target, tenant, actor)):
-            raise ValueError("trigger, target and identity must be nonempty")
+                   for x in (trigger_id, target, goal, tenant, actor)):
+            raise ValueError("trigger, target, goal and identity must be nonempty")
         if not all(type(x) is int and x >= 1 for x in (max_attempts, max_units)):
             raise ValueError("positive integer budgets required")
         all_tasks = self.store.load_all()
         existing = all_tasks.get(trigger_id)
         contract = {
-            "target": target, "tenant": tenant, "actor": actor,
+            "target": target, "public_goal": goal,
+            "tenant": tenant, "actor": actor,
             "max_attempts": max_attempts, "max_units": max_units,
             "verifier_revision": self.verifier.revision,
         }
@@ -161,8 +166,10 @@ class OuterLoop:
         view = {
             "task_id": state["task_id"], "tenant": contract["tenant"],
             "actor": contract["actor"], "attempt": state["attempts"],
-            "feedback": list(state["last_feedback"]),
+            "goal": contract["public_goal"], "feedback": list(state["last_feedback"]),
         }
+        # Hidden target is absent from the runner input. This is logical
+        # separation, not OS security: both objects run in the same process.
         try:
             result = runner(view)
         except UnsafeRunError:
@@ -234,7 +241,8 @@ def demo() -> dict:
     with tempfile.TemporaryDirectory() as tmp:
         store = TaskStore(Path(tmp) / "task-state.json")
         outer = OuterLoop(store)
-        outer.submit("git-issue-001", "tests-pass")
+        outer.submit("git-issue-001", "tests-pass",
+                     goal="Fix fictional failing tests without modifying the verifier")
         runner = ScriptedRunner([
             {"artifact": "tests-fail", "claim_done": True},
             {"artifact": "tests-pass", "claim_done": True},

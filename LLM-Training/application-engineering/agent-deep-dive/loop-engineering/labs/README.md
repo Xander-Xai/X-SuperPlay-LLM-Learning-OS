@@ -13,11 +13,28 @@ python -m unittest discover -s LLM-Training/application-engineering/agent-deep-d
 
 预期 demo：第一次 Runner 自称完成但 artifact 内容是 tests-fail → Verifier 拒绝；第二次产出 tests-pass → VERIFIED_SUCCESS；attempts=2。它只证明标准库状态和验证合同正确，**不代表 GitHub CI 真的运行了**。
 
+## 最重要的接口：公开任务 Goal 与隐藏验收 Oracle
+
+正确 Loop Engineering 必须**先向 Agent 提供可行动的公开目标**（goal）及失败后的可修复反馈，却不能泄露或允许它篡改 Verifier 的冻结答案（target）。
+
+~~~python
+outer.submit(
+    "issue-42", "tests-pass",
+    goal="修复虚构测试仓库的失败用例，不允许修改冻结测试",
+    max_attempts=3,
+)
+~~~
+
+- Runner 收到 goal、attempt、failed_checks 等反馈，可以决定下一次具体要修复什么；Runner 不会从运行接口收到 target。
+- Verifier 单独持有 target 和版本，从可信产物评价结果，不因为 Runner 的 claim_done=True 而宣告完成。
+- 旧 Toy 调用没有 goal 时使用泛化默认说明，仅供兼容性；真实任务必须写明确的目标，否则模型无法获得合理的行动依据。
+- **安全边界**：Toy 的 Runner 与 Verifier 实际在同一个 Python 进程，所谓隐藏 target 只是消息接口设计，不是权限/沙箱隔离。真实代码和 CI 验收需要进程、文件和仓库权限隔离。
+
 ## 逐段理解源码
 
 | 源码对象 | 执行职责 | 警惕的边界 |
 |---|---|---|
-| OuterLoop.submit | 把 Trigger ID、受信身份、冻结验收目标、attempt/units 预算登记为 Task | 相同 trigger 不允许换 target/actor 绕过验收 |
+| OuterLoop.submit | 登记 Trigger ID、公开 goal、可信身份、冻结 target、attempt/units 预算 | 相同 trigger 不允许改变 goal/target/actor 绕过验收 |
 | OuterLoop.step | 标记 RUNNING，启动某一次 Agent Run，等待 Tool/模型运行汇总产物 | 这里的 Runner 是 ScriptedRunner，非真实模型 |
 | IndependentVerifier.evaluate | 根据**环境产物**与 target 比对，忽略 Runner 的 claim_done | ExactText 只是最低强度 Toy Oracle |
 | OuterLoop._unchanged_twice | 两次失败检查和 artifact hash 完全相同判为无进展 | 只是一种启发式，不等于真实语义无进展 |

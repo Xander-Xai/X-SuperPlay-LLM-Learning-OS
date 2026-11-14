@@ -128,6 +128,35 @@ class OuterLoopContractTests(unittest.TestCase):
         self.assertEqual(first["history"], second["history"])
         self.assertEqual(runner.calls, 0)
 
+    def test_public_goal_visible_without_hidden_verifier_target(self):
+        self.loop.submit("event", "SECRET_TEST_ANSWER",
+                         goal="Fix a synthetic issue while preserving existing tests")
+        runner = ScriptedRunner([{"artifact": "wrong"}])
+        self.loop.step("event", runner)
+        self.assertEqual(runner.received[0]["goal"],
+                         "Fix a synthetic issue while preserving existing tests")
+        self.assertNotIn("SECRET_TEST_ANSWER", str(runner.received[0]))
+        self.assertNotIn("target", runner.received[0])
+
+    def test_same_trigger_changed_goal_rejected(self):
+        self.loop.submit("event", "ok", goal="Implement feature A")
+        with self.assertRaisesRegex(ValueError, "TRIGGER_CONTRACT_CONFLICT"):
+            self.loop.submit("event", "ok", goal="Implement feature B")
+
+    def test_feedback_forwarded_to_second_agent_run(self):
+        self.loop.submit("event", "correct", goal="Deliver a valid artifact")
+        runner = ScriptedRunner([
+            {"artifact": "wrong"}, {"artifact": "correct"},
+        ])
+        state = self.loop.run("event", runner)
+        self.assertEqual(state["status"], "VERIFIED_SUCCESS")
+        self.assertEqual(runner.received[0]["feedback"], [])
+        self.assertEqual(runner.received[1]["feedback"], ["ARTIFACT_MISMATCH"])
+
+    def test_empty_public_goal_rejected(self):
+        with self.assertRaises(ValueError):
+            self.loop.submit("event", "expected", goal="")
+
     def test_runner_does_not_see_target(self):
         self.loop.submit("event", "SECRET_TARGET")
         runner = ScriptedRunner([{"artifact": "not target"}])
