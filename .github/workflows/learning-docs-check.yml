@@ -67,6 +67,10 @@ jobs:
         run: |
           python LLM-Training/labs/task-evaluation/evaluate.py
           python -m unittest discover -s LLM-Training/labs/task-evaluation -p 'test_*.py' -v
+      - name: Test synthetic agentic RL environment and tabular policy updates
+        run: |
+          python LLM-Training/labs/agentic-rl-trajectory/trajectory_lab.py
+          python -m unittest discover -s LLM-Training/labs/agentic-rl-trajectory -p 'test_*.py' -v
       - name: Test synthetic tool gateway and run safe demo
         run: |
           python -m unittest discover -s LLM-Training/labs/synthetic-tool-gateway -p 'test_*.py' -v
