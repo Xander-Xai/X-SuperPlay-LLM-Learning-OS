@@ -1,4 +1,17 @@
-# LLM Training 学习中心 · V2.0 完整实施导航
+# LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
+
+## 本仓当前 V3 导航｜从需求跳学，不按线性顺序打卡
+
+- [Roadmap V3：深度覆盖、知识依赖与生产能力](ROADMAP-V3-DEMAND-DRIVEN.md)
+- [需求入口和 18 张机器索引卡](demand-driven/README.md) · [一个实战任务卡模板](demand-driven/DEMAND-CARD-TEMPLATE.md) · [五个真实工程故障的合成教学案例](demand-driven/worked-demand-cards.md)
+- [知识依赖图 V3](knowledge-graph/dependency-and-capability-map.md) · [20 份权威来源导航](resources/AUTHORITATIVE-INDEX.md)
+- [可运行合成工具网关实验](labs/synthetic-tool-gateway/README.md)（标准库即可运行，验证工具授权/参数/证据/负例，不冒充大模型训练）
+- [L0–L4 独立能力 Rubric](assessments/CAPABILITY-RUBRIC.md) · [实战阶梯](labs/capability-ladder.md) · [生产 Go/No-Go](production/PRODUCTION-READINESS.md)
+- [机器索引与上下游双向关系](index/README.md) · [命令行按需检索](tools/route_learning.py)
+
+**定位**：这是训练、推理、Agent、RAG 与评测等技能的学习基地；学到的知识可用于多种下游产品，但不要求本仓服务某个固定项目。原有的 [V2 十二模块导航](ROADMAP-V2.md) 和 5 类训练实验继续有效。
+
+---
 
 **从此页进入 12 个模块，而不是按日历从头到尾死读。** 本仓库内容为学习资料/实验计划；GPU 训练结果仍标记 NOT RUN。最新审核记录见 [验收报告](ACCEPTANCE-V2.md)。
 

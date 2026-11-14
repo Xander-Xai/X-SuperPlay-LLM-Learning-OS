@@ -1,3 +1,15 @@
+## 当前入口：需求驱动的 LLM 专项学习 V3（2026-11-14）
+
+**本仓是独立的 LLM 学习与能力验收体系，不是某个下游产品的交付代码仓。** 保留 V2 的 M01–M12、MiniMind 白盒与 Qwen3 实验；学习时按工程问题跳到对应模块，不必机械从第 1 章开始。生产能力通过多种可迁移切片验收，而不是让本仓绑定一个 Agent 项目。
+
+- [Roadmap V3｜需求驱动扩展](LLM-Training/ROADMAP-V3-DEMAND-DRIVEN.md) · [按问题跳学](LLM-Training/demand-driven/README.md) · [知识依赖与能力关系图](LLM-Training/knowledge-graph/dependency-and-capability-map.md)
+- [机器索引（12 模块 / 18 需求 / 20 来源）](LLM-Training/index/README.md) · [权威资料](LLM-Training/resources/AUTHORITATIVE-INDEX.md) · [上线门禁](LLM-Training/production/PRODUCTION-READINESS.md)
+- [上游 AI-Learning-OS 的责任分工与旧 M00–M17 映射](LLM-Training/index/UPSTREAM-DOWNSTREAM.md)
+
+**状态边界**：课程、索引与教学 CI 可以审查，但 MiniMind/Qwen GPU 实验仍需真实日志；学员能力和生产上线不因文档/CI 通过自动升级。
+
+---
+
 # X-SuperPlay-LLM-Learning-OS
 
 需求驱动的大模型学习操作系统：覆盖基础架构、预训练、持续预训练、SFT、DPO、RL、评估、推理和工程化。核心原则：**知识地图完整、只维护一条底层实战主线、按问题跳学、用实验证据验收**。
