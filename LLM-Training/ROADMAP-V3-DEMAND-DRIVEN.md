@@ -195,3 +195,7 @@ flowchart LR
 [机器索引](index/learning-index.json)现为每个模块记录 `sources`、`practice`、`question` 与 `gates`，问题路由有中英同义词并支持按模块反查：`python LLM-Training/tools/route_learning.py --module M11`。但这仍是**人工策划的关键词入口**，不是无限语义检索或自动获取私人项目需求。
 
 后续若要完成真实 Qwen 微调、线上负载及独立技能评估，仍须在有权限的环境实际执行并留下可审查记录。第三轮 [验收报告](ACCEPTANCE-V3-AUDIT.md)只验收课程资产和静态/教学运行，不虚构 GPU 训练结果。
+
+### 严格复验补充：应用层评测分账
+
+[19 条冻结合成基准](application-engineering/labs/README.md) 仅验证检索/拒答/工具合同；[真实 Ragas Faithfulness 可选脚本](application-engineering/labs/ragas_live_optional.py) 需要用户主动启用及凭据。不会将教学 case-pass 当模型或线上任务通过。

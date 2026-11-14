@@ -18,6 +18,18 @@
 
 依据 [Ragas Metrics 最新目录](https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/) · [Faithfulness](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/) · [Tool Metrics](https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/agents/)。**部分指标使用 LLM Judge，成本、重现性、评分偏差和版本都需要校准。**
 
+## 本轮严格补验：冻结案例与可选真实 Ragas 接线
+
+此前只有单条 recall_at_k 与少量函数负例，缺少逐案例报告及明确的拒答分母。现新增：
+
+- [19 条固定用例](labs/benchmark_cases.json) · [离线评测程序](labs/evaluate_benchmark.py)：分别输出正例 Recall@k、无证据/无权限 Abstain、未授权文档违规、工具正确性与副作用，一次复跑可定位失败 ID 和类型；
+- [Ragas Faithfulness 可选脚本](labs/ragas_live_optional.py)：参照当前官方 collections API，需要明确 --live、API Key 和实际可用模型，CI 仅执行无 Key Dry Run；
+- [完整说明](labs/README.md)：独立检索分母、如何构建业务 Gold Set 与人工校准集、为何不能把代理指标当正式 Ragas。
+
+专业公式：Recall@k = Top-k 中 Gold 证据个数 / 全部 Gold 证据个数。Gold 集为空的拒答案例**不计入**这个比率，而单独统计拒答正确率。该指标不等于 Ragas Context Recall/Precision 等可能依赖参考答案/LLM Judge 的指标。
+
+**证据状态**：离线合成基准能够执行，但真实模型与正式 Ragas Judge 还未在用户环境执行；不可称正式 Ragas 评分已 PASS。
+
 ## 2. 最小 Eval 结构
 
 ~~~mermaid

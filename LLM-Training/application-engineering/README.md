@@ -66,3 +66,7 @@ flowchart TD
 | Harness | [专项入口](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/HARNESS-ENGINEERING-LEARNING-20261029.md) · [验证沙箱](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/labs/harness-verification-sandbox-20261029/README.md) |
 
 本仓只管理跨域关系和可复现的最小学习路径，上游仍是它自己的课程事实主权。
+
+### 严格复验补充：冻结用例和正式评测边界
+
+[19 条合成检索／工具回归测试](labs/README.md) · [固定评测用例](labs/benchmark_cases.json) · [可选 Ragas Faithfulness 脚本](labs/ragas_live_optional.py)。此处的 19 是基准案例数量，不是此前训练索引的 19 条需求；不新设第 11 条应用工程专题。
