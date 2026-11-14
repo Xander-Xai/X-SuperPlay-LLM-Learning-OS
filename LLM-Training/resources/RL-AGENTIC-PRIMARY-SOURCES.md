@@ -53,3 +53,12 @@ compatibility_break / fallback / linked_experiment_run_id
 **外链质量标准**：官方身份/作者 → 可稳定定位原文 → 与当前目标直接相关 → 可记录版本 → 具有可测行为。**每次复验外链状态不能依靠本仓 CI 本地链接检查**；CI 主要验证相对路径和教学代码。
 
 拓展关联：[M08](../modules/M08.md) · [Agentic RL 实验桥](../experiments/agentic-rl-bridge/README.md) · [实验规范](../experiments/EXPERIMENT-TEMPLATE.md)。
+
+## 2026-11-15 严格复验：官方接口版本与可执行训练之间的桥梁
+
+- 已重查 [Hugging Face Agent 后训练课程](https://huggingface.co/blog/huggingface/train-agents)，原文标记发布时间 **2026-10-20**，介绍 SFT/蒸馏/RL/环境/Harness 的学习顺序；不能当成所有模型必须遵循的固定训练流程。
+- [TRL SFTTrainer](https://huggingface.co/docs/trl/sft_trainer) 官方文档：`prompt-completion` 数据可启用 `completion_only_loss=True`，LoRA 可通过 `peft_config` 训练；Chat 的 `assistant_only_loss` 则依赖有效 generation mask/chat template，不能混同。
+- [TRL GRPOTrainer](https://huggingface.co/docs/trl/grpo_trainer) 官方文档：有可自定义 `reward_funcs` 与 Agent `environment_factory`；目前文档注明 Agent 环境 API 需要 **transformers>=5.2.0**，并非所有历史发行版都具备。
+- [Agent Lightning v1.0 docs](https://github.com/microsoft/agent-lightning/blob/main/docs/README.md) 和 [verl Agentic RL](https://verl.readthedocs.io/en/latest/start/agentic_rl.html) 均可访问；Agent Lightning v1.x 与旧 v0.x 不可无检验混用。
+- 新增 [小模型 SFT→GRPO 实操](../experiments/mini-posttrain-sft-grpo/README.md) 是**仓库自编的可审计参考脚本**，不同于官方已经实测通过的配方。只允许在真实安装版本与本机 CUDA 验证后写 PASS；CPU 单测不验证官方运行时 API 兼容。
+- 一体化覆盖证据与对照详见 [严格验收审计](../ACCEPTANCE-RL-AGENTIC-STRICT-20261115.md)。本资料表只包含原始来源，不使用来历不明的汇总博文替代论文/文档。
