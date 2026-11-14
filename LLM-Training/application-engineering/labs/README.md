@@ -32,3 +32,5 @@ python -m unittest discover -s LLM-Training/application-engineering/labs -p 'tes
 选择一个真实/脱敏授权任务，固定 Data/Model/Tokenizer/Prompt/Tools 版本，替换 Lexical Stub 为 BM25/Hybrid + 权限检索；真实模型仅能提议 ToolCall，服务端再次鉴权；加持久 Checkpoint/审批，再用 [Ragas](../RAGAS-EVALUATION.md) 和 [生产 G0–G8](../../production/PRODUCTION-READINESS.md) 进行独立验收。
 
 **注意**：这 20 个 CPU 单测不是“真实 RAG/Agent 或权限安全评估通过”。只代表确定性教学合同和分层关系在给定合成 fixture 下成立。
+ 
+**严格说明（2026-11-14 审计修订）**：这里的 Context Budget 仅是**检索材料的空白分隔代理成本**，不计算 System Prompt、Tool Schema、历史或预留输出；真实 Token Budget 必须用目标 Tokenizer 全量计算。样例的 `system/user/tool` 列表只演示信任角色边界，**不是可直接提交给任意 API 的完整 Tool Calling 消息序列**（常需 Assistant Tool Call / Tool Call ID）。Idempotency Key 在真实系统里必须由受信身份、租户和业务操作共同确定，不能从用户自报角色判断身份。模拟工具的 actor_id 也不是已认证用户。

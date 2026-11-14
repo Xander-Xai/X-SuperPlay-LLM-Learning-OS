@@ -105,6 +105,11 @@ class ApplicationVerticalSliceTests(unittest.TestCase):
         self.assertEqual(first, second)
         self.assertEqual(gw.stock["product-a"], 6)
         self.assertEqual(gw.trace.events[-1]["status"], "replayed")
+        # Same idempotency key under a DIFFERENT verified actor identity is separate.
+        second_actor = Principal("demo", "admin", "another-admin")
+        gw.execute(second_actor, call, approved=True)
+        self.assertEqual(gw.stock["product-a"], 4)
+        self.assertEqual(gw.trace.events[-1]["status"], "ok")
 
     def test_idempotency_rejects_different_payload(self):
         gw = ToolGateway()
