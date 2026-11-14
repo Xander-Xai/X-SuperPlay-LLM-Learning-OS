@@ -8,6 +8,21 @@
 - 跨模块投入比例建议：**底层原理 20% + 框架/编排 25% + 生产工程 30% + 评测与项目复盘 25%**。这是按知识领域的分配，和每天按活动划分时间是**两个不同维度**。
 - 每个专题形成「问题 → 官方资料与版本 → 基线 → 最小代码 → 两类负例 → 固定对照 → 原始日志 → 结论边界 → 闭卷」的证据卡。不用阅读篇幅和打卡数冒充 L2–L4。
 
+## 原始求职 P0 / P1 / P2 知识优先级
+
+| 级别 | 专题 | 为什么 |
+|---|---|---|
+| P0 | Agent Loop / Function Calling | 基础运行机制 |
+| P0 | LangGraph State / Checkpoint / Interrupt | 核心项目的恢复语义 |
+| P0 | 工具幂等 / 容错 / 异步架构 | 区分 Demo 和真正可靠服务 |
+| P0 | 多 Agent 编排与架构选型 | 解释 Router / Supervisor 的取舍 |
+| P0 | Tracing / Agent Evals | 用数据证明成功、成本和安全 |
+| P1 | Memory / Context Engineering | 稳定长任务和长对话 |
+| P1 | MCP / Agent Harness | 扩展工具及运行时能力 |
+| P2 | A2A / Computer Use / 高级自主规划 | 按具体岗位拓展 |
+
+**Computer Use** 是在受控浏览器/桌面上观察界面、操作鼠标和键盘并核验结果的 Agent 能力；不是 MCP、A2A 或 Harness 的同义词。优先保证沙箱隔离、敏感数据与凭据权限、域名限制、审计。参考 [Anthropic 官方](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool) / [OpenAI 官方](https://developers.openai.com/api/docs/guides/tools-computer-use)。
+
 ## 八周进度表
 
 | 周 | 优先级 | 主要知识 | 当周交付 | 可核验退出条件 |

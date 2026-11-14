@@ -42,6 +42,8 @@ python -m unittest discover -s LLM-Training/application-engineering/labs -p 'tes
 
 在独立测试环境创建只读 MCP Server，观察 Host/Client/Server 工具发现与调用。使用仅含参考资料的 Skill 学习 SKILL.md 资源加载；确认载入不等于获得执行权限。长任务 Research/Coding Harness 需计划、进度、持久记录、恢复、实际文件/测试验证。A2A 选学，不强制接入分布式 Agent。攻击负例：恶意网页或 Tool Output 要求读取越权文件、重复任务、无限工具调用。
 
+**P2 可选 Computer Use 练习**：只在授权沙箱操作虚构网页 UI，记录截图/动作/观察/回滚；测试恶意网页文本试图提权。真实账户、付款及敏感页面不得作为默认练习环境。可参考 [Anthropic 文档](https://platform.claude.com/docs/en/agents-and-tools/tool-use/computer-use-tool)。
+
 ## 三个项目的最终交付
 
 | 项目 | 训练阶段 | 退出材料 |
