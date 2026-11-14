@@ -1,3 +1,7 @@
+## 新增｜RL / Agentic RL 专题入口（2026-11-14）
+
+[RL / Agentic RL 体系、28 天可选学习路线](reinforcement-learning/AGENTIC-RL-LEARNING-PATH.md) · [官方原始资料与版本边界](resources/RL-AGENTIC-PRIMARY-SOURCES.md) · [可运行多步工具环境 + Tabular Q-learning 教学](labs/agentic-rl-trajectory/README.md) · [与实验 03/05 关联的真实模型实验桥（NOT RUN）](experiments/agentic-rl-bridge/README.md)。本专题跨 M04/M06/M07/M08/M09/M10，不另设 M13，不新增加强制模块。
+
 # LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
 
 ## 完整应用工程横切：RAG / Ragas / Agent / Harness / Context / Prompt

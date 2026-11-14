@@ -1,3 +1,5 @@
+**2026-11-14 RL/Agentic RL 资料增量**：[理论路径](reinforcement-learning/AGENTIC-RL-LEARNING-PATH.md)、[权威原始来源](resources/RL-AGENTIC-PRIMARY-SOURCES.md)、[CPU 合成工具环境/Tabular Q-learning](labs/agentic-rl-trajectory/README.md)、[真实模型实验桥](experiments/agentic-rl-bridge/README.md)。状态为 **DOCS + SYNTHETIC TABULAR LAB**；原 03/05 真实 SFT/GRPO 与 Agentic RL GPU 仍 NOT STARTED / NOT RUN，个人能力不因仓库合并而升级。
+
 # 学习进度、里程碑验收与下次行动
 
 **2026-11-14 课程补充**：[90 个核心概念入口](index/FOUNDATION-COVERAGE.md) 与 [数学](fundamentals/CORE-MATH-PROBABILITY-STATISTICS.md)、[Tokenizer](data-engineering/TOKENIZER-AND-DATA-FOUNDATIONS.md)、[架构家族](fundamentals/MODEL-FAMILIES-AND-GENERATION.md)、[复现/评估](training-systems/REPRODUCIBILITY-AND-EVAL-FOUNDATIONS.md) 已落盘；**不改变本文件真实 MiniMind/Qwen 实验 NOT STARTED 状态**。

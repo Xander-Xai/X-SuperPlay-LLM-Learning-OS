@@ -17,3 +17,7 @@
 
 专题：[GRPO 低显存 Playbook](../../reinforcement-learning/grpo-16gb-playbook.md)。
 
+
+## 可选进阶：多轮 Agent 环境（非新编号实验）
+
+完成简单可验证的 GRPO/RLVR 真正训练后，再依据 [Agentic RL Bridge](../agentic-rl-bridge/README.md) 把 rollout 扩展到可重置的多步工具环境。其 [CPU 标准库沙盒](../../labs/agentic-rl-trajectory/README.md) 只是 Tabular Q-learning 教学，不可记录为本实验真实 GRPO PASS；训练资料见 [权威来源表](../../resources/RL-AGENTIC-PRIMARY-SOURCES.md)。

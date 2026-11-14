@@ -65,3 +65,7 @@
 - 并行系统：[NVIDIA Megatron Core](https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html) 区分 DP/TP/PP/CP/EP。
 
 每篇只留下：问题→公式→源码实现→可测假设→失败反例→适用边界。
+
+## Agentic RL 增量阅读（2026-11-14）
+
+[原始资料分级导航](../resources/RL-AGENTIC-PRIMARY-SOURCES.md)：从经典 RL 与后训练的训练信号，走向 HF Agent 后训练课程、TRL Agent GRPO 接口、Agent Lightning v1.0、verl。具体实验入口参见 [多步工具沙盒](../labs/agentic-rl-trajectory/README.md)；此处避免复制维护另一份版本清单。

@@ -1,3 +1,11 @@
+## 新增｜RL / Agentic RL 与预训练、后训练学习闭环（2026-11-14）
+
+[跨模块完整学习路径](LLM-Training/reinforcement-learning/AGENTIC-RL-LEARNING-PATH.md) · [权威原始资料导航](LLM-Training/resources/RL-AGENTIC-PRIMARY-SOURCES.md) · [标准库多步工具与 Q-learning 教学实验](LLM-Training/labs/agentic-rl-trajectory/README.md) · [M08 真实模型实验桥（NOT RUN）](LLM-Training/experiments/agentic-rl-bridge/README.md)。
+
+**边界**：这是一套独立的跨模块补全，不改变既有 M01–M12、五类训练实验及真实 GPU 训练进度；文档/CPU Toy 通过不能代表已完成真实模型 RL。
+
+---
+
 # X-SuperPlay-LLM-Learning-OS
 
 ## RAG 完整深入学习专项（原理→实验→评测→面试）

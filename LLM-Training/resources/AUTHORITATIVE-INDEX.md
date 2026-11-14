@@ -84,3 +84,7 @@
 同样，[PyTorch FSDP2 当前官方文档](https://docs.pytorch.org/docs/main/distributed/fsdp.fully_shard.html) 说明了基于 DTensor 的分片与 All-Gather 生命周期；实际环境应以安装的 PyTorch 版本文档为准，不能假设所有 GPU 或后端都可复现。
 
 **事实边界**：原始论文、官方实现与公开 Model Card 可作为技术参考；来源被编目并不意味着全部外部 URL 已逐个 HTTP 验证，不意味着代码在本机跑过，也不意味着个人已掌握对应能力。
+
+## Agentic RL 原始资料专项（2026-11-14）
+
+补充 [Agentic RL / 后训练官方源导航](RL-AGENTIC-PRIMARY-SOURCES.md)：OpenAI Spinning Up、InstructGPT、DeepSeekMath/R1、HF 2026 Agent 后训练课程、TRL GRPO environment_factory、Agent Lightning v1.0、verl。版本核对结果与可执行实验绑定 [M08 Agentic RL 实验桥](../experiments/agentic-rl-bridge/README.md)，不把文档复核当成真实训练。
