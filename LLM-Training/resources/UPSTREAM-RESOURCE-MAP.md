@@ -109,6 +109,30 @@
 6. [HF Multimodal](https://huggingface.co/docs/transformers/tasks/any_to_any) 覆盖 text/image/audio/video 的 any-to-any 任务，不能用纯文本 tokenizer 知识解释一切。
 7. [vLLM 官方 Serving 文档](https://docs.vllm.ai/en/latest/serving/online_serving/openai_compatible_server/) 明确模型服务协议不等于所有端点都自动受 API Key 保护；发布需加完整网关安全边界。
 
+## 上游延伸阅读｜0–49 全栈覆盖矩阵与 Decoder-Only L3 细节（按需查阅）
+
+**重要补充**：上游不只有六域 Atlas。还存在对原始 **0–49 个知识主题**的覆盖矩阵、带版本信息的技术来源注册表，以及 Decoder-Only 的多份 L2/L3 原理卡。它们是本仓 **33 个主题导航的更细或更广的证据层**，不是要求额外按 50 章重新学一遍。下表全部路径已对 2026-11-14 固定 Git 树核对。
+
+| 上游资料 | 何时打开 | 
+|---|---|
+| [全栈 0–49 主题覆盖矩阵](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/sources/source-coverage-matrix.md) | 上游对一套 0–49 号完整 LLM/多模态知识材料的覆盖检查，作为本仓 33 主题的广度补充；绝不能按编号等同 M01–M12 |
+| [上游论文与官方文档版本注册表](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/sources/registry.yaml) | 比纯 URL 更可追溯的论文 ID、发布日期/版本及上游历史核验日期；新引用需要重新核查 |
+| [上游 Source Full Stack 主题索引](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/sources/llm-full-stack.md) | 从解码器、后训练、推理服务、MCP 四块追溯原始源 ID |
+| [Decoder-Only 知识总览](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/knowledge/foundation/decoder-only/README.md) | 基础概念与更深单点说明，适合当前问题需要时跳入 |
+| [自回归语言建模](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/knowledge/foundation/decoder-only/causal-language-modeling.md) | 专业概率分解，解释“训练可以并行，推理逐 Token 生成”的缘由 |
+| [Causal Mask 与 Autoregression](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/knowledge/foundation/decoder-only/causal-mask-and-autoregression.md) | 为什么训练不应看未来 Token，如何导致 masking 错误 |
+| [Transformer Block](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/knowledge/foundation/decoder-only/transformer-block.md) | QKV/FFN/残差与 shape 拆解 |
+| [Training vs Inference](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/knowledge/foundation/decoder-only/training-vs-inference.md) | 同一自回归目标在训练和推理执行方式的差别 |
+| [Prefill/Decode/KV Cache](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/knowledge/foundation/decoder-only/prefill-decode-kv-cache.md) | 推理 TTFT/TPOT 的核心原理 |
+| [现代 Attention/Position](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/knowledge/foundation/decoder-only/modern-attention-and-position.md) | RoPE/GQA/MLA 与显存/注意力效率的边界 |
+| [架构家族比较](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/knowledge/foundation/decoder-only/architecture-comparison.md) | BERT/T5/Decoder-Only，避免错误地把所有模型叫生成模型 |
+| [Decoder-Only 深工程 Track](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/tracks/deep-engineering/decoder-only/README.md) | 了解实现/服务源代码细节的可选项目型资料 |
+| [AI 原生 NLP 学习候选](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/sources/ai-native-nlp-research-20261029.md) | 更传统的 NLP/检索/表示学习知识拓展，当前任务需要时再读 |
+| [AI 原生 ML/Deep Learning 学习候选](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/sources/ai-native-deep-learning-research-20261029.md) | 优化/训练基础缺口时的可选延伸，不强制回炉 |
+| [强化学习学习候选](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/fdf2c09fc5cfbf4967d2507a66a3e19625482d7a/docs/sources/ai-native-rl-learning-research-20261029.md) | 不懂 Policy/Advantage 时可定位基础强化学习，不直接替代 TRL/verl 官方源码 |
+
+**查阅纪律**：优先从当前问题的本仓需求卡进入；若要了解覆盖是否遗漏，查看 0–49 矩阵；若对一条公式或架构困惑，再打开对应 L3 卡；涉及最新版 API 则查官方发行文档。上游原文件保持唯一知识正文，不在专项仓重复粘贴。
+
 ## 更新与避免冲突的规则
 
 - 上游原内容改动应检查 commit diff；本仓**只保存指针与课程实践**，不做全量复制。
