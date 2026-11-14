@@ -1,0 +1,40 @@
+name: Safe retirement of reviewed merged branches
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/retire-merged-branches.yml"
+      - "LLM-Training/governance/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: read
+
+concurrency:
+  group: learning-os-merged-branch-retirement
+  cancel-in-progress: false
+
+jobs:
+  retire-pinned-branches:
+    if: github.repository == 'Xander-Xai/X-SuperPlay-LLM-Learning-OS'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate branch retirement safety invariants offline
+        run: |
+          python -m py_compile LLM-Training/governance/retire_merged_branches.py
+          python -m unittest discover -s LLM-Training/governance -p 'test_*.py' -v
+      - name: Retire only SHA-pinned, already merged or ancestor branches
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python LLM-Training/governance/retire_merged_branches.py --apply
+
+# Executes on main only; never deletes branches with open PRs, changed SHAs,
+# or protection. A deletion counts only when GitHub confirms ref is absent.
