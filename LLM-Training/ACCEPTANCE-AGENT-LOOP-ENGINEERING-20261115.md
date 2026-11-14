@@ -15,7 +15,7 @@
 | Agent Loop 原有教具保留 | [Mini Agent Loop](application-engineering/labs/MINI-AGENT-LOOP.md) | 保留原有 16 项合成测试 |
 | Agent 与外层 Loop 区别 | CORE 的五种 Loop、Task State、Handoff/Verifier/Stop | DOC_READY |
 | 外层完整任务合同 | [outer_loop.py](application-engineering/agent-deep-dive/loop-engineering/labs/outer_loop.py) | SYNTHETIC_TOY |
-| 触发去重、验收、重试、持久/恢复、安全 | [20 项负例与单测](application-engineering/agent-deep-dive/loop-engineering/labs/test_outer_loop.py) | PASS |
+| 触发去重、验收、重试、持久/恢复、安全 | [24 项负例与单测](application-engineering/agent-deep-dive/loop-engineering/labs/test_outer_loop.py) | PASS |
 | 4 周、6 Labs、5 重要一手资料和目录口径 | [manifest](application-engineering/agent-deep-dive/loop-engineering/loop-course-manifest.json) + [validator](application-engineering/agent-deep-dive/loop-engineering/validate_loop_course.py) + [9 项合同测试](application-engineering/agent-deep-dive/loop-engineering/test_loop_course.py) | PASS |
 | README/Agent 深学/Harness 的互链与相对链接 | [根首页](../README.md) + check_repo.py | PASS |
 | 既有 RAG、RL、Agent 课程与原 CI 保留 | workflow | PASS |
@@ -36,3 +36,17 @@
 ## 4. 首要学习建议
 
 先运行原 [Agent Mini Loop](application-engineering/labs/MINI-AGENT-LOOP.md)，然后做 [Outer Loop 教学实验](application-engineering/agent-deep-dive/loop-engineering/labs/README.md)，对比 Agent 自称成功与独立 Verifier 的结论；按 [四周任务](application-engineering/agent-deep-dive/loop-engineering/ROADMAP.md) 逐步引入触发、恢复、幂等、任务指标，最后使用客服或 Coding Agent 的独立授权测试项目证明真实系统行为。
+
+## 5. 最终复验补充：公开目标与隐藏 Oracle（2026-11-15）
+
+严格检查发现前版 OuterLoop 只把 verifier target 存在 Task Contract，Runner 实际没有得到可行动的公开任务说明，虽然 ScriptedRunner 合成示例仍可按预写结果通过，但这种写法容易误导真实 Agent 学习。已按 [PR #31](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/pull/31) 修正并合并（commit [f3e1c5c1b65fac328894cbc4b5c22e1046da7fc6](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/commit/f3e1c5c1b65fac328894cbc4b5c22e1046da7fc6)）：
+
+- Task Contract 将**公开 goal**与**隐藏 verifier target**分开存储；Agent Runner 收到 goal、可修复反馈与尝试次数，但不会从 Run 参数获取 target。
+- 重复 Trigger 但试图改变 goal/target，返回 TRIGGER_CONTRACT_CONFLICT；空 goal 被拒绝。
+- 4 个新增测试覆盖 Goal 可见但 Oracle 不泄漏、重复任务 goal 更改拒绝、失败反馈到下一次 Run、空 goal 输入。
+- 明确单进程 Toy 的对象分离**不是权限/沙箱隔离**，真实独立测试器必须分配独立访问控制及不可由 Agent 修改的验收集。
+- [PR #31 Actions 43622005503](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/actions/runs/43622005503)：docs 和 cpu-toy 均 success；OuterLoop **24/24**、课程规范 **9/9**，文档相对链接/必需文件校验 **0 问题**。
+
+此外，主分支先前的合并分支清理检查曾因 #28 分支清单误设为起始 main SHA 而失败；现有 [branch-retirement-manifest](governance/branch-retirement-manifest.json) 已更正为 #28 的真正 head SHA `e91e079f...` 且用 `merged_pr=28` 证明合法性，新一轮[分支治理工作流](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/actions/runs/43621753509)已通过。这一故障属于仓库治理，与课程本身的测试区分处理。
+
+**最终结论**：教学资料、教程入口、标准库合成教学实现及相关 GitHub CI 的验收通过；真实 LLM、多 Worker/DB 事务、真正 GitHub Issue 自动修复、生产部署和学习者实际能力，仍维持 NOT_RUN / UNASSESSED。
