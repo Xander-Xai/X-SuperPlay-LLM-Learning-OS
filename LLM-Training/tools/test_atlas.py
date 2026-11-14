@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from route_atlas import load, match_topics, match_needs, topic_details, need_details
+from route_atlas import load, match_topics, match_needs, topic_details, need_details, topic_relations, shortest_relation_path, relation_summary, path_summary
 from validate_atlas import read_json, MANIFEST, validate
 
 
@@ -86,6 +86,46 @@ class AtlasTest(unittest.TestCase):
         c=copy.deepcopy(self.idx)
         c["needs"][0]["status"]="REALLY_RUN"
         self.assertTrue(any("unverified claim" in s for s in validate(c,self.manifest)))
+
+
+    def test_tool_relation_has_action_and_security_edges(self):
+        relations = topic_relations(self.idx, "A04")
+        self.assertTrue(any(r["from"] == "A04" and r["to"] == "A05" and
+                            r["type"] == "supplies-actions" for r in relations))
+        self.assertTrue(any(r["from"] == "O03" and r["to"] == "A04" and
+                            r["type"] == "guards" for r in relations))
+
+    def test_relation_summary_preserves_arrow_direction(self):
+        text = relation_summary(self.idx, "A04")
+        self.assertIn("O03", text)
+        self.assertIn("O03", text.split("--guards-->")[0])
+        self.assertIn("--supplies-actions-->", text)
+
+    def test_shortest_connection_to_observability(self):
+        steps = shortest_relation_path(self.idx, "A04", "O02")
+        self.assertIsNotNone(steps)
+        self.assertEqual(len(steps), 2)
+        self.assertEqual(steps[0]["from"], "A04")
+        self.assertEqual(steps[0]["to"], "A05")
+        self.assertEqual(steps[1]["from"], "O02")
+        self.assertEqual(steps[1]["to"], "A05")
+
+    def test_path_summary_labels_graph_as_exploration(self):
+        answer = path_summary(self.idx, "A04", "O02")
+        self.assertIn("无向连通性", answer)
+        self.assertIn("原始方向", answer)
+        self.assertIn("O02 --observes--> A05", answer)
+
+    def test_self_path_empty(self):
+        self.assertEqual(shortest_relation_path(self.idx, "A04", "A04"), [])
+
+    def test_unknown_path_not_hallucinated(self):
+        self.assertIsNone(shortest_relation_path(self.idx, "A04", "A99"))
+        self.assertIsNone(path_summary(self.idx, "A04", "A99"))
+
+    def test_unknown_topic_relation_is_explicit(self):
+        self.assertIn("未知主题", relation_summary(self.idx, "A99"))
+
 
 
 if __name__=="__main__":

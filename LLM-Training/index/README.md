@@ -49,6 +49,18 @@ python -m unittest discover -s LLM-Training/tools -p 'test_learning_index.py' -v
 索引验收在现有 docs CI 中运行，只验证结构、关联 ID、有效仓内路径与状态约束；不能证实外部 HTTP 可达、性能提升或上线成功。
 
 
+## 关系查询（新增）
+
+~~~bash
+# Tool Calling / MCP 与其他主题的全部已编目入边和出边
+python LLM-Training/tools/route_atlas.py --relate A04
+
+# Tool Calling 与 Observability 之间的关系探索路径
+python LLM-Training/tools/route_atlas.py --path A04 O02
+~~~
+
+关系查询基于静态 JSON 的 30 条边。**--path 使用无向连通性寻找最短探索路径，但每条边保留原存储方向**；并不是自动学习计划、因果证明或全行业知识搜索。遗漏的边不应被编造。参考 [全景 Atlas](../knowledge-graph/LLM-FULL-STACK-ATLAS.md) 与 [官方实现复验](../resources/OFFICIAL-RUNTIME-DELTA-20261114.md)。
+
 ## 全栈 Atlas 离线验收命令
 
 ~~~bash

@@ -4,6 +4,12 @@
 >
 > 状态：**CURRICULUM READY / LEARNER UNASSESSED / PRODUCTION NOT VERIFIED**。本仓是独立的 **LLM 专项学习操作系统**，目标覆盖研发与上线需要的知识和技能；它不是某一个下游产品的研发仓，也不承接客户/订单事实。真实产品源码与线上数据属于其各自仓库。
 
+## 2026-11-14 复验补丁：关系反查 + 最新工程边界
+
+在六域全景与 33 个知识主题基础上，可用 CLI **--relate A04** 查看一个知识点与其他知识的出入关系，用 **--path A04 O02** 探索“工具调用 → Agent → 可观测性”的已编目概念连接。原始边的语义和方向会显示，**从某点能找到路径，不意味着该路径的节点必须依次学习**。
+
+最新官方实现资料涉及 [TRL Tool Chat Template 的 Assistant generation mask 与 prefix-preserving、GRPO 的 vLLM/Importance Sampling、vLLM HTTP 端点鉴权范围、MCP 2026-07-28 修订](resources/OFFICIAL-RUNTIME-DELTA-20261114.md)。只有出现对应需求时再进入，不能假设旧版本教程仍然适用。
+
 ## V3 全栈扩展｜补齐上游六域而不替换训练模块
 
 你现在可从 [**LLM 六域全景图**](knowledge-graph/LLM-FULL-STACK-ATLAS.md) 看清一条完整技术系统（Foundation、Training Systems、Post-training、Model Engineering、Applications、LLMOps）与多模态/安全/评估/成本横切层。这里是**知识广度**，与本 Roadmap 的 M01–M12 **能力深度**互补。
