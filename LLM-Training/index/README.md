@@ -1,5 +1,11 @@
 # LLM-Learning-OS 专项仓索引
 
+## 新增应用工程第四类索引（不扩充 M01–M12）
+
+- [10 条应用工程横向专题及官方来源](../application-engineering/index/README.md) · [应用能力 JSON](../application-engineering/index/application-engineering-index.json) · [搜索工具](../application-engineering/tools/route_application.py)。
+- 它与现有 **33 六域主题 / 90 基础概念 / 12 训练模块+19 条需求+25 来源** **各自按不同口径维护**：不要把它们相加成一份必须从头学到尾的课表。
+- **Agent Harness** ≠ **EleutherAI lm-evaluation-harness**；**RAG** ≠ **Ragas**；**Prompt** ≠ **Context**。
+
 ## 三层索引与日常查询
 
 - **细颗粒基础**：[90 项概念](FOUNDATION-COVERAGE.md) · [JSON](foundation-coverage.json)，链接到原理、练习和官方原始资料；

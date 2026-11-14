@@ -21,6 +21,18 @@ jobs:
         run: python LLM-Training/tools/validate_learning_index.py
       - name: Validate pinned six-domain upstream atlas and typed relations
         run: python LLM-Training/tools/validate_atlas.py
+      - name: Validate 10 application-engineering routes and upstream links
+        run: python LLM-Training/application-engineering/tools/validate_application_engineering.py
+      - name: Test application-engineering index and routing
+        run: |
+          python -m unittest discover -s LLM-Training/application-engineering/tools -p 'test_*.py' -v
+          python LLM-Training/application-engineering/tools/route_application.py --search Ragas
+          python LLM-Training/application-engineering/tools/route_application.py --search 上下文
+          python LLM-Training/application-engineering/tools/route_application.py --id APP-HARNESS
+      - name: Run synthetic application vertical slice and negative tests
+        run: |
+          python LLM-Training/application-engineering/labs/pipeline.py
+          python -m unittest discover -s LLM-Training/application-engineering/labs -p 'test_*.py' -v
       - name: Validate 90 core foundation topics and canonical level wording
         run: python LLM-Training/tools/validate_foundation_coverage.py
       - name: Test foundation coverage, local links and known contradictions

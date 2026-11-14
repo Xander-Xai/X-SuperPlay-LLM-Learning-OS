@@ -1,5 +1,13 @@
 # X-SuperPlay-LLM-Learning-OS
 
+## 本轮严格验收补足：RAG、Ragas、Agent、Harness、Context、Prompt
+
+[**应用工程专项总入口**](LLM-Training/application-engineering/README.md) · [10 个可检索横向主题](LLM-Training/application-engineering/index/README.md) · [纯标准库可运行纵切](LLM-Training/application-engineering/labs/README.md) · [跨层关系图](LLM-Training/application-engineering/ROADMAP-RELATIONS.md) · [本轮验收](LLM-Training/ACCEPTANCE-APPLICATION-ENGINEERING-20261114.md)。
+
+[Prompt](LLM-Training/application-engineering/PROMPT-ENGINEERING.md)｜[Context](LLM-Training/application-engineering/CONTEXT-ENGINEERING.md)｜[RAG](LLM-Training/application-engineering/RAG-ENGINEERING.md)｜[Ragas Evals](LLM-Training/application-engineering/RAGAS-EVALUATION.md)｜[Agent Harness](LLM-Training/application-engineering/AGENT-HARNESS-ENGINEERING.md)｜[Project/Production](LLM-Training/application-engineering/PROJECT-PRODUCTION-ENGINEERING.md)。
+
+**一致性**：原训练 M01–M12、90 个基础知识点、33 项六域宏观主题、19 条训练需求、25 份来源仍然独立；此次额外补的 10 项是**横向应用工程专题**，非新的 10 个训练模块，亦非个人能力或生产系统已经通过。
+
 ## 本轮基础覆盖与一致性审计（2026-11-14）
 
 [90 个核心基础概念、讲义与实践索引](LLM-Training/index/FOUNDATION-COVERAGE.md) · [离线关键词路由](LLM-Training/tools/route_foundations.py) · [严格验收记录](LLM-Training/ACCEPTANCE-FOUNDATION-CONSISTENCY-20261114.md)。

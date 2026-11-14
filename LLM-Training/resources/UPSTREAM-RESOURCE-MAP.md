@@ -139,3 +139,14 @@
 - 上游历史资料、外部官方文档和个人实验记录的“证据等级”不同。外部项目的存在不证明已安装可用。
 - 新增 LLM 全景知识点先更新 [机器可读目录](../index/upstream-knowledge-index.json) 并通过 [校验](../tools/validate_atlas.py)；新增需求案例到 [需求卡](../demand-driven/AI-NATIVE-NEED-ROUTES.md)。
 - 如需同步跨域稳定解释，提给上游 Canonical Knowledge；本仓只维护 LLM 专项学习路线、可执行练习和能力验收。
+
+## 专项更新：上游已有 RAG/Harness/Context/Prompt（固定快照）
+
+本文件以上游历史 Git SHA **fdf2c09...** 固定六域宏观主题来源；应用工程另外核查了更新的上游提交 **59ea4e509507378860519d165113e21a9a9eb4d7**，其完整课程不复制到此仓：
+
+- [RAG 练习与学习路线](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/practice/rag/README.md)。
+- [Prompt Engineering 需求/课程](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/market/prompt-engineering-demand-to-practice-20261029.md)。
+- [Context Engineering 需求/实验](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/docs/market/context-engineering-demand-to-lab-20261029.md)。
+- [Harness Engineering 专项](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/blob/59ea4e509507378860519d165113e21a9a9eb4d7/HARNESS-ENGINEERING-LEARNING-20261029.md)。
+
+对应新 [本仓应用层 10 条专题索引](../application-engineering/index/README.md)、[专业/白话路线](../application-engineering/README.md)、[Ragas 评测](../application-engineering/RAGAS-EVALUATION.md)。**两个固定提交分别代表不同时间的资料来源，不是两个互相覆盖的知识主权副本。**

@@ -1,5 +1,9 @@
 # 权威资料索引：理论 → 源码 → 实验 → 限制
 
+**应用层权威补充**：[Anthropic Context Engineering](https://www.anthropic.com/research/effective-context-engineering-for-ai-agents) · [OpenAI Prompt Engineering](https://developers.openai.com/api/docs/guides/prompt-engineering) · [Google Cloud Agent Harness](https://cloud.google.com/discover/agent-harness) · [OpenAI Harness Engineering](https://openai.com/index/harness-engineering/) · [Ragas Metrics](https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/) · [OpenAI Agent Trace Grading](https://developers.openai.com/api/docs/guides/trace-grading)。
+
+这些资料的应用工程归属和最小实验见 [应用层 10 条技能总目录](../application-engineering/index/README.md)。外部官方网页经过本轮抽样核验，不代表依赖安装或全部现网 API 实测。
+
 **补充专业基础官方资源**：[Dive into Deep Learning](https://d2l.ai/chapter_preliminaries/index.html)（数学/梯度/概率） · [Hugging Face Tokenizers 第 6 章](https://huggingface.co/learn/llm-course/en/chapter6/1)（BPE/WordPiece/Unigram） · [PyTorch 复现性](https://pytorch.org/docs/stable/notes/randomness.html)（跨设备/版本限制） · [Dataset Cards](https://huggingface.co/docs/hub/en/datasets-cards)。按 [90 项核心知识目录](../index/FOUNDATION-COVERAGE.md) 查阅，避免另造并行课程。
 
 **技术框架会变**：针对 2026-11-14 抽查的 [TRL、vLLM、MCP 运行时变化与最小实验](OFFICIAL-RUNTIME-DELTA-20261114.md) 单独建了一张问题卡，避免只有书目而没有实际验收要求。
