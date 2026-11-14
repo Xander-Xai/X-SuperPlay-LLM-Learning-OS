@@ -15,6 +15,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Validate safe branch deletion manifest and refusal guards
+        run: |
+          python -m py_compile LLM-Training/governance/retire_merged_branches.py
+          python -m unittest discover -s LLM-Training/governance -p 'test_*.py' -v
       - name: Validate modules, statuses, local Markdown links
         run: python LLM-Training/tools/check_repo.py
       - name: Validate demand routes, source IDs and file index
