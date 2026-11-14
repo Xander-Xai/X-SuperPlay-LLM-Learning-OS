@@ -1,5 +1,7 @@
 # 应用工程机器索引｜10 条横向技能专题，不扩增训练模块编号
 
+**Agent 纵向深学**：[Agent 主线](../AGENT-LEARNING-PATH.md) → [官方资料](../AGENT-OFFICIAL-RESOURCES.md) → [实践评测](../AGENT-PRACTICE-AND-EVAL.md) → [面试题](../AGENT-INTERVIEW-QUESTIONS.md)。沿用 APP-AGENT/APP-HARNESS/APP-TOOLS/APP-EVAL 编号，不新增第 11 个应用专题。
+
 > 这是 2026-11-14 资料与实践导航，包含 Prompt/Context/RAG/Ragas/Agent/Harness/MCP/Eval/Project/Security **10 条专题**。上游已存在的完整教程/研究链接使用固定 Git SHA；本仓维护关系、差异和教学纵切。**CURRICULUM_ONLY** 不代表实际模型执行或个人 L2/L4 达标。
 
 ## 日常查询

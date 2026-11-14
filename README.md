@@ -1,5 +1,9 @@
 # X-SuperPlay-LLM-Learning-OS
 
+## Agent 系统化学习专项（2026-11-14）
+
+[**Agent 8 周可选学习主线**](LLM-Training/application-engineering/AGENT-LEARNING-PATH.md) · [权威资料精读表](LLM-Training/application-engineering/AGENT-OFFICIAL-RESOURCES.md) · [项目/任务评测](LLM-Training/application-engineering/AGENT-PRACTICE-AND-EVAL.md) · [纯 Python Agent Loop](LLM-Training/application-engineering/labs/MINI-AGENT-LOOP.md) · [24 道面试题](LLM-Training/application-engineering/AGENT-INTERVIEW-QUESTIONS.md)。归属现有 APP-AGENT/APP-HARNESS，不增加训练模块或应用专题；可运行测试为合成场景，不能当作真实 Agent 或生产验证。
+
 ## RAG 完整深入学习专项（原理→实验→评测→面试）
 
 [**RAG 十大模块与六周参考路线**](LLM-Training/application-engineering/rag-deep-dive/README.md) · [R01–R05 检索底座](LLM-Training/application-engineering/rag-deep-dive/CORE-01-05.md) · [R06–R10 可信与生产](LLM-Training/application-engineering/rag-deep-dive/CORE-06-10.md) · [权威来源账本](LLM-Training/application-engineering/rag-deep-dive/SOURCES.md) · [实验与验收](LLM-Training/application-engineering/rag-deep-dive/LABS.md) · [面试题卡](LLM-Training/application-engineering/rag-deep-dive/INTERVIEW.md)。保留原 10 条应用工程专题与 12 模块；新增的离线 BM25/RRF/ACL 实验不能代表真实 BGE/Milvus/LLM/Ragas 已运行。

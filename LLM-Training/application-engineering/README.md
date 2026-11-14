@@ -1,5 +1,13 @@
 # 大模型应用工程专项｜RAG、Agent、Harness、Context、Prompt 与评测
 
+## Agent 完整专项入口
+
+[8 周可选主线](AGENT-LEARNING-PATH.md) · [官方权威资料](AGENT-OFFICIAL-RESOURCES.md) · [三项目/评测协议](AGENT-PRACTICE-AND-EVAL.md) · [纯 Python Agent Loop](labs/MINI-AGENT-LOOP.md) · [24 道闭卷题](AGENT-INTERVIEW-QUESTIONS.md)。是现有 APP-AGENT/APP-HARNESS 的纵向学习路径，不改变此目录 10 条横向专题计数；本仓仅完成合成离线实验的合同验证。
+
+> **定位**：这是 [V3 全栈地图](../knowledge-graph/LLM-FULL-STACK-ATLAS.md) 的应用层实践延伸，不是新设 M13–M20、替换 [M01–M12](../README.md)，也不是从本仓复制上游 [AI-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS) 的完整市场/训练资料。原始实验、客户、职位事实保留在对应仓。本目录状态 **CURRICULUM_READY / REAL_APPLICATION_NOT_RUN / LEARNER_UNASSESSED**。
+
+**RAG 深入专项**：[R01–R10 学习导航](rag-deep-dive/README.md) · [权威来源与版本审计](rag-deep-dive/SOURCES.md) · [BM25/RRF/ACL 离线实验](rag-deep-dive/lab/README.md) · [5 组进阶对照](rag-deep-dive/LABS.md)。既有 10 条应用专题 ID 及跨仓边界不变。
+
 > **定位**：这是 [V3 全栈地图](../knowledge-graph/LLM-FULL-STACK-ATLAS.md) 的应用层实践延伸，不是新设 M13–M20、替换 [M01–M12](../README.md)，也不是从本仓复制上游 [AI-Learning-OS](https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS) 的完整市场/训练资料。原始实验、客户、职位事实保留在对应仓。本目录状态 **CURRICULUM_READY / REAL_APPLICATION_NOT_RUN / LEARNER_UNASSESSED**。
 
 **RAG 深入专项**：[R01–R10 学习导航](rag-deep-dive/README.md) · [权威来源与版本审计](rag-deep-dive/SOURCES.md) · [BM25/RRF/ACL 离线实验](rag-deep-dive/lab/README.md) · [5 组进阶对照](rag-deep-dive/LABS.md)。既有 10 条应用专题 ID 及跨仓边界不变。
