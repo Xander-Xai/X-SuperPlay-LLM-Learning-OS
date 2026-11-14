@@ -4,6 +4,10 @@
 
 # LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
 
+## 新增 Agent 学习贯通入口
+
+[Agent 学习路线](application-engineering/AGENT-LEARNING-PATH.md)｜[官方资料](application-engineering/AGENT-OFFICIAL-RESOURCES.md)｜[实践评测](application-engineering/AGENT-PRACTICE-AND-EVAL.md)｜[Mini Loop](application-engineering/labs/MINI-AGENT-LOOP.md)｜[面试题](application-engineering/AGENT-INTERVIEW-QUESTIONS.md)。与现有 APP-AGENT/APP-HARNESS 和 M01–M12 交叉关联，学习时间是建议而非硬性模块，个人和生产状态保持未验证。
+
 ## 完整应用工程横切：RAG / Ragas / Agent / Harness / Context / Prompt
 
 - [应用工程完整入口](application-engineering/README.md)：专业定义、大白话类比、知识依赖图、按需任务路由、上游专项和官方链接。
