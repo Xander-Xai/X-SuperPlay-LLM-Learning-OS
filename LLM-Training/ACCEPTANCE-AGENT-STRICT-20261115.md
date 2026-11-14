@@ -44,3 +44,12 @@
 ## 继续学习的具体入口
 
 先按 [Day 1–3 操作](application-engineering/agent-deep-dive/STUDY-SCHEDULE.md) 自己运行合成 Loop、工具错误与客服流程复盘，再按 Week 3/5/6 在独立项目实现真实状态机、故障和评测，保留真实日志。完成当前岗位要求后按需求跳学，不要求一次性学完所有框架。
+
+## 最后一轮原文覆盖复验（2026-11-15）
+
+再次逐行比对原文，补上此前遗漏的 **求职八项 P0/P1/P2 具体优先级** 与 **Computer Use（P2）官方文档、安全沙箱和操作边界**：
+
+- 修订 PR：[PR #27](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/pull/27)，合入 commit [bd88c89b86df434d0d0c959f18db51b70934e6e0](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/commit/bd88c89b86df434d0d0c959f18db51b70934e6e0)。
+- 测试证据：[GitHub Actions 43616744705](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/actions/runs/43616744705) 中 docs / cpu-toy **均成功**。
+- 回读验证：[学习计划](application-engineering/agent-deep-dive/STUDY-SCHEDULE.md)、[CORE 模块 7](application-engineering/agent-deep-dive/CORE-05-08.md)、[来源审计](application-engineering/agent-deep-dive/SOURCES.md) 和 [manifest](application-engineering/agent-deep-dive/agent-curriculum-manifest.json) 都存在 Computer Use 并可从 main 读取。
+- 本次只补文档和机器索引；**Computer Use 尚未在真实浏览器/桌面执行**。不改变本报告其他真实运行/个人学习边界。
