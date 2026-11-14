@@ -66,6 +66,10 @@ jobs:
           python -c "import torch; print('CPU torch:', torch.__version__)"
           python LLM-Training/labs/toy_train.py
           python -m unittest discover -s LLM-Training/labs -p 'test_*.py' -v
+      - name: Train/check real TinyGPT parameters on synthetic CPU text
+        run: |
+          python LLM-Training/labs/tiny-gpt/tiny_gpt.py
+          python -m unittest discover -s LLM-Training/labs/tiny-gpt -p 'test_*.py' -v
 
 # CPU teaching lab is tested in CI. Passing it does not demonstrate any GPU training.
 

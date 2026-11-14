@@ -2,6 +2,10 @@
 
 **定位**：这是对 M01/M04/M06 的 1 分钟单元实验，独立于 MiniMind，仅用于验证分词后 **Token 级角色范围**、assistant-only 标签选择、一次右移和梯度位置。它没有训练真实模型，也不能取代 MiniMind 代码实战。
 
+## 教学实验 A 已补全真实 Decoder 结构
+
+现有 Loss Mask/Shift Toy 优化**可训练假 Logits**，不包含 Transformer；请另见 [手写 TinyGPT](tiny-gpt/README.md)，验证真实 QKV、因果性、Embedding、AdamW 与模型/优化器临时恢复。二者都只提供 CPU 合成教学证据，不表示真实 MiniMind/Qwen 已训练。
+
 ## 运行
 
 GitHub Actions 的 `cpu-toy` 作业会在 CPU-only PyTorch 环境执行同一套测试；`docs` 作业只验证文档结构、内部链接与实验状态。

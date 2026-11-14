@@ -90,6 +90,27 @@ class IndexContractTest(unittest.TestCase):
         data["modules"][0]["sources"] = ["SRC-INVENTED"]
         self.assertTrue(any("authoritative sources" in s for s in validate(data)))
 
+    def test_tinygpt_route_and_new_sources(self):
+        hit = select(self.catalog, "tinygpt-mechanism", None)
+        self.assertEqual(len(hit), 1)
+        self.assertEqual(hit[0]["practice"], "LLM-Training/labs/tiny-gpt/README.md")
+        self.assertIn("M03", hit[0]["modules"])
+        self.assertTrue(any(x["id"] == "SRC-MEGATRONCORE" for x in self.catalog["sources"]))
+        self.assertTrue(any(x["id"] == "SRC-PYTHIA" for x in self.catalog["sources"]))
+
+    def test_tinygpt_alias_and_practice(self):
+        hits = select(self.catalog, None, "手写GPT")
+        self.assertTrue(any(x["id"] == "tinygpt-mechanism" for x in hits))
+        self.assertEqual(
+            next(m for m in self.catalog["modules"] if m["id"] == "M03")["practice_toy"],
+            "LLM-Training/labs/tiny-gpt/README.md",
+        )
+
+    def test_invalid_optional_toy_practice_rejected(self):
+        broken = copy.deepcopy(self.catalog)
+        next(m for m in broken["modules"] if m["id"] == "M03")["practice_toy"] = "../NOTHERE.md"
+        self.assertTrue(any("practice_toy" in s for s in validate(broken)))
+
     def test_detects_duplicate_alias(self):
         data = copy.deepcopy(self.catalog)
         data["demands"][0]["aliases"] = ["RAG", "rag"]

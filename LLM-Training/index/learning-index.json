@@ -21,7 +21,7 @@
         "SRC-PYTORCH",
         "SRC-CS336"
       ],
-      "practice": "LLM-Training/labs/README.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
       "question": "OOM、NaN、梯度与训练显存如何归因？",
       "gates": [
         "G5"
@@ -62,7 +62,8 @@
       "gates": [
         "G2",
         "G5"
-      ]
+      ],
+      "practice_toy": "LLM-Training/labs/tiny-gpt/README.md"
     },
     {
       "id": "M04",
@@ -75,14 +76,16 @@
       ],
       "sources": [
         "SRC-MINIMIND",
-        "SRC-CS336"
+        "SRC-CS336",
+        "SRC-LITGPT"
       ],
       "practice": "LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md",
       "question": "一个 Batch 如何从 token 更新到可恢复 checkpoint？",
       "gates": [
         "G1",
         "G2"
-      ]
+      ],
+      "practice_toy": "LLM-Training/labs/tiny-gpt/README.md"
     },
     {
       "id": "M05",
@@ -116,7 +119,8 @@
       "sources": [
         "SRC-TRL",
         "SRC-PEFT",
-        "SRC-QWEN-TOOLS"
+        "SRC-QWEN-TOOLS",
+        "SRC-SMOL"
       ],
       "practice": "LLM-Training/labs/synthetic-tool-gateway/README.md",
       "question": "Tool Call 参数、模板、SFT mask 出错时如何训练和排错？",
@@ -136,7 +140,8 @@
       ],
       "sources": [
         "SRC-DPO-PAPER",
-        "SRC-TRL"
+        "SRC-TRL",
+        "SRC-ALIGNMENT"
       ],
       "practice": "LLM-Training/labs/preference-rl-math/README.md",
       "question": "为什么 DPO 的 Loss 下降却使任务行为退化？",
@@ -174,7 +179,8 @@
       "sources": [
         "SRC-PYTORCH",
         "SRC-FSDP",
-        "SRC-VERL"
+        "SRC-VERL",
+        "SRC-MEGATRONCORE"
       ],
       "practice": "LLM-Training/training-systems/memory-and-distributed.md",
       "question": "显存、通信、Rollout 与训练引擎如何分工？",
@@ -190,7 +196,8 @@
       "prerequisites": [],
       "sources": [
         "SRC-LMEVAL",
-        "SRC-TRL"
+        "SRC-TRL",
+        "SRC-PYTHIA"
       ],
       "practice": "LLM-Training/labs/task-evaluation/README.md",
       "question": "怎样把 JSON 正确率与最终工具执行/引用成功率分开？",
@@ -233,7 +240,8 @@
       "sources": [
         "SRC-ATLAS",
         "SRC-CS336",
-        "SRC-VERL"
+        "SRC-VERL",
+        "SRC-MEGATRONCORE"
       ],
       "practice": "LLM-Training/advanced/M11-M12.md",
       "question": "什么时候选择 MoE、多模态或 Agentic RL 而不是普通 RAG？",
@@ -383,6 +391,41 @@
       "url": "https://github.com/karpathy/nanochat",
       "publisher": "Official project / publisher",
       "scope": "end-to-end source organization"
+    },
+    {
+      "id": "SRC-PYTHIA",
+      "title": "EleutherAI Pythia",
+      "url": "https://github.com/EleutherAI/pythia",
+      "publisher": "Official project / publisher",
+      "scope": "checkpoints and training dynamics"
+    },
+    {
+      "id": "SRC-MEGATRONCORE",
+      "title": "NVIDIA Megatron Core Parallelism",
+      "url": "https://docs.nvidia.com/megatron-core/developer-guide/latest/user-guide/parallelism-guide.html",
+      "publisher": "Official project / publisher",
+      "scope": "DP TP PP CP EP official scope"
+    },
+    {
+      "id": "SRC-LITGPT",
+      "title": "Lightning AI LitGPT",
+      "url": "https://github.com/Lightning-AI/litgpt",
+      "publisher": "Official project / publisher",
+      "scope": "full model training / tuning architecture"
+    },
+    {
+      "id": "SRC-ALIGNMENT",
+      "title": "Hugging Face Alignment Handbook",
+      "url": "https://github.com/huggingface/alignment-handbook",
+      "publisher": "Official project / publisher",
+      "scope": "posttraining recipes"
+    },
+    {
+      "id": "SRC-SMOL",
+      "title": "Hugging Face smol-course",
+      "url": "https://github.com/huggingface/smol-course",
+      "publisher": "Official project / publisher",
+      "scope": "posttraining learning materials"
     }
   ],
   "demands": [
@@ -879,6 +922,37 @@
         "运维",
         "回滚",
         "Agent"
+      ]
+    },
+    {
+      "id": "tinygpt-mechanism",
+      "problem": "从零追踪 GPT 的 Embedding、Causal Attention、Next Token Loss、Autograd 和 Checkpoint",
+      "modules": [
+        "M03",
+        "M01",
+        "M04",
+        "M10"
+      ],
+      "sources": [
+        "SRC-RASCHKA",
+        "SRC-CS336",
+        "SRC-MINIMIND"
+      ],
+      "gates": [
+        "G2",
+        "G5"
+      ],
+      "entry": "LLM-Training/knowledge-graph/TRAINING-SIGNAL-AND-LIFECYCLE.md",
+      "practice": "LLM-Training/labs/tiny-gpt/README.md",
+      "status": "DESIGN_ONLY",
+      "aliases": [
+        "TinyGPT",
+        "手写GPT",
+        "从零训练",
+        "Next Token",
+        "因果注意力",
+        "训练循环",
+        "训练原理"
       ]
     }
   ],

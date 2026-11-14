@@ -4,6 +4,8 @@
 
 **起步教学验证**：先跑 [CPU Mask/Shift 单元测试](../../labs/README.md)，注意其不是 MiniMind 训练证据。
 
+若还无法解释 Causal Mask/Logits/Backward，可先做 [手写 TinyGPT CPU](../../labs/tiny-gpt/README.md)；已理解则直接按 [MiniMind 固定版本 Runbook](RUNBOOK-FIRST-DAY.md) 操作。TinyGPT Toy 不等于当前实验完成。
+
 ## Steps
 
 1. Clone [MiniMind](https://github.com/jingyaogong/minimind) 并记录 SHA；查看 model/model_minimind.py、trainer/train_pretrain.py、trainer/train_full_sft.py、dataset/lm_dataset.py（若上游改动以当前仓库为准）。
