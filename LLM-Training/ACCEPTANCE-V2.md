@@ -47,7 +47,17 @@
 | Qwen CPT / Full SFT / LoRA / QLoRA | NOT RUN | 需有评估/显存/忘却对照 |
 | DPO / GRPO / vLLM Deployment | NOT RUN | 需真实采样、评估与服务日志 |
 
-## 5. 最终验收结论
+## 第三轮复审：运行级证据与发现的缺口（2026-11-14）
+
+- 重新读取了 GitHub main 的 12 模块、4 里程碑和实验导图；结构与 V2.0 对齐。
+- **在本轮容器实际复测 CPU Toy**：PyTorch 2.10.0+cpu，5/5 单元测试通过，Smoke 的 Loss 为 3.56822 → 3.55165；证明合成 Token 的 assistant loss mask、shift-one 和梯度位置，不证明 MiniMind/Qwen 的训练效果。
+- **修复 CI 漏检**：原 GitHub Actions 仅运行文档检查；新增 `cpu-toy` 作业安装 CPU-only PyTorch 并运行 smoke + 单测。**以本轮 PR 最新提交对应的 CI 结果为最终证据**，不能沿用旧 PR 的 Success。
+- **修复永久 NOT RUN 锁定**：原目录检查脚本要求实验文本永远包含 NOT RUN，未来真实实验改为 PASS 会失败。现允许 `NOT RUN / RUNNING / PASS / FAIL / INCONCLUSIVE`；如果标记 PASS、FAIL 或 INCONCLUSIVE 必须设 `## 实际运行证据`。
+- **补齐第一天可执行路径**：[MiniMind 16GB/WSL2 起步 Runbook](experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md)，已核对 MiniMind 上游源码、数据相对路径、训练/评估 CLI 和 `hidden_size` 一致性；命令仍待在用户的 NVIDIA GPU 上执行。
+- **安全边界**：新增 .gitignore，避免将数据、权重、Checkpoint、日志或本地秘密误提交（并不代替许可证审查和数据脱敏）。
+- 外链只抽检了部分关键官方资源，**没有证明所有外部 URL 当前可达**。
+
+## 6. 最终验收结论
 
 **文档与学习路线可执行层面：通过（以 PR #2 合并并复验静态检查为最终交付条件）。**
 **模型训练效果层面：未验收，不得声称完成。**

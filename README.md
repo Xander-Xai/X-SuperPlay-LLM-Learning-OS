@@ -8,6 +8,7 @@
 
 **首选总导航：[LLM-Training 学习中心](LLM-Training/README.md)**（12 个模块独立入口、4 个里程碑、5 类训练实验 + 1 个部署验收）。
 
+0. [MiniMind 第一天操作手册](LLM-Training/experiments/01-minimind-whitebox/RUNBOOK-FIRST-DAY.md)：从环境检查、数据获取到 Pretrain→SFT 的可复制命令（尚未实际 GPU 运行）。
 1. [训练全流程 Roadmap V2.0](LLM-Training/ROADMAP-V2.md)：12 模块、4 里程碑、学习时间与严格验收。
 2. [完整训练链路与架构图](LLM-Training/knowledge-graph/full-training-pipeline.md) / [知识依赖与跳学导航](LLM-Training/knowledge-graph/concept-dependencies.md)。
 3. [实验总入口](LLM-Training/experiments/README.md)：MiniMind 白盒 → Qwen CPT → Agent SFT → DPO → GRPO → 部署。

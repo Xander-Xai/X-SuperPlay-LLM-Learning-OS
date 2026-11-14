@@ -4,6 +4,8 @@
 
 ## 运行
 
+GitHub Actions 的 `cpu-toy` 作业会在 CPU-only PyTorch 环境执行同一套测试；`docs` 作业只验证文档结构、内部链接与实验状态。
+
 在仓库根目录执行：
 
 ```bash
