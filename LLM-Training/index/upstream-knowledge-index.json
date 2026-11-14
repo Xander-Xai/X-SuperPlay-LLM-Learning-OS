@@ -1,0 +1,1541 @@
+{
+  "schema_version": 1,
+  "title": "LLM Full Stack Upstream Knowledge Bridge",
+  "snapshot": {
+    "repo": "Xander-Xai/X-SuperPlay-AI-Learning-OS",
+    "sha": "fdf2c09fc5cfbf4967d2507a66a3e19625482d7a",
+    "verified_date": "2026-11-14",
+    "policy": "Read-only pinned paths for learning. Not a live sync; current source may change."
+  },
+  "identity": {
+    "specialist": "Xander-Xai/X-SuperPlay-LLM-Learning-OS",
+    "roadmap": "LLM-Training/ROADMAP-V3-DEMAND-DRIVEN.md",
+    "full_atlas": "LLM-Training/knowledge-graph/LLM-FULL-STACK-ATLAS.md",
+    "resource_guide": "LLM-Training/resources/UPSTREAM-RESOURCE-MAP.md",
+    "need_guide": "LLM-Training/demand-driven/AI-NATIVE-NEED-ROUTES.md"
+  },
+  "domains": [
+    {
+      "id": "F",
+      "name": "基础模型：数据、架构、预训练",
+      "slug": "foundation",
+      "upstream": "docs/atlas/01-foundation.md"
+    },
+    {
+      "id": "S",
+      "name": "训练与计算系统：显存、并行、可靠性",
+      "slug": "training-systems",
+      "upstream": "docs/atlas/02-training-systems.md"
+    },
+    {
+      "id": "P",
+      "name": "后训练：行为、偏好、强化学习",
+      "slug": "post-training",
+      "upstream": "docs/atlas/03-post-training.md"
+    },
+    {
+      "id": "E",
+      "name": "模型工程：评估、推理、服务",
+      "slug": "model-engineering",
+      "upstream": "docs/atlas/04-model-engineering.md"
+    },
+    {
+      "id": "A",
+      "name": "应用：Prompt、RAG、Tools、Agent",
+      "slug": "applications",
+      "upstream": "docs/atlas/05-applications.md"
+    },
+    {
+      "id": "O",
+      "name": "LLMOps：发布、监控、安全、治理",
+      "slug": "production",
+      "upstream": "docs/atlas/06-production.md"
+    }
+  ],
+  "official_sources": [
+    {
+      "id": "official-hf-llm",
+      "title": "Hugging Face LLM Course",
+      "url": "https://huggingface.co/learn/llm-course/en/chapter1/1",
+      "tier": "official-course",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-cs336",
+      "title": "Stanford CS336 Spring 2026",
+      "url": "https://cs336.stanford.edu/",
+      "tier": "university-course",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-minimind",
+      "title": "MiniMind code",
+      "url": "https://github.com/jingyaogong/minimind",
+      "tier": "official-source",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-hf-trl",
+      "title": "Hugging Face TRL trainers",
+      "url": "https://huggingface.co/docs/trl/index",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-hf-peft",
+      "title": "Hugging Face PEFT",
+      "url": "https://huggingface.co/docs/peft/index",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-pytorch",
+      "title": "PyTorch",
+      "url": "https://pytorch.org/docs/stable/index.html",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-vllm",
+      "title": "vLLM serving",
+      "url": "https://docs.vllm.ai/en/latest/serving/online_serving/openai_compatible_server/",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-langgraph",
+      "title": "LangGraph overview",
+      "url": "https://docs.langchain.com/oss/python/langgraph/overview",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-hf-agent",
+      "title": "Hugging Face Agents Course",
+      "url": "https://huggingface.co/learn/agents-course/en/unit1/introduction",
+      "tier": "official-course",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-mcp",
+      "title": "MCP 2026-07-28 specification",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "tier": "official-spec",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-ragas",
+      "title": "Ragas metrics",
+      "url": "https://docs.ragas.io/en/latest/concepts/metrics/available_metrics/",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-hf-multimodal",
+      "title": "Hugging Face Multimodal Generation",
+      "url": "https://huggingface.co/docs/transformers/tasks/any_to_any",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-otel",
+      "title": "OpenTelemetry GenAI semantic conventions",
+      "url": "https://github.com/open-telemetry/semantic-conventions-genai/blob/main/docs/gen-ai/gen-ai-spans.md",
+      "tier": "official-spec",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-nist",
+      "title": "NIST AI RMF",
+      "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+      "tier": "official-framework",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-owasp",
+      "title": "OWASP GenAI Security",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "tier": "official-project",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-hf-datasets",
+      "title": "Hugging Face Datasets",
+      "url": "https://huggingface.co/docs/datasets/index",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-qwen",
+      "title": "Qwen Function Calling",
+      "url": "https://qwen.readthedocs.io/en/latest/framework/function_call.html",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-anthropic-agent",
+      "title": "Anthropic: Building Effective Agents",
+      "url": "https://www.anthropic.com/research/building-effective-agents",
+      "tier": "author-engineering",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-verl",
+      "title": "verl RL training",
+      "url": "https://github.com/volcengine/verl",
+      "tier": "official-source",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-hf-transformers",
+      "title": "Hugging Face Transformers",
+      "url": "https://huggingface.co/docs/transformers/index",
+      "tier": "official-docs",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    },
+    {
+      "id": "official-eleuther-eval",
+      "title": "EleutherAI lm-evaluation-harness",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "tier": "official-project",
+      "verified_scope": "ENTRYPOINT_ONLY; dependency versions not tested",
+      "catalogued_on": "2026-11-14",
+      "url_check": "Authoritative publisher/official project entry, not comprehensive live URL or version-compatibility audit."
+    }
+  ],
+  "topics": [
+    {
+      "id": "F01",
+      "domain": "F",
+      "title": "问题定义/训练或不训练",
+      "modules": [
+        "M10",
+        "M05",
+        "M06"
+      ],
+      "upstream": [
+        "docs/atlas/01-foundation.md",
+        "docs/market/llm-demand-to-practice-20261029.md"
+      ],
+      "sources": [
+        "official-cs336"
+      ],
+      "aliases": [
+        "build-vs-buy",
+        "训练还是RAG",
+        "model choice"
+      ],
+      "definition": "先按用户任务、数据变化与可衡量错误决定 Prompt、RAG、SFT、CPT 或模型自训",
+      "plain": "先确认病因，再决定买药还是开刀",
+      "practice": "用同一组测试对比规则/API/RAG/训练的质量与成本",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "F02",
+      "domain": "F",
+      "title": "架构家族 Encoder/Decoder/Seq2Seq",
+      "modules": [
+        "M03"
+      ],
+      "upstream": [
+        "docs/knowledge/foundation/decoder-only/architecture-comparison.md"
+      ],
+      "sources": [
+        "official-hf-llm",
+        "official-hf-transformers"
+      ],
+      "aliases": [
+        "BERT",
+        "T5",
+        "GPT",
+        "decoder-only"
+      ],
+      "definition": "Encoder 双向表示、Seq2Seq 条件生成、Decoder 自回归生成属于不同目标和计算接口",
+      "plain": "图书管理员理解全文、翻译官先读后写、写作助手逐字续写",
+      "practice": "用同一任务分别设计 embedding 分类与 autoregressive 输出，并标注为什么不互换",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "F03",
+      "domain": "F",
+      "title": "Tokenizer/数据/污染",
+      "modules": [
+        "M02"
+      ],
+      "upstream": [
+        "docs/atlas/01-foundation.md",
+        "docs/sources/ai-native-llm-learning-research-20261029.md"
+      ],
+      "sources": [
+        "official-hf-datasets",
+        "official-hf-llm"
+      ],
+      "aliases": [
+        "BPE",
+        "packing",
+        "去重",
+        "token数"
+      ],
+      "definition": "文本归一化、分词、数据清洗、混合、分割和泄漏控制决定有效训练信号",
+      "plain": "原料检验与切料，混入试卷答案就不是真考试",
+      "practice": "比较分词和上下文截断，建立按文档 ID 隔离的 held-out 数据",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "F04",
+      "domain": "F",
+      "title": "Decoder block 与因果注意力",
+      "modules": [
+        "M03",
+        "M01"
+      ],
+      "upstream": [
+        "docs/knowledge/foundation/decoder-only/transformer-block.md",
+        "docs/knowledge/foundation/decoder-only/causal-mask-and-autoregression.md"
+      ],
+      "sources": [
+        "official-cs336",
+        "official-minimind"
+      ],
+      "aliases": [
+        "causal mask",
+        "Attention",
+        "QKV"
+      ],
+      "definition": "Causal Attention 限制未来信息，残差、归一化、MLP 协同变换 token 表示",
+      "plain": "写句子只能看已写的字，不能偷看未来",
+      "practice": "标注 B/T/H/D 张量形状并注入未来 token 泄漏负例",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "F05",
+      "domain": "F",
+      "title": "现代注意力 RoPE/GQA/MLA",
+      "modules": [
+        "M03",
+        "M09"
+      ],
+      "upstream": [
+        "docs/knowledge/foundation/decoder-only/modern-attention-and-position.md"
+      ],
+      "sources": [
+        "official-cs336",
+        "official-hf-transformers"
+      ],
+      "aliases": [
+        "RoPE",
+        "GQA",
+        "KV占用",
+        "FlashAttention"
+      ],
+      "definition": "位置编码改变注意力的空间关系，GQA/MLA 等降低或压缩 KV 表示，影响部署成本",
+      "plain": "给记忆加坐标，减少多人重复保存同一份资料",
+      "practice": "固定上下文估算 GQA 前后 KV 消耗与注意力正确性",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "F06",
+      "domain": "F",
+      "title": "Pretrain/Checkpoint/Scaling",
+      "modules": [
+        "M04",
+        "M01"
+      ],
+      "upstream": [
+        "docs/atlas/01-foundation.md",
+        "docs/projects/llm-training-dual-repo/README.md"
+      ],
+      "sources": [
+        "official-cs336",
+        "official-minimind"
+      ],
+      "aliases": [
+        "预训练",
+        "next token",
+        "梯度",
+        "checkpoint"
+      ],
+      "definition": "自回归交叉熵与优化器更新参数；恢复训练还需优化器、调度、RNG和数据状态",
+      "plain": "背诵语言世界规律的基础训练，不等于学会遵守具体指令",
+      "practice": "在 MiniMind 追踪一批数据并执行断点恢复比较",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "F07",
+      "domain": "F",
+      "title": "CPT/中训练/防遗忘",
+      "modules": [
+        "M05",
+        "M10"
+      ],
+      "upstream": [
+        "docs/atlas/01-foundation.md"
+      ],
+      "sources": [
+        "official-cs336",
+        "official-hf-datasets"
+      ],
+      "aliases": [
+        "持续预训练",
+        "领域适配",
+        "replay"
+      ],
+      "definition": "领域继续训练改变权重分布，可能伴随通用知识漂移；Replay 是实验控制而非保证",
+      "plain": "专精行业可能生疏通用知识，需定期复习",
+      "practice": "Base/Domain/Replay 三组固定预算对照，比较领域与通用指标",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "F08",
+      "domain": "F",
+      "title": "多模态基础与投影融合",
+      "modules": [
+        "M12",
+        "M03"
+      ],
+      "upstream": [
+        "docs/atlas/multimodal-vertical.md"
+      ],
+      "sources": [
+        "official-hf-multimodal"
+      ],
+      "aliases": [
+        "VLM",
+        "图文",
+        "音频",
+        "视频",
+        "projector"
+      ],
+      "definition": "不同模态编码器和对齐层连接视觉/音频/视频表示，训练与评测必须考虑模态错误来源",
+      "plain": "让读文字的专家学会看图听音，先要统一交互接口",
+      "practice": "图文 OCR+RAG 基线与 VLM 对照，拆分看图错/检索错/回答错",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "S01",
+      "domain": "S",
+      "title": "训练显存与数值精度",
+      "modules": [
+        "M01",
+        "M09"
+      ],
+      "upstream": [
+        "docs/atlas/02-training-systems.md"
+      ],
+      "sources": [
+        "official-pytorch"
+      ],
+      "aliases": [
+        "OOM",
+        "BF16",
+        "FP16",
+        "显存"
+      ],
+      "definition": "权重、梯度、优化器、激活与 allocator 的消耗叠加；精度影响数值稳定",
+      "plain": "仓库不只有货物，还有机器、半成品和缓存",
+      "practice": "同模型改变序列长度与 dtype 记录 peak VRAM（无 GPU 仅理论）",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "S02",
+      "domain": "S",
+      "title": "分布式并行与状态切分",
+      "modules": [
+        "M09"
+      ],
+      "upstream": [
+        "docs/atlas/02-training-systems.md"
+      ],
+      "sources": [
+        "official-pytorch",
+        "official-verl"
+      ],
+      "aliases": [
+        "FSDP",
+        "ZeRO",
+        "DDP",
+        "TP",
+        "PP"
+      ],
+      "definition": "数据并行与参数/梯度/优化器分片解决不同瓶颈，换显存会增加通信",
+      "plain": "多个厨房分工，分食材还是分厨师任务是两种切法",
+      "practice": "画出 AllGather/ReduceScatter 与 Rollout/Actor 资源图",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "S03",
+      "domain": "S",
+      "title": "Kernel/Compiler/Profiler",
+      "modules": [
+        "M09",
+        "M03"
+      ],
+      "upstream": [
+        "docs/atlas/02-training-systems.md"
+      ],
+      "sources": [
+        "official-cs336",
+        "official-pytorch"
+      ],
+      "aliases": [
+        "Triton",
+        "FlashAttention",
+        "Profiler",
+        "kernel"
+      ],
+      "definition": "实际性能受算力、HBM带宽、内核融合和 Python 调度约束",
+      "plain": "锅的火力、洗菜速度、人员移动决定整体出餐速度",
+      "practice": "Profiler 找 top3 热点并单变量比较优化",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "S04",
+      "domain": "S",
+      "title": "训练可靠性与复现",
+      "modules": [
+        "M04",
+        "M09",
+        "M10"
+      ],
+      "upstream": [
+        "docs/atlas/02-training-systems.md"
+      ],
+      "sources": [
+        "official-pytorch",
+        "official-cs336"
+      ],
+      "aliases": [
+        "seed",
+        "resume",
+        "checkpoint",
+        "异常恢复"
+      ],
+      "definition": "可复现训练包括模型/数据/环境/随机性/优化器状态和故障恢复，不止日志记录",
+      "plain": "训练存档必须包含进度、环境和未完成任务",
+      "practice": "中断再恢复实验比对 LR/tokens/验证结果",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "P01",
+      "domain": "P",
+      "title": "SFT 与 PEFT/QLoRA",
+      "modules": [
+        "M06",
+        "M02"
+      ],
+      "upstream": [
+        "docs/atlas/03-post-training.md"
+      ],
+      "sources": [
+        "official-hf-trl",
+        "official-hf-peft"
+      ],
+      "aliases": [
+        "SFT",
+        "LoRA",
+        "QLoRA",
+        "指令微调"
+      ],
+      "definition": "监督目标是选定的 Assistant 输出 token，PEFT 只更新部分参数；模板/Mask 不正确会学偏",
+      "plain": "给员工示范标准服务动作，不要求它编造查询接口返回",
+      "practice": "Qwen template 展开检查 loss mask，比较 Prompt 与 LoRA 基线",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "P02",
+      "domain": "P",
+      "title": "合成数据/拒绝采样/偏好对",
+      "modules": [
+        "M02",
+        "M06",
+        "M07"
+      ],
+      "upstream": [
+        "docs/atlas/03-post-training.md",
+        "docs/sources/ai-native-llm-learning-research-20261029.md"
+      ],
+      "sources": [
+        "official-hf-trl"
+      ],
+      "aliases": [
+        "synthetic",
+        "rejection sampling",
+        "chosen rejected"
+      ],
+      "definition": "生成候选、验证正确性、过滤污染，形成监督或偏好数据；教师输出不可当真值",
+      "plain": "试卷自动出题可以，但答案必须有核对标准",
+      "practice": "用确定性工具生成两个答案并用 verifier 选优",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "P03",
+      "domain": "P",
+      "title": "Reward Model/DPO/Online DPO",
+      "modules": [
+        "M07"
+      ],
+      "upstream": [
+        "docs/atlas/03-post-training.md"
+      ],
+      "sources": [
+        "official-hf-trl"
+      ],
+      "aliases": [
+        "DPO",
+        "reward model",
+        "偏好优化"
+      ],
+      "definition": "偏好优化需区分离线固定对、实时采样/更新与参考策略；胜率并非正确率",
+      "plain": "评委的喜好能改变答题风格，但不代表事实正确",
+      "practice": "DPO pair margin 实验并检查长答案偏好与真实任务退化",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "P04",
+      "domain": "P",
+      "title": "PPO/GRPO/RLVR",
+      "modules": [
+        "M08",
+        "M10"
+      ],
+      "upstream": [
+        "docs/atlas/03-post-training.md"
+      ],
+      "sources": [
+        "official-hf-trl",
+        "official-verl"
+      ],
+      "aliases": [
+        "GRPO",
+        "PPO",
+        "RLVR",
+        "rollout",
+        "奖励"
+      ],
+      "definition": "PPO/GRPO 是优化算法，RLVR 是奖励信号机制；Group Advantage 的信号取决于组内差异",
+      "plain": "同一题的几份答案集体评分，全同分没法学习谁更好",
+      "practice": "先运行数学 Toy 再开展 GPU rollout/更新/held-out 训练",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "P05",
+      "domain": "P",
+      "title": "Reasoning/Agentic RL",
+      "modules": [
+        "M08",
+        "M12"
+      ],
+      "upstream": [
+        "docs/atlas/03-post-training.md",
+        "docs/atlas/multimodal-vertical.md"
+      ],
+      "sources": [
+        "official-hf-trl",
+        "official-verl"
+      ],
+      "aliases": [
+        "Agentic RL",
+        "推理强化",
+        "multi step"
+      ],
+      "definition": "Agentic RL 的状态包含工具与环境反馈，跨步奖惩会产生信用分配难题",
+      "plain": "棋局的最后输赢不能简单归因给最后一手棋",
+      "practice": "设计只读环境的 state/action/observation/reward 和失败回放",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "E01",
+      "domain": "E",
+      "title": "基础评测/正确性/回归",
+      "modules": [
+        "M10"
+      ],
+      "upstream": [
+        "docs/atlas/04-model-engineering.md"
+      ],
+      "sources": [
+        "official-eleuther-eval",
+        "official-ragas"
+      ],
+      "aliases": [
+        "benchmark",
+        "PPL",
+        "Eval",
+        "基线"
+      ],
+      "definition": "不同目标需不同指标与 held-out，输出格式正确不等于用户任务正确",
+      "plain": "体检不只看体重，要同时检查血压、血糖和症状",
+      "practice": "区分 Token loss、参数准确率、任务成功率与证据支持率",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "E02",
+      "domain": "E",
+      "title": "Prefill/Decode/KV Cache",
+      "modules": [
+        "M03",
+        "M11"
+      ],
+      "upstream": [
+        "docs/knowledge/foundation/decoder-only/prefill-decode-kv-cache.md",
+        "docs/projects/decoder-only-mini-inference/README.md"
+      ],
+      "sources": [
+        "official-hf-transformers",
+        "official-vllm"
+      ],
+      "aliases": [
+        "TTFT",
+        "KV Cache",
+        "prefill",
+        "decode"
+      ],
+      "definition": "Prefill 批量处理上下文，Decode 顺序生成；KV Cache 复用历史 Key/Value",
+      "plain": "先一次性整理所有资料，再逐字写作并保存历史索引",
+      "practice": "测 TTFT vs TPOT，固定长度比较 cache on/off",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "E03",
+      "domain": "E",
+      "title": "Decoding/采样/测试时计算",
+      "modules": [
+        "M11",
+        "M12"
+      ],
+      "upstream": [
+        "docs/atlas/04-model-engineering.md"
+      ],
+      "sources": [
+        "official-hf-transformers"
+      ],
+      "aliases": [
+        "temperature",
+        "top-p",
+        "beam",
+        "test time"
+      ],
+      "definition": "生成策略改变输出概率分布；多采样/验证器是推理时成本，不是权重训练",
+      "plain": "写作时可按概率选词或多写几版再挑，不代表记忆改变",
+      "practice": "保持权重不变改变 temperature/候选数，记录成功率和额外 tokens",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "E04",
+      "domain": "E",
+      "title": "量化/蒸馏/Adapter Merge",
+      "modules": [
+        "M11",
+        "M06"
+      ],
+      "upstream": [
+        "docs/atlas/04-model-engineering.md"
+      ],
+      "sources": [
+        "official-hf-peft",
+        "official-vllm"
+      ],
+      "aliases": [
+        "quantization",
+        "AWQ",
+        "GPTQ",
+        "distillation",
+        "merge"
+      ],
+      "definition": "降低精度与蒸馏压缩参数或计算，可能改变任务正确性；模型合并需版本一致",
+      "plain": "把厚百科压缩成便携本，容量小了不代表所有章节无损",
+      "practice": "量化前后同 held-out 测 Tool args、VRAM、延迟",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "E05",
+      "domain": "E",
+      "title": "Serving/引擎/接口安全",
+      "modules": [
+        "M11",
+        "M09"
+      ],
+      "upstream": [
+        "docs/atlas/04-model-engineering.md",
+        "docs/atlas/06-production.md"
+      ],
+      "sources": [
+        "official-vllm",
+        "official-owasp"
+      ],
+      "aliases": [
+        "vLLM",
+        "SGLang",
+        "OpenAI server",
+        "并发"
+      ],
+      "definition": "模型服务涉及 batching、队列、鉴权、超时和工具解析，兼容协议不等于默认安全",
+      "plain": "餐厅出餐不只靠厨师，还靠排队与门禁",
+      "practice": "本机单用户与受限并发压测，验证所有服务端点均受保护",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "A01",
+      "domain": "A",
+      "title": "Prompt 与 Context Engineering",
+      "modules": [
+        "M02",
+        "M10"
+      ],
+      "upstream": [
+        "docs/atlas/05-applications.md",
+        "docs/sources/ai-native-context-engineering-research-20261029.md"
+      ],
+      "sources": [
+        "official-hf-agent",
+        "official-anthropic-agent"
+      ],
+      "aliases": [
+        "prompt",
+        "上下文工程",
+        "system prompt",
+        "context"
+      ],
+      "definition": "上下文预算、指令层级、证据顺序和状态压缩会影响推理能力",
+      "plain": "给员工的工作台：任务说明、参考资料和当前状态摆放得对才高效",
+      "practice": "用固定测试集比较 prompt/context 和去除噪声前后效果",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "A02",
+      "domain": "A",
+      "title": "Retrieval/Embedding/Rerank",
+      "modules": [
+        "M02",
+        "M10"
+      ],
+      "upstream": [
+        "docs/atlas/05-applications.md",
+        "docs/practice/rag/README.md"
+      ],
+      "sources": [
+        "official-ragas"
+      ],
+      "aliases": [
+        "embedding",
+        "reranker",
+        "Milvus",
+        "BM25",
+        "向量"
+      ],
+      "definition": "检索为查询提取证据，稀疏/稠密/重排分别解决词面、语义与排序问题",
+      "plain": "图书馆找书：目录检索、语义找相似书、专家重排",
+      "practice": "用负例测 Recall@K、MRR、引用污染与 ACL",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "A03",
+      "domain": "A",
+      "title": "RAG/Agentic RAG",
+      "modules": [
+        "M10",
+        "M06"
+      ],
+      "upstream": [
+        "docs/atlas/05-applications.md",
+        "docs/sources/ai-native-rag-learning-research-20261029.md",
+        "docs/playbooks/rag-agent-chatbot.md"
+      ],
+      "sources": [
+        "official-ragas",
+        "official-hf-agent"
+      ],
+      "aliases": [
+        "RAG",
+        "知识库",
+        "引文",
+        "拒答"
+      ],
+      "definition": "检索证据增强生成，可不改变模型参数；质量取决于召回、证据适配、权限与引用",
+      "plain": "开卷考试：模型可以查资料，但引用必须能支持答案",
+      "practice": "用固定合成题逐层测 Recall/支持率/无证据拒答",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "A04",
+      "domain": "A",
+      "title": "Function Calling 与 MCP",
+      "modules": [
+        "M06",
+        "M11"
+      ],
+      "upstream": [
+        "docs/atlas/05-applications.md",
+        "docs/playbooks/rag-agent-chatbot.md"
+      ],
+      "sources": [
+        "official-mcp",
+        "official-qwen"
+      ],
+      "aliases": [
+        "工具调用",
+        "MCP",
+        "tool",
+        "json schema",
+        "function calling"
+      ],
+      "definition": "Tool Calling 是模型输出结构化请求；MCP 标准化 Host/Client/Server 间资源与工具协议；执行必须经系统鉴权",
+      "plain": "工具调用像申请操作单，MCP 像统一的插座协议，插上不等于有权限",
+      "practice": "先验证 schema/权限/副作用，再对照工具模板和协议版本",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "A05",
+      "domain": "A",
+      "title": "Workflow/Agent/Multi-agent",
+      "modules": [
+        "M06",
+        "M10",
+        "M12"
+      ],
+      "upstream": [
+        "docs/atlas/05-applications.md",
+        "docs/sources/ai-native-agent-learning-research-20261029.md"
+      ],
+      "sources": [
+        "official-langgraph",
+        "official-anthropic-agent"
+      ],
+      "aliases": [
+        "Agent",
+        "LangGraph",
+        "state graph",
+        "多智能体"
+      ],
+      "definition": "Workflow 预设控制流；Agent 允许模型根据反馈选择步骤；多 Agent 仅在角色拆分有独立收益时使用",
+      "plain": "流水线是既定步骤，智能员工会决定下一步做什么；多个员工不自动更好",
+      "practice": "同任务比较单流程、单 Agent、多 Agent 的正确率/成本/恢复",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "A06",
+      "domain": "A",
+      "title": "Memory/State/HITL",
+      "modules": [
+        "M06",
+        "M10",
+        "M11"
+      ],
+      "upstream": [
+        "docs/atlas/05-applications.md"
+      ],
+      "sources": [
+        "official-langgraph"
+      ],
+      "aliases": [
+        "checkpoint",
+        "记忆",
+        "HITL",
+        "session"
+      ],
+      "definition": "运行状态/线程记忆/长期记忆是不同持久化层；人类审批应用于不可逆或高风险副作用",
+      "plain": "便签是当前步骤，档案柜保存长期事实，经理签字批准高风险动作",
+      "practice": "故障重放与审批前后权限检查，防止重复扣减/误执行",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "O01",
+      "domain": "O",
+      "title": "LLMOps 评估与模型版本",
+      "modules": [
+        "M10",
+        "M11"
+      ],
+      "upstream": [
+        "docs/atlas/06-production.md",
+        "docs/market/llm-demand-to-practice-20261029.md"
+      ],
+      "sources": [
+        "official-nist",
+        "official-eleuther-eval"
+      ],
+      "aliases": [
+        "LLMOps",
+        "版本",
+        "evaluation gate"
+      ],
+      "definition": "生产模型不以部署成功为验收；要求冻结评测、差异报告和发布/回滚证据",
+      "plain": "发货前的质量关、发货后的售后检查都必须存在",
+      "practice": "做 release manifest+回归与回滚演练",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "O02",
+      "domain": "O",
+      "title": "Observability/Tracing",
+      "modules": [
+        "M09",
+        "M10",
+        "M11"
+      ],
+      "upstream": [
+        "docs/atlas/06-production.md"
+      ],
+      "sources": [
+        "official-otel"
+      ],
+      "aliases": [
+        "trace",
+        "logging",
+        "metrics",
+        "监控"
+      ],
+      "definition": "跨模型/检索/工具阶段的 Trace 与指标需关联 request 和版本、延迟、错误原因",
+      "plain": "生产线上要能追踪哪一工位出错，不能只看到最后产品坏了",
+      "practice": "自造 request_id 串联 Retrieval/LLM/Tool 与错误码",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "O03",
+      "domain": "O",
+      "title": "安全/权限/隐私",
+      "modules": [
+        "M02",
+        "M10",
+        "M11"
+      ],
+      "upstream": [
+        "docs/atlas/06-production.md",
+        "docs/atlas/cross-cutting-planes.md"
+      ],
+      "sources": [
+        "official-owasp",
+        "official-nist"
+      ],
+      "aliases": [
+        "prompt injection",
+        "ACL",
+        "PII",
+        "越权",
+        "安全"
+      ],
+      "definition": "Prompt Injection 属信任边界；模型输出不可信，鉴权与工具执行必须在服务端实施",
+      "plain": "服务员说我想进金库不构成开门凭证",
+      "practice": "合成越权/引文/敏感信息诱导负例验证服务器拒绝",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "O04",
+      "domain": "O",
+      "title": "成本/反馈/构建或购买",
+      "modules": [
+        "M10",
+        "M11"
+      ],
+      "upstream": [
+        "docs/atlas/06-production.md",
+        "docs/market/llm-demand-to-practice-20261029.md"
+      ],
+      "sources": [
+        "official-nist"
+      ],
+      "aliases": [
+        "cost",
+        "SLO",
+        "unit economics",
+        "cost per request"
+      ],
+      "definition": "Token、GPU、吞吐、调用链和维护人力共同构成产品单位经济；反馈需要标注再入训练",
+      "plain": "买成品电器还是自己造，先算总成本和售后",
+      "practice": "算不同模型服务的单请求成本与失败恢复成本",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    },
+    {
+      "id": "X01",
+      "domain": "F",
+      "title": "跨域多模态处理链",
+      "modules": [
+        "M12",
+        "M03",
+        "M10"
+      ],
+      "upstream": [
+        "docs/atlas/multimodal-vertical.md",
+        "docs/sources/ai-native-cv-research-20261029.md"
+      ],
+      "sources": [
+        "official-hf-multimodal"
+      ],
+      "aliases": [
+        "multimodal",
+        "OCR",
+        "CLIP",
+        "VLM"
+      ],
+      "definition": "多模态贯穿原始数据编码、预训练、后训练、推理、应用与上线评估，不能塞入单一章节",
+      "plain": "图文音视频是另外几种‘原材料’，都需质检、加工、复验",
+      "practice": "为带图的知识库设计 OCR+RAG vs VLM 的误差分桶",
+      "confidence": "explained",
+      "status": "CURRICULUM_NOT_LEARNER_VERIFIED"
+    }
+  ],
+  "relations": [
+    {
+      "from": "F03",
+      "to": "F06",
+      "type": "feeds",
+      "explain": "清洗/分词数据供应 Pretrain"
+    },
+    {
+      "from": "F04",
+      "to": "F06",
+      "type": "implements",
+      "explain": "Decoder Block 是预训练的模型主体"
+    },
+    {
+      "from": "F06",
+      "to": "F07",
+      "type": "produces-base-for",
+      "explain": "预训练 Base 可用于 CPT，但 CPT 可按需跳过"
+    },
+    {
+      "from": "F06",
+      "to": "P01",
+      "type": "produces-base-for",
+      "explain": "Base 可以直接用于 SFT"
+    },
+    {
+      "from": "P01",
+      "to": "P03",
+      "type": "provides-baseline",
+      "explain": "SFT 可作为偏好训练的初始模型"
+    },
+    {
+      "from": "P01",
+      "to": "P04",
+      "type": "provides-baseline",
+      "explain": "GRPO 可从 SFT checkpoint 分叉"
+    },
+    {
+      "from": "P02",
+      "to": "P01",
+      "type": "supplies",
+      "explain": "合成/筛选数据可以用于 SFT"
+    },
+    {
+      "from": "P02",
+      "to": "P03",
+      "type": "supplies",
+      "explain": "选择对和验证提供 DPO 信号"
+    },
+    {
+      "from": "P02",
+      "to": "P04",
+      "type": "supplies",
+      "explain": "Verifier 定义 reward 输入"
+    },
+    {
+      "from": "F05",
+      "to": "E02",
+      "type": "reduces-cost-of",
+      "explain": "GQA 和位置方案影响 KV footprint"
+    },
+    {
+      "from": "S01",
+      "to": "P04",
+      "type": "constrains",
+      "explain": "显存预算限制 Rollout+更新的规模"
+    },
+    {
+      "from": "S02",
+      "to": "P04",
+      "type": "accelerates",
+      "explain": "并行/分片支持大规模 RL 系统"
+    },
+    {
+      "from": "E01",
+      "to": "P03",
+      "type": "evaluates",
+      "explain": "任务级评估检验偏好优化效果"
+    },
+    {
+      "from": "E01",
+      "to": "A03",
+      "type": "evaluates",
+      "explain": "引用/检索/生成要分开测"
+    },
+    {
+      "from": "E01",
+      "to": "O01",
+      "type": "gates",
+      "explain": "冻结回归评估影响是否发布"
+    },
+    {
+      "from": "E02",
+      "to": "E05",
+      "type": "enables",
+      "explain": "Prefill/Decode+KV支撑推理服务"
+    },
+    {
+      "from": "E04",
+      "to": "E05",
+      "type": "deploys-into",
+      "explain": "量化/合并需经推理质量回归"
+    },
+    {
+      "from": "E05",
+      "to": "A03",
+      "type": "hosts",
+      "explain": "RAG 可以调用独立服务/API"
+    },
+    {
+      "from": "E05",
+      "to": "A05",
+      "type": "hosts",
+      "explain": "Agent 可以调用独立服务/API"
+    },
+    {
+      "from": "A02",
+      "to": "A03",
+      "type": "supplies-evidence",
+      "explain": "RAG 检索提供外部证据"
+    },
+    {
+      "from": "A01",
+      "to": "A03",
+      "type": "controls-context",
+      "explain": "上下文工程决定证据可用性"
+    },
+    {
+      "from": "A04",
+      "to": "A05",
+      "type": "supplies-actions",
+      "explain": "Tools/MCP 是 Agent 的行动接口"
+    },
+    {
+      "from": "A06",
+      "to": "A05",
+      "type": "persists",
+      "explain": "Checkpoint/Memory 支持恢复和状态"
+    },
+    {
+      "from": "O03",
+      "to": "A04",
+      "type": "guards",
+      "explain": "工具执行权限由系统保障"
+    },
+    {
+      "from": "O02",
+      "to": "E05",
+      "type": "observes",
+      "explain": "Trace 贯通 serving"
+    },
+    {
+      "from": "O02",
+      "to": "A05",
+      "type": "observes",
+      "explain": "Agent 需要跨步骤可观测"
+    },
+    {
+      "from": "O04",
+      "to": "F01",
+      "type": "informs-choice",
+      "explain": "成本与风险反向决定是否训练"
+    },
+    {
+      "from": "F08",
+      "to": "X01",
+      "type": "is-cross-cutting-view-of",
+      "explain": "多模态基础是贯穿视角的一部分"
+    },
+    {
+      "from": "X01",
+      "to": "A03",
+      "type": "extends",
+      "explain": "图文 RAG 为多模态应用之一"
+    },
+    {
+      "from": "X01",
+      "to": "O03",
+      "type": "requires",
+      "explain": "多模态同样需要安全/隐私边界"
+    }
+  ],
+  "needs": [
+    {
+      "id": "N01",
+      "problem": "RAG 找不到证据或引用错",
+      "keywords": [
+        "rag",
+        "召回",
+        "知识库",
+        "引用"
+      ],
+      "topics": [
+        "A02",
+        "A03",
+        "E01",
+        "O03"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N02",
+      "problem": "Agent 工具调用错误、越权或状态断裂",
+      "keywords": [
+        "Agent",
+        "tool",
+        "工具调用",
+        "MCP",
+        "HITL"
+      ],
+      "topics": [
+        "A04",
+        "A05",
+        "A06",
+        "O03",
+        "O02"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N03",
+      "problem": "模型 OOM、吞吐不达标",
+      "keywords": [
+        "OOM",
+        "显存",
+        "性能",
+        "TPOT"
+      ],
+      "topics": [
+        "S01",
+        "S03",
+        "E02",
+        "E05"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N04",
+      "problem": "想做 QLoRA/SFT 但 Mask 不懂",
+      "keywords": [
+        "QLoRA",
+        "SFT",
+        "loss mask",
+        "chat template"
+      ],
+      "topics": [
+        "P01",
+        "F03",
+        "F04",
+        "E01"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N05",
+      "problem": "DPO/GRPO Reward 上升但正确率下降",
+      "keywords": [
+        "DPO",
+        "GRPO",
+        "Reward Hacking"
+      ],
+      "topics": [
+        "P03",
+        "P04",
+        "E01",
+        "S01"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N06",
+      "problem": "行业知识更新快，要不要 CPT",
+      "keywords": [
+        "CPT",
+        "训练还是RAG",
+        "领域知识"
+      ],
+      "topics": [
+        "F01",
+        "F07",
+        "A03",
+        "E01"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N07",
+      "problem": "理解模型推理 TTFT、KV Cache",
+      "keywords": [
+        "KV",
+        "TTFT",
+        "prefill",
+        "decode"
+      ],
+      "topics": [
+        "F05",
+        "E02",
+        "E05",
+        "S03"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N08",
+      "problem": "多模态产品：图片、音频和文本",
+      "keywords": [
+        "VLM",
+        "multimodal",
+        "OCR",
+        "图文"
+      ],
+      "topics": [
+        "F08",
+        "X01",
+        "A03",
+        "E01"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N09",
+      "problem": "模型上线安全、监控、回滚",
+      "keywords": [
+        "上线",
+        "LLMOps",
+        "回滚",
+        "安全"
+      ],
+      "topics": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "E05"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N10",
+      "problem": "不想训练，想用 API/Prompt 快速实现",
+      "keywords": [
+        "Prompt",
+        "API",
+        "no training",
+        "选型"
+      ],
+      "topics": [
+        "F01",
+        "A01",
+        "E05",
+        "E01"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N11",
+      "problem": "从零理解 Decoder/Tokenizer/预训练",
+      "keywords": [
+        "Transformer",
+        "Decoder",
+        "Tokenizer",
+        "Pretrain"
+      ],
+      "topics": [
+        "F02",
+        "F03",
+        "F04",
+        "F06",
+        "S04"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    },
+    {
+      "id": "N12",
+      "problem": "未来研究分布式训练、Agentic RL",
+      "keywords": [
+        "FSDP",
+        "verl",
+        "Agentic RL",
+        "分布式"
+      ],
+      "topics": [
+        "S02",
+        "S04",
+        "P04",
+        "P05",
+        "O02"
+      ],
+      "status": "ROUTING_GUIDE_ONLY"
+    }
+  ],
+  "assessment": "Knowledge routes ready; learner expertise/model training/production deployment NOT VERIFIED."
+}

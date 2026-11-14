@@ -4,6 +4,17 @@
 >
 > 状态：**CURRICULUM READY / LEARNER UNASSESSED / PRODUCTION NOT VERIFIED**。本仓是独立的 **LLM 专项学习操作系统**，目标覆盖研发与上线需要的知识和技能；它不是某一个下游产品的研发仓，也不承接客户/订单事实。真实产品源码与线上数据属于其各自仓库。
 
+## V3 全栈扩展｜补齐上游六域而不替换训练模块
+
+你现在可从 [**LLM 六域全景图**](knowledge-graph/LLM-FULL-STACK-ATLAS.md) 看清一条完整技术系统（Foundation、Training Systems、Post-training、Model Engineering、Applications、LLMOps）与多模态/安全/评估/成本横切层。这里是**知识广度**，与本 Roadmap 的 M01–M12 **能力深度**互补。
+
+- [33 个主题的上游一键链接 + 官方参考](resources/UPSTREAM-RESOURCE-MAP.md)：按领域直接指向上游固定文件、专业原理和官方资料；当前不会全部精读也能知道将来去哪找。
+- [12 张需求驱动任务卡](demand-driven/AI-NATIVE-NEED-ROUTES.md)：从 RAG 引用、Tool Calling、显存、GRPO、KV Cache、多模态、模型发布、API 选型等任意当前问题进入。
+- [AI-Native 导师提示词与学习闭环](learning-method/AI-NATIVE-LEARNING-LOOP.md)：专业定义 + 大白话 + 公式/接口 + 两种反例 + 最小可运行实验 + 未知场景迁移 + 停止规则。
+- [可检索 Atlas 目录](index/upstream-knowledge-index.json)：6 域、33 主题、30 条类型化知识关系、12 需求、21 官方入口；原有 [12 模块/18 需求索引](index/learning-index.json) 保持独立。
+
+**明确定位**：上游的历史深工程 M00–M17 与本仓 M01–M12 编号不同；全栈主题使用 F/S/P/E/A/O + 数字，也不是学习顺序。RAG、Agent、MCP 属应用体系，不改写为后训练的三个新模块。知识地图不强制每个主题到 L3/L4；按需要先 L0 知道在哪里，出现真实 Gap 再做深度学习。
+
 ## 0. 三个不同的“顺序”，不要混淆
 
 1. **客观知识关系**：如理解 DPO 的 log-prob 需要 CE/概率基础；理解 KV Cache 需要 causal attention；这是“前置依赖”，不会因为需求改变而消失。

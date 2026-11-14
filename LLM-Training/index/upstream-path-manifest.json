@@ -1,0 +1,31 @@
+{
+  "upstream_repository": "Xander-Xai/X-SuperPlay-AI-Learning-OS",
+  "verified_sha": "fdf2c09fc5cfbf4967d2507a66a3e19625482d7a",
+  "verified_date": "2026-11-14",
+  "method": "Compared every path to actual upstream main Git tree at same SHA using connected GitHub",
+  "paths": [
+    "docs/atlas/01-foundation.md",
+    "docs/atlas/02-training-systems.md",
+    "docs/atlas/03-post-training.md",
+    "docs/atlas/04-model-engineering.md",
+    "docs/atlas/05-applications.md",
+    "docs/atlas/06-production.md",
+    "docs/atlas/cross-cutting-planes.md",
+    "docs/atlas/multimodal-vertical.md",
+    "docs/knowledge/foundation/decoder-only/architecture-comparison.md",
+    "docs/knowledge/foundation/decoder-only/causal-mask-and-autoregression.md",
+    "docs/knowledge/foundation/decoder-only/modern-attention-and-position.md",
+    "docs/knowledge/foundation/decoder-only/prefill-decode-kv-cache.md",
+    "docs/knowledge/foundation/decoder-only/transformer-block.md",
+    "docs/market/llm-demand-to-practice-20261029.md",
+    "docs/playbooks/rag-agent-chatbot.md",
+    "docs/practice/rag/README.md",
+    "docs/projects/decoder-only-mini-inference/README.md",
+    "docs/projects/llm-training-dual-repo/README.md",
+    "docs/sources/ai-native-agent-learning-research-20261029.md",
+    "docs/sources/ai-native-context-engineering-research-20261029.md",
+    "docs/sources/ai-native-cv-research-20261029.md",
+    "docs/sources/ai-native-llm-learning-research-20261029.md",
+    "docs/sources/ai-native-rag-learning-research-20261029.md"
+  ]
+}

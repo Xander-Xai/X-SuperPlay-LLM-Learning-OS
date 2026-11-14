@@ -19,6 +19,16 @@ jobs:
         run: python LLM-Training/tools/check_repo.py
       - name: Validate demand routes, source IDs and file index
         run: python LLM-Training/tools/validate_learning_index.py
+      - name: Validate pinned six-domain upstream atlas and typed relations
+        run: python LLM-Training/tools/validate_atlas.py
+      - name: Test six-domain atlas routing, sources, snapshot and negative cases
+        run: python -m unittest discover -s LLM-Training/tools -p 'test_atlas.py' -v
+      - name: Smoke-test full-stack source and need lookup
+        run: |
+          python LLM-Training/tools/route_atlas.py --topic A04
+          python LLM-Training/tools/route_atlas.py --need N02
+          python LLM-Training/tools/route_atlas.py --domain E
+          python LLM-Training/tools/route_atlas.py --search RAG
       - name: Verify demand-index and source-to-module contracts
         run: python -m unittest discover -s LLM-Training/tools -p 'test_learning_index.py' -v
       - name: Test toy DPO/GRPO formulas and reward hacking
