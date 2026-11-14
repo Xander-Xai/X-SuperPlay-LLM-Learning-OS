@@ -17,6 +17,18 @@ jobs:
           python-version: "3.11"
       - name: Validate modules, statuses, local Markdown links
         run: python LLM-Training/tools/check_repo.py
+      - name: Validate demand routes, source IDs and file index
+        run: python LLM-Training/tools/validate_learning_index.py
+      - name: Run 8 offline demand-index contract tests
+        run: python -m unittest discover -s LLM-Training/tools -p 'test_learning_index.py' -v
+      - name: Test synthetic tool gateway and run safe demo
+        run: |
+          python -m unittest discover -s LLM-Training/labs/synthetic-tool-gateway -p 'test_*.py' -v
+          python LLM-Training/labs/synthetic-tool-gateway/run_demo.py
+      - name: Smoke test demand router
+        run: |
+          python LLM-Training/tools/route_learning.py --id tool-calling
+          python LLM-Training/tools/route_learning.py --search 延迟
   cpu-toy:
     runs-on: ubuntu-latest
     steps:

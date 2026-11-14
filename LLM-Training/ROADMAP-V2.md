@@ -1,6 +1,8 @@
-# LLM Training Roadmap V2.0 — 最终执行版
+# LLM Training Roadmap V2.0 — 完整训练底座（保留，已拓展 V3）
 
 **状态：学习体系文档已落盘；模型训练待执行。**
+
+**重要：这份 V2 是保留的学习底座；当前以 [V3 需求驱动扩展路线](ROADMAP-V3-DEMAND-DRIVEN.md) 为入口。V3 不删改 12 模块/4 里程碑/5 类实验，只让学习顺序取决于当前问题，并覆盖生产能力。**
 
 **学习中心：[12 模块导航](README.md) · [预训练/后训练对照](knowledge-graph/pretrain-posttrain-relations.md) · [CPU Toy Shift/Mask](labs/README.md) · [验收报告](ACCEPTANCE-V2.md)。** 更新：2026-11-14。
 

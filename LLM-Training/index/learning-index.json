@@ -1,0 +1,719 @@
+{
+  "schema_version": 1,
+  "updated_on": "2026-11-14",
+  "learning_status": "CURRICULUM_READY_LEARNER_UNASSESSED",
+  "identity": {
+    "repository": "Xander-Xai/X-SuperPlay-LLM-Learning-OS",
+    "upstream_repository": "Xander-Xai/X-SuperPlay-AI-Learning-OS",
+    "scope": "Specialized demand-driven LLM learning, reproducible labs, independent assessments; NOT a downstream product code repository.",
+    "readme": "LLM-Training/README.md",
+    "roadmap": "LLM-Training/ROADMAP-V3-DEMAND-DRIVEN.md",
+    "legacy_roadmap": "LLM-Training/ROADMAP-V2.md",
+    "canonical_upstream": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/tree/main/docs/atlas"
+  },
+  "modules": [
+    {
+      "id": "M01",
+      "title": "数学 Autograd 数值稳定",
+      "path": "LLM-Training/modules/M01.md",
+      "prerequisites": []
+    },
+    {
+      "id": "M02",
+      "title": "Tokenizer 数据清洗 评估泄漏",
+      "path": "LLM-Training/modules/M02.md",
+      "prerequisites": [
+        "M01"
+      ]
+    },
+    {
+      "id": "M03",
+      "title": "Transformer Attention RoPE KV Cache",
+      "path": "LLM-Training/modules/M03.md",
+      "prerequisites": [
+        "M01",
+        "M02"
+      ]
+    },
+    {
+      "id": "M04",
+      "title": "预训练 CausalLM Checkpoint",
+      "path": "LLM-Training/modules/M04.md",
+      "prerequisites": [
+        "M01",
+        "M02",
+        "M03"
+      ]
+    },
+    {
+      "id": "M05",
+      "title": "持续预训练 CPT Data Replay",
+      "path": "LLM-Training/modules/M05.md",
+      "prerequisites": [
+        "M04",
+        "M10"
+      ]
+    },
+    {
+      "id": "M06",
+      "title": "SFT PEFT LoRA QLoRA Tool Call",
+      "path": "LLM-Training/modules/M06.md",
+      "prerequisites": [
+        "M01",
+        "M02",
+        "M10"
+      ]
+    },
+    {
+      "id": "M07",
+      "title": "DPO Reward Preference Online DPO",
+      "path": "LLM-Training/modules/M07.md",
+      "prerequisites": [
+        "M06",
+        "M10"
+      ]
+    },
+    {
+      "id": "M08",
+      "title": "GRPO PPO RLVR Agentic RL",
+      "path": "LLM-Training/modules/M08.md",
+      "prerequisites": [
+        "M06",
+        "M10"
+      ]
+    },
+    {
+      "id": "M09",
+      "title": "训练系统 Profiler FSDP ZeRO",
+      "path": "LLM-Training/modules/M09.md",
+      "prerequisites": [
+        "M01"
+      ]
+    },
+    {
+      "id": "M10",
+      "title": "Evaluation Benchmarks 泄漏 回归",
+      "path": "LLM-Training/modules/M10.md",
+      "prerequisites": []
+    },
+    {
+      "id": "M11",
+      "title": "Serving vLLM 量化 蒸馏 回滚",
+      "path": "LLM-Training/modules/M11.md",
+      "prerequisites": [
+        "M03",
+        "M10"
+      ]
+    },
+    {
+      "id": "M12",
+      "title": "MoE 多模态 长上下文 先进 RL",
+      "path": "LLM-Training/modules/M12.md",
+      "prerequisites": [
+        "M03",
+        "M08"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-MINIMIND",
+      "title": "MiniMind 官方源码",
+      "url": "https://github.com/jingyaogong/minimind",
+      "publisher": "Official project / publisher",
+      "scope": "model and training loop"
+    },
+    {
+      "id": "SRC-CS336",
+      "title": "Stanford CS336",
+      "url": "https://cs336.stanford.edu/",
+      "publisher": "Official project / publisher",
+      "scope": "model architecture training systems"
+    },
+    {
+      "id": "SRC-RASCHKA",
+      "title": "Build LLM from Scratch",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "publisher": "Official project / publisher",
+      "scope": "tensor and implementation"
+    },
+    {
+      "id": "SRC-TRL",
+      "title": "Hugging Face TRL",
+      "url": "https://huggingface.co/docs/trl/index",
+      "publisher": "Official project / publisher",
+      "scope": "SFT DPO GRPO reward"
+    },
+    {
+      "id": "SRC-QWEN3",
+      "title": "Qwen3-0.6B-Base Model Card",
+      "url": "https://huggingface.co/Qwen/Qwen3-0.6B-Base",
+      "publisher": "Official project / publisher",
+      "scope": "real model baseline"
+    },
+    {
+      "id": "SRC-QWEN-TOOLS",
+      "title": "Qwen Function Calling",
+      "url": "https://qwen.readthedocs.io/en/latest/framework/function_call.html",
+      "publisher": "Official project / publisher",
+      "scope": "chat templates and tools"
+    },
+    {
+      "id": "SRC-PEFT",
+      "title": "Hugging Face PEFT",
+      "url": "https://huggingface.co/docs/peft/index",
+      "publisher": "Official project / publisher",
+      "scope": "LoRA QLoRA"
+    },
+    {
+      "id": "SRC-DCLM",
+      "title": "DataComp LM",
+      "url": "https://github.com/mlfoundations/dclm",
+      "publisher": "Official project / publisher",
+      "scope": "training data engineering"
+    },
+    {
+      "id": "SRC-PYTORCH",
+      "title": "PyTorch Autograd and Profiler",
+      "url": "https://docs.pytorch.org/docs/stable/autograd.html",
+      "publisher": "Official project / publisher",
+      "scope": "autograd"
+    },
+    {
+      "id": "SRC-DPO-PAPER",
+      "title": "DPO original paper",
+      "url": "https://arxiv.org/abs/2305.18290",
+      "publisher": "Original paper / arXiv",
+      "scope": "preference optimization"
+    },
+    {
+      "id": "SRC-GRPO-PAPER",
+      "title": "DeepSeekMath GRPO paper",
+      "url": "https://arxiv.org/abs/2402.03300",
+      "publisher": "Original paper / arXiv",
+      "scope": "group advantage RL"
+    },
+    {
+      "id": "SRC-UNSLOTH",
+      "title": "Unsloth RL guide",
+      "url": "https://unsloth.ai/docs/get-started/reinforcement-learning-rl-guide",
+      "publisher": "Official project / publisher",
+      "scope": "memory-efficient RL"
+    },
+    {
+      "id": "SRC-FSDP",
+      "title": "PyTorch FSDP2",
+      "url": "https://docs.pytorch.org/docs/stable/distributed.fsdp.fully_shard.html",
+      "publisher": "Official project / publisher",
+      "scope": "distributed memory"
+    },
+    {
+      "id": "SRC-VERL",
+      "title": "verl",
+      "url": "https://github.com/volcengine/verl",
+      "publisher": "Official project / publisher",
+      "scope": "RL rollout training architecture"
+    },
+    {
+      "id": "SRC-VLLM",
+      "title": "vLLM Docs",
+      "url": "https://docs.vllm.ai/en/latest/",
+      "publisher": "Official project / publisher",
+      "scope": "inference and serving"
+    },
+    {
+      "id": "SRC-LMEVAL",
+      "title": "EleutherAI lm-eval",
+      "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+      "publisher": "Official project / publisher",
+      "scope": "evaluation"
+    },
+    {
+      "id": "SRC-OTEL",
+      "title": "OpenTelemetry",
+      "url": "https://opentelemetry.io/docs/",
+      "publisher": "Official project / publisher",
+      "scope": "observability"
+    },
+    {
+      "id": "SRC-OWASP",
+      "title": "OWASP GenAI LLM Top 10",
+      "url": "https://genai.owasp.org/llm-top-10/",
+      "publisher": "Official project / publisher",
+      "scope": "security"
+    },
+    {
+      "id": "SRC-ATLAS",
+      "title": "Upstream AI Learning Atlas",
+      "url": "https://github.com/Xander-Xai/X-SuperPlay-AI-Learning-OS/tree/main/docs/atlas",
+      "publisher": "Official project / publisher",
+      "scope": "canonical overview"
+    },
+    {
+      "id": "SRC-NANOCHAT",
+      "title": "Karpathy nanochat",
+      "url": "https://github.com/karpathy/nanochat",
+      "publisher": "Official project / publisher",
+      "scope": "end-to-end source organization"
+    }
+  ],
+  "demands": [
+    {
+      "id": "rag-citation",
+      "problem": "RAG 引用不支持回答",
+      "modules": [
+        "M10",
+        "M06",
+        "M02"
+      ],
+      "sources": [
+        "SRC-ATLAS",
+        "SRC-LMEVAL"
+      ],
+      "gates": [
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "tool-calling",
+      "problem": "Tool Calling 参数错误或多轮状态错",
+      "modules": [
+        "M06",
+        "M02",
+        "M10"
+      ],
+      "sources": [
+        "SRC-QWEN-TOOLS",
+        "SRC-TRL"
+      ],
+      "gates": [
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "gpu-oom",
+      "problem": "QLoRA/训练 OOM",
+      "modules": [
+        "M09",
+        "M01",
+        "M04"
+      ],
+      "sources": [
+        "SRC-PYTORCH",
+        "SRC-PEFT"
+      ],
+      "gates": [
+        "G5"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "cpt-forgetting",
+      "problem": "CPT 后遗忘",
+      "modules": [
+        "M05",
+        "M10",
+        "M02"
+      ],
+      "sources": [
+        "SRC-MINIMIND",
+        "SRC-LMEVAL"
+      ],
+      "gates": [
+        "G1",
+        "G2"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "qwen-finetune",
+      "problem": "Qwen SFT Full/LoRA/QLoRA",
+      "modules": [
+        "M06",
+        "M10",
+        "M01"
+      ],
+      "sources": [
+        "SRC-QWEN3",
+        "SRC-PEFT",
+        "SRC-TRL"
+      ],
+      "gates": [
+        "G1",
+        "G2",
+        "G5"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "data-contamination",
+      "problem": "训练数据重复/污染/PII",
+      "modules": [
+        "M02",
+        "M10"
+      ],
+      "sources": [
+        "SRC-DCLM"
+      ],
+      "gates": [
+        "G1",
+        "G2"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "dpo-regression",
+      "problem": "DPO 退化 / 偏好标注错",
+      "modules": [
+        "M07",
+        "M06",
+        "M10"
+      ],
+      "sources": [
+        "SRC-TRL",
+        "SRC-DPO-PAPER"
+      ],
+      "gates": [
+        "G2"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "grpo-reward-hacking",
+      "problem": "GRPO Reward 投机",
+      "modules": [
+        "M08",
+        "M10",
+        "M09"
+      ],
+      "sources": [
+        "SRC-TRL",
+        "SRC-GRPO-PAPER",
+        "SRC-UNSLOTH"
+      ],
+      "gates": [
+        "G2",
+        "G5"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "agentic-rl",
+      "problem": "多步工具训练 Agentic RL",
+      "modules": [
+        "M08",
+        "M12",
+        "M10"
+      ],
+      "sources": [
+        "SRC-VERL",
+        "SRC-TRL"
+      ],
+      "gates": [
+        "G2",
+        "G3",
+        "G4"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "serving-p95",
+      "problem": "推理服务 P95 延迟和吞吐瓶颈",
+      "modules": [
+        "M11",
+        "M03",
+        "M09"
+      ],
+      "sources": [
+        "SRC-VLLM",
+        "SRC-PYTORCH"
+      ],
+      "gates": [
+        "G4",
+        "G5",
+        "G6"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "quantization",
+      "problem": "量化/蒸馏/合并模型后退化",
+      "modules": [
+        "M11",
+        "M10",
+        "M06"
+      ],
+      "sources": [
+        "SRC-PEFT",
+        "SRC-VLLM"
+      ],
+      "gates": [
+        "G2",
+        "G5",
+        "G7"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "distributed-rl",
+      "problem": "理解 verl 多卡 Rollout/Actor",
+      "modules": [
+        "M09",
+        "M08"
+      ],
+      "sources": [
+        "SRC-VERL",
+        "SRC-FSDP"
+      ],
+      "gates": [
+        "G5",
+        "G6"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "nan-loss",
+      "problem": "Loss NaN 梯度爆炸",
+      "modules": [
+        "M01",
+        "M04",
+        "M09"
+      ],
+      "sources": [
+        "SRC-PYTORCH",
+        "SRC-CS336"
+      ],
+      "gates": [
+        "G5"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "attention-whitebox",
+      "problem": "MiniMind Attention/RoPE 形状不懂",
+      "modules": [
+        "M03",
+        "M04",
+        "M01"
+      ],
+      "sources": [
+        "SRC-MINIMIND",
+        "SRC-RASCHKA"
+      ],
+      "gates": [
+        "G2"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "multimodal",
+      "problem": "长上下文/多模态新场景",
+      "modules": [
+        "M12",
+        "M03",
+        "M02",
+        "M10"
+      ],
+      "sources": [
+        "SRC-ATLAS",
+        "SRC-CS336"
+      ],
+      "gates": [
+        "G1",
+        "G2",
+        "G5"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "start-without-project",
+      "problem": "没有下游项目但想学完整机制",
+      "modules": [
+        "M04",
+        "M06",
+        "M07",
+        "M08",
+        "M10"
+      ],
+      "sources": [
+        "SRC-MINIMIND",
+        "SRC-TRL"
+      ],
+      "gates": [
+        "G2"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "model-selection",
+      "problem": "到底要不要训练、本地还是 API",
+      "modules": [
+        "M10",
+        "M11",
+        "M05",
+        "M06"
+      ],
+      "sources": [
+        "SRC-QWEN3",
+        "SRC-VLLM"
+      ],
+      "gates": [
+        "G0",
+        "G5"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    },
+    {
+      "id": "production-agent",
+      "problem": "Agent/RAG 产品上线上线门禁",
+      "modules": [
+        "M10",
+        "M11",
+        "M06",
+        "M09"
+      ],
+      "sources": [
+        "SRC-OTEL",
+        "SRC-OWASP",
+        "SRC-VLLM"
+      ],
+      "gates": [
+        "G2",
+        "G3",
+        "G4",
+        "G5",
+        "G6",
+        "G7"
+      ],
+      "entry": "LLM-Training/demand-driven/README.md",
+      "practice": "LLM-Training/demand-driven/worked-demand-cards.md",
+      "status": "DESIGN_ONLY"
+    }
+  ],
+  "tracks": [
+    {
+      "id": "mechanism",
+      "title": "模型机制白盒",
+      "modules": [
+        "M01",
+        "M02",
+        "M03",
+        "M04"
+      ],
+      "entry": "LLM-Training/experiments/01-minimind-whitebox/README.md",
+      "outcome": "独立解释 data-to-gradient-to-checkpoint"
+    },
+    {
+      "id": "data-and-alignment",
+      "title": "数据生成与模型行为训练",
+      "modules": [
+        "M02",
+        "M05",
+        "M06",
+        "M07",
+        "M08",
+        "M10"
+      ],
+      "entry": "LLM-Training/experiments/README.md",
+      "outcome": "自建可验证训练数据和偏好/RL 对照"
+    },
+    {
+      "id": "evaluation",
+      "title": "评估科学",
+      "modules": [
+        "M10",
+        "M02",
+        "M06"
+      ],
+      "entry": "LLM-Training/evaluation/evaluation-protocol.md",
+      "outcome": "独立 held-out 与错误归因"
+    },
+    {
+      "id": "serving",
+      "title": "模型推理与系统",
+      "modules": [
+        "M03",
+        "M09",
+        "M11"
+      ],
+      "entry": "LLM-Training/production/PRODUCTION-READINESS.md",
+      "outcome": "有性能数据、可回滚的服务"
+    },
+    {
+      "id": "application",
+      "title": "RAG/Tool/Agent 融合",
+      "modules": [
+        "M06",
+        "M10",
+        "M11",
+        "M12"
+      ],
+      "entry": "LLM-Training/labs/capability-ladder.md",
+      "outcome": "可靠的工具/检索垂直切片与独立迁移"
+    }
+  ],
+  "production": {
+    "entry": "LLM-Training/production/PRODUCTION-READINESS.md",
+    "gates": [
+      "G0",
+      "G1",
+      "G2",
+      "G3",
+      "G4",
+      "G5",
+      "G6",
+      "G7",
+      "G8"
+    ]
+  },
+  "assessments": {
+    "entry": "LLM-Training/assessments/CAPABILITY-RUBRIC.md",
+    "levels": [
+      "L0",
+      "L1",
+      "L2",
+      "L3",
+      "L4"
+    ]
+  }
+}

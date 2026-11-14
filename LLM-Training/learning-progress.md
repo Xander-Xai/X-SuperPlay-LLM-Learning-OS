@@ -1,5 +1,7 @@
 # 学习进度、里程碑验收与下次行动
 
+**V3 需求驱动课程已补充设计文档**：[V3 Roadmap](ROADMAP-V3-DEMAND-DRIVEN.md) · [机器索引](index/README.md) · [能力评分](assessments/CAPABILITY-RUBRIC.md)。本次新增索引和 CI 不代表学习者完成 L0–L4，也不代表任何 GPU 训练已执行。
+
 状态定义：NOT STARTED / IN PROGRESS / READY FOR REVIEW / VERIFIED。**文档落盘不等于训练已跑通**。
 
 | 阶段 | 状态 | 验收依据 | 证据路径 |
