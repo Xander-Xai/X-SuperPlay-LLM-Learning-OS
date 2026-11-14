@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-15",
-  "purpose": "explicit one-time safe retirement of previously merged or strictly ancestor branches",
+  "checked_at": "2026-11-15-followup",
+  "purpose": "followup after first action deleted 22; PR28 changed SHA and PR29 cleanup head now verified merged",
   "candidates": [
     {
       "branch": "docs/llm-training-roadmap-v2-20261114",
@@ -115,8 +115,13 @@
     },
     {
       "branch": "docs/agent-loop-and-loop-engineering-20261115",
-      "expected_sha": "d28ceb4edea5f0b9765f108eae05bdbc45722010",
-      "ancestor_of": "main"
+      "expected_sha": "e91e079f1a3d6434d5e30ddb99a948638616b2a6",
+      "merged_pr": 28
+    },
+    {
+      "branch": "chore/safe-retire-merged-branches-20261115",
+      "expected_sha": "c3507f569f64bc35c6d61d1baec14741815ad0c2",
+      "merged_pr": 29
     }
   ]
 }

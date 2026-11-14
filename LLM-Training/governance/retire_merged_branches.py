@@ -15,7 +15,7 @@ from urllib.parse import quote
 from urllib.request import Request, urlopen
 
 EXPECTED_REPO = "Xander-Xai/X-SuperPlay-LLM-Learning-OS"
-SELF_REF = "chore/safe-retire-merged-branches-20261115"
+SELF_REF = "fix/finish-branch-retirement-20261115"
 MANIFEST = Path(__file__).with_name("branch-retirement-manifest.json")
 
 
