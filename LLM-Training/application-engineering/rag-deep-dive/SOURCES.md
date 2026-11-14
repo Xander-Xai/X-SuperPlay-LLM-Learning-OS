@@ -29,6 +29,14 @@
 | S21 | R07–R08 | [本仓 Ragas](../RAGAS-EVALUATION.md) | 现有 19 案例与可选 Judge API | 本仓既有课程，不是第三方证据 |
 | S22 | R01–R10 | [本仓既有应用工程 Lab](../labs/README.md) | Synthetic pipeline、拒答/权限/工具 | 仅离线合成，不是生产验证 |
 
+
+| S23 | R01–R09 | [DeepLearning.AI RAG 系统课程](https://www.deeplearning.ai/courses/retrieval-augmented-generation) | 以课程作骨架、动手比较 BM25/RRF/向量与评测 | 作者课程 P1，课程页面抽查，权益/内容可能变 |
+| S24 | R02/R05/R08 | [Building and Evaluating Advanced RAG](https://www.deeplearning.ai/courses/building-evaluating-advanced-rag) | Sentence-window、Auto-merging、RAG Triad | 作者课程 P1，课程页面抽查 |
+| S25 | R05/R06 | [Advanced Retrieval for AI with Chroma](https://www.deeplearning.ai/courses/advanced-retrieval-for-ai) | Query Expansion、CrossEncoder、Embedding Adapter | 作者课程 P1，课程页面抽查 |
+| S26 | R01/R02 | [LlamaIndex Introduction to RAG](https://developers.llamaindex.ai/python/framework/understanding/rag/) | Loading、Indexing、Storing、Querying、Evaluation | 官方手册抽查，当前 API 依版本复核 |
+| S27 | R02/R10 | [PaddleOCR 官方仓库](https://github.com/PaddlePaddle/PaddleOCR) | OCR/结构化解析质量与版本 | 官方源码抽查，实际 OCR 未运行 |
+| S28 | R03/R10 | [OpenAI CLIP 官方仓库](https://github.com/openai/CLIP) | 图文对比学习/相容向量空间 | 官方源码抽查，实际 CLIP 未运行 |
+
 ## 资料取用策略
 
 - 第一次：先看本专项对应 Rxx 讲义，选该行 1 个 P0 原文/官方手册，回答“它为什么有效/何时失效”。
