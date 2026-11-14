@@ -2,6 +2,8 @@
 
 **定义**：Retrieval-Augmented Generation 在推理阶段检索外部证据，将可信、授权、相关且适当新鲜的材料提供给生成模型。通常不修改模型权重。**大白话**：员工不用背库存/法规，先从有权限的最新版资料里查，再基于证据回答。
 
+**进阶配套**：[10 模块完整 RAG 学习路径](rag-deep-dive/README.md) → [检索基础与公式](rag-deep-dive/CORE-01-05.md) → [可信生成与生产](rag-deep-dive/CORE-06-10.md) → [实验与 120 题标注规范](rag-deep-dive/LABS.md) → [面试验收](rag-deep-dive/INTERVIEW.md)。原 Ragas 和应用工程合成 Lab 继续保留，不覆盖既有用例。
+
 ## 1. 全链路与边界（P0）
 
 ~~~mermaid
