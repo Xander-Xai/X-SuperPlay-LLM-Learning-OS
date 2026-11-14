@@ -57,9 +57,9 @@ class BranchRetirementSafetyTests(unittest.TestCase):
 
     def test_fixed_manifest(self):
         manifest = load_manifest()
-        self.assertEqual(len(manifest), 23)
-        self.assertEqual(len({x["branch"] for x in manifest}), 23)
-        self.assertEqual(sum("merged_pr" in x for x in manifest), 21)
+        self.assertEqual(len(manifest), 24)
+        self.assertEqual(len({x["branch"] for x in manifest}), 24)
+        self.assertEqual(sum("merged_pr" in x for x in manifest), 23)
         self.assertNotIn("main", [x["branch"] for x in manifest])
 
 
