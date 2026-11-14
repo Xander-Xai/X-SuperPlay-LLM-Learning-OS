@@ -63,6 +63,83 @@ def need_details(data: dict, need: dict) -> str:
     return "\n".join(out)
 
 
+
+
+def topic_relations(data: dict, topic_id: str) -> list[dict]:
+    """Incoming AND outgoing typed relations; no asserted prerequisites."""
+    return [r for r in data["relations"]
+            if r["from"] == topic_id or r["to"] == topic_id]
+
+
+def shortest_relation_path(data: dict, start: str, goal: str) -> list[dict] | None:
+    """Shortest *undirected exploration* route over typed relationships.
+
+    Walking an edge backwards never changes that edge's stored direction.
+    This is for understanding how concepts connect, NOT a topological learning
+    order or a claim that all edges are prerequisites.
+    """
+    from collections import deque
+
+    ids = {t["id"] for t in data["topics"]}
+    if start not in ids or goal not in ids:
+        return None
+    if start == goal:
+        return []
+    adjacency = {tid: [] for tid in ids}
+    for relation in data["relations"]:
+        adjacency[relation["from"]].append((relation["to"], relation))
+        adjacency[relation["to"]].append((relation["from"], relation))
+    queue = deque([(start, [])])
+    visited = {start}
+    while queue:
+        current, steps = queue.popleft()
+        for neighbor, rel in adjacency[current]:
+            if neighbor in visited:
+                continue
+            result = steps + [rel]
+            if neighbor == goal:
+                return result
+            visited.add(neighbor)
+            queue.append((neighbor, result))
+    return None
+
+
+def relation_summary(data: dict, topic_id: str) -> str:
+    topics = {t["id"]: t["title"] for t in data["topics"]}
+    if topic_id not in topics:
+        return "未知主题；使用 --list 查看真实 ID。"
+    lines = [f"[{topic_id}] {topics[topic_id]} 的关联关系",
+             "关系箭头为原始语义方向，不表示必修顺序；逆向查询不颠倒原关系。"]
+    rels = topic_relations(data, topic_id)
+    if not rels:
+        lines.append("本索引目前没有声明关联边；不是说技术上毫无关系。")
+    for r in rels:
+        position = "出边" if r["from"] == topic_id else "入边"
+        lines.append(
+            f"  {position}: {r['from']} {topics[r['from']]} --{r['type']}-->"
+            f" {r['to']} {topics[r['to']]} | {r['explain']}"
+        )
+    return "\n".join(lines)
+
+
+def path_summary(data: dict, start: str, goal: str) -> str | None:
+    topics = {t["id"]: t["title"] for t in data["topics"]}
+    steps = shortest_relation_path(data, start, goal)
+    if steps is None:
+        return None
+    lines = [
+        f"知识关联路径：{start} {topics[start]} ⇢ {goal} {topics[goal]}",
+        "警告：按无向连通性查找最短探索路径；以下每个边显示原始方向。",
+        "它只揭示概念关联，不证明先修关系、最佳学习顺序或实际实验效果。",
+    ]
+    if not steps:
+        lines.append("起点和终点相同，不需要跨节点。")
+    for i, r in enumerate(steps, 1):
+        lines.append(
+            f"  {i}. {r['from']} --{r['type']}--> {r['to']}：{r['explain']}"
+        )
+    return "\n".join(lines)
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Offline LLM all-stack atlas route")
     group = parser.add_mutually_exclusive_group(required=True)
@@ -71,11 +148,29 @@ def main() -> int:
     group.add_argument("--domain", help="domain ID F/S/P/E/A/O")
     group.add_argument("--need", help="exact demand card ID e.g. N02")
     group.add_argument("--search", help="substring topic/name/aliases or demand keyword")
+    group.add_argument("--relate", help="show incoming/outgoing typed edges for topic ID")
+    group.add_argument("--path", nargs=2, metavar=("FROM", "TO"),
+                       help="explore shortest graph connection; NOT prerequisites")
     args = parser.parse_args()
     data = load()
     domains = {d["id"]: d for d in data["domains"]}
     topics = {t["id"]: t for t in data["topics"]}
     needs = {n["id"]: n for n in data["needs"]}
+    if args.relate:
+        key = args.relate.upper()
+        if key not in topics:
+            print("未知主题；使用 --list 查看真实 ID。")
+            return 2
+        print(relation_summary(data, key))
+        return 0
+    if args.path:
+        start, goal = (x.upper() for x in args.path)
+        result = path_summary(data, start, goal)
+        if result is None:
+            print("没有收录这两个主题之间的连通路径（或 ID 无效）。不能编造概念关系。")
+            return 2
+        print(result)
+        return 0
     if args.list:
         for domain in data["domains"]:
             print(f"\n[{domain['id']}] {domain['name']}")

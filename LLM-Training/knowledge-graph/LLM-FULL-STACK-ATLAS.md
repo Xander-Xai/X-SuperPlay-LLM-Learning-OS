@@ -150,3 +150,9 @@ flowchart LR
 **L1 理解**：专业解释 + 大白话 + 反例；**L2 实现**：代码可执行和可修改；**L3 迁移**：陌生任务与排错；**L4 生产**：依 [G0–G8](../production/PRODUCTION-READINESS.md) 留下权限、SLO、监控、回滚和真实用户证据。
 
 索引完成/CI 通过/CPU Toy 通过，只证明课程资产的局部正确性，**不证明 Qwen 已训练、个人已掌握或产品已上线**。本仓是学习系统，真实客户数据与部署证据由相应工程项目仓维护。
+
+## 8. 图谱可双向追问（新增，不当作课程顺序）
+
+已将 30 条类型化关系接入离线关系查询工具：**python LLM-Training/tools/route_atlas.py --relate A04** 显示 Tool Calling 的出边 A04→A05（提供 Agent 动作）和入边 O03→A04（系统安全保护）；**--path A04 O02** 可以探索它到 Observability 的最短**无向关联链**，同时保留每条边的真实方向与解释。不能把反向遍历误读为技术前置关系。
+
+当需要真实工程版本判断时，不靠概念图猜测，转到 [官方实现变化与工程测试清单](../resources/OFFICIAL-RUNTIME-DELTA-20261114.md)；其中区分 SFT Mask、工具型 GRPO 前缀稳定性、服务端鉴权、MCP 协议兼容。

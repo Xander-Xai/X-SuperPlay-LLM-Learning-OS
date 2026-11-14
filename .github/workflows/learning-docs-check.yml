@@ -29,6 +29,8 @@ jobs:
           python LLM-Training/tools/route_atlas.py --need N02
           python LLM-Training/tools/route_atlas.py --domain E
           python LLM-Training/tools/route_atlas.py --search RAG
+          python LLM-Training/tools/route_atlas.py --relate A04
+          python LLM-Training/tools/route_atlas.py --path A04 O02
       - name: Verify demand-index and source-to-module contracts
         run: python -m unittest discover -s LLM-Training/tools -p 'test_learning_index.py' -v
       - name: Test toy DPO/GRPO formulas and reward hacking

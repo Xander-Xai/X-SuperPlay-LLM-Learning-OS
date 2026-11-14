@@ -1,5 +1,11 @@
 # LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
 
+## 新增：如何反查关系及查询动态框架约束
+
+- [官方实现变化检查单（TRL Assistant Mask / Tool GRPO Prefix / vLLM 全路径鉴权 / MCP）](resources/OFFICIAL-RUNTIME-DELTA-20261114.md)。
+- [关系图查询入口](index/README.md)：在仓库根目录使用 **python LLM-Training/tools/route_atlas.py --relate A04** 查看 Tool Calling 的入边和出边；用 **--path A04 O02** 查到可观测性的已编目关系。它只是知识关系探索，不是自动推导课程顺序。
+- [重新审计报告](ACCEPTANCE-RECHECK-20261114.md)，区分课程可用与生产模型未验证。
+
 ## 全栈 6 域知识入口（优先看这组，不改变 12 模块原有编号）
 
 - **完整大模型全景与关系图**：[LLM 全链路 Atlas](knowledge-graph/LLM-FULL-STACK-ATLAS.md)（包含训练与推理两条不同链路、六域与多模态、11 组易混淆原理）。

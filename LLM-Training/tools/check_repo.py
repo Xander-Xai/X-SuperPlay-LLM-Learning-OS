@@ -44,6 +44,8 @@ REQUIRED = [
     "LLM-Training/tools/route_atlas.py",
     "LLM-Training/tools/validate_atlas.py",
     "LLM-Training/tools/test_atlas.py",
+    "LLM-Training/resources/OFFICIAL-RUNTIME-DELTA-20261114.md",
+    "LLM-Training/ACCEPTANCE-RECHECK-20261114.md",
     "LLM-Training/ACCEPTANCE-FULL-STACK-20261114.md",
     "LLM-Training/ACCEPTANCE-V3-AUDIT.md",
     "LLM-Training/labs/preference-rl-math/README.md",

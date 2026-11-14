@@ -1,3 +1,7 @@
+## 再验收更新｜关系可反查 + 官方工程变更核查（2026-11-14）
+
+[Atlas 关系探索](LLM-Training/index/README.md)现支持按主题查看入边/出边以及两个概念之间的**关联路径**；不会把关联路径误当成必修课程顺序。[TRL、vLLM、MCP 官方变化与上线检查](LLM-Training/resources/OFFICIAL-RUNTIME-DELTA-20261114.md) 已补入 M06/M08/M11 和生产门禁。[最新严格复验](LLM-Training/ACCEPTANCE-RECHECK-20261114.md)记录课程验证与尚未执行的模型实验。
+
 ## 新增：六域大模型全景与上游知识打通（2026-11-14）
 
 现在先看 [**大模型全链路知识地图（专业原理 + 白话 + 关系图）**](LLM-Training/knowledge-graph/LLM-FULL-STACK-ATLAS.md)，再按当前问题进入 [**12 条需求驱动任务卡**](LLM-Training/demand-driven/AI-NATIVE-NEED-ROUTES.md)，沿 [**33 主题上游/官方直达索引**](LLM-Training/resources/UPSTREAM-RESOURCE-MAP.md) 找材料。也可以用 [AI-Native 导师学习协议](LLM-Training/learning-method/AI-NATIVE-LEARNING-LOOP.md) 做单点讲解与实操验收。
