@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-11-15-followup",
-  "purpose": "followup after first action deleted 22; PR28 changed SHA and PR29 cleanup head now verified merged",
+  "checked_at": "2026-11-15-post-pr31",
+  "purpose": "PR #31 merged on main and orphaned its SHA-pinned branch; safe follow-up clean-up",
   "candidates": [
     {
       "branch": "docs/llm-training-roadmap-v2-20261114",
@@ -122,6 +122,11 @@
       "branch": "chore/safe-retire-merged-branches-20261115",
       "expected_sha": "c3507f569f64bc35c6d61d1baec14741815ad0c2",
       "merged_pr": 29
+    },
+    {
+      "branch": "audit/agent-loop-verifier-contract-and-retirement-20261115",
+      "expected_sha": "3267ab8d0093140c9dbc7db78802e82da2f87f62",
+      "merged_pr": 31
     }
   ]
 }
