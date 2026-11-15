@@ -4,7 +4,7 @@
 
 ## 执行机制
 
-- [已审清单](branch-retirement-manifest.json) 当前固定 **24 条**经两轮复验的历史分支（其中 23 条已合并 PR，1 条 main 祖先）。第一轮 [Actions #43621192846](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/actions/runs/43621192846) 实际删除 22 条并回读确认；原清单中 docs/agent-loop 分支 SHA 变化，是因 [PR #28](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/pull/28) 在随后合并，已核实其最新 head SHA；另加入已合并 [PR #29](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/pull/29) 的残留分支。第二轮在每次删除前依旧重新读取实际 HEAD、PR 和 open PR，不根据旧结论盲删。
+- [已审清单](branch-retirement-manifest.json) 目前固定 **25 条**经多轮复验的历史分支（其中 23 条已合并 PR，1 条 main 祖先）。第一轮 [Actions #43621192846](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/actions/runs/43621192846) 实际删除 22 条并回读确认；原清单中 docs/agent-loop 分支 SHA 变化，是因 [PR #28](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/pull/28) 在随后合并，已核实其最新 head SHA；另加入已合并 [PR #29](https://github.com/Xander-Xai/X-SuperPlay-LLM-Learning-OS/pull/29) 的残留分支。第二轮在每次删除前依旧重新读取实际 HEAD、PR 和 open PR，不根据旧结论盲删。
 - [清理器](retire_merged_branches.py) 每次从 GitHub 实时读取：分支是否受保护、最新 SHA、有无开放 PR、指定 PR 是否确实已合并及 head 是否仍一致；对于孤儿祖先分支，要求与 main 比较结果的 `ahead_by == 0`。
 - [GitHub Actions](../../.github/workflows/retire-merged-branches.yml) 只在 **main** 合并此功能时对清单执行删除。流程使用 GitHub 内置、限制权限的 `GITHUB_TOKEN`（`contents:write` / `pull-requests:read`），**不需外部 PAT、不存密钥**。也可以由仓库维护者在 main 上手动 Workflow Dispatch 重试。
 - 每次调用 GitHub DELETE API 后，必须通过 GET 回读验证分支确实不存在；拒绝用 force push、update_ref 将分支指向 main 来冒充删除。删除失败（403/规则阻止）时 workflow 必须红灯，Issue #25 仍保留。
@@ -40,3 +40,7 @@ GITHUB_REPOSITORY=Xander-Xai/X-SuperPlay-LLM-Learning-OS GITHUB_TOKEN=YOUR_TOKEN
 - 如果分支实际删除后需要恢复：在明确旧 SHA 与授权后通过 GitHub 创建分支指向原 SHA，完整原提交 SHA 已存在 manifest；这不是鼓励无需审核地恢复被删除的旧工作分支。
 
 该工作流仅是 **PR/Branch 生命周期治理**，与真实 MiniMind、SFT、GRPO、Agentic RL、RAG 评测和 vLLM 的完成度无关。
+
+## PR #31 后续补充（2026-11-15）
+
+PR #31 的源分支 `audit/agent-loop-verifier-contract-and-retirement-20261115` 在合并后仍存在，GitHub branch HEAD 为 `3267ab8d0093140c9dbc7db78802e82da2f87f62`；其 PR 已 merged，且无开放 PR。此次仅增加一条精确 `merged_pr:31` 与 HEAD SHA 记录，由原安全清理器在 main workflow 再次读取开放 PR、分支 HEAD、保护状态及合并证据后处理。此次清理器承载 PR 的源分支 `chore/retire-post-pr31-20261115` 只有在其合并并经同样验证后才自动删除。结果必须由真实 workflow 与 GitHub Branch API 回读证明；PR/CI 通过本身不是远程删除证据。
