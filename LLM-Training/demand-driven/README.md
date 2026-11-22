@@ -10,6 +10,10 @@
 
 **用户真实问题优先于课程顺序**。这里的“需求”包含：工程故障、科研问题、职业任务、纯兴趣问题、准备上线的产品需求；不必先拥有真实客户项目，才能学习底层知识。训练卡可以是 **SELF_CHOSEN / SYNTHETIC / AUTHORIZED_TASK / HISTORICAL**，不得将模拟需求写成已成交业务。
 
+### 资料驱动探索也允许进入
+
+偶然发现高质量技术博客、论文或官网时，用 [Source-to-Mastery](../learning-method/SOURCE-TO-MASTERY.md) 先确定本次希望获得的能力，并登记 `SELF_CHOSEN`、来源版本与一个最小 Gap；再回到本页相应需求和非训练基线。优先复用现有知识节点、实验、[需求卡](DEMAND-CARD-TEMPLATE.md) 与 [Rubric](../assessments/CAPABILITY-RUBRIC.md)。发现资料不等于确认新岗位/新客户需求；不增加第二份课程或状态台账。
+
 ## 1. 需求分流：先问要不要训练
 
 ```mermaid

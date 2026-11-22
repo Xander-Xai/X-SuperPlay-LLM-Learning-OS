@@ -12,6 +12,10 @@
 
 ---
 
+## 外部资料学习｜Source-to-Mastery（2026-11-22）
+
+[LLM 专项资料内化指南](LLM-Training/learning-method/SOURCE-TO-MASTERY.md) 复用上游 AI-Learning-OS 的 Source-to-Mastery：博客/论文/官网/教程 → 明确目标与 Gap → 闭卷理解 → 既有最小实验 → 负例/受控对照 → 增量沉淀与延迟迁移。**不另建能力等级、知识地图、课程编号或学习进度表**；本仓 [L0–L4 Rubric](LLM-Training/assessments/CAPABILITY-RUBRIC.md) 与已有训练/Agent/RAG 证据门禁仍是权威。文档同步不代表本人已独立学习或真实 GPU 实验完成。
+
 # X-SuperPlay-LLM-Learning-OS
 
 ## Agent 系统化学习专项（2026-11-14）

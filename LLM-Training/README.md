@@ -6,6 +6,10 @@
 
 [RL / Agentic RL 体系、28 天可选学习路线](reinforcement-learning/AGENTIC-RL-LEARNING-PATH.md) · [官方原始资料与版本边界](resources/RL-AGENTIC-PRIMARY-SOURCES.md) · [可运行多步工具环境 + Tabular Q-learning 教学](labs/agentic-rl-trajectory/README.md) · [与实验 03/05 关联的真实模型实验桥（NOT RUN）](experiments/agentic-rl-bridge/README.md)。本专题跨 M04/M06/M07/M08/M09/M10，不另设 M13，不新增加强制模块。
 
+## 从博客、论文、官网开始学：Source-to-Mastery
+
+[LLM 外部资料内化适配](learning-method/SOURCE-TO-MASTERY.md) 将高质量资料纳入既有知识节点与实验：先看资料解决的问题、版本和当前 Gap，再闭卷解释，按需复用现有 Lab 和两类负例。唯一能力评级仍为 [L0–L4 Rubric](assessments/CAPABILITY-RUBRIC.md)，唯一进度台账仍为 [learning-progress](learning-progress.md)；这不是新增 M13、平行课程或证明学习者通过。
+
 # LLM Training 学习中心｜需求驱动的 V3 扩展与 V2 基础
 
 ## 新增 Agent 学习贯通入口
